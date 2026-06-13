@@ -83,16 +83,25 @@ export default function LevelView({ theme, themeTitle, lesson, nextSlug }) {
 
       {/* Next */}
       <footer className="border-t border-slate-200 pt-6 dark:border-slate-700">
-        {passed && nextSlug ? (
-          <a href={`/track/${theme}/${nextSlug}`} className="inline-block rounded-lg bg-emerald-600 px-5 py-3 font-medium text-white hover:bg-emerald-700">
-            On to the next level →
+        <div className="flex flex-wrap items-center gap-3">
+          {passed && (
+            <span className="text-sm font-medium text-emerald-700 dark:text-emerald-400">✓ Level complete</span>
+          )}
+          {nextSlug ? (
+            <a href={`/track/${theme}/${nextSlug}`} className="inline-block rounded-lg bg-emerald-600 px-5 py-3 font-medium text-white hover:bg-emerald-700">
+              {passed ? 'On to the next level →' : 'Next level →'}
+            </a>
+          ) : (
+            <a href={`/track/${theme}`} className="inline-block rounded-lg bg-emerald-600 px-5 py-3 font-medium text-white hover:bg-emerald-700">
+              {passed ? '🎉 Track finished — back to the map' : '← Back to the track'}
+            </a>
+          )}
+          <a href={`/track/${theme}`} className="inline-block rounded-lg border border-slate-300 px-5 py-3 font-medium text-slate-600 hover:border-emerald-400 dark:border-slate-600 dark:text-slate-300">
+            All levels
           </a>
-        ) : passed ? (
-          <a href={`/track/${theme}`} className="inline-block rounded-lg bg-emerald-600 px-5 py-3 font-medium text-white hover:bg-emerald-700">
-            ← Back to the track
-          </a>
-        ) : (
-          <p className="text-sm text-slate-400">Clear the checkpoint to unlock the next level.</p>
+        </div>
+        {!passed && (
+          <p className="mt-3 text-sm text-slate-400">Tip: clear the checkpoint to mark this level ✅ — but you’re free to jump ahead anytime.</p>
         )}
       </footer>
     </article>
