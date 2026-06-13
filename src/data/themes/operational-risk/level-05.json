@@ -1,0 +1,85 @@
+{
+  "id": 5,
+  "slug": "taming-it",
+  "title": "Taming It",
+  "subtitle": "Controls, three lines of defence & a learning culture",
+  "icon": "🛡️",
+  "hook": {
+    "metaphor": "A great kitchen isn't one that never has an accident — it's one where the burn gets caught early, the near-miss gets talked about, and tomorrow's shift runs a little safer because of it. Taming operational risk is less about heroics and more about layers of defence and a culture where people surface problems instead of hiding them.",
+    "scenario": "A staff member notices a control was skipped on a big payment — but it happened to be fine this time. In one firm they stay quiet (why invite trouble?). In another they report the near-miss and the gap gets fixed. Which firm just got safer?"
+  },
+  "learn": [
+    "First, the **four basic responses** to any risk: **avoid** it (don't do the risky thing), **reduce** it (add controls), **transfer** it (insurance, or shift it to a third party), or **accept** it (consciously live with it within your appetite). Mature teams choose deliberately rather than defaulting to one.",
+    "Second, the organising idea of operational risk management: the **Three Lines of Defence.** The **first line** is the business that owns and runs the risk day-to-day. The **second line** is the risk and compliance function that sets standards and challenges the first. The **third line** is internal audit, independently checking that it all actually works. Each line is a backstop for the one before — and confusing the lines (e.g. the people doing the work also being the only ones checking it) is a classic failure.",
+    "Third, **controls come in flavours**, and you want a mix: **preventive** (stop the bad thing — limits, approvals, access controls), **detective** (catch it fast — reconciliations, monitoring, alerts), and **corrective** (recover well — backups, incident response). Prevention alone is brittle; you need detection and recovery for when prevention fails (it will).",
+    "But the quiet superpower is **culture** — specifically a **near-miss / no-blame culture.** Aviation transformed its safety record by treating every near-miss as free learning, reported without punishment. Finance is learning the same lesson: if surfacing a mistake gets you punished, people hide mistakes, and you lose your best early-warning system. This is 'tone at the top' (Governance Level 6) made concrete."
+  ],
+  "bridge": "So at work, you can size up how seriously a team manages operational risk by looking for two things: a sensible mix of **preventive, detective, and corrective controls** across clear **lines of defence** — and a culture where people feel safe reporting near-misses. A firm that punishes the messenger is, whatever its policies say, flying blind.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The near-miss",
+      "prompt": "A skipped control on a big payment turned out fine this time. What's the response that makes the firm safer?",
+      "options": [
+        { "label": "Say nothing — no harm done.", "verdict": "bad", "feedback": "A near-miss is a free warning. Staying quiet wastes it and guarantees the gap stays open until the day it *isn't* fine." },
+        { "label": "Report the near-miss so the control gap gets fixed.", "verdict": "good", "feedback": "Exactly the aviation lesson: near-misses reported without blame are pure learning. You fix the gap before it ever causes a loss." },
+        { "label": "Quietly punish whoever skipped the control.", "verdict": "bad", "feedback": "Punishment drives reporting underground. Next time, people hide the miss — and you lose your early-warning system. Fix the process, protect the messenger." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Three lines of defence",
+      "prompt": "Which line of defence does each role belong to?",
+      "buckets": [
+        { "id": "first", "label": "1st line (owns the risk)" },
+        { "id": "second", "label": "2nd line (sets standards & challenges)" },
+        { "id": "third", "label": "3rd line (independent audit)" }
+      ],
+      "items": [
+        { "label": "The lending team running daily approvals", "bucket": "first" },
+        { "label": "The risk & compliance function setting policy", "bucket": "second" },
+        { "label": "Internal audit independently testing controls", "bucket": "third" },
+        { "label": "An operations team executing payments", "bucket": "first" },
+        { "label": "Compliance challenging the business on a gap", "bucket": "second" }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Control types & responses",
+      "prompt": "Match each term to its meaning.",
+      "pairs": [
+        { "left": "Preventive control", "right": "Stops the bad thing happening (limits, approvals)" },
+        { "left": "Detective control", "right": "Catches it quickly (reconciliations, alerts)" },
+        { "left": "Corrective control", "right": "Helps you recover (backups, incident response)" },
+        { "left": "Risk transfer", "right": "Shifting the risk elsewhere, e.g. via insurance" },
+        { "left": "Risk acceptance", "right": "Consciously living with a risk within appetite" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “You tame operational risk with layers — a mix of preventive, detective and corrective controls across three lines of defence — and a no-blame culture where near-misses are reported, not hidden.”",
+  "checkpoint": [
+    {
+      "q": "In the Three Lines of Defence, internal audit is the…",
+      "options": ["First line", "Second line", "Third line", "Not part of it"],
+      "answer": 2,
+      "explain": "Third line = independent assurance that the first (business) and second (risk/compliance) are actually working."
+    },
+    {
+      "q": "A reconciliation that catches an error after it occurs is a… control.",
+      "options": ["Preventive", "Detective", "Corrective", "Decorative"],
+      "answer": 1,
+      "explain": "Detective controls spot problems quickly after they happen; preventive ones stop them up front."
+    },
+    {
+      "q": "Why is a no-blame, near-miss-reporting culture so valuable?",
+      "options": [
+        "It lets people avoid all accountability",
+        "It turns near-misses into free early warnings instead of hidden gaps",
+        "It eliminates the need for any controls",
+        "It speeds up marketing"
+      ],
+      "answer": 1,
+      "explain": "Punishing the messenger drives mistakes underground; safe reporting surfaces gaps before they cause losses."
+    }
+  ]
+}

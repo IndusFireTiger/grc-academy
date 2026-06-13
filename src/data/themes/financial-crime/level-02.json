@@ -1,0 +1,90 @@
+{
+  "id": 2,
+  "slug": "spotting-the-fakes",
+  "title": "Spotting the Fakes",
+  "subtitle": "The many faces of fraud",
+  "icon": "🎭",
+  "hook": {
+    "metaphor": "Not every fake at the door looks the same. Some have a forged ID (a stolen identity). Some borrowed a regular's wristband (a hijacked account). Some are perfectly real people who'll cause trouble inside on purpose (first-party fraud). And some smooth-talk the bouncer into just letting them in (a scam). Spotting fraud means knowing the whole cast.",
+    "scenario": "A customer calls, distressed: she got a call from 'her bank's fraud team', who convinced her to move her savings to a 'safe account' to protect them. She authorised the transfer herself. Was she defrauded — even though she pressed the buttons?"
+  },
+  "learn": [
+    "**Identity fraud** is using someone else's identity (real or invented) to open accounts or borrow. **Synthetic identity** — stitching real and fake details into a brand-new 'person' — is a fast-growing, hard-to-catch variant.",
+    "**Account takeover (ATO)** is hijacking a *genuine* customer's existing account — via phishing, stolen passwords, or SIM-swapping. It's dangerous precisely because the account is real and trusted; the criminal wears the customer's face.",
+    "**First-party fraud** flips the script: the fraudster is the *real* account holder, lying for gain — inflating income on an application, or 'first-party' chargeback abuse ('I never got it' when they did). No stolen identity, just dishonesty by a genuine customer.",
+    "And the fastest-growing category: **scams**, especially **Authorised Push Payment (APP) fraud** — exactly our scenario. The victim is manipulated into *authorising the payment themselves*, so old defences ('was this the real customer?') don't trigger — it *was* her. APP scams (impersonation, romance, investment, invoice redirection) have exploded, and regulators in the UK, Australia and beyond are pushing firms toward shared responsibility and even reimbursement. The hard truth: yes, she was defrauded — consent obtained by deception is still fraud."
+  ],
+  "bridge": "So at work, you can stop picturing fraud as just 'a stolen card.' Ask: *Is the identity fake (identity/synthetic fraud)? Is a real account hijacked (ATO)? Is the genuine customer lying (first-party)? Or has the customer been manipulated into doing it themselves (a scam/APP)?* Each needs a different defence — and the scam category is the one quietly winning right now.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Did she 'authorise' it?",
+      "prompt": "The customer moved her own savings after a convincing impersonation call. How should the firm see it?",
+      "options": [
+        { "label": "Her fault — she authorised it, so it's not fraud.", "verdict": "bad", "feedback": "This is the outdated view. Consent obtained by deception is still fraud (APP scam). Blaming victims both misreads the crime and increasingly breaches regulators' reimbursement expectations." },
+        { "label": "An APP scam — she was deceived into authorising it; treat it as fraud.", "verdict": "good", "feedback": "Correct. Authorised Push Payment fraud is the fastest-growing category precisely because the victim presses the buttons. The deception is the crime." },
+        { "label": "Money laundering, not fraud.", "verdict": "bad", "feedback": "No money was being *disguised* here — she was *deceived* into paying. That's fraud. (The criminal will likely launder the proceeds next — a separate step.)" }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Know the cast",
+      "prompt": "Match each fraud type to its description.",
+      "pairs": [
+        { "left": "Identity fraud", "right": "Using someone else's (or a fake) identity to transact" },
+        { "left": "Synthetic identity", "right": "A fabricated 'person' built from real + fake details" },
+        { "left": "Account takeover (ATO)", "right": "Hijacking a genuine customer's existing account" },
+        { "left": "First-party fraud", "right": "The real account holder lying for gain" },
+        { "left": "APP / scam", "right": "Manipulating a victim into authorising the payment themselves" }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Whose identity is in play?",
+      "prompt": "Sort each case by whether a real, fake, or hijacked identity is involved.",
+      "buckets": [
+        { "id": "genuine", "label": "Genuine customer (lying or tricked)" },
+        { "id": "stolen", "label": "Stolen / hijacked identity" },
+        { "id": "fake", "label": "Fake / invented identity" }
+      ],
+      "items": [
+        { "label": "Real account holder inflates income on a loan form", "bucket": "genuine" },
+        { "label": "Criminal logs into a victim's real bank account", "bucket": "stolen" },
+        { "label": "A 'person' built from mixed real and fake details", "bucket": "fake" },
+        { "label": "Victim tricked into transferring her own money", "bucket": "genuine" },
+        { "label": "Loan opened using a stolen driver's licence", "bucket": "stolen" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Fraud isn't one thing — it's fake identities, hijacked accounts, dishonest real customers, and (fastest of all) scams where the victim is tricked into paying themselves.”",
+  "checkpoint": [
+    {
+      "q": "In Authorised Push Payment (APP) fraud, the victim…",
+      "options": [
+        "Never touches the payment",
+        "Is deceived into authorising the payment themselves",
+        "Is always the bank",
+        "Is a synthetic identity"
+      ],
+      "answer": 1,
+      "explain": "The victim presses the buttons under manipulation — which is why old 'is this the real customer?' checks don't catch it."
+    },
+    {
+      "q": "Account takeover (ATO) is dangerous mainly because…",
+      "options": [
+        "It uses an obviously fake account",
+        "The account is genuine and trusted, so the criminal wears the customer's face",
+        "It only affects synthetic identities",
+        "It's always small-value"
+      ],
+      "answer": 1,
+      "explain": "Hijacking a real, trusted account lets the criminal bypass defences aimed at fake identities."
+    },
+    {
+      "q": "A genuine customer inflating their income on an application is…",
+      "options": ["Account takeover", "First-party fraud", "Money laundering", "Synthetic identity"],
+      "answer": 1,
+      "explain": "First-party fraud = the real account holder being dishonest for gain, no stolen identity involved."
+    }
+  ]
+}

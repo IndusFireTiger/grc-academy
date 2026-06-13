@@ -1,0 +1,94 @@
+{
+  "id": 1,
+  "slug": "whos-at-the-door",
+  "title": "Who’s at the Door?",
+  "subtitle": "Foundations: fraud + money laundering = FRAML",
+  "icon": "🕵️",
+  "hook": {
+    "metaphor": "Picture the bouncer outside a busy club. Two very different problems walk up. One is the person with a *fake ID* trying to sneak in — that's **fraud**: deception to get something they shouldn't. The other looks respectable but is quietly trying to *wash a bag of dirty cash* through the cloakroom — that's **money laundering**. A good bouncer watches for both, which is exactly why modern teams combine them into one job: **FRAML**.",
+    "scenario": "A payments firm has two teams that never talk: a fraud team and an anti-money-laundering team. A criminal uses a stolen card (fraud) and then funnels the proceeds through mule accounts (laundering) — and slips through the gap *between* the two teams. What was the real weakness?"
+  },
+  "learn": [
+    "**Financial crime** is an umbrella for illegal ways of moving or taking money. The two giants under it are **fraud** and **money laundering** — and although they're different, they're deeply connected: fraud *generates* dirty money, and laundering *hides* where it came from. They're two ends of the same criminal pipeline.",
+    "**Fraud is deception for gain** — tricking a person or system into handing over money or access. The victim can be the firm, the customer, or both.",
+    "**Money laundering is disguise** — taking the proceeds of crime ('dirty' money) and making them look legitimate ('clean'), so criminals can spend the profits without getting caught. No victim hands over money in the moment; the harm is to the whole financial system's integrity.",
+    "Because criminals don't respect org charts, firms increasingly merge the two disciplines into **FRAML (Fraud + AML).** Our scenario's criminal exploited the *gap* between siloed teams — a unified view of the customer would have connected the stolen card to the mule accounts. The scale is staggering: financial crime drains trillions globally each year, which is why regulators worldwide — Australia's **AUSTRAC**, NZ's FIU, India's **FIU-IND**, and the global standard-setter **FATF** — police it hard, with heavy penalties for firms that don't."
+  ],
+  "bridge": "So at work, you can hold two questions in your head about any suspicious activity: *Is someone being deceived to give up money or access?* (fraud) and *Is someone trying to disguise where money came from?* (laundering). The smartest financial-crime defences refuse to treat these as separate problems — because criminals never do.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Mind the gap",
+      "prompt": "The criminal slipped through the gap between the siloed fraud and AML teams. What's the core lesson?",
+      "options": [
+        { "label": "Hire more fraud analysts.", "verdict": "ok", "feedback": "More hands might help, but it misses the point: the failure was the *gap between* the teams, not a shortage in one of them." },
+        { "label": "Unite fraud and AML into one connected view (FRAML).", "verdict": "good", "feedback": "Exactly. The stolen card (fraud) and the mule accounts (laundering) were one criminal story. Connecting the signals — FRAML — closes the gap criminals exploit." },
+        { "label": "Accept that some criminals always get through.", "verdict": "bad", "feedback": "Some leakage is realistic, but this loss was preventable. Shrugging at a structural blind spot is exactly what regulators penalise." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Fraud or laundering?",
+      "prompt": "Sort each act. Remember: fraud = deception for gain; laundering = disguising dirty money.",
+      "buckets": [
+        { "id": "fraud", "label": "Fraud" },
+        { "id": "laundering", "label": "Money laundering" }
+      ],
+      "items": [
+        { "label": "Using a stolen credit card to buy goods", "bucket": "fraud" },
+        { "label": "Funnelling crime proceeds through fake businesses", "bucket": "laundering" },
+        { "label": "Tricking someone into paying a fake invoice", "bucket": "fraud" },
+        { "label": "Buying property to make dirty cash look legitimate", "bucket": "laundering" },
+        { "label": "Phishing for someone's banking login", "bucket": "fraud" }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Financial-crime basics",
+      "prompt": "Match each term to its meaning.",
+      "pairs": [
+        { "left": "Fraud", "right": "Deceiving a person or system to gain money or access" },
+        { "left": "Money laundering", "right": "Making the proceeds of crime look legitimate" },
+        { "left": "FRAML", "right": "Running fraud and anti-money-laundering defences together" },
+        { "left": "FATF", "right": "The global body that sets anti-financial-crime standards" },
+        { "left": "AUSTRAC", "right": "Australia's financial-crime regulator and intelligence unit" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Financial crime is mostly fraud (deceiving someone for money) and money laundering (disguising dirty money) — and since they're two ends of one pipeline, smart firms fight them together as FRAML.”",
+  "checkpoint": [
+    {
+      "q": "The key difference between fraud and money laundering is…",
+      "options": [
+        "Fraud is legal; laundering is not",
+        "Fraud is deception for gain; laundering disguises the proceeds of crime",
+        "They are exactly the same thing",
+        "Only laundering involves money"
+      ],
+      "answer": 1,
+      "explain": "Fraud tricks someone out of money/access; laundering hides where already-dirty money came from."
+    },
+    {
+      "q": "Why combine fraud and AML teams into 'FRAML'?",
+      "options": [
+        "To save on salaries only",
+        "Because criminals exploit the gaps between siloed teams",
+        "Because the law forbids separate teams",
+        "There's no real reason"
+      ],
+      "answer": 1,
+      "explain": "Fraud generates dirty money and laundering hides it — one pipeline; a connected view closes the gap."
+    },
+    {
+      "q": "FATF is best described as…",
+      "options": [
+        "A type of fraud",
+        "The global standard-setter for fighting financial crime",
+        "A laundering technique",
+        "An Australian bank"
+      ],
+      "answer": 1,
+      "explain": "The Financial Action Task Force sets the international AML/CFT standards that national regulators implement."
+    }
+  ]
+}

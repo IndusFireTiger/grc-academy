@@ -1,0 +1,94 @@
+{
+  "id": 2,
+  "slug": "people-and-process",
+  "title": "People & Process",
+  "subtitle": "The most common way things break",
+  "icon": "👥",
+  "hook": {
+    "metaphor": "Ask any head chef where the night goes wrong and they won't say 'the oven' — they'll say 'people and the system we work to.' The new waiter who rings up the wrong table. The missing checklist that lets a raw dish leave the pass. Most operational losses aren't dramatic disasters; they're small human slips and sloppy processes, repeated.",
+    "scenario": "A junior trader fat-fingers an extra zero and buys 10× what was intended. Was this a 'bad person' problem — or did the process let one tired human cause a catastrophe with no safety net?"
+  },
+  "learn": [
+    "Two of the four sources — **people** and **process** — cause the lion's share of everyday operational losses. They're deeply intertwined: a good process protects against human error; a bad process amplifies it.",
+    "**People risk** has an honest half and a dishonest half. The honest half is plain **human error** — fatigue, misunderstanding, a slip of the finger (our fat-finger trade). The dishonest half is **internal fraud** — someone deliberately abusing access for personal gain. Both are 'people', but you manage them differently: training and ergonomics for error, controls and culture for fraud.",
+    "**Process risk** — often called **execution risk** — is when the *way work flows* is flawed: a missing approval step, an unclear handoff, no reconciliation, a manual workaround that everyone relies on. The fat-finger trade is really a process failure: why was one person able to execute a giant trade with no second check or limit?",
+    "The most important mindset shift: **blaming the individual is usually the wrong fix.** If one tired person can cause a disaster, the *system* is the problem. Strong operational risk management designs processes that assume people will occasionally err — and catches the error before it becomes a loss. (This is also why 'tone at the top' from the governance level matters: culture decides whether people hide mistakes or surface them.)"
+  ],
+  "bridge": "So at work, when something goes wrong you can resist the urge to find someone to blame and instead ask: *what in the process let a normal human mistake turn into a loss?* The durable fix is almost always a better-designed process — a check, a limit, a second pair of eyes — not just telling people to 'be more careful.'",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Whose fault — or what's the fix?",
+      "prompt": "After the fat-finger trade, leadership debates what to do. Which response actually reduces future risk?",
+      "options": [
+        { "label": "Fire the trader and move on.", "verdict": "bad", "feedback": "Satisfying, but it fixes nothing. The next tired human will make the same slip. You've removed a person, not the weakness." },
+        { "label": "Add a confirmation step and size limits for large trades.", "verdict": "good", "feedback": "Yes — this is process design. You assume humans will err and build a net that catches it. The fix outlives any individual." },
+        { "label": "Send a company-wide email saying 'be careful'.", "verdict": "bad", "feedback": "Awareness alone doesn't stop fatigue-driven slips. Hope is not a control. You need a structural check, not a reminder." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "People or process?",
+      "prompt": "Sort each issue — and notice how often they overlap.",
+      "buckets": [
+        { "id": "people", "label": "Mainly people" },
+        { "id": "process", "label": "Mainly process" }
+      ],
+      "items": [
+        { "label": "A staff member deliberately approves fake invoices", "bucket": "people" },
+        { "label": "There's no reconciliation between two systems", "bucket": "process" },
+        { "label": "A tired clerk transposes digits on a payment", "bucket": "people" },
+        { "label": "Large payments need no second approver", "bucket": "process" },
+        { "label": "A handoff between teams has no clear owner", "bucket": "process" }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Key terms",
+      "prompt": "Match each people/process term to its meaning.",
+      "pairs": [
+        { "left": "Human error", "right": "An honest, unintentional slip or mistake" },
+        { "left": "Internal fraud", "right": "Deliberate abuse of access for personal gain" },
+        { "left": "Execution risk", "right": "Loss from a flawed way of carrying out work" },
+        { "left": "Reconciliation", "right": "Cross-checking two records to catch discrepancies" },
+        { "left": "Segregation of duties", "right": "Splitting a task so no one person controls it end-to-end" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Most operational losses come from ordinary human slips and weak processes — so the real fix is a better-designed process that catches mistakes, not just blaming the person.”",
+  "checkpoint": [
+    {
+      "q": "A 'fat-finger' trade (a typo causing a huge order) is best seen as…",
+      "options": [
+        "Purely the individual's fault",
+        "A process failure that let a normal human error cause a loss",
+        "Market risk",
+        "Unavoidable and unmanageable"
+      ],
+      "answer": 1,
+      "explain": "If one slip can cause disaster, the process lacked a safety net — limits and confirmations are the fix."
+    },
+    {
+      "q": "'Segregation of duties' means…",
+      "options": [
+        "Everyone does the same job",
+        "Splitting a task so no single person controls it end-to-end",
+        "Working in separate buildings",
+        "Outsourcing the work"
+      ],
+      "answer": 1,
+      "explain": "Separating who initiates, approves, and records makes fraud and error far harder — a core process control."
+    },
+    {
+      "q": "The most durable response to a recurring human error is usually to…",
+      "options": [
+        "Tell people to be more careful",
+        "Redesign the process to catch the error automatically",
+        "Punish whoever made it",
+        "Ignore it if it's small"
+      ],
+      "answer": 1,
+      "explain": "Design for the fact that humans err; build a structural check rather than relying on vigilance."
+    }
+  ]
+}

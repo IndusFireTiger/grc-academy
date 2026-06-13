@@ -1,0 +1,95 @@
+{
+  "id": 3,
+  "slug": "systems-and-the-outside-world",
+  "title": "Systems & the Outside World",
+  "subtitle": "When tech fails and the world intrudes",
+  "icon": "🔌",
+  "hook": {
+    "metaphor": "The kitchen can run perfectly and still go dark — because the power grid failed, or the gas supplier didn't deliver. Some operational risks aren't about your people at all; they're about the **systems** you depend on and the **outside world** you can't control. The modern twist: more of your kitchen is now plugged into someone else's wiring.",
+    "scenario": "A neobank's app goes down for six hours. The cause? Not their code — a global outage at the cloud provider they rent everything from. Their customers don't care whose fault it is; they just can't reach their money."
+  },
+  "learn": [
+    "The third source — **systems** — is the risk that the technology you run on fails: an outage, a bug, a failed change, a capacity overload. As finance becomes software, systems risk has swollen from a back-office concern to an existential one. When the app is down, the business is down.",
+    "**Cyber risk** is the sharp end of systems risk: attackers deliberately breaking, stealing, or holding your systems to ransom. It's so important it's often treated as its own GRC theme (it is, in this academy) — but at root, a breach is an operational loss.",
+    "The fourth source — **external events** — is everything outside your walls: natural disasters, pandemics, power cuts, civil disruption. You can't prevent them, so the game changes from *avoidance* to **resilience**: can you keep operating, and recover fast, when they hit?",
+    "The biggest modern shift ties systems and external events together: **third-party and concentration risk.** You now depend on cloud providers, payment networks, and SaaS vendors you don't control. When one of them sneezes, thousands of firms catch a cold at once. This is exactly why APRA's **CPS 230** explicitly demands management of service-provider risk and tested business-continuity plans — and why 'it was our vendor's fault' is never an acceptable answer to a regulator or a customer."
+  ],
+  "bridge": "So at work, you can map your hidden dependencies: *what systems and outside parties would take us down if they failed — and do we have a tested plan to keep running without them?* Resilience isn't assuming nothing breaks; it's rehearsing for when it does. The firms that survive outages are the ones that practised the fire drill before the fire.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Whose problem is the outage?",
+      "prompt": "The neobank is down because its cloud provider failed. A customer complains. What's the right posture?",
+      "options": [
+        { "label": "'Not our fault — blame the cloud provider.'", "verdict": "bad", "feedback": "Outsourcing the work never outsources the responsibility. The customer (and the regulator) hold the bank accountable for resilience, vendor or not." },
+        { "label": "Own it, and invest in resilience — backups, failover, a tested continuity plan.", "verdict": "good", "feedback": "Right. You can't control the vendor's outage, but you can control your dependence on it: redundancy, failover, and a rehearsed plan. That's managing concentration and continuity risk." },
+        { "label": "Promise it will never happen again.", "verdict": "bad", "feedback": "You can't promise that — outages will recur. The honest, credible commitment is faster recovery and less single-point dependence, not zero incidents." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Systems, external, or third-party?",
+      "prompt": "Sort each scenario. (Some blur together — that's the point of modern operational risk.)",
+      "buckets": [
+        { "id": "systems", "label": "Systems failure" },
+        { "id": "external", "label": "External event" },
+        { "id": "thirdparty", "label": "Third-party dependency" }
+      ],
+      "items": [
+        { "label": "A bug in your own app crashes checkout", "bucket": "systems" },
+        { "label": "An earthquake closes your data centre", "bucket": "external" },
+        { "label": "Your payment-processing vendor goes offline", "bucket": "thirdparty" },
+        { "label": "Your database runs out of capacity at peak", "bucket": "systems" },
+        { "label": "A cloud provider you rely on has a global outage", "bucket": "thirdparty" }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Resilience vocabulary",
+      "prompt": "Match each term to its meaning.",
+      "pairs": [
+        { "left": "Business continuity", "right": "Keeping critical operations running through a disruption" },
+        { "left": "Resilience", "right": "The ability to absorb a shock and recover quickly" },
+        { "left": "Concentration risk", "right": "Over-relying on a single vendor or system" },
+        { "left": "Failover", "right": "Switching automatically to a backup when the primary fails" },
+        { "left": "Cyber risk", "right": "Deliberate attacks on your systems and data" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Some operational risk is your tech failing, some is the world outside, and more and more is the vendors you depend on — so the goal isn't 'never break,' it's 'recover fast.'”",
+  "checkpoint": [
+    {
+      "q": "When a critical cloud vendor's outage takes your service down, who is accountable to your customers and regulator?",
+      "options": [
+        "The cloud vendor alone",
+        "You — outsourcing the work doesn't outsource the responsibility",
+        "Nobody, it's an act of god",
+        "The customers themselves"
+      ],
+      "answer": 1,
+      "explain": "You remain responsible for resilience and continuity even when you rely on third parties — a core CPS 230 expectation."
+    },
+    {
+      "q": "'Concentration risk' in operations means…",
+      "options": [
+        "Focusing too hard at work",
+        "Over-relying on a single system, vendor, or point of failure",
+        "Having too many backups",
+        "Concentrating staff in one office"
+      ],
+      "answer": 1,
+      "explain": "When too much depends on one provider or system, its failure cascades widely."
+    },
+    {
+      "q": "For external events you can't prevent, the right strategy is…",
+      "options": [
+        "Pretend they won't happen",
+        "Build and test resilience and business-continuity plans",
+        "Buy more of the same single system",
+        "Blame whoever's nearest"
+      ],
+      "answer": 1,
+      "explain": "You can't stop an earthquake or a grid failure — you rehearse continuity and recovery so you keep running."
+    }
+  ]
+}

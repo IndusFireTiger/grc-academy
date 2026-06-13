@@ -2,6 +2,8 @@
 // (from grc-themes.md) are stubbed as "coming soon" and become live by adding a
 // /themes/<slug>/ content folder and wiring its track here. No component changes needed.
 import { creditRiskTrack } from './themes/credit-risk/track.js';
+import { operationalRiskTrack } from './themes/operational-risk/track.js';
+import { financialCrimeTrack } from './themes/financial-crime/track.js';
 
 export const themes = [
   {
@@ -15,9 +17,9 @@ export const themes = [
     track: creditRiskTrack,
   },
   // ---- Wave 1 ----
-  { slug: 'operational-risk', title: 'Operational Risk', tagline: 'Running the Kitchen', blurb: 'The ways the day goes wrong — people, process, systems, and external shocks.', icon: '🍳', accent: 'amber', status: 'soon', track: null },
+  { slug: 'operational-risk', title: 'Operational Risk', tagline: 'Running the Kitchen', blurb: 'The ways the day goes wrong — people, process, systems, and external shocks.', icon: '🍳', accent: 'amber', status: 'live', track: operationalRiskTrack },
   { slug: 'regulatory-compliance', title: 'Regulatory Compliance', tagline: 'The Rulebook & the Referee', blurb: 'Playing by the laws — GDPR, SOX, HIPAA, DORA, and friends.', icon: '⚖️', accent: 'sky', status: 'soon', track: null },
-  { slug: 'financial-crime', title: 'Financial Crime (FRAML)', tagline: 'The Bouncer at the Door', blurb: 'Spotting fraud and dirty money before it gets in.', icon: '🕵️', accent: 'rose', status: 'soon', track: null },
+  { slug: 'financial-crime', title: 'Financial Crime (FRAML)', tagline: 'The Bouncer at the Door', blurb: 'Spotting fraud and dirty money before it gets in.', icon: '🕵️', accent: 'rose', status: 'live', track: financialCrimeTrack },
   { slug: 'internal-controls', title: 'Internal Controls', tagline: 'Checks & Balances', blurb: 'The locks, keys, and second signatures that keep things honest.', icon: '🔐', accent: 'violet', status: 'soon', track: null },
   // ---- Wave 2 ----
   { slug: 'cyber-it-risk', title: 'Cyber & IT Risk', tagline: 'Guarding the Castle', blurb: 'Digital walls, gates, and spies — plus AI governance.', icon: '🏰', accent: 'sky', status: 'soon', track: null },

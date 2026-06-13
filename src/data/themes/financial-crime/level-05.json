@@ -1,0 +1,95 @@
+{
+  "id": 5,
+  "slug": "the-bouncers-playbook",
+  "title": "The Bouncer’s Playbook",
+  "subtitle": "Controls, false positives & the friction balance",
+  "icon": "📓",
+  "hook": {
+    "metaphor": "A great bouncer keeps the troublemakers out *without* making the whole queue miserable. Check everyone too hard and the genuine customers leave; wave everyone through and the criminals stroll in. The art of running a financial-crime programme is exactly this balancing act — security versus a smooth experience — and getting the balance wrong has real victims on both sides.",
+    "scenario": "A bank's fraud system is set so tight it blocks thousands of legitimate payments a day ('false positives'), furious customers flood the call centre, and overwhelmed analysts start rubber-stamping alerts — so a real fraud slips through. Tightening the net made them *less* safe. How?"
+  },
+  "learn": [
+    "The defences build on each other: **prevention** (KYC at the door, strong authentication), **detection** (transaction monitoring, sanctions screening, anomaly models), and **response** (investigate, freeze, report). Same preventive/detective/corrective logic as Operational Risk — applied to crime.",
+    "The central tension is **friction vs. experience.** Every check adds friction. Too little and criminals get through; too much and you punish honest customers, drive them away, and — as in our scenario — *overload your own analysts* until they miss the real thing. More alerts is not more safety.",
+    "Which is why **false positives** are the quiet enemy. Most alerts are innocent; if analysts drown in noise, genuine threats hide in the flood. The goal isn't *maximum* alerts, it's *smart* alerts — increasingly tuned with the AI/ML from the Credit-Risk track (and carrying the same bias and explainability risks). And beware over-correcting into **de-risking** — bluntly dumping whole categories of customers to avoid effort, which just pushes vulnerable people out of the banking system.",
+    "Wrapping it all is **governance** (Credit-Risk Level 6, again): a named accountable owner (often an **MLRO** — Money Laundering Reporting Officer), regular independent review, staff training, and a culture that rewards surfacing suspicions. Regulators like **AUSTRAC**, the **RBNZ/DIA**, **FIU-IND** and others don't just want controls to *exist* — they want evidence they actually *work*, with eye-watering fines for firms that treat it as a box-tick."
+  ],
+  "bridge": "So at work, you can judge a financial-crime programme by more than 'do they have controls?' Ask: *Is the friction calibrated — catching criminals without drowning honest customers and analysts? Are false positives managed, or is everyone numb to alerts? And is there real governance and evidence it works?* The best programmes are precise, not just strict.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Why did tightening backfire?",
+      "prompt": "Cranking the fraud rules to maximum led to a real fraud slipping through. The core lesson?",
+      "options": [
+        { "label": "They didn't tighten enough — go even stricter.", "verdict": "bad", "feedback": "Stricter would worsen it. The flood of false positives is what numbed the analysts. Beyond a point, more alerts means less real safety." },
+        { "label": "Over-alerting drowned analysts; smarter, tuned detection beats blunt strictness.", "verdict": "good", "feedback": "Exactly. Security isn't a volume dial. Too many false positives exhausts your people and hides real threats. Precision, not maximum friction, is the goal." },
+        { "label": "Abolish the controls — they clearly don't work.", "verdict": "bad", "feedback": "The opposite error. The controls weren't wrong to exist; they were mis-tuned. You calibrate the balance, you don't remove the net." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Prevent, detect, or respond?",
+      "prompt": "Sort each financial-crime control by its role.",
+      "buckets": [
+        { "id": "prevent", "label": "Prevent" },
+        { "id": "detect", "label": "Detect" },
+        { "id": "respond", "label": "Respond" }
+      ],
+      "items": [
+        { "label": "KYC checks before opening an account", "bucket": "prevent" },
+        { "label": "Transaction monitoring flagging an odd pattern", "bucket": "detect" },
+        { "label": "Freezing an account and filing a SAR", "bucket": "respond" },
+        { "label": "Strong customer authentication at login", "bucket": "prevent" },
+        { "label": "Sanctions screening catching a banned name", "bucket": "detect" }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Running the programme",
+      "prompt": "Match each concept to its meaning.",
+      "pairs": [
+        { "left": "False positive", "right": "An alert that turns out to be innocent" },
+        { "left": "Friction", "right": "The effort/checks imposed on customers" },
+        { "left": "De-risking", "right": "Bluntly dropping whole customer groups to avoid effort" },
+        { "left": "MLRO", "right": "The accountable owner of the AML programme" },
+        { "left": "Risk-based approach", "right": "Matching the depth of checks to the level of risk" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Fighting financial crime is a balancing act — enough friction to stop criminals, not so much that you drown honest customers and your own analysts in false positives — all held together by real governance.”",
+  "checkpoint": [
+    {
+      "q": "Why can cranking fraud controls to 'maximum' make a firm *less* safe?",
+      "options": [
+        "It never can — stricter is always safer",
+        "Floods of false positives overload analysts so real threats slip through",
+        "It saves too much money",
+        "Regulators forbid strong controls"
+      ],
+      "answer": 1,
+      "explain": "Beyond a point, more alerts numb your people and hide genuine threats — precision beats blunt strictness."
+    },
+    {
+      "q": "'De-risking' refers to…",
+      "options": [
+        "Carefully tuning controls",
+        "Bluntly dumping whole categories of customers to avoid effort",
+        "Filing a suspicious activity report",
+        "Training staff"
+      ],
+      "answer": 1,
+      "explain": "It's the lazy over-correction — excluding entire groups, often pushing vulnerable people out of banking."
+    },
+    {
+      "q": "Regulators like AUSTRAC and FIU-IND primarily want to see that controls…",
+      "options": [
+        "Exist on paper",
+        "Actually work, with evidence and accountable ownership",
+        "Are as strict as technically possible",
+        "Are kept secret"
+      ],
+      "answer": 1,
+      "explain": "Box-ticking isn't enough — they expect demonstrable effectiveness, governance, and an accountable owner (MLRO)."
+    }
+  ]
+}

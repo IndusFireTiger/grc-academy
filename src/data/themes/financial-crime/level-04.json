@@ -1,0 +1,95 @@
+{
+  "id": 4,
+  "slug": "know-your-customer",
+  "title": "Know Your Customer",
+  "subtitle": "KYC, screening, red flags & reporting",
+  "icon": "🪪",
+  "hook": {
+    "metaphor": "Before the bouncer lets anyone in, he checks the ID, glances at the 'do-not-admit' list, and keeps an eye out for trouble once they're inside. That's the heart of fighting financial crime: know who you're dealing with at the door (**KYC**), screen them against the banned lists (**sanctions/PEPs**), and watch for odd behaviour afterwards (**monitoring**) — and when something's clearly off, tell the authorities.",
+    "scenario": "A new corporate customer wants to open an account. The paperwork is vague about who really owns the company, the listed director shares a name with a sanctioned individual, and the firm immediately starts wiring large sums to a high-risk jurisdiction. How many alarms should be ringing?"
+  },
+  "learn": [
+    "It starts with **KYC — Know Your Customer** (the deeper process is **Customer Due Diligence, CDD**). You verify *who* the customer really is, and for companies, the **beneficial owner** — the actual human who controls it (criminals love to hide behind opaque corporate layers, as in our scenario).",
+    "Risk isn't uniform, so you apply a **risk-based approach**: light-touch checks for low-risk customers, and **Enhanced Due Diligence (EDD)** for high-risk ones — including **PEPs (Politically Exposed Persons)**, whose position carries higher bribery/corruption risk, and customers tied to high-risk jurisdictions.",
+    "Then **sanctions screening**: checking customers and payments against government 'banned lists' (sanctioned people, entities, countries). A sanctions breach is a strict-liability nightmare — firms face enormous fines even for accidental hits, so screening is non-negotiable.",
+    "Finally, **ongoing monitoring** watches transactions for red flags — sudden spikes, round-number transfers, links to risky places, behaviour that doesn't fit the customer's profile. When something is genuinely suspicious, the firm files a report to the national financial-intelligence unit: a **SAR/STR** (Suspicious Activity/Transaction Report) — or in Australia an **SMR** to **AUSTRAC**, with parallels at NZ's FIU and India's **FIU-IND**. A crucial rule: **'tipping off'** — warning the customer they've been reported — is itself a serious crime."
+  ],
+  "bridge": "So at work, you can sanity-check any onboarding or transaction against four questions: *Do we truly know who this is (and who really owns it)? Have we screened them against sanctions/PEP lists? Is their behaviour consistent with their profile? And if it's off, have we reported it — without tipping them off?* Those four cover the backbone of any financial-crime programme.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The suspicious account",
+      "prompt": "Vague ownership, a director matching a sanctions name, and instant large wires to a high-risk country. What's the correct action?",
+      "options": [
+        { "label": "Open it — innocent until proven guilty.", "verdict": "bad", "feedback": "This isn't a court; it's risk management. Multiple serious red flags (hidden ownership + possible sanctions match + high-risk wires) demand EDD and likely a report before proceeding — not a shrug." },
+        { "label": "Do enhanced due diligence, screen the sanctions match, and file a SAR if confirmed.", "verdict": "good", "feedback": "Exactly. Resolve the beneficial owner, clear or confirm the sanctions hit, and if suspicion holds, report to the FIU — quietly. This is the risk-based approach working as designed." },
+        { "label": "Quietly warn the customer you're investigating them.", "verdict": "bad", "feedback": "Never. That's 'tipping off' — a criminal offence that sabotages investigations. You report to the authorities, not to the customer." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "The KYC toolkit",
+      "prompt": "Match each term to its meaning.",
+      "pairs": [
+        { "left": "KYC / CDD", "right": "Verifying who your customer really is" },
+        { "left": "Beneficial owner", "right": "The actual human who ultimately controls a company" },
+        { "left": "PEP", "right": "A politically exposed person — higher corruption risk" },
+        { "left": "Sanctions screening", "right": "Checking names against government banned lists" },
+        { "left": "SAR / SMR", "right": "A report of suspicious activity filed to the authorities" },
+        { "left": "Tipping off", "right": "Illegally warning a customer they've been reported" }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Standard or enhanced?",
+      "prompt": "Which customers warrant Enhanced Due Diligence (EDD) versus standard checks?",
+      "buckets": [
+        { "id": "standard", "label": "Standard due diligence" },
+        { "id": "enhanced", "label": "Enhanced due diligence" }
+      ],
+      "items": [
+        { "label": "A salaried local with a simple savings account", "bucket": "standard" },
+        { "label": "A senior foreign government official (a PEP)", "bucket": "enhanced" },
+        { "label": "A company with deliberately opaque ownership", "bucket": "enhanced" },
+        { "label": "A long-standing low-value retail customer", "bucket": "standard" },
+        { "label": "A client routing funds through a high-risk jurisdiction", "bucket": "enhanced" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Fighting financial crime means knowing who you're dealing with (KYC), checking them against the banned lists (sanctions/PEPs), watching for odd behaviour, and quietly reporting it when it's off — never tipping the customer off.”",
+  "checkpoint": [
+    {
+      "q": "The 'beneficial owner' of a company is…",
+      "options": [
+        "Whoever signed the account form",
+        "The actual human who ultimately owns or controls it",
+        "The company's largest customer",
+        "The bank holding the account"
+      ],
+      "answer": 1,
+      "explain": "Criminals hide behind corporate layers, so KYC must identify the real human in control."
+    },
+    {
+      "q": "'Tipping off' a customer that they've been reported is…",
+      "options": [
+        "Good customer service",
+        "A serious criminal offence",
+        "Required by law",
+        "Only a minor breach"
+      ],
+      "answer": 1,
+      "explain": "Warning the subject sabotages the investigation and is itself a crime; you report to the FIU, not the customer."
+    },
+    {
+      "q": "A PEP (Politically Exposed Person) typically triggers…",
+      "options": [
+        "No checks at all",
+        "Enhanced Due Diligence due to higher corruption risk",
+        "An automatic account closure",
+        "A guaranteed sanctions breach"
+      ],
+      "answer": 1,
+      "explain": "Their position carries elevated bribery/corruption risk, so a risk-based approach applies enhanced scrutiny."
+    }
+  ]
+}

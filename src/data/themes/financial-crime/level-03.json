@@ -1,0 +1,91 @@
+{
+  "id": 3,
+  "slug": "following-the-dirty-money",
+  "title": "Following the Dirty Money",
+  "subtitle": "How money laundering actually works",
+  "icon": "🧺",
+  "hook": {
+    "metaphor": "Dirty money has a problem: it can't explain itself. A suitcase of cash from crime can't just be deposited and spent — the questions would sink the criminal. So laundering is like running dirty laundry through a wash: get it *into* the machine, spin it around until nobody can trace the stains, then fold it neatly back into normal life. Three steps, every time.",
+    "scenario": "A criminal has ₹5 crore in cash from illegal sales. He can't bank it in one go without setting off alarms. Over months it becomes: dozens of small cash deposits, a maze of transfers through shell companies abroad, and finally a 'clean' apartment and a 'profitable' restaurant. Trace the three stages."
+  },
+  "learn": [
+    "Money laundering classically has **three stages.** Learn these three words and you understand the whole game: **placement, layering, integration.**",
+    "**Placement** is getting the dirty cash *into* the financial system — the riskiest step, because raw cash is conspicuous. Criminals break it into small deposits (**structuring** / 'smurfing') to stay under reporting thresholds, or push it through cash-heavy businesses.",
+    "**Layering** is the spin cycle: moving the money through many transactions — transfers, shell companies, foreign accounts, crypto, buying and selling assets — to break the trail between the money and its criminal source. The more confusing the maze, the harder to follow.",
+    "**Integration** is the money returning to the criminal looking clean and legitimate — as 'business profits', property, or investment returns they can spend openly. Our criminal's apartment and restaurant are integration. The defender's job is to spot the wash at any stage — and crucially, to file a report when something looks off. (Note: criminals also do the reverse — **terrorist financing** — moving *clean* money toward harm; AML and counter-terrorist-financing, 'CFT', are policed together.)"
+  ],
+  "bridge": "So at work, you can recognise the shape of laundering instead of just sensing 'something's dodgy.' Ask: *Is dirty money getting in (placement)? Being shuffled to hide its trail (layering)? Or coming back as fake-legit wealth (integration)?* Naming the stage tells you what red flags to expect — and structuring, shells, and unexplained wealth are the classic tells.",
+  "interactions": [
+    {
+      "type": "classify",
+      "title": "Name the stage",
+      "prompt": "Sort each action into the laundering stage it belongs to.",
+      "buckets": [
+        { "id": "placement", "label": "Placement (get it in)" },
+        { "id": "layering", "label": "Layering (hide the trail)" },
+        { "id": "integration", "label": "Integration (spend it clean)" }
+      ],
+      "items": [
+        { "label": "Making many small cash deposits under the alert threshold", "bucket": "placement" },
+        { "label": "Wiring funds through shell companies in several countries", "bucket": "layering" },
+        { "label": "Buying an apartment with the now-'clean' funds", "bucket": "integration" },
+        { "label": "Depositing crime cash through a cash-heavy car wash", "bucket": "placement" },
+        { "label": "Rapid buy/sell of assets to muddy the trail", "bucket": "layering" },
+        { "label": "Drawing a 'salary' from a fake-profitable restaurant", "bucket": "integration" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "Spot the smurf",
+      "prompt": "A new customer makes nine cash deposits of ₹49,000 across three branches in two days (just under a ₹50,000 reporting threshold). The right read?",
+      "options": [
+        { "label": "Normal — each deposit is under the limit, so it's fine.", "verdict": "bad", "feedback": "Staying *just* under the threshold, repeatedly, across branches, is the textbook tell of structuring (smurfing). The pattern is the red flag, not any single deposit." },
+        { "label": "Likely structuring at the placement stage — investigate and consider a report.", "verdict": "good", "feedback": "Exactly. Deliberately breaking cash into sub-threshold chunks to dodge reporting is classic placement-stage laundering. This is what monitoring is built to catch." },
+        { "label": "It's integration, the final stage.", "verdict": "ok", "feedback": "Right instinct that it's suspicious, wrong stage. Getting cash *in* via sub-threshold deposits is placement; integration is when it returns looking legitimate." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Laundering vocabulary",
+      "prompt": "Match each term to its meaning.",
+      "pairs": [
+        { "left": "Placement", "right": "Getting dirty cash into the financial system" },
+        { "left": "Layering", "right": "Shuffling money through transactions to hide its source" },
+        { "left": "Integration", "right": "Returning the money as apparently legitimate wealth" },
+        { "left": "Structuring (smurfing)", "right": "Splitting cash into sub-threshold deposits to dodge reporting" },
+        { "left": "Shell company", "right": "A company with no real business, used to obscure flows" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Money laundering is a three-step wash — get the dirty money in (placement), shuffle it to hide the trail (layering), then bring it back looking clean (integration).”",
+  "checkpoint": [
+    {
+      "q": "The three classic stages of money laundering are…",
+      "options": [
+        "Placement, layering, integration",
+        "Buy, hold, sell",
+        "Deposit, withdraw, repeat",
+        "People, process, systems"
+      ],
+      "answer": 0,
+      "explain": "Get it in (placement), hide the trail (layering), bring it back clean (integration)."
+    },
+    {
+      "q": "Making many deposits just under a reporting threshold is called…",
+      "options": ["Integration", "Structuring (smurfing)", "Hedging", "Reconciliation"],
+      "answer": 1,
+      "explain": "Structuring deliberately breaks cash into sub-threshold chunks to avoid triggering reports — a placement-stage red flag."
+    },
+    {
+      "q": "Terrorist financing differs from laundering in that it often moves…",
+      "options": [
+        "Only physical gold",
+        "Clean money toward causing harm (rather than hiding dirty money)",
+        "Money that is always large",
+        "Nothing at all"
+      ],
+      "answer": 1,
+      "explain": "Laundering disguises dirty money's origin; terrorist financing can move clean funds toward harm — hence AML/CFT together."
+    }
+  ]
+}

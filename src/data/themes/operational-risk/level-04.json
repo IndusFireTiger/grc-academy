@@ -1,0 +1,94 @@
+{
+  "id": 4,
+  "slug": "measuring-the-mess",
+  "title": "Measuring the Mess",
+  "subtitle": "Risk registers, RCSA, KRIs and loss data",
+  "icon": "📊",
+  "hook": {
+    "metaphor": "A good head chef doesn't just *feel* that things are getting risky — they track it. How many dishes came back tonight? How close did we get to running out of gas? Operational risk teams do the same: they turn the vague dread of 'something could go wrong' into things you can list, score, and watch. You can't manage what you don't measure.",
+    "scenario": "Two teams both 'feel fine' about their risks. One keeps a register, scores each risk by likelihood and impact, and watches early-warning indicators. The other just hopes. Six months later, only one of them saw the problem coming. Which — and why?"
+  },
+  "learn": [
+    "Step one is the **risk register**: a living list of what could go wrong, each scored by — you guessed it — **likelihood × impact** (the same idea from Credit Risk Level 1, and the same colours as a heat map). It forces the vague into the specific.",
+    "Step two is the **RCSA — Risk and Control Self-Assessment.** Teams systematically ask, for each risk, 'how bad could this be, and how good are our controls against it?' It surfaces the gaps *before* they cost money. Boring, structured, and quietly powerful.",
+    "Step three is watching **leading vs lagging indicators.** **Loss event data** (what already went wrong, and what it cost) is *lagging* — it tells you about the past. **Key Risk Indicators (KRIs)** are *leading* — early-warning metrics like staff turnover, system downtime, or rising error rates that flash amber *before* the loss lands. The team that 'saw it coming' was watching its KRIs.",
+    "Be honest about the limits, though. Operational risk is hard to quantify precisely — rare, severe events don't fit neat statistics, and **model risk** means your measurement can itself be wrong. So good teams pair the numbers with judgement and scenario thinking ('what's our worst plausible day?') rather than trusting a single tidy figure."
+  ],
+  "bridge": "So at work, you can push any team beyond 'we feel okay' with three questions: *Where's your risk register? Have you self-assessed your controls (RCSA)? What early-warning indicators are you actually watching?* A risk that's been named, scored, and monitored is a risk you can get ahead of; an unmeasured one just waits to surprise you.",
+  "interactions": [
+    {
+      "type": "match",
+      "title": "The measurement toolkit",
+      "prompt": "Match each tool to what it does.",
+      "pairs": [
+        { "left": "Risk register", "right": "A living list of risks, each scored by likelihood × impact" },
+        { "left": "RCSA", "right": "Teams self-assess how strong their controls are" },
+        { "left": "Loss event data", "right": "A record of what went wrong and what it cost (lagging)" },
+        { "left": "Key Risk Indicator (KRI)", "right": "An early-warning metric that flags trouble ahead (leading)" },
+        { "left": "Scenario analysis", "right": "Imagining your worst plausible day to test readiness" }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Leading or lagging?",
+      "prompt": "Sort each metric. Leading indicators warn you *before*; lagging ones tell you *after*.",
+      "buckets": [
+        { "id": "leading", "label": "Leading (early warning)" },
+        { "id": "lagging", "label": "Lagging (after the fact)" }
+      ],
+      "items": [
+        { "label": "Number of losses recorded last quarter", "bucket": "lagging" },
+        { "label": "Rising system error rate this week", "bucket": "leading" },
+        { "label": "Spiking staff turnover in a key team", "bucket": "leading" },
+        { "label": "Total fraud losses booked last year", "bucket": "lagging" },
+        { "label": "Growing backlog of overdue control checks", "bucket": "leading" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "Trust the single number?",
+      "prompt": "A vendor sells a model that outputs one precise figure: 'your operational risk = ₹4.2 crore.' How should you treat it?",
+      "options": [
+        { "label": "Accept it — it's a precise, scientific number.", "verdict": "bad", "feedback": "False precision. Rare, severe events resist tidy statistics, and the model itself carries model risk. One exact figure hides huge uncertainty." },
+        { "label": "Use it as one input, alongside judgement and scenarios.", "verdict": "good", "feedback": "Right. Numbers inform but don't replace thinking. Pair the estimate with 'what's our worst plausible day?' and expert judgement." },
+        { "label": "Ignore all measurement — it's hopeless.", "verdict": "bad", "feedback": "Too far the other way. Imperfect measurement still beats hoping. Register it, score it, watch KRIs — just don't worship a single number." }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “You measure operational risk by listing and scoring it (register), checking your controls (RCSA), and watching early-warning signs (KRIs) — while staying humble that no single number is the whole truth.”",
+  "checkpoint": [
+    {
+      "q": "A Key Risk Indicator (KRI) is valuable because it…",
+      "options": [
+        "Records losses after they happen",
+        "Gives early warning *before* a loss lands",
+        "Replaces the need for any controls",
+        "Is always perfectly accurate"
+      ],
+      "answer": 1,
+      "explain": "KRIs are leading indicators — rising error rates or turnover flash amber before the loss arrives."
+    },
+    {
+      "q": "An RCSA (Risk and Control Self-Assessment) is mainly about…",
+      "options": [
+        "Teams assessing how strong their controls are against each risk",
+        "Calculating profit",
+        "Marketing the product",
+        "Hiring staff"
+      ],
+      "answer": 0,
+      "explain": "It's a structured self-check of risks and the controls meant to contain them, surfacing gaps early."
+    },
+    {
+      "q": "Why be cautious about a single precise operational-risk number?",
+      "options": [
+        "Numbers are always useless",
+        "Rare severe events resist neat statistics and the model itself can be wrong",
+        "Regulators ban all numbers",
+        "It's too expensive to calculate"
+      ],
+      "answer": 1,
+      "explain": "False precision hides real uncertainty; pair estimates with judgement and scenario thinking."
+    }
+  ]
+}

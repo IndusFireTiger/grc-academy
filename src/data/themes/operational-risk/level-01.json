@@ -1,0 +1,80 @@
+{
+  "id": 1,
+  "slug": "what-could-go-wrong",
+  "title": "What Could Go Wrong?",
+  "subtitle": "Foundations: the four sources of operational risk",
+  "icon": "🍳",
+  "hook": {
+    "metaphor": "Run a busy restaurant kitchen for one night and you'll understand operational risk in your bones. A chef burns himself, the fridge dies, an order ticket gets lost, a water main bursts outside. None of these are about *markets* or *lending* — they're about the messy business of *getting things done*. That's operational risk: everything that can go wrong inside the machine.",
+    "scenario": "A bank loses millions — not because borrowers defaulted, and not because markets moved, but because a single botched software update took payments offline for a day. Which kind of risk just bit them?"
+  },
+  "learn": [
+    "**Operational risk is the risk of loss from inadequate or failed internal processes, people, and systems, or from external events.** That definition (the global Basel one) has four neat sources worth memorising: **people, process, systems, and external events.** Almost every operational mishap is one of these four.",
+    "It's the odd one out among risk types. **Credit risk** is a borrower not paying; **market risk** is prices moving. Operational risk is different — it's not about making a bet that goes wrong, it's about the *plumbing* failing while you do everything else. You can't avoid it by not lending; you carry it just by operating.",
+    "It hides in plain sight and comes in many flavours: a staff member's honest mistake, a deliberate internal fraud, a broken process, an IT outage, a cyber-attack, a pandemic, a key supplier collapsing. Even **model risk** — a flawed model giving bad answers (remember the biased credit model?) — is operational risk.",
+    "Regulators take it very seriously precisely because it's everywhere. Australia's **APRA CPS 230** (Operational Risk Management) requires regulated firms to identify, manage, and build resilience against exactly these failures; New Zealand's RBNZ and India's RBI have parallel expectations, and Basel sets the global tone. The message: operating is itself a risk you must manage."
+  ],
+  "bridge": "So at work, you can instantly categorise an incident by asking 'which of the four?' — was it **people**, **process**, **systems**, or an **external event**? That single question routes a problem to the right owner and the right fix. A people problem needs training or culture; a systems problem needs engineering; you don't solve a process gap with a pep talk.",
+  "interactions": [
+    {
+      "type": "classify",
+      "title": "Which source is it?",
+      "prompt": "Sort each mishap into the operational-risk source it springs from.",
+      "buckets": [
+        { "id": "people", "label": "People" },
+        { "id": "process", "label": "Process" },
+        { "id": "systems", "label": "Systems" },
+        { "id": "external", "label": "External event" }
+      ],
+      "items": [
+        { "label": "A clerk accidentally pays a supplier twice", "bucket": "people" },
+        { "label": "There's no step to double-check large payments", "bucket": "process" },
+        { "label": "A server outage halts all transactions", "bucket": "systems" },
+        { "label": "A flood shuts the head office for a week", "bucket": "external" },
+        { "label": "An employee deliberately siphons off funds", "bucket": "people" },
+        { "label": "A key cloud provider suffers a global outage", "bucket": "external" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "Name that risk",
+      "prompt": "The bank lost millions from a botched software update that took payments offline. The cleanest classification is…",
+      "options": [
+        { "label": "Credit risk — money was lost", "verdict": "bad", "feedback": "Losing money doesn't make it credit risk. No borrower defaulted. The loss came from a failed internal *system change* — that's operational risk." },
+        { "label": "Operational risk — a systems/process failure", "verdict": "good", "feedback": "Exactly. A failed software update is the 'systems' (and arguably 'process') source of operational risk. The plumbing broke." },
+        { "label": "Market risk — it affected the bank's value", "verdict": "bad", "feedback": "Market risk is about prices (rates, FX, equities) moving. Nothing here was a market move; it was an internal failure." }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Operational risk is everything that can go wrong while you *operate* — down to people, process, systems, or the outside world — not the bets you make, but the plumbing that runs them.”",
+  "checkpoint": [
+    {
+      "q": "The four classic sources of operational risk are…",
+      "options": [
+        "Credit, market, liquidity, fraud",
+        "People, process, systems, and external events",
+        "Profit, loss, revenue, cost",
+        "Past, present, future, unknown"
+      ],
+      "answer": 1,
+      "explain": "The Basel definition: loss from failed/inadequate people, processes, and systems, or from external events."
+    },
+    {
+      "q": "What makes operational risk different from credit and market risk?",
+      "options": [
+        "It never causes financial loss",
+        "It comes from the business operating, not from a bet on borrowers or prices",
+        "It only affects banks",
+        "It can be completely eliminated"
+      ],
+      "answer": 1,
+      "explain": "It's the plumbing failing while you operate — you carry it just by running, regardless of any lending or trading bet."
+    },
+    {
+      "q": "A flawed model that produces bad decisions is an example of…",
+      "options": ["Market risk", "Operational risk (model risk)", "No risk at all", "Liquidity risk"],
+      "answer": 1,
+      "explain": "Model risk — a model being wrong, biased, or misused — sits under operational risk."
+    }
+  ]
+}
