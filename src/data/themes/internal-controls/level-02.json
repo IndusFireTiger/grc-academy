@@ -1,0 +1,79 @@
+{
+  "id": 2,
+  "slug": "types-of-controls",
+  "title": "Types of Controls",
+  "subtitle": "Prevent, detect, correct — and how",
+  "icon": "🧰",
+  "hook": {
+    "metaphor": "Think about protecting a house. A lock stops the burglar getting in (prevent). An alarm tells you if they do (detect). Insurance and a locksmith help you recover afterwards (correct). You wouldn't rely on just one — and you'd automate what you can (a smart lock beats remembering to lock up). Controls come in exactly these flavours.",
+    "scenario": "A finance team is proud that every payment needs manager approval. But the approver rubber-stamps 200 a day without looking, and nobody ever reviews the payments afterward. They have one type of control, done weakly, and nothing to back it up. Where are the gaps?"
+  },
+  "learn": [
+    "By **timing**, controls are **preventive** (stop the bad thing before it happens — approvals, access limits, validation), **detective** (catch it quickly after — reconciliations, exception reports, monitoring), or **corrective** (fix and recover — backups, incident response, clawbacks). A healthy system has all three; prevention always leaks, so you need detection and recovery too.",
+    "By **how they run**, controls are **manual** (a person does it — flexible but error-prone and tiring, like our rubber-stamping approver) or **automated** (a system enforces it — consistent, scalable, and harder to bypass). Automate the repetitive, high-volume checks; reserve human judgement for the genuinely judgemental.",
+    "By **importance**, some are **key controls** — the few that really matter, where failure would be serious — and others are secondary. When a key control can't operate, a **compensating control** stands in to cover the gap. You spend your attention and assurance on the key ones.",
+    "The art is the **mix**. Our payment team has a single preventive control (approval), executed so weakly it's theatre, with no detective backstop. Better: tighten the approval (only large/unusual payments need human eyes), automate validation, and add a detective review of a sample afterwards. Layered, varied controls beat one heroic checkpoint every time."
+  ],
+  "bridge": "So at work, you can pressure-test any control setup with two questions: *Do we have prevention, detection, AND correction — or are we betting everything on one?* and *Could this be automated to be more reliable than a tired human?* A single manual checkpoint, however well-meant, is the most common and most fragile control pattern there is.",
+  "interactions": [
+    {
+      "type": "classify",
+      "title": "Prevent, detect, or correct?",
+      "prompt": "Sort each control by when it acts.",
+      "buckets": [
+        { "id": "prevent", "label": "Preventive" },
+        { "id": "detect", "label": "Detective" },
+        { "id": "correct", "label": "Corrective" }
+      ],
+      "items": [
+        { "label": "Access limits so only authorised staff can pay", "bucket": "prevent" },
+        { "label": "A daily reconciliation flagging odd payments", "bucket": "detect" },
+        { "label": "Restoring data from backup after an error", "bucket": "correct" },
+        { "label": "Requiring approval before a large transfer", "bucket": "prevent" },
+        { "label": "An exception report reviewed each morning", "bucket": "detect" },
+        { "label": "Clawing back an incorrect payment", "bucket": "correct" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "Fix the rubber-stamp",
+      "prompt": "The manager approves 200 payments a day without looking, with no after-the-fact review. Best improvement?",
+      "options": [
+        { "label": "Keep it — at least there's an approval step.", "verdict": "bad", "feedback": "An approval nobody actually performs is theatre, not a control. On paper it exists; in reality it stops nothing. This is the documented-vs-implemented trap." },
+        { "label": "Automate routine checks, route only unusual payments to humans, add a sample review after.", "verdict": "good", "feedback": "Exactly. You make the preventive control meaningful (humans see only what needs judgement), let automation handle volume, and add a detective backstop. Layered and realistic." },
+        { "label": "Add a second rubber-stamping approver.", "verdict": "bad", "feedback": "Two people not looking is no better than one. Adding more of a broken manual control just doubles the theatre." }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Controls come in three timings — prevent, detect, correct — and two styles — manual or automated — and a good system layers a mix rather than betting everything on one tired checkpoint.”",
+  "checkpoint": [
+    {
+      "q": "A reconciliation that catches an error the next day is a… control.",
+      "options": ["Preventive", "Detective", "Corrective", "Compensating"],
+      "answer": 1,
+      "explain": "Detective controls catch problems quickly after they occur; preventive ones stop them up front."
+    },
+    {
+      "q": "Why prefer automated controls for high-volume, repetitive checks?",
+      "options": [
+        "They're more fun",
+        "They're consistent, scalable, and harder to bypass than tired humans",
+        "They never need review",
+        "They remove all risk"
+      ],
+      "answer": 1,
+      "explain": "Automation beats manual effort on consistency and volume; save human judgement for genuinely judgemental calls."
+    },
+    {
+      "q": "A 'compensating control' is one that…",
+      "options": [
+        "Pays staff a bonus",
+        "Stands in to cover the gap when a key control can't operate",
+        "Replaces the need for any controls",
+        "Only exists on paper"
+      ],
+      "answer": 1,
+      "explain": "When a key control fails or can't run, a compensating control covers the same risk another way."
+    }
+  ]
+}

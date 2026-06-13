@@ -1,0 +1,78 @@
+{
+  "id": 4,
+  "slug": "the-referee",
+  "title": "The Referee",
+  "subtitle": "How regulators actually work",
+  "icon": "🧑‍⚖️",
+  "hook": {
+    "metaphor": "Every serious game has a referee — and knowing how the ref thinks changes how you play. Regulators are the referees of finance: they set expectations, watch the game, blow the whistle, and can send you off. Treating them as a faceless enemy is a rookie error; the pros learn to play *with* the referee in view.",
+    "scenario": "A firm gets a polite letter from its regulator requesting information about a product. One executive wants to stall and reveal as little as possible. Another wants to be fully open. Who understands how regulators actually operate?"
+  },
+  "learn": [
+    "Around the world the referees have names worth knowing: Australia's **ASIC** (conduct) and **APRA** (prudential), **RBNZ** (New Zealand), **RBI** and **SEBI** (India), the **FCA**/**PRA** (UK), and the **SEC** (US). Different jurisdictions, same basic job: licence firms, set rules, supervise, and enforce.",
+    "Regulators work through a few main levers: **licensing** (you need permission to operate, and they can revoke it), **supervision** (ongoing monitoring, reporting requirements, and **examinations**/inspections), and **enforcement** (investigations, fines, bans, and public censure when things go wrong).",
+    "The relationship is built on **candour**. Regulators reward firms that are open, self-report problems, and cooperate — and punish those that hide, stall, or mislead far more harshly. Stonewalling the polite letter (our scenario) is the worst move: it converts a manageable enquiry into an adversarial investigation. Openness is not weakness; it's strategy.",
+    "Modern supervision is increasingly **risk-based and data-driven**: regulators focus their attention where the potential harm is greatest, and they collect ever more data to spot problems themselves. The implication: assume the referee can see more than you think, and that 'they'll never notice' is a losing bet."
+  ],
+  "bridge": "So at work, you can treat the regulator as a stakeholder to manage well, not an enemy to evade: respond to enquiries promptly and openly, self-report issues before they're discovered, and keep the evidence that shows good faith. Firms that build a credible, candid relationship with their referee get the benefit of the doubt; firms that play games get the book thrown at them.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The regulator's letter",
+      "prompt": "The regulator requests information about a product. What's the smart posture?",
+      "options": [
+        { "label": "Stall and disclose the bare minimum.", "verdict": "bad", "feedback": "The fastest way to turn a routine enquiry into a hostile investigation. Regulators read stalling as a red flag and escalate. You lose the benefit of the doubt." },
+        { "label": "Respond promptly, openly, and completely — and fix any issue you find.", "verdict": "good", "feedback": "Exactly. Candour and cooperation are rewarded; they keep the matter proportionate and build credibility you'll need later. Self-correcting beats getting caught." },
+        { "label": "Ignore it and hope it goes away.", "verdict": "bad", "feedback": "It won't. Ignoring a regulator invites the harshest response available — and can itself be a breach. Silence is the most expensive answer." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Meet the referees",
+      "prompt": "Match each regulator to its remit.",
+      "pairs": [
+        { "left": "APRA (Australia)", "right": "Prudential safety of banks/insurers" },
+        { "left": "ASIC (Australia)", "right": "Market conduct and consumer protection" },
+        { "left": "RBNZ (New Zealand)", "right": "Central bank & prudential regulator" },
+        { "left": "RBI (India)", "right": "Central bank & banking regulator" },
+        { "left": "FCA (UK)", "right": "Conduct regulation of financial firms" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Regulators are the referees — they licence, supervise, and enforce — and the winning move is candour and cooperation, because stonewalling just turns an enquiry into a war.”",
+  "checkpoint": [
+    {
+      "q": "The three main levers regulators use are…",
+      "options": [
+        "Marketing, sales, and HR",
+        "Licensing, supervision, and enforcement",
+        "Lending, trading, and saving",
+        "Hiring, firing, and promoting"
+      ],
+      "answer": 1,
+      "explain": "They grant/revoke licences, supervise via monitoring and exams, and enforce with fines, bans, and censure."
+    },
+    {
+      "q": "When a regulator makes an enquiry, the smartest approach is to…",
+      "options": [
+        "Stall and reveal as little as possible",
+        "Respond promptly and openly, and self-correct issues",
+        "Ignore it",
+        "Mislead them"
+      ],
+      "answer": 1,
+      "explain": "Candour and cooperation keep matters proportionate; stonewalling escalates them and forfeits goodwill."
+    },
+    {
+      "q": "Modern 'risk-based' supervision means regulators…",
+      "options": [
+        "Check every firm equally at random",
+        "Focus attention where potential harm is greatest, using data",
+        "Never inspect anyone",
+        "Only look at small firms"
+      ],
+      "answer": 1,
+      "explain": "They direct scrutiny toward the biggest risks and increasingly detect problems from data themselves."
+    }
+  ]
+}

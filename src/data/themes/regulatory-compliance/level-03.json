@@ -1,0 +1,78 @@
+{
+  "id": 3,
+  "slug": "compliance-as-a-spec",
+  "title": "Compliance as a Spec",
+  "subtitle": "Turning law into things you actually do",
+  "icon": "🧩",
+  "hook": {
+    "metaphor": "A law is like a customer saying 'I want it to be safe.' Useless to a builder until someone translates it into a *spec*: 'fit two locks, a smoke alarm, and a fire exit.' Compliance is that translation job — turning vague legal language into a concrete checklist of obligations and controls that someone can actually build and prove.",
+    "scenario": "Legal forwards a 90-page new regulation with a note: 'make sure we comply.' Panic? Or is there a repeatable way to turn that wall of text into a short list of things the business must now do?"
+  },
+  "learn": [
+    "The core move is **'law → obligation → control.'** You read the regulation, extract each concrete **obligation** ('breaches must be reported within 72 hours'), and assign a **control** that satisfies it ('automated breach-detection + a 72-hour escalation process with an owner'). The 90 pages collapse into a manageable list.",
+    "Teams keep these in an **obligations register** (sometimes an obligations library): every applicable rule, mapped to the controls, owners, and evidence that satisfy it. It's the bridge between the legal world and the operational world — and it's what you show a regulator to prove you've thought it through.",
+    "Crucially, regulation **never stands still**. New laws land, old ones change. **Regulatory change management** is the discipline of horizon-scanning for changes, assessing impact, and updating your obligations and controls before the deadline — not after the breach.",
+    "And one obligation often demands several capabilities. 'The right to be forgotten' (delete my data) sounds simple but forces real product features: find every copy of a person's data, delete it, and prove you did. This is why compliance and product/engineering must talk early — a rule is a requirement, and requirements shape what you build."
+  ],
+  "bridge": "So at work, you can defuse any scary regulation with the same pipeline: *what are the concrete obligations? what control satisfies each? who owns it, and what evidence proves it?* That turns 'make sure we comply' from a vague dread into a finite, trackable list — and gives you something real to show a regulator.",
+  "interactions": [
+    {
+      "type": "match",
+      "title": "Law → obligation → control",
+      "prompt": "Match each legal requirement to the concrete control that satisfies it.",
+      "pairs": [
+        { "left": "Report breaches within 72 hours", "right": "Automated detection + a timed escalation process" },
+        { "left": "Right to be forgotten", "right": "A way to find and delete all copies of a person's data" },
+        { "left": "Get consent before using data", "right": "A consent capture-and-record mechanism" },
+        { "left": "Keep accurate financial records", "right": "Reconciliations and an audit trail" },
+        { "left": "Verify customer identity", "right": "A KYC onboarding check" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "The 90-page regulation",
+      "prompt": "Legal sends a new 90-page rule with 'make sure we comply.' Best first move?",
+      "options": [
+        { "label": "Forward it to everyone and hope someone reads it.", "verdict": "bad", "feedback": "Diffusion of responsibility = nobody owns it = a breach waiting to happen. A rule without an owner isn't being managed." },
+        { "label": "Extract the concrete obligations, map each to a control and an owner.", "verdict": "good", "feedback": "Exactly the 'law → obligation → control' pipeline. You turn 90 pages into a finite obligations register with owners and evidence — manageable and defensible." },
+        { "label": "Wait until the regulator asks about it.", "verdict": "bad", "feedback": "That's how deadlines get missed and fines get issued. Regulatory change management is proactive — you act before the deadline, not after the enquiry." }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Compliance turns vague law into a real spec — every obligation mapped to a control, an owner, and evidence — kept in a register and updated as the rules change.”",
+  "checkpoint": [
+    {
+      "q": "An 'obligations register' is…",
+      "options": [
+        "A list of customers",
+        "A mapping of each applicable rule to its controls, owners, and evidence",
+        "The company's profit log",
+        "A type of fine"
+      ],
+      "answer": 1,
+      "explain": "It's the bridge from legal text to operations — and what you show a regulator to prove you've covered the rules."
+    },
+    {
+      "q": "'Regulatory change management' is about…",
+      "options": [
+        "Ignoring new rules",
+        "Proactively spotting rule changes and updating controls before the deadline",
+        "Changing the regulator",
+        "Rewriting laws yourself"
+      ],
+      "answer": 1,
+      "explain": "Horizon-scan, assess impact, update obligations/controls ahead of time — not after a breach."
+    },
+    {
+      "q": "Why must compliance and product/engineering talk early?",
+      "options": [
+        "They don't need to",
+        "Because a regulatory obligation is a requirement that shapes what you build",
+        "Only to share lunch",
+        "To slow down releases"
+      ],
+      "answer": 1,
+      "explain": "Obligations like 'delete my data' become real product capabilities — compliance is a source of requirements."
+    }
+  ]
+}

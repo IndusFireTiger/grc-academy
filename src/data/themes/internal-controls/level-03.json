@@ -1,0 +1,78 @@
+{
+  "id": 3,
+  "slug": "separation-and-authorization",
+  "title": "Separation & Authorization",
+  "subtitle": "Four eyes, limits, and who's allowed",
+  "icon": "✋",
+  "hook": {
+    "metaphor": "Nuclear missiles famously need two people to turn two keys at once — no single person can launch. That's the most dramatic version of the most important control idea there is: for anything that really matters, don't let one person do it alone. Most fraud and most catastrophic errors trace back to a single unchecked pair of hands.",
+    "scenario": "A manager can create a new supplier in the system, approve invoices to that supplier, and release the payment — all by herself. She invents 'Acme Supplies', approves its invoices, and pays herself. Which control would have made this impossible?"
+  },
+  "learn": [
+    "The cornerstone is **segregation of duties (SoD)**: split any sensitive process so that no one person controls it end-to-end. The classic split is **initiate / approve / record / reconcile** done by *different* people. Our fraudster could do all of it alone — collapse those into one role and you've built a fraud machine.",
+    "Close cousin: the **four-eyes principle** (a.k.a. dual control / maker-checker) — important actions need a second person to review and approve. Two sets of eyes catch both fraud (needs collusion now) and honest mistakes (someone double-checks).",
+    "**Authorization limits** decide *who can approve what*: a junior can sign off ₹10,000, a manager ₹1,00,000, the board ₹1 crore. Limits ensure the size of a decision matches the seniority approving it, so no one can unilaterally commit beyond their level.",
+    "And underpinning all of it: **access controls** — the digital version of locks and keys. People should have the *least privilege* needed to do their job, access should be reviewed regularly, and leavers' access revoked promptly. A perfect SoD design means nothing if everyone secretly has admin rights to override it."
+  ],
+  "bridge": "So at work, you can sniff out the single most common control weakness with one question: *can one person take a sensitive action from start to finish with nobody else involved?* If yes, you've found a fraud-and-error hotspot. The fixes are reliable and well-known: segregate the duties, require four eyes, set authorization limits, and lock down access to least privilege.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The fake supplier",
+      "prompt": "One manager could create a supplier, approve its invoices, and pay it — all alone. The control that stops this?",
+      "options": [
+        { "label": "Trust her more and audit once a decade.", "verdict": "bad", "feedback": "Trust plus a once-a-decade look is exactly how this fraud ran for years. The problem is structural: one person owns the whole chain." },
+        { "label": "Segregate duties so different people set up suppliers, approve invoices, and pay.", "verdict": "good", "feedback": "Exactly. Once those steps require different people, the lone fraud is impossible without collusion, and honest errors get caught. Segregation of duties is the fix." },
+        { "label": "Let her keep all three but add a longer form to fill in.", "verdict": "bad", "feedback": "Paperwork doesn't break the concentration of power. She still controls every step; a longer form just gives the fraud better documentation." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Separation toolkit",
+      "prompt": "Match each control to what it does.",
+      "pairs": [
+        { "left": "Segregation of duties", "right": "No one person controls a process end-to-end" },
+        { "left": "Four-eyes principle", "right": "A second person must review/approve key actions" },
+        { "left": "Authorization limits", "right": "Decision size must match the approver's seniority" },
+        { "left": "Least privilege", "right": "People get only the access their job needs" },
+        { "left": "Access review", "right": "Regularly checking and revoking unneeded access" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “For anything that matters, don't let one person do it alone — split the duties, require a second pair of eyes, set approval limits by seniority, and give people only the access they need.”",
+  "checkpoint": [
+    {
+      "q": "Segregation of duties means…",
+      "options": [
+        "One trusted person does everything",
+        "Splitting a process so no single person controls it end-to-end",
+        "Everyone does the same task",
+        "Working from separate offices"
+      ],
+      "answer": 1,
+      "explain": "Separating initiate/approve/record/reconcile across people makes lone fraud and unchecked error far harder."
+    },
+    {
+      "q": "The 'four-eyes principle' requires that…",
+      "options": [
+        "You wear glasses",
+        "A second person reviews/approves important actions",
+        "Four managers sign everything",
+        "Decisions are made in secret"
+      ],
+      "answer": 1,
+      "explain": "Dual control / maker-checker means a second set of eyes on key actions — catching fraud and mistakes."
+    },
+    {
+      "q": "'Least privilege' access means…",
+      "options": [
+        "Everyone gets admin rights",
+        "People get only the access their role actually requires",
+        "Nobody can access anything",
+        "Access is never reviewed"
+      ],
+      "answer": 1,
+      "explain": "Minimise access to what's needed, review it regularly, and revoke promptly — or SoD can be silently bypassed."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": 2,
+  "slug": "the-big-rulebooks",
+  "title": "The Big Rulebooks",
+  "subtitle": "A field guide to the major regimes",
+  "icon": "📚",
+  "hook": {
+    "metaphor": "A referee doesn't carry one rulebook — they carry a shelf of them, and they know which applies to which moment of the game. Compliance is the same: there isn't 'the regulation', there's a whole library, each volume guarding a different harm. You don't need to memorise them; you need to recognise which book is open on your desk.",
+    "scenario": "A health-tech lender in Australia handles patients' medical data, takes card payments, and reports to investors. A colleague asks, 'so which regulation do we follow?' Trick question — how many rulebooks are open at once here?"
+  },
+  "learn": [
+    "**Privacy & data** is the most universal shelf: Europe's **GDPR**, India's **DPDP Act**, Australia's **Privacy Act** and **Consumer Data Right (CDR)**, New Zealand's **Privacy Act**. Common thread: get consent, use data fairly, protect it, and respect people's rights over it.",
+    "**Financial & prudential** rules keep firms safe and honest: **Basel** standards globally, **APRA**'s prudential standards (Australia), **RBNZ** and **RBI** requirements, and **SOX** (US) for the integrity of financial reporting. Common thread: hold enough buffer, report truthfully, don't blow up.",
+    "**Sector-specific** books apply when you touch certain things: **HIPAA** for US health data, **PCI-DSS** for anyone handling card payments, AML laws (the Financial Crime track) for money movement. Common thread: special data, special rules.",
+    "**Operational resilience** is the newest shelf: the EU's **DORA**, Australia's **APRA CPS 230**, and similar regimes demanding you keep critical services running through disruption. The key skill across all of them isn't recitation — it's translation: turning 'GDPR exists' into '*so we must* get consent, honour deletion requests, and report breaches within 72 hours.' In our scenario, at least three shelves are open at once (privacy, cards/PCI, financial reporting)."
+  ],
+  "bridge": "So at work, you can stop asking 'what's *the* regulation?' and start asking 'which rulebooks are *open* for this activity?' Touching personal data opens privacy law; taking cards opens PCI; moving money opens AML; reporting to investors opens financial-reporting rules. Most real products have several open at once — spotting all of them is half the job.",
+  "interactions": [
+    {
+      "type": "match",
+      "title": "Regime → what it forces",
+      "prompt": "Match each rulebook to what it mainly requires.",
+      "pairs": [
+        { "left": "GDPR / DPDP / Privacy Act", "right": "Consent, fair use, and protection of personal data" },
+        { "left": "Basel / APRA prudential", "right": "Holding enough capital and managing risk soundly" },
+        { "left": "SOX", "right": "Integrity and accuracy of financial reporting" },
+        { "left": "PCI-DSS", "right": "Securely handling payment-card data" },
+        { "left": "HIPAA", "right": "Protecting health information (US)" },
+        { "left": "DORA / CPS 230", "right": "Operational resilience of critical services" }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Which shelf is open?",
+      "prompt": "For each activity, which broad rulebook does it primarily trigger?",
+      "buckets": [
+        { "id": "privacy", "label": "Privacy / data" },
+        { "id": "financial", "label": "Financial / prudential" },
+        { "id": "sector", "label": "Sector-specific" }
+      ],
+      "items": [
+        { "label": "Storing customers' names and addresses", "bucket": "privacy" },
+        { "label": "Processing credit-card payments", "bucket": "sector" },
+        { "label": "Publishing audited financial statements", "bucket": "financial" },
+        { "label": "Honouring a customer's request to delete their data", "bucket": "privacy" },
+        { "label": "Holding a capital buffer against losses", "bucket": "financial" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “There's no single 'the regulation' — there's a library: privacy, financial, sector, and resilience rulebooks — and the skill is spotting which ones are open for what you're doing.”",
+  "checkpoint": [
+    {
+      "q": "GDPR, India's DPDP Act, and Australia's Privacy Act all primarily govern…",
+      "options": ["Capital buffers", "Personal data and privacy", "Card payments", "Insider trading"],
+      "answer": 1,
+      "explain": "They're the privacy/data shelf: consent, fair use, protection, and individuals' rights over their data."
+    },
+    {
+      "q": "PCI-DSS applies to any organisation that…",
+      "options": [
+        "Publishes financial statements",
+        "Handles payment-card data",
+        "Employs more than 50 people",
+        "Operates only in Europe"
+      ],
+      "answer": 1,
+      "explain": "PCI-DSS is the card-data security standard — touch card payments and it's open on your desk."
+    },
+    {
+      "q": "The most useful skill with any regulation is to…",
+      "options": [
+        "Memorise it word-for-word",
+        "Translate it into 'so we must actually do X'",
+        "Assume it doesn't apply",
+        "Wait for the regulator to explain it"
+      ],
+      "answer": 1,
+      "explain": "Turning law into concrete required actions (consent, breach reporting, capital, etc.) is the heart of compliance."
+    }
+  ]
+}

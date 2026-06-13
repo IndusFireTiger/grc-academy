@@ -1,0 +1,78 @@
+{
+  "id": 5,
+  "slug": "testing-and-assurance",
+  "title": "Testing & Assurance",
+  "subtitle": "How you actually know controls work",
+  "icon": "🔬",
+  "hook": {
+    "metaphor": "Believing your smoke alarms work isn't the same as knowing. Once a year you press the button on each one and listen for the beep. Control assurance is that button-press at organisational scale: deliberately testing controls so you can *prove*, not just hope, that they fire when needed.",
+    "scenario": "An executive tells the board, 'our controls are strong.' A director asks the killer question: 'How do you know?' The honest answer is either 'we tested a sample of them last quarter and here are the results' — or an awkward silence. Which firm would you trust?"
+  },
+  "learn": [
+    "Assurance turns belief into evidence through **testing**. You can't check every transaction, so you take a **sample** and inspect it: were the approvals there? did the reconciliation actually happen? does the evidence exist? Sampling lets you draw a reliable conclusion about the whole from a manageable few.",
+    "When a test fails, you've found a **control deficiency** — and the severity has a ladder (especially in financial-reporting / **SOX**-style regimes): a minor **deficiency**, a more serious **significant deficiency**, and the worst, a **material weakness** (a flaw serious enough that a meaningful error could slip through undetected). Naming the severity drives how urgently it's fixed and whether it must be disclosed.",
+    "Assurance comes in layers — the **three lines of defence** again. The business checks its own controls (1st line); risk/compliance monitors and tests (2nd line); and **internal audit** independently and objectively tests the lot (3rd line). On top, **external auditors** give an independent opinion to the outside world. Independence rises as you go up — because marking your own homework isn't assurance.",
+    "The point of all this isn't to generate findings for their own sake; it's to give leaders and regulators **justified confidence**. 'Our controls are strong, and here's the testing that shows it' is a fundamentally different — and far more defensible — statement than 'trust us.'"
+  ],
+  "bridge": "So at work, you can cut through any 'our controls are fine' claim with the director's question: **'How do you know — what was tested, by whom, and what did it find?'** Real assurance has evidence behind it: samples tested, deficiencies rated and tracked, and independent eyes involved. No evidence means it's a hope, not an assurance.",
+  "interactions": [
+    {
+      "type": "match",
+      "title": "Assurance vocabulary",
+      "prompt": "Match each term to its meaning.",
+      "pairs": [
+        { "left": "Sampling", "right": "Testing a subset to conclude about the whole" },
+        { "left": "Control deficiency", "right": "A control that failed a test or isn't working" },
+        { "left": "Material weakness", "right": "A flaw serious enough that a big error could go undetected" },
+        { "left": "Internal audit", "right": "Independent in-house testing of all controls (3rd line)" },
+        { "left": "External auditor", "right": "An outside party giving an independent opinion" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "'How do you know?'",
+      "prompt": "The board asks how the executive knows controls are strong. The trustworthy answer is…",
+      "options": [
+        { "label": "'I've been here 20 years — trust me.'", "verdict": "bad", "feedback": "Experience and confidence aren't evidence. 'Trust me' is exactly the answer that precedes a nasty surprise. Assurance needs testing behind it." },
+        { "label": "'We tested a risk-based sample; here are the results and the fixes underway.'", "verdict": "good", "feedback": "Exactly. That's justified confidence: evidence from testing, deficiencies rated and tracked, remediation in flight. It's defensible to the board and the regulator." },
+        { "label": "'Our policies are very detailed.'", "verdict": "bad", "feedback": "Detailed policies prove design intent, not that controls operate. The question was 'how do you *know* they work?' — that needs testing, not page count." }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Assurance is pressing the smoke-alarm button at scale — sampling and testing controls so you can prove they work, rating any deficiencies, with independent audit on top — turning 'trust us' into 'here's the evidence.'”",
+  "checkpoint": [
+    {
+      "q": "Why do auditors use sampling?",
+      "options": [
+        "Because they're lazy",
+        "You can't test everything, so a sample lets you reliably conclude about the whole",
+        "It's required to test only one item",
+        "To avoid finding problems"
+      ],
+      "answer": 1,
+      "explain": "Testing a representative subset draws a sound conclusion about the full population efficiently."
+    },
+    {
+      "q": "A 'material weakness' is…",
+      "options": [
+        "A tiny, trivial issue",
+        "A flaw serious enough that a meaningful error could go undetected",
+        "A strong control",
+        "A marketing term"
+      ],
+      "answer": 1,
+      "explain": "It's the most severe rung of control deficiency — serious enough to risk a material undetected error, often disclosable."
+    },
+    {
+      "q": "Internal audit's role in assurance is to…",
+      "options": [
+        "Run the business's daily controls",
+        "Independently and objectively test that controls work (the 3rd line)",
+        "Approve all payments",
+        "Write the marketing plan"
+      ],
+      "answer": 1,
+      "explain": "As the third line, internal audit provides independent assurance — you can't credibly mark your own homework."
+    }
+  ]
+}

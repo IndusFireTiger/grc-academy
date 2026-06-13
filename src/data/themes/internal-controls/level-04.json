@@ -1,0 +1,82 @@
+{
+  "id": 4,
+  "slug": "designing-controls-well",
+  "title": "Designing Controls Well",
+  "subtitle": "Design vs operating effectiveness",
+  "icon": "✏️",
+  "hook": {
+    "metaphor": "A smoke alarm screwed to the ceiling but with no battery is *well-designed and totally useless*. A great control has to be two things at once: designed right AND actually working. Auditors have separate words for these — and the gap between them is where most control failures hide.",
+    "scenario": "A bank's policy says all wire transfers over ₹10 lakh need dual approval. The design is textbook. But in practice, the second approver is on leave half the year and payments just… go through anyway. Is this control effective?"
+  },
+  "learn": [
+    "Two distinct questions: **design effectiveness** — *if this control operated as intended, would it actually address the risk?* — and **operating effectiveness** — *is it actually operating that way, consistently, in real life?* A control must pass both. Our wire-transfer control is well-designed but operating-ineffective (the battery's out).",
+    "This is the **documented-vs-implemented** gap again (it haunts every GRC theme): a beautiful policy that nobody follows fails on operating effectiveness, even with perfect design. Both halves get tested, and both can fail independently.",
+    "A practical tool for getting design right is the **risk-control matrix (RCM)**: list each significant risk, then the control(s) that address it, the owner, and how it's evidenced. It exposes two dangers — **gaps** (a risk with no control) and **over-control** (five overlapping controls on a trivial risk while a big risk sits naked).",
+    "And every control needs a named **control owner** — the person accountable for it actually running. 'Everyone's responsible' means no one is. The owner makes sure the smoke alarm has a battery, that the second approver has a backup, and that the control keeps working when people go on leave or move on."
+  ],
+  "bridge": "So at work, you can interrogate any control with two separate questions, not one: *Is it designed to address the risk?* and *Is it actually operating that way every day?* And you can spot trouble fast by asking who the **owner** is — a control without a clearly accountable owner is a battery waiting to die.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Designed vs working",
+      "prompt": "Dual approval is required for big wires, but the second approver is often away and payments clear regardless. Verdict?",
+      "options": [
+        { "label": "Effective — the policy clearly requires dual approval.", "verdict": "bad", "feedback": "That's design effectiveness only. In practice the control doesn't operate — payments clear without the second approval. It fails operating effectiveness; the design on paper is cold comfort." },
+        { "label": "Design is fine, but it's operating-ineffective — fix the real-world execution.", "verdict": "good", "feedback": "Exactly. The control is well-designed but not actually working. The fix is operational: a backup approver, a hard system block, an accountable owner — so it runs even when someone's on leave." },
+        { "label": "Just delete the policy since it's not followed.", "verdict": "bad", "feedback": "The control addresses a real risk (large unauthorised wires) — you don't remove it, you make it actually operate. Deleting it leaves the risk fully exposed." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Which kind of failure?",
+      "prompt": "Sort each problem by whether it's a design flaw or an operating failure.",
+      "buckets": [
+        { "id": "design", "label": "Design failure" },
+        { "id": "operating", "label": "Operating failure" }
+      ],
+      "items": [
+        { "label": "The control wouldn't catch the risk even if performed perfectly", "bucket": "design" },
+        { "label": "A well-designed check is skipped when staff are busy", "bucket": "operating" },
+        { "label": "No control exists for a significant risk (a gap)", "bucket": "design" },
+        { "label": "The approver signs without actually reviewing", "bucket": "operating" },
+        { "label": "The control only covers half the transactions it should", "bucket": "design" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “A good control must be both designed right and actually working — a smoke alarm with no battery passes design but fails in practice — so you test both, map risks to controls, and give every control an owner.”",
+  "checkpoint": [
+    {
+      "q": "The difference between design and operating effectiveness is…",
+      "options": [
+        "There is none",
+        "Design = would it work if performed; operating = is it actually performed that way",
+        "Design is for big firms, operating for small",
+        "Operating effectiveness doesn't matter"
+      ],
+      "answer": 1,
+      "explain": "A control must pass both: sound on paper AND consistently performed in reality."
+    },
+    {
+      "q": "A risk-control matrix helps reveal…",
+      "options": [
+        "Employee salaries",
+        "Gaps (risks with no control) and over-control (too many on trivial risks)",
+        "The marketing plan",
+        "Customer complaints"
+      ],
+      "answer": 1,
+      "explain": "Mapping risks to controls, owners, and evidence exposes both uncovered risks and wasteful duplication."
+    },
+    {
+      "q": "Why does every control need a named owner?",
+      "options": [
+        "For the org chart's sake",
+        "Because 'everyone's responsible' means no one ensures it keeps working",
+        "To assign blame only",
+        "It doesn't need one"
+      ],
+      "answer": 1,
+      "explain": "An accountable owner keeps the control operating through leave, turnover, and change — the battery stays in."
+    }
+  ]
+}

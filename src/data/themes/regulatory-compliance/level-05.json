@@ -1,0 +1,82 @@
+{
+  "id": 5,
+  "slug": "conduct-and-culture",
+  "title": "Conduct & Culture",
+  "subtitle": "Beyond the letter of the law",
+  "icon": "🤝",
+  "hook": {
+    "metaphor": "You can obey every written rule of a game and still be the player everyone hates — the one who games the offside trap, time-wastes, and bends every grey area. Compliance has the same trap: you can be technically legal and still be doing the wrong thing. That gap between 'legal' and 'right' is where **conduct** lives.",
+    "scenario": "A bank sells a product that is fully legal and fully disclosed (in 40 pages of fine print) — but it's designed so most customers will lose money and never understand why. No rule is broken. Is the bank in the clear?"
+  },
+  "learn": [
+    "**Conduct risk** is the risk of treating customers, markets, or competitors unfairly — even within the letter of the law. Regulators increasingly judge firms on **outcomes for customers**, not just box-ticking. 'It was technically legal' is no longer a safe defence (our fine-print bank is very much *not* in the clear).",
+    "This shows up as duties like **Treating Customers Fairly** and, in the UK, the **Consumer Duty** — and in Australia, ASIC's focus on fair dealing and product **design & distribution obligations**. The thread: products should do right by the people who buy them, not just survive a legal reading.",
+    "Two everyday conduct hazards: **conflicts of interest** (when what's good for you is bad for the customer — e.g. pushing a product because it pays you more) must be identified and managed; and **ethics** beyond the rules — the daily judgement calls no rulebook covers.",
+    "And the safety valve for all of it is **speak-up culture / whistleblowing.** People must be able to raise concerns without fear, and protected by law when they do. A firm where bad conduct can't be safely reported is a firm flying blind — which loops straight back to **tone at the top**: leaders decide whether 'is this *right*?' is a question people feel free to ask."
+  ],
+  "bridge": "So at work, you can apply a test the rulebook can't: beyond 'is this legal?', ask **'is this fair to the customer, and would it survive being on the front page?'** Watch for conflicts of interest, and make sure people around you feel safe to speak up. Conduct is where compliance stops being paperwork and becomes integrity.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Legal but wrong?",
+      "prompt": "The bank's product is legal and disclosed, but designed so most customers quietly lose. Verdict?",
+      "options": [
+        { "label": "Fine — no rule was broken.", "verdict": "bad", "feedback": "This is exactly the conduct trap. Regulators now judge customer *outcomes*, not just legality. 'Technically legal' won't save you from a conduct finding, a fine, or front-page damage." },
+        { "label": "A conduct failure — it's unfair to customers despite being legal.", "verdict": "good", "feedback": "Right. Conduct risk lives in the gap between 'legal' and 'right'. A product engineered for customers to lose fails the fairness test no matter how thick the disclosure." },
+        { "label": "Acceptable as long as the fine print is technically complete.", "verdict": "bad", "feedback": "Burying the truth in 40 pages is a classic unfair-by-design pattern. Disclosure isn't a licence to mislead — the outcome still has to be fair." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Conduct: good or hazard?",
+      "prompt": "Sort each behaviour by whether it reflects good conduct or a conduct hazard.",
+      "buckets": [
+        { "id": "good", "label": "Good conduct" },
+        { "id": "hazard", "label": "Conduct hazard" }
+      ],
+      "items": [
+        { "label": "Recommending the product that's best for the customer", "bucket": "good" },
+        { "label": "Pushing a product because it pays you the biggest bonus", "bucket": "hazard" },
+        { "label": "Making key terms genuinely clear and prominent", "bucket": "good" },
+        { "label": "Burying the catch in 40 pages of fine print", "bucket": "hazard" },
+        { "label": "Protecting a colleague who raised a concern", "bucket": "good" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Conduct is the gap between 'legal' and 'right' — regulators now judge whether customers are treated fairly, so the real test is 'would this survive the front page?', backed by a culture where people can speak up.”",
+  "checkpoint": [
+    {
+      "q": "'Conduct risk' refers to…",
+      "options": [
+        "The risk of breaking an explicit written rule only",
+        "The risk of treating customers/markets unfairly, even within the law",
+        "The risk of a system outage",
+        "The risk of a market crash"
+      ],
+      "answer": 1,
+      "explain": "It lives in the gap between legal and right — regulators judge customer outcomes, not just technical legality."
+    },
+    {
+      "q": "A conflict of interest must be…",
+      "options": [
+        "Hidden from everyone",
+        "Identified and managed (or avoided)",
+        "Encouraged for profit",
+        "Ignored if it's small"
+      ],
+      "answer": 1,
+      "explain": "When your gain harms the customer, the conflict has to be surfaced and managed, not concealed."
+    },
+    {
+      "q": "A healthy speak-up / whistleblowing culture matters because…",
+      "options": [
+        "It lets people gossip",
+        "Without safe reporting, bad conduct stays hidden and the firm flies blind",
+        "It replaces all controls",
+        "Regulators dislike it"
+      ],
+      "answer": 1,
+      "explain": "Protected, fearless reporting is how problems surface — tone at the top decides whether people dare to ask 'is this right?'"
+    }
+  ]
+}

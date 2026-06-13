@@ -1,0 +1,83 @@
+{
+  "id": 1,
+  "slug": "why-rules-exist",
+  "title": "Why Rules Exist",
+  "subtitle": "What compliance is — and why anyone bothers",
+  "icon": "📐",
+  "hook": {
+    "metaphor": "Imagine a sport with no rules and no referee. The strongest player just shoves everyone aside, nobody trusts the score, and eventually no one wants to play. Rules don't exist to spoil the game — they're what *makes the game possible*. Regulatory compliance is simply playing business by the rules society has set, so the game stays fair and people keep showing up.",
+    "scenario": "A fast-growing app skips the 'boring' compliance steps to launch faster. It wins customers — then a regulator finds it mishandled their data, hits it with a fine bigger than a year's revenue, and customers flee. Was compliance really the thing slowing them down?"
+  },
+  "learn": [
+    "**Compliance means following the laws, regulations, and standards that apply to what you do.** It's not optional and it's not internal preference — it's the externally-imposed rulebook, enforced by regulators with real teeth.",
+    "Rules exist for reasons worth knowing, because they tell you the *spirit* behind the letter: **protecting consumers** (from being cheated or harmed), **protecting stability** (so one firm's collapse doesn't sink the system), ensuring **fairness and integrity** (no insider advantage, no discrimination), and ultimately preserving **trust** — the thing all finance runs on.",
+    "Rules come in two broad flavours. **Rules-based** regimes spell out exactly what to do ('hold X% capital'); **principles-based** regimes set an outcome ('treat customers fairly') and trust you to get there. Most modern regulation mixes both — which means you can't always just follow a checklist; sometimes you must apply judgement to the intent.",
+    "And the cost of getting it wrong is not abstract. Beyond eye-watering **fines**, there's **licence loss** (you can be put out of business), **personal liability** for executives, and the slow killer — **reputational damage** that drives customers away, exactly as in our scenario. Compliance isn't the brake on the business; done well, it's what lets the business keep running at all."
+  ],
+  "bridge": "So at work, you can reframe compliance from 'annoying paperwork' to 'the licence to keep playing.' When someone calls a rule pointless, ask *which harm is it trying to prevent?* — consumer, stability, fairness, or trust. Knowing the 'why' lets you comply with the intent, not just tick the box, and spot when a clever shortcut is actually a landmine.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Was compliance the problem?",
+      "prompt": "The app skipped compliance to launch faster, then got fined into the ground. The real lesson?",
+      "options": [
+        { "label": "Compliance slowed them down — they were right to skip it.", "verdict": "bad", "feedback": "The skipped step didn't slow them — its absence destroyed them. The fine and customer exodus cost far more than compliance ever would have. Speed bought on borrowed rules comes due." },
+        { "label": "Compliance is the licence to operate — skipping it risked the whole business.", "verdict": "good", "feedback": "Exactly. Compliance isn't overhead competing with growth; it's the precondition for keeping the customers and the licence you grew. Build it in early and it's cheap; bolt it on after a breach and it's ruinous." },
+        { "label": "They just got unlucky with one strict regulator.", "verdict": "bad", "feedback": "Not luck. Mishandling customer data is a foreseeable, well-known risk with well-known rules. 'We didn't think we'd get caught' is not a strategy." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "What harm is the rule preventing?",
+      "prompt": "Match each rule to the main harm it exists to stop.",
+      "buckets": [
+        { "id": "consumer", "label": "Protect consumers" },
+        { "id": "stability", "label": "Protect stability" },
+        { "id": "fairness", "label": "Fairness / integrity" }
+      ],
+      "items": [
+        { "label": "Banks must hold enough capital to survive a downturn", "bucket": "stability" },
+        { "label": "Lenders must clearly disclose the true interest rate", "bucket": "consumer" },
+        { "label": "Insiders can't trade on secret company news", "bucket": "fairness" },
+        { "label": "Firms must protect customers' personal data", "bucket": "consumer" },
+        { "label": "Big banks face extra rules so their failure can't sink the system", "bucket": "stability" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Compliance is just playing business by society's rules — and those rules exist to protect customers, stability, and fairness, so skipping them doesn't save time, it risks the whole game.”",
+  "checkpoint": [
+    {
+      "q": "Regulatory compliance is best described as…",
+      "options": [
+        "Internal company preferences",
+        "Following the externally-imposed laws and standards that apply to you",
+        "Optional best practice",
+        "A marketing activity"
+      ],
+      "answer": 1,
+      "explain": "It's the externally-set, enforceable rulebook — not optional and not just internal policy."
+    },
+    {
+      "q": "A 'principles-based' rule differs from a 'rules-based' one because it…",
+      "options": [
+        "Spells out the exact steps to follow",
+        "Sets a desired outcome and trusts you to achieve it with judgement",
+        "Doesn't have to be followed",
+        "Only applies to small firms"
+      ],
+      "answer": 1,
+      "explain": "Principles-based regulation sets an outcome (e.g. 'treat customers fairly'); you must apply judgement to meet the intent."
+    },
+    {
+      "q": "Beyond fines, a serious consequence of non-compliance can be…",
+      "options": [
+        "Losing your licence to operate and reputational collapse",
+        "A small thank-you note",
+        "Nothing at all",
+        "Higher profits"
+      ],
+      "answer": 0,
+      "explain": "Licence loss, personal liability, and reputational damage can be far more destructive than the fine itself."
+    }
+  ]
+}

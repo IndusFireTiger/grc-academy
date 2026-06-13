@@ -1,0 +1,78 @@
+{
+  "id": 6,
+  "slug": "running-a-compliance-program",
+  "title": "Running a Compliance Program",
+  "subtitle": "From scattered rules to a working system",
+  "icon": "🏗️",
+  "hook": {
+    "metaphor": "Knowing the rules of a sport doesn't make a club run well — you need coaches, training, someone tracking the rulebook, and a way to catch problems before match day. A compliance *program* is that whole machine: the standing system that keeps a whole organisation playing by the rules, not just one heroic person remembering them all.",
+    "scenario": "Two firms both 'care about compliance.' One has a named compliance officer, training, monitoring, and clear reporting to the board. The other relies on one overworked person and good intentions. A new regulation lands. Which firm absorbs it without a crisis?"
+  },
+  "learn": [
+    "At the centre sits the **compliance function** — a team (led by a **Chief Compliance Officer**) that's independent enough to challenge the business. It owns the obligations register, advises on new rules, and reports honestly upward. Independence matters: compliance can't be overruled by the people it's meant to check.",
+    "The program runs on a familiar cycle: **policies** (written standards everyone follows) → **training** (so people actually know them) → **monitoring & testing** (checking controls really work, not just exist — the documented-vs-implemented trap again) → **reporting** (telling management and the board the truth, including the bad news).",
+    "It fits the **three lines of defence** (from Operational Risk): the business owns compliance day-to-day (1st line), the compliance function sets standards and challenges (2nd line), and internal audit independently checks the whole thing (3rd line). Compliance that lives only in a siloed team — with the business treating it as 'not my job' — is a program destined to fail.",
+    "And the whole machine is powered by **culture and tone at the top** (yes, again — it's the golden thread of GRC). The best program on paper fails if leaders signal that hitting targets beats following rules. A genuine 'culture of compliance' is what makes the firm in our scenario absorb a new regulation as routine, while the other lurches into crisis."
+  ],
+  "bridge": "So at work, you can assess whether compliance is *real* by looking for the machine, not the intentions: *Is there an independent compliance function? Policies people actually know? Monitoring that tests effectiveness? Honest reporting to the board? And a culture where following the rules is genuinely valued?* A program with all five turns regulation from a recurring fire drill into business as usual.",
+  "interactions": [
+    {
+      "type": "match",
+      "title": "The compliance machine",
+      "prompt": "Match each part of a compliance program to its job.",
+      "pairs": [
+        { "left": "Compliance function", "right": "Independent team that owns and challenges compliance" },
+        { "left": "Policies", "right": "Written standards everyone is expected to follow" },
+        { "left": "Training", "right": "Making sure people actually know the rules" },
+        { "left": "Monitoring & testing", "right": "Checking controls truly work, not just exist" },
+        { "left": "Reporting", "right": "Telling the board the truth, including bad news" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "Which firm survives the new rule?",
+      "prompt": "A new regulation lands. The well-run program firm vs the 'one person + good intentions' firm. What's the lesson?",
+      "options": [
+        { "label": "Good intentions are enough — process is bureaucracy.", "verdict": "bad", "feedback": "Intentions don't scale or survive turnover. When the one overworked person misses something, there's no system to catch it. That's how 'we care' becomes 'we got fined'." },
+        { "label": "A standing program (function, policies, training, monitoring, reporting) absorbs change calmly.", "verdict": "good", "feedback": "Exactly. A real program turns a new rule into a routine update of the obligations register — not a crisis. The machine, not the hero, is what makes compliance durable." },
+        { "label": "Just hire one more person and keep winging it.", "verdict": "bad", "feedback": "Adding bodies to an unstructured approach doesn't fix the missing system. Without policies, monitoring, and reporting, you've just got more people winging it." }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “A compliance program is the standing machine — independent function, policies, training, monitoring, honest reporting, and a real culture of compliance — that lets a whole organisation keep playing by the rules without heroics.”",
+  "checkpoint": [
+    {
+      "q": "Why must the compliance function be independent?",
+      "options": [
+        "So it can be ignored",
+        "So it can challenge the business and not be overruled by the people it checks",
+        "To increase profits",
+        "It doesn't need to be"
+      ],
+      "answer": 1,
+      "explain": "Independence lets compliance honestly challenge and report — it can't be a function the business simply overrides."
+    },
+    {
+      "q": "'Monitoring & testing' in a compliance program is there to…",
+      "options": [
+        "Write more policies",
+        "Check that controls actually work, not merely exist on paper",
+        "Market the firm",
+        "Replace the board"
+      ],
+      "answer": 1,
+      "explain": "It closes the documented-vs-implemented gap by verifying controls are effective in practice."
+    },
+    {
+      "q": "The golden thread running through every GRC theme is…",
+      "options": [
+        "Buying more software",
+        "Culture and tone at the top",
+        "Hiring consultants",
+        "Longer documents"
+      ],
+      "answer": 1,
+      "explain": "Even a perfect program on paper fails without leadership genuinely valuing doing the right thing."
+    }
+  ]
+}

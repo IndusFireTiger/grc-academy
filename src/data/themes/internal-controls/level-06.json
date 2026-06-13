@@ -1,0 +1,78 @@
+{
+  "id": 6,
+  "slug": "controls-that-last",
+  "title": "Controls That Last",
+  "subtitle": "Environment, automation & remediation",
+  "icon": "♻️",
+  "hook": {
+    "metaphor": "Anyone can lock the door once. The hard part is a household where the doors *stay* locked every night, for years, even as kids grow up and routines change. Durable internal control is the same: not a one-off clean-up before the audit, but a living system that keeps working as the organisation changes — powered, as always, by the culture around it.",
+    "scenario": "A firm scrambles to fix all its controls the month before the annual audit, passes, then lets everything slide until next year's scramble. The controls 'work' for exactly four weeks a year. What's the real problem — and the real fix?"
+  },
+  "learn": [
+    "It starts with the **control environment** — the foundation of COSO and the golden thread of this whole academy. Controls operate inside a culture; if leaders treat them as an annual nuisance (our scramble firm), they'll decay the other eleven months no matter how well-designed. **Tone at the top** decides whether control is continuous or theatrical.",
+    "The modern accelerant is **automation and continuous controls monitoring (CCM)**: instead of testing a sample once a year, systems check controls constantly and flag failures in real time. Automated controls don't get tired, skipped, or forgotten on leave — they're how you get from 'works for four weeks' to 'works always'.",
+    "When testing finds a deficiency, what matters is **remediation**: a tracked fix with an owner and a deadline, then a re-test to confirm it actually worked. A finding that's logged and forgotten is worse than no finding — you knew and did nothing. Mature organisations track remediation to closure relentlessly.",
+    "And it all sits within the **three lines of defence** and clear **governance**: the business owns controls daily, risk/compliance oversees, internal audit assures, and the board holds the whole thing to account. Pull it together and you get the goal of the entire discipline — **reasonable assurance** (Level 1!) that's real every day, not a costume worn for the auditors."
+  ],
+  "bridge": "So at work, you can tell durable control from theatre by one tell: *do controls work all year, or only at audit time?* Push for automation and continuous monitoring over annual scrambles, insist that every finding has a tracked remediation owner and deadline, and remember that culture — not the control catalogue — is what keeps the doors locked every night.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The four-week firm",
+      "prompt": "Controls are fixed for the audit, then left to slide until next year. The real fix?",
+      "options": [
+        { "label": "Nothing — they pass the audit, so it works.", "verdict": "bad", "feedback": "Passing an annual snapshot while controls fail the other 48 weeks is exactly the risk controls exist to prevent. The audit measured a costume, not the everyday reality." },
+        { "label": "Build a culture of continuous control plus automated monitoring, not annual scrambles.", "verdict": "good", "feedback": "Exactly. Durable control means controls operate all year — driven by tone at the top and continuous/automated monitoring — so 'compliant' is a steady state, not a four-week performance." },
+        { "label": "Schedule two scrambles a year instead of one.", "verdict": "bad", "feedback": "Two performances is still theatre. The goal is controls that simply run continuously, not more frequent cram sessions before inspections." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Making controls durable",
+      "prompt": "Match each concept to its role in lasting control.",
+      "pairs": [
+        { "left": "Control environment", "right": "The culture/tone that everything else stands on" },
+        { "left": "Continuous controls monitoring", "right": "Systems checking controls in real time, not yearly" },
+        { "left": "Remediation", "right": "A tracked fix with an owner, deadline, and re-test" },
+        { "left": "Three lines of defence", "right": "Business owns, risk oversees, audit assures" },
+        { "left": "Reasonable assurance", "right": "Real, everyday confidence objectives are met" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Controls that last aren't a pre-audit scramble — they run all year through automation, continuous monitoring, tracked remediation, and above all a culture that values keeping the doors locked every night.”",
+  "checkpoint": [
+    {
+      "q": "The biggest problem with fixing controls only just before the annual audit is…",
+      "options": [
+        "It's too expensive",
+        "Controls then fail the rest of the year, exactly when risk is unmanaged",
+        "Auditors enjoy it",
+        "Nothing — it's best practice"
+      ],
+      "answer": 1,
+      "explain": "An annual snapshot hides that controls aren't operating the other 48 weeks — the audit measures a costume."
+    },
+    {
+      "q": "Continuous controls monitoring (CCM) improves on annual testing by…",
+      "options": [
+        "Testing less often",
+        "Checking controls in real time and flagging failures as they happen",
+        "Removing the need for owners",
+        "Only working at audit time"
+      ],
+      "answer": 1,
+      "explain": "Automated, continuous checks catch failures immediately instead of once a year — controls that work always."
+    },
+    {
+      "q": "When testing finds a control deficiency, the essential next step is…",
+      "options": [
+        "Log it and forget it",
+        "Tracked remediation with an owner and deadline, then re-test",
+        "Hide it from the board",
+        "Delete the control"
+      ],
+      "answer": 1,
+      "explain": "A known-but-unfixed finding is worse than none — remediate to closure and confirm the fix worked."
+    }
+  ]
+}

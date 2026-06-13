@@ -1,0 +1,83 @@
+{
+  "id": 1,
+  "slug": "what-is-a-control",
+  "title": "What Is a Control?",
+  "subtitle": "The everyday safeguards that keep things honest",
+  "icon": "🔐",
+  "hook": {
+    "metaphor": "You already run dozens of internal controls at home: you lock the door, you check the change from a shopkeeper, two signatures are needed on a big family decision. A control is just a deliberate safeguard that makes a bad outcome less likely. Scale that up to an organisation and you have the discipline of internal controls.",
+    "scenario": "A small charity lets one trusted volunteer receive the cash, record it, and bank it — alone. For years it's fine. Then ₹8 lakh quietly goes missing. No villain was hired; a missing control created the opportunity. What single safeguard would have changed everything?"
+  },
+  "learn": [
+    "An **internal control is a process or safeguard that gives *reasonable assurance* you'll meet your objectives** — accurate reporting, smooth operations, and compliance with the rules. That phrase 'reasonable assurance' matters: controls reduce risk, they don't promise perfection. The goal is to make failure unlikely and detectable, not impossible.",
+    "Controls serve three broad objectives (straight from the **COSO** framework you met in Credit Risk): **operations** (things run effectively), **reporting** (the numbers are trustworthy), and **compliance** (you obey the law). A good control usually protects at least one of these.",
+    "Crucially, controls aren't about assuming people are crooks — they're about removing **opportunity** and catching honest mistakes. Our charity's loss wasn't really about one bad volunteer; it was that one person controlled the whole cash cycle with nobody checking. The fix (splitting those duties) protects good people as much as it deters bad ones.",
+    "And controls cost something — time, friction, money. So you don't control everything to the maximum; you focus the strongest controls where the **risk** is greatest. Internal controls are the operational answer to the question every risk discipline asks: 'we've found the risk — now what concretely stops it?'"
+  ],
+  "bridge": "So at work, you can spot a missing control by asking: *where could one person, one mistake, or one gap cause real harm with nobody noticing?* That's where a safeguard belongs. And you can keep expectations honest — controls give 'reasonable assurance', so the aim is to make problems unlikely and visible, not to chase an impossible zero.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The charity's missing safeguard",
+      "prompt": "One volunteer received, recorded, and banked all the cash alone, and money vanished. The key fix?",
+      "options": [
+        { "label": "Only ever hire people you completely trust.", "verdict": "bad", "feedback": "Trust isn't a control — it's a hope. Even honest people make mistakes, and concentrating the whole cash cycle in one pair of hands is the real weakness, regardless of character." },
+        { "label": "Split the duties so no one person controls the whole cash cycle.", "verdict": "good", "feedback": "Exactly — segregation of duties. When receiving, recording, and banking are separate people, theft or error needs collusion or gets caught. The opportunity disappears." },
+        { "label": "Accept that some loss is just inevitable.", "verdict": "bad", "feedback": "This loss was preventable with one basic control. 'Inevitable' is what people say when they haven't designed the safeguard that was sitting right there." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Which objective does it protect?",
+      "prompt": "Sort each control by the COSO objective it mainly serves.",
+      "buckets": [
+        { "id": "operations", "label": "Operations" },
+        { "id": "reporting", "label": "Reporting" },
+        { "id": "compliance", "label": "Compliance" }
+      ],
+      "items": [
+        { "label": "A nightly reconciliation so the accounts are accurate", "bucket": "reporting" },
+        { "label": "A backup process so the service keeps running", "bucket": "operations" },
+        { "label": "A KYC check required before onboarding", "bucket": "compliance" },
+        { "label": "Sign-off that financial statements are correct", "bucket": "reporting" },
+        { "label": "A privacy consent step required by law", "bucket": "compliance" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “An internal control is just a deliberate safeguard — like locks or a second signature — that gives reasonable assurance things go right, by removing the opportunity for harm and catching honest mistakes.”",
+  "checkpoint": [
+    {
+      "q": "An internal control provides…",
+      "options": [
+        "A guarantee that nothing can ever go wrong",
+        "Reasonable assurance that objectives are met",
+        "More profit, always",
+        "A legal loophole"
+      ],
+      "answer": 1,
+      "explain": "Controls reduce risk to make failure unlikely and detectable — 'reasonable assurance', not perfection."
+    },
+    {
+      "q": "The three broad objectives controls protect (per COSO) are…",
+      "options": [
+        "Operations, reporting, and compliance",
+        "Sales, marketing, and HR",
+        "Profit, loss, and tax",
+        "Past, present, and future"
+      ],
+      "answer": 0,
+      "explain": "Effective operations, trustworthy reporting, and compliance with laws."
+    },
+    {
+      "q": "Controls primarily work by…",
+      "options": [
+        "Assuming everyone is a criminal",
+        "Removing opportunity and catching honest mistakes",
+        "Slowing everything down for its own sake",
+        "Replacing employees"
+      ],
+      "answer": 1,
+      "explain": "They protect good people and deter bad ones by closing gaps where harm could go unnoticed."
+    }
+  ]
+}
