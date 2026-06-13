@@ -1,0 +1,102 @@
+{
+  "id": 6,
+  "slug": "the-rules-of-the-game",
+  "title": "The Rules of the Game",
+  "subtitle": "Governance, COSO & privacy",
+  "icon": "⚖️",
+  "hook": {
+    "metaphor": "Every game needs rules and a referee — otherwise the fastest, greediest player wins and everyone else gets hurt. **Governance** is the rulebook for lending: who's allowed to do what, how decisions are checked, and what keeps the whole system fair, safe, and honest. It's the least glamorous part of credit risk and quietly the most important.",
+    "scenario": "A sales-driven lending firm celebrates a manager who hit his targets by quietly approving loans he knew were dodgy. The numbers looked great — for two quarters. Then the defaults landed. What was actually broken here?"
+  },
+  "learn": [
+    "The most famous map of governance is the **COSO framework** — often pictured as an **'internal control cube.'** You don't need every face of the cube; you need its big idea: good control isn't one thing, it's layers working together (the right environment, assessing risks, control activities, information flow, and monitoring).",
+    "The foundation layer is the **control environment** — and its beating heart is **'tone at the top.'** If leaders reward results no matter how they're achieved, no policy document will save you (that's exactly what broke in the scenario). If leaders visibly value ethics over short-term numbers, that culture flows down. Tone at the top is governance's load-bearing wall.",
+    "Governance also means surviving **regulatory scrutiny**. Lenders must navigate a thicket of laws — privacy regimes like **GDPR** (EU), the **Privacy Act / CDR** (Australia), the **NZ Privacy Act**, and India's **DPDP Act**; prudential rules from **APRA, RBNZ and RBI**; and consumer-credit and AML laws. The job isn't to memorise them — it's to translate each into 'so what must we actually *do*?'",
+    "A subtle but vital distinction: a control can be **documented** without being **implemented**. A beautiful policy nobody follows is theatre. Real governance demands **continuous improvement** — regular reviews that check mitigation strategies are *actually working in practice*, not just sitting in a binder. Auditors live for the gap between 'what we wrote' and 'what we do.'",
+    "Tie it all back: governance is what makes the speed (Level 2), the data (Level 3), and the algorithms (Level 4) *safe to run at scale*. It's the referee that lets the fast game be played fairly."
+  ],
+  "bridge": "So at work, you can read the health of any lending operation by looking past the dashboards to the governance underneath: *Does the tone at the top reward doing it right, or just doing it big? Are controls actually implemented, or only documented? Who reviews them, and how often?* The firms that get this right are boring in the best possible way.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "What broke?",
+      "prompt": "The manager hit targets by approving loans he knew were bad; defaults followed. From a governance view, the root cause is best described as…",
+      "options": [
+        {
+          "label": "Bad luck — the loans just happened to default.",
+          "verdict": "bad",
+          "feedback": "Not luck. He *knew* they were dodgy. The system rewarded the wrong behaviour and didn't catch it — that's a governance failure, not chance."
+        },
+        {
+          "label": "A broken control environment / tone at the top — results were rewarded over ethics.",
+          "verdict": "good",
+          "feedback": "Exactly. When leadership celebrates numbers regardless of how they're achieved, the foundation layer of COSO collapses and every downstream control gets undermined. Culture ate the controls."
+        },
+        {
+          "label": "There just weren't enough policy documents.",
+          "verdict": "ok",
+          "feedback": "More documents wouldn't have helped if the culture rewarded ignoring them. A policy that isn't lived is theatre — the problem was tone and enforcement, not a missing PDF."
+        }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "The COSO idea, in plain words",
+      "prompt": "Match each governance concept to what it actually means.",
+      "pairs": [
+        { "left": "Control environment", "right": "The culture and tone that everything else stands on" },
+        { "left": "Tone at the top", "right": "Whether leaders visibly value ethics over short-term numbers" },
+        { "left": "Control activities", "right": "The concrete checks and approvals that reduce risk" },
+        { "left": "Monitoring", "right": "Regularly checking that controls actually still work" },
+        { "left": "Continuous improvement", "right": "Reviewing and fixing controls so they're done, not just written" }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Documented vs. done",
+      "prompt": "An auditor's favourite question: is this control real, or just on paper? Sort each example.",
+      "buckets": [
+        { "id": "documented", "label": "Only documented (theatre)" },
+        { "id": "implemented", "label": "Actually implemented" }
+      ],
+      "items": [
+        { "label": "A lending policy that exists but everyone routinely overrides", "bucket": "documented" },
+        { "label": "Every large loan genuinely requires a second approver, no exceptions", "bucket": "implemented" },
+        { "label": "An annual fairness review that is actually run and acted on", "bucket": "implemented" },
+        { "label": "A 'code of ethics' poster that leadership ignores in practice", "bucket": "documented" },
+        { "label": "Access to the approval system is reviewed and revoked each quarter", "bucket": "implemented" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Governance is the rulebook and referee for lending — and it lives or dies on tone at the top and whether controls are actually done, not just written down.”",
+  "checkpoint": [
+    {
+      "q": "In the COSO framework, the foundation that everything else rests on is the…",
+      "options": ["Risk heat map", "Control environment (incl. tone at the top)", "Credit score", "Marketing budget"],
+      "answer": 1,
+      "explain": "The control environment — culture and tone at the top — is the base layer; weak culture undermines every other control."
+    },
+    {
+      "q": "A control that is 'documented but not implemented' means…",
+      "options": [
+        "It's working perfectly",
+        "The policy exists on paper but isn't actually followed in practice",
+        "It has been deleted",
+        "It's a legal requirement"
+      ],
+      "answer": 1,
+      "explain": "A policy nobody follows is theatre. Real governance needs controls that are lived, then reviewed and improved."
+    },
+    {
+      "q": "Why does 'tone at the top' matter so much for credit risk?",
+      "options": [
+        "It sets the wifi password",
+        "If leaders reward results over ethics, downstream controls get undermined",
+        "It determines the interest rate",
+        "It only affects the marketing team"
+      ],
+      "answer": 1,
+      "explain": "Culture flows down. When leadership prizes numbers over how they're achieved, people cut corners and controls fail."
+    }
+  ]
+}

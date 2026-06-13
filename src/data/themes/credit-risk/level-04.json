@@ -1,0 +1,108 @@
+{
+  "id": 4,
+  "slug": "teaching-the-robot-to-judge",
+  "title": "Teaching the Robot to Judge",
+  "subtitle": "AI & ML, the black box, and bias",
+  "icon": "🤖",
+  "hook": {
+    "metaphor": "Imagine training an apprentice by showing them thousands of past loans — who paid back, who didn't — and saying “learn the pattern, then judge new applicants the same way.” That apprentice is a **machine-learning model**. It can crunch numbers at superhuman speed. But it also quietly absorbs every bias in the examples you showed it — including the ones you'd be ashamed of.",
+    "scenario": "A lender's shiny new AI model approves loans in milliseconds. Months later, someone notices it quietly rejects applicants from certain postcodes far more often — postcodes that happen to track race. Nobody programmed that rule. So where did it come from?"
+  },
+  "learn": [
+    "You don't need a statistics degree for the core idea. **Predictive modelling** means: feed software lots of historical examples, and it learns which borrower characteristics tended to go with **default**. Then it scores a new applicant on those same patterns. It's pattern-matching at scale — a very fast version of the gut-call you made in Level 1.",
+    "The superpower is **speed and scale**: a model can assess millions of applicants consistently, 24/7, far faster than any human committee.",
+    "The trap is the **'black box'**. Many models are so complex that even their builders can't fully explain *why* a particular person was rejected. That's a problem when someone has a legal right to an explanation — and when the model might be wrong.",
+    "The deepest danger is **bias**. A model learns from history — and if history was discriminatory, the model learns to discriminate, *without anyone writing a discriminatory rule*. Our scenario's postcode effect is a classic **proxy**: the model never sees 'race', but it finds a stand-in for it. This is how AI can produce **discriminatory lending** while looking perfectly neutral. Regulators are explicit about this — Australia's ASIC and APRA, and global guidance, expect lenders to manage AI fairness, explainability, and **model risk**.",
+    "Which is why the future is **human + algorithm**, not algorithm alone. Software is brilliant at crunching numbers at speed, but it lacks human judgement — it can't weigh a borrower's reputation, a one-off life event, or the instinct of someone who knows the sector. The algorithm proposes; a human governs, questions, and overrides."
+  ],
+  "bridge": "So at work, you can be the person in the room who asks the uncomfortable, essential questions about any AI decision: *What data was this trained on, and was that history fair? Can we explain why it rejected someone? Could it be using a proxy for something it's not allowed to consider?* You don't need to build the model to hold it accountable.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Spot the bias",
+      "prompt": "Back to the postcode problem: the AI rejects certain postcodes far more, tracking race, though no one coded that rule. What's the right response?",
+      "options": [
+        {
+          "label": "Nothing's wrong — the model is just being objective with data.",
+          "verdict": "bad",
+          "feedback": "A model trained on biased history isn't 'objective' — it has laundered old discrimination into a neutral-looking score. Postcode here is a proxy for race. 'The data said so' is not a defence."
+        },
+        {
+          "label": "Investigate the training data and the proxy, and put a human review in place.",
+          "verdict": "good",
+          "feedback": "Exactly. You trace where the bias entered (the historical data), test whether postcode is acting as a proxy, and add human oversight. This is fairness + explainability + model risk management in action."
+        },
+        {
+          "label": "Just delete the postcode field and assume it's fixed.",
+          "verdict": "ok",
+          "feedback": "Tempting, but often not enough — models can reconstruct a proxy from other correlated fields. Removing the obvious variable is a start, but you still have to test the outcomes for bias."
+        }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Human or algorithm?",
+      "prompt": "Who is better suited to each job — the fast pattern-matching algorithm, or the human governing it?",
+      "buckets": [
+        { "id": "algorithm", "label": "Algorithm's strength" },
+        { "id": "human", "label": "Human's strength" }
+      ],
+      "items": [
+        { "label": "Scoring 10 million applications consistently overnight", "bucket": "algorithm" },
+        { "label": "Judging whether a one-off job loss is a real red flag", "bucket": "human" },
+        { "label": "Spotting a subtle pattern across thousands of variables", "bucket": "algorithm" },
+        { "label": "Deciding the model is being unfair and overriding it", "bucket": "human" },
+        { "label": "Weighing a borrower's reputation and sector instinct", "bucket": "human" },
+        { "label": "Re-scoring instantly when new data arrives", "bucket": "algorithm" }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "AI credit, de-jargoned",
+      "prompt": "Match each term to its plain-English meaning.",
+      "pairs": [
+        { "left": "Training data", "right": "The historical examples a model learns its patterns from" },
+        { "left": "Black box", "right": "A model whose reasoning is too complex to easily explain" },
+        { "left": "Proxy variable", "right": "A neutral-looking field that secretly stands in for a forbidden one" },
+        { "left": "Model risk", "right": "The risk that the model itself is wrong, biased, or misused" },
+        { "left": "Explainability", "right": "Being able to say *why* the model made a given decision" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “A credit model just learns patterns from past loans — so it's fast and scalable, but it also inherits history's biases, which is why a human still has to question and govern it.”",
+  "checkpoint": [
+    {
+      "q": "At its core, a machine-learning credit model works by…",
+      "options": [
+        "Following hand-written rules a lawyer wrote",
+        "Learning patterns from historical examples of who did and didn't repay",
+        "Randomly approving applicants",
+        "Asking a human to decide each case"
+      ],
+      "answer": 1,
+      "explain": "It learns from history which characteristics went with default, then scores new applicants on those patterns."
+    },
+    {
+      "q": "A model rejects a group far more often even though no one coded that rule. This most likely means…",
+      "options": [
+        "The model is perfectly fair and objective",
+        "It learned bias from historical data, possibly via a proxy variable",
+        "Someone manually entered a discriminatory rule",
+        "The model is broken and outputs random results"
+      ],
+      "answer": 1,
+      "explain": "Models inherit bias from biased history and can use proxies (like postcode for race) without any explicit rule."
+    },
+    {
+      "q": "The 'black box' problem refers to…",
+      "options": [
+        "A model being too slow to use",
+        "Not being able to easily explain why the model made a decision",
+        "A model that only runs at night",
+        "Storing data in a physical black box"
+      ],
+      "answer": 1,
+      "explain": "Complex models can be accurate yet hard to explain — a real problem when people have a right to know why they were refused."
+    }
+  ]
+}

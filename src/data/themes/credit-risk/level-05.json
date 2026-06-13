@@ -1,0 +1,87 @@
+{
+  "id": 5,
+  "slug": "the-lenders-cockpit",
+  "title": "The Lender’s Cockpit",
+  "subtitle": "Tools & risk heat maps",
+  "icon": "🎛️",
+  "hook": {
+    "metaphor": "A pilot doesn't fly by gut feel — they fly by a cockpit full of instruments. Credit professionals are the same. Behind every lending decision sits a stack of tools: humble spreadsheets, serious code, big enterprise platforms, and one deceptively simple dashboard — the risk heat map — that lets a busy executive grasp the danger at a glance.",
+    "scenario": "You're handed a credit portfolio and asked, 'How risky is this, really?' You could send a 40-page spreadsheet. Or you could send one coloured grid that an exec understands in five seconds. Which lands?"
+  },
+  "learn": [
+    "Start humble: **Excel is everywhere.** It's still the cornerstone for the vast majority of actuarial and risk teams — flexible, universal, and good enough for an enormous amount of analysis. Never be embarrassed by a spreadsheet.",
+    "When data gets big or models get serious, teams reach for **code** — usually **Python** or **R**. These handle millions of rows, build the predictive models from Level 4, and automate work that Excel can't.",
+    "For running credit at scale, there are **enterprise platforms**: **Moody's** (deep banking and credit-risk analytics), **Provenir** (automated, real-time credit decisions), and **LogicManager** (broader risk management for mid-market firms), among others. These are the industrial machinery behind big lenders.",
+    "And then there's the tool you'll actually see in meetings: the **risk heat map**. It's a grid — **likelihood** on one axis, **impact** on the other — coloured green (safe) through amber to red (danger). It turns 'risk = likelihood × consequence' (Level 1!) into a picture anyone can read. The whole point is *communication*: it lets you show executives the high-likelihood, high-impact threats without a single formula. You've been building one all along — that coloured cell on the Approval Dial is a heat-map cell.",
+    "A tip that translates everywhere: for *exploring* data without writing code, beginners increasingly use **point-and-click visualization** tools like **Power BI** or **Tableau** — drag fields, get charts. They've made data literacy possible for non-coders, which is exactly the spirit of this whole course."
+  ],
+  "bridge": "So at work, you can pick the right instrument for the audience: a spreadsheet to work the numbers, code or a platform to scale them — and a **heat map** to communicate the answer to people who don't want the maths. Matching the tool to the job (and to who's listening) is half of being effective in risk.",
+  "interactions": [
+    {
+      "type": "approvalDial",
+      "title": "Read a heat map like a pro",
+      "prompt": "One more pass at the Approval Dial — this time, ignore the number and just read the heat-map grid. Move the sliders so the lit cell sits in the top-right (likely × severe = red), then bottom-left (rare × minor = green). That instant green/amber/red read is exactly what a heat map gives an executive."
+    },
+    {
+      "type": "match",
+      "title": "Right tool for the job",
+      "prompt": "Match each tool to what it's best known for.",
+      "pairs": [
+        { "left": "Excel", "right": "The universal cornerstone for everyday risk analysis" },
+        { "left": "Python / R", "right": "Code for big data and building predictive models" },
+        { "left": "Moody’s", "right": "Deep enterprise analytics for banking & credit risk" },
+        { "left": "Provenir", "right": "Automated, real-time credit decisioning at scale" },
+        { "left": "Power BI / Tableau", "right": "Point-and-click data visualization, no coding needed" },
+        { "left": "Risk heat map", "right": "A coloured grid that shows risk to execs at a glance" }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "What's it for?",
+      "prompt": "Sort each tool by its main role in the cockpit.",
+      "buckets": [
+        { "id": "analyse", "label": "Crunch the numbers" },
+        { "id": "decide", "label": "Automate decisions at scale" },
+        { "id": "communicate", "label": "Communicate the risk" }
+      ],
+      "items": [
+        { "label": "A detailed pricing model in Excel", "bucket": "analyse" },
+        { "label": "A risk heat map for the board pack", "bucket": "communicate" },
+        { "label": "A Provenir workflow approving loans in real time", "bucket": "decide" },
+        { "label": "A Python script training a default model", "bucket": "analyse" },
+        { "label": "A one-page Tableau dashboard for executives", "bucket": "communicate" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Credit teams run on a cockpit of tools — Excel and code to crunch it, platforms to scale it, and a colour-coded heat map to make the risk obvious to everyone else.”",
+  "checkpoint": [
+    {
+      "q": "Despite all the fancy platforms, the everyday cornerstone tool for most risk teams is still…",
+      "options": ["A custom AI", "Excel", "A heat map", "Tableau only"],
+      "answer": 1,
+      "explain": "Excel remains the universal workhorse for the great majority of actuarial and risk analysis."
+    },
+    {
+      "q": "The main purpose of a risk heat map is to…",
+      "options": [
+        "Replace all underwriting models",
+        "Communicate likelihood × impact to people at a glance",
+        "Store customer data securely",
+        "Write the code for credit models"
+      ],
+      "answer": 1,
+      "explain": "It's a communication tool: a coloured likelihood × impact grid that non-specialists grasp instantly."
+    },
+    {
+      "q": "Power BI and Tableau are popular with non-coders because they…",
+      "options": [
+        "Are the only legal tools for credit risk",
+        "Let you explore and visualize data by point-and-click, no code",
+        "Automatically approve loans",
+        "Are required by regulators"
+      ],
+      "answer": 1,
+      "explain": "They make data exploration possible without programming — point, click, and you get charts."
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": 2,
+  "slug": "beyond-the-bank-manager",
+  "title": "Beyond the Bank Manager",
+  "subtitle": "The FinTech credit landscape",
+  "icon": "🏦",
+  "hook": {
+    "metaphor": "Once upon a time, getting a loan meant sitting across a desk from a bank manager who knew your family, your job, and your reputation. That manager *was* the credit decision. Today, that desk has been replaced by an app that says yes or no in seconds — and the manager has been replaced by code, data, and a dozen new kinds of lender.",
+    "scenario": "Your friend runs a small café. She needs ₹3,00,000 to buy an oven *this week* to take a catering order. Her bank says the loan will take 3 weeks and a pile of paperwork. A lending app offers the money in 10 minutes at a higher rate. What just changed about credit?"
+  },
+  "learn": [
+    "For most of history, **credit lived inside banks**. Banks took deposits and lent them out, and a human used judgement (and your reputation) to decide. Slow, relationship-based, and limited to people the bank already knew.",
+    "**FinTech blew the doors off.** Today credit is offered by a whole zoo of **non-bank lenders**: digital lending apps, **Buy-Now-Pay-Later (BNPL)** providers (Afterpay/Zip in Australia & NZ, ZestMoney/LazyPay in India, Klarna globally), marketplace lenders, and neobanks. They don't need a branch — they need data and a phone.",
+    "Credit is also becoming **embedded** — woven invisibly into other journeys. You buy a sofa and the “pay in 4” option *is* a loan; a delivery app offers a cash advance to a driver. This is **integrated retail finance**: the lending is so smooth you barely notice it. To keep it safe, lenders bolt credit decisions together with **fraud analytics** — the combined discipline is often called **FRAML** (Fraud + Anti-Money-Laundering). Speed without fraud control just means getting robbed faster.",
+    "A third big shift: **private credit**. Increasingly, lending happens *outside* the regulated banking system — funds and private investors lend directly to companies. It's one of the fastest-growing corners of finance, because it's flexible and fast. The flip side: less of it sits under the bright lights of bank regulation, so the risk is harder for outsiders to see.",
+    "Regulators are racing to keep up. Australia is bringing BNPL under credit law (ASIC / the National Credit Act); India built public rails like **UPI** and the **Account Aggregator** framework so data (and credit) can flow with consent. The pattern is global: **technology moves credit first, the rulebook follows.**"
+  ],
+  "bridge": "So at work, you can stop assuming “lender = bank.” When you see a credit product, ask three questions: *Who is actually lending the money?* (a bank, a fintech, a private fund?), *Where is the decision made?* (a human, or an algorithm in seconds?), and *Is fraud control keeping pace with the speed?* Those three questions place almost any modern credit product on the map.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Fast money, real trade-offs",
+      "prompt": "Your café-owner friend takes the 10-minute app loan at a higher rate to win the catering order. From a credit-risk view, what's the most balanced take?",
+      "options": [
+        {
+          "label": "Reckless — bank loans are always the safe choice.",
+          "verdict": "bad",
+          "feedback": "Not quite. The bank loan she can't get in time is worthless for this order. Speed has real economic value; the question is whether the higher cost is worth the opportunity, not whether banks are 'safer'."
+        },
+        {
+          "label": "Reasonable — speed unlocked an opportunity; just mind the higher rate and terms.",
+          "verdict": "good",
+          "feedback": "Exactly the modern trade-off. FinTech credit converts *time* into *access*. The risk shifts to cost and terms (and to the lender, who priced that speed by leaning on data instead of a slow review)."
+        },
+        {
+          "label": "Irrelevant — app loans and bank loans are identical.",
+          "verdict": "bad",
+          "feedback": "They're not. Same core (will she repay?), but very different in speed, price, data used, and how much regulation sits behind them. Those differences are the whole point of this level."
+        }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Know the new players",
+      "prompt": "Match each FinTech-era credit term to its plain-English meaning.",
+      "pairs": [
+        { "left": "Non-bank lender", "right": "Lends money but doesn't take deposits like a traditional bank" },
+        { "left": "BNPL (Buy Now, Pay Later)", "right": "Splits a purchase into instalments — a small loan at checkout" },
+        { "left": "Embedded finance", "right": "Credit built invisibly into another app or purchase journey" },
+        { "left": "FRAML", "right": "Fraud + anti-money-laundering controls, run together" },
+        { "left": "Private credit", "right": "Lending by funds/investors outside the regulated banking system" }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Old world vs. new world",
+      "prompt": "Sort each trait into the lending model it best describes.",
+      "buckets": [
+        { "id": "traditional", "label": "Traditional bank" },
+        { "id": "fintech", "label": "FinTech / non-bank" }
+      ],
+      "items": [
+        { "label": "Decision made by a manager who knows you, over weeks", "bucket": "traditional" },
+        { "label": "Approval in minutes from an app, using your phone data", "bucket": "fintech" },
+        { "label": "Funded by customer deposits held at a branch", "bucket": "traditional" },
+        { "label": "Credit offered invisibly at the checkout of a shopping app", "bucket": "fintech" },
+        { "label": "Heavily and visibly regulated as a bank", "bucket": "traditional" },
+        { "label": "May sit partly outside traditional banking rules", "bucket": "fintech" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Credit used to live inside banks and a manager's head — now it's offered in seconds by apps, BNPL, and private funds, with the rulebook scrambling to catch up.”",
+  "checkpoint": [
+    {
+      "q": "A 'non-bank lender' is best described as an outfit that…",
+      "options": [
+        "Lends money without taking deposits like a traditional bank",
+        "Is illegal and unregulated by definition",
+        "Only lends to other banks",
+        "Cannot use any customer data"
+      ],
+      "answer": 0,
+      "explain": "Non-bank lenders lend without the deposit-taking bank model — fintech apps, BNPL providers, marketplace lenders, private funds."
+    },
+    {
+      "q": "Pairing credit decisions with fraud and anti-money-laundering checks is often called…",
+      "options": ["FRAML", "COSO", "BNPL", "UPI"],
+      "answer": 0,
+      "explain": "FRAML = Fraud + AML. Fast credit without fraud control just means being defrauded faster."
+    },
+    {
+      "q": "A key risk of the rise of private credit is that…",
+      "options": [
+        "It is always more expensive than bank credit",
+        "Much of it sits outside bank regulation, so the risk is harder to see",
+        "It can only be used by individuals, never companies",
+        "It removes credit risk entirely"
+      ],
+      "answer": 1,
+      "explain": "Private credit is fast and flexible, but less of it sits under bank-style oversight — making the build-up of risk harder for outsiders to spot."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": 3,
+  "slug": "reading-the-clues",
+  "title": "Reading the Clues",
+  "subtitle": "Data: traditional, alternative, unstructured",
+  "icon": "🔍",
+  "hook": {
+    "metaphor": "Before you lend to someone, you gather clues. Do they have a steady job? Did they pay you back last time? A lender does the same thing — except its 'clues' are *data*. The better and broader the clues, the sharper the decision. The story of modern credit is the story of lenders finding new clues nobody used to look at.",
+    "scenario": "Two applicants want the same loan. One has a thin credit history (young, new to the country) but pays rent and phone bills on time for years. The other has a long credit history but it's patchy. The old system favours the second. Should the rent-and-bills clues count?"
+  },
+  "learn": [
+    "For decades, credit decisions ran on **traditional data**: your credit score, your loan and repayment history, your income. Useful — but it leaves out millions of 'thin-file' people who are perfectly creditworthy but simply haven't borrowed before.",
+    "Enter **alternative data**: clues the old system ignored. Rent and utility payments, phone-bill history, **telematics** (how you actually drive, for car loans), even — in some markets — prescription data or **Electronic Health Records (EHRs)** for medical lending. These can reveal reliability that a credit score misses entirely. (You met one of these — 'rent paid on time' — as a slider on the Approval Dial.)",
+    "Then there's **unstructured data**: information that isn't in neat rows and columns. Customer-service call transcripts, app behaviour, even social-media sentiment. FinTechs mine these to spot shifts in borrower behaviour early — a flood of angry support calls can signal trouble before a payment is ever missed.",
+    "All this fuels **accelerated underwriting**: using real-time data to make a sound credit decision in seconds instead of weeks — *without* throwing away accuracy. More clues, gathered faster.",
+    "But more clues cut both ways. Alternative and unstructured data raise serious **privacy** questions: just because you *can* use someone's health records or social posts doesn't mean you should — or that it's legal. Australia's Privacy Act and the **Consumer Data Right (CDR)**, New Zealand's Privacy Act, India's **DPDP Act** and Account Aggregator consent framework, and Europe's GDPR all draw lines around what data a lender may use and how. Good lenders treat consent and fairness as part of the clue-gathering, not an afterthought."
+  ],
+  "bridge": "So at work, you can always ask of any credit decision: *what clues is this resting on?* Traditional data alone? Alternative signals? Unstructured behaviour? And the follow-up that separates the responsible from the reckless: *did the borrower consent, and is using this data fair and legal?* Data is the fuel — but fuel needs handling rules.",
+  "interactions": [
+    {
+      "type": "classify",
+      "title": "Sort the clues",
+      "prompt": "Drag each data source into the right kind of clue.",
+      "buckets": [
+        { "id": "traditional", "label": "Traditional data" },
+        { "id": "alternative", "label": "Alternative data" },
+        { "id": "unstructured", "label": "Unstructured data" }
+      ],
+      "items": [
+        { "label": "Credit score and past loan repayment history", "bucket": "traditional" },
+        { "label": "Rent and utility bills paid on time", "bucket": "alternative" },
+        { "label": "Transcripts of customer-service phone calls", "bucket": "unstructured" },
+        { "label": "Declared income on the application form", "bucket": "traditional" },
+        { "label": "Telematics: how safely someone actually drives", "bucket": "alternative" },
+        { "label": "Social-media posts and sentiment", "bucket": "unstructured" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "Should the new clues count?",
+      "prompt": "Your lender could approve the thin-file applicant by using years of on-time rent and phone payments. What's the soundest, most responsible call?",
+      "options": [
+        {
+          "label": "Use the rent/bills data — with the applicant's consent.",
+          "verdict": "good",
+          "feedback": "This is the promise of alternative data done right: it includes a creditworthy person the old system would reject, *and* respects consent and privacy law. Inclusion + fairness."
+        },
+        {
+          "label": "Refuse — only a traditional credit score can be trusted.",
+          "verdict": "bad",
+          "feedback": "This is exactly the gap alternative data fixes. A thin file isn't the same as a bad borrower; rejecting reliable payers just because they're new to credit is both unfair and bad business."
+        },
+        {
+          "label": "Quietly pull their health records and social posts too — more data is always better.",
+          "verdict": "bad",
+          "feedback": "More data is not always better. Using sensitive data without consent or a lawful basis breaches privacy law (DPDP, GDPR, the Privacy Acts) and erodes trust. 'Can' is not 'should'."
+        }
+      ]
+    },
+    {
+      "type": "approvalDial",
+      "title": "Watch a clue change the verdict",
+      "prompt": "Same Approval Dial — now focus on the bottom slider, 'Rent paid on time'. Hold the other sliders steady and drag just this alternative-data signal up and down. Watch a single new clue nudge the risk score and verdict. That's alternative data earning its keep."
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Lending runs on clues — old ones like your credit score, new ones like rent and behaviour — and the skill is gathering more clues, faster, without trampling people's privacy.”",
+  "checkpoint": [
+    {
+      "q": "Rent and utility payments used to assess a thin-file borrower are an example of…",
+      "options": ["Traditional data", "Alternative data", "Unstructured data", "Illegal data"],
+      "answer": 1,
+      "explain": "Alternative data = useful signals the old credit-score system ignored, like on-time rent and phone bills."
+    },
+    {
+      "q": "Customer-service call transcripts and social-media posts are best described as…",
+      "options": [
+        "Structured, traditional credit data",
+        "Unstructured data",
+        "Always off-limits for any use",
+        "The same as a credit score"
+      ],
+      "answer": 1,
+      "explain": "They don't fit neat rows and columns — that's unstructured data, mined for early behavioural signals."
+    },
+    {
+      "q": "The most important guardrail when using alternative and unstructured data is…",
+      "options": [
+        "Speed — gather it as fast as possible",
+        "Consent, fairness, and a lawful basis (privacy law)",
+        "Using as much data as technically possible",
+        "Keeping it secret from the borrower"
+      ],
+      "answer": 1,
+      "explain": "Privacy regimes (DPDP, GDPR, the Australian & NZ Privacy Acts, CDR) require consent and fair use. 'Can' isn't 'should'."
+    }
+  ]
+}
