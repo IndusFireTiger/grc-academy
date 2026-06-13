@@ -24,6 +24,23 @@ export default function ThemeCatalog({ themes }) {
         </p>
       </section>
 
+      {/* Reference module: the GRC Atlas */}
+      <a
+        href="/atlas"
+        className="mb-8 flex items-center justify-between gap-4 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 to-sky-50 p-5 transition hover:border-emerald-400 hover:shadow-md dark:border-emerald-800/50 dark:from-emerald-900/20 dark:to-sky-900/20"
+      >
+        <div className="flex items-center gap-4">
+          <span className="text-3xl">🗺️</span>
+          <div>
+            <h2 className="font-semibold text-slate-900 dark:text-slate-100">The GRC Atlas</h2>
+            <p className="text-sm text-slate-600 dark:text-slate-300">
+              A worldwide reference of the laws, regulations, frameworks &amp; standards organisations must abide by — filter by region, type &amp; scope.
+            </p>
+          </div>
+        </div>
+        <span className="hidden shrink-0 text-sm font-medium text-emerald-600 sm:inline dark:text-emerald-400">Open the atlas →</span>
+      </a>
+
       <div className="grid gap-4 sm:grid-cols-2">
         {themes.map((t) => {
           const total = t.track ? t.track.levels.length : 0;
