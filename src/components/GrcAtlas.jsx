@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { catalog, regionGroupOrder, trackSlugFor } from '../data/grc-catalog.js';
+import { catalog, regionGroupOrder, trackSlugFor, risksFor, riskTypesInCatalog } from '../data/grc-catalog.js';
 import { getThemes } from '../data/themes.js';
 import WorldMap from './WorldMap.jsx';
 
@@ -9,12 +9,19 @@ const TYPE_ORDER = ['Regulation', 'Law / Statute', 'Framework', 'Standard', 'Pro
 const THEME_TITLE = Object.fromEntries(getThemes().map((t) => [t.slug, t.title]));
 const THEME_LIVE = Object.fromEntries(getThemes().map((t) => [t.slug, t.status === 'live']));
 
+// Risk types = the learning themes, in catalog order, that at least one instrument covers.
+const RISK_OPTIONS = (() => {
+  const present = riskTypesInCatalog();
+  return getThemes().filter((t) => present.has(t.slug)).map((t) => ({ slug: t.slug, title: t.title }));
+})();
+
 // Interactive atlas of GRC instruments worldwide, filterable by region, type and
 // whether each is globally usable or legally region-specific.
 export default function GrcAtlas() {
   const [region, setRegion] = useState('All');
   const [type, setType] = useState('All');
   const [scope, setScope] = useState('All');
+  const [risk, setRisk] = useState('All');
   const [query, setQuery] = useState('');
 
   const filtered = useMemo(() => {
@@ -23,11 +30,12 @@ export default function GrcAtlas() {
       if (region !== 'All' && c.regionGroup !== region) return false;
       if (type !== 'All' && c.type !== type) return false;
       if (scope !== 'All' && c.scope !== scope) return false;
+      if (risk !== 'All' && !risksFor(c).includes(risk)) return false;
       if (q && !(`${c.name} ${c.full} ${c.region} ${c.domain} ${c.summary}`.toLowerCase().includes(q)))
         return false;
       return true;
     });
-  }, [region, type, scope, query]);
+  }, [region, type, scope, risk, query]);
 
   // Items per region for the map — reflect every filter EXCEPT region itself.
   const regionItems = useMemo(() => {
@@ -36,11 +44,12 @@ export default function GrcAtlas() {
     catalog.forEach((c) => {
       if (type !== 'All' && c.type !== type) return;
       if (scope !== 'All' && c.scope !== scope) return;
+      if (risk !== 'All' && !risksFor(c).includes(risk)) return;
       if (q && !(`${c.name} ${c.full} ${c.region} ${c.domain} ${c.summary}`.toLowerCase().includes(q))) return;
       (map[c.regionGroup] ||= []).push(c);
     });
     return map;
-  }, [type, scope, query]);
+  }, [type, scope, risk, query]);
 
   const groups = regionGroupOrder
     .map((g) => ({ group: g, items: filtered.filter((c) => c.regionGroup === g) }))
@@ -50,6 +59,7 @@ export default function GrcAtlas() {
     setRegion('All');
     setType('All');
     setScope('All');
+    setRisk('All');
     setQuery('');
   };
 
@@ -102,6 +112,12 @@ export default function GrcAtlas() {
           <Chip active={scope === 'All'} onClick={() => setScope('All')}>All</Chip>
           <Chip active={scope === 'Global'} onClick={() => setScope('Global')}>🌍 Global</Chip>
           <Chip active={scope === 'Region-specific'} onClick={() => setScope('Region-specific')}>📍 Region-specific</Chip>
+        </FilterRow>
+        <FilterRow label="Risk">
+          <Chip active={risk === 'All'} onClick={() => setRisk('All')}>All risk types</Chip>
+          {RISK_OPTIONS.map((r) => (
+            <Chip key={r.slug} active={risk === r.slug} onClick={() => setRisk(r.slug)}>{r.title}</Chip>
+          ))}
         </FilterRow>
         <div className="flex flex-wrap items-center gap-3 pt-1">
           <input
@@ -191,6 +207,16 @@ function Card({ item }) {
         {item.year && <Tag>{item.year}</Tag>}
       </div>
       <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{item.summary}</p>
+      <div className="mt-2">
+        <span className="text-[10px] font-semibold uppercase tracking-wide text-slate-400">Risk types covered</span>
+        <div className="mt-1 flex flex-wrap gap-1">
+          {risksFor(item).map((r) => (
+            <span key={r} className="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-medium text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">
+              {THEME_TITLE[r] || r}
+            </span>
+          ))}
+        </div>
+      </div>
       <div className="mt-auto pt-3">
         <p className="text-xs font-medium text-slate-400">{item.region}</p>
         {live && (

@@ -127,3 +127,84 @@ const OVERRIDES = {
 export function trackSlugFor(item) {
   return OVERRIDES[item.id] || TRACK_BY_DOMAIN[item.domain] || 'regulatory-compliance';
 }
+
+// Which risk types (= learning-track slugs) each instrument helps an organisation
+// manage. Many cover several. Falls back to the single primary track if untagged.
+const RISKS = {
+  // Privacy & data
+  gdpr: ['cyber-it-risk', 'regulatory-compliance'],
+  'uk-gdpr': ['cyber-it-risk', 'regulatory-compliance'],
+  ccpa: ['cyber-it-risk', 'regulatory-compliance'],
+  dpdp: ['cyber-it-risk', 'regulatory-compliance'],
+  lgpd: ['cyber-it-risk', 'regulatory-compliance'],
+  pipeda: ['cyber-it-risk', 'regulatory-compliance'],
+  pipl: ['cyber-it-risk', 'regulatory-compliance'],
+  appi: ['cyber-it-risk', 'regulatory-compliance'],
+  'pdpa-sg': ['cyber-it-risk', 'regulatory-compliance'],
+  'privacy-act-au': ['cyber-it-risk', 'regulatory-compliance'],
+  'privacy-act-nz': ['cyber-it-risk', 'regulatory-compliance'],
+  'cdr-au': ['cyber-it-risk', 'regulatory-compliance', 'third-party-risk'],
+  popia: ['cyber-it-risk', 'regulatory-compliance'],
+  'iso-27701': ['cyber-it-risk', 'regulatory-compliance'],
+  hipaa: ['cyber-it-risk', 'regulatory-compliance'],
+  // Financial & prudential
+  sox: ['internal-controls', 'audit-management', 'regulatory-compliance'],
+  glba: ['cyber-it-risk', 'regulatory-compliance'],
+  'pci-dss': ['cyber-it-risk'],
+  'basel-iii': ['credit-risk', 'market-risk', 'liquidity-risk', 'operational-risk'],
+  mifid2: ['market-risk', 'regulatory-compliance'],
+  psd2: ['cyber-it-risk', 'third-party-risk', 'regulatory-compliance'],
+  'solvency-ii': ['insurable-risk', 'market-risk'],
+  'apra-cps234': ['cyber-it-risk', 'regulatory-compliance'],
+  'apra-cps230': ['operational-risk', 'business-continuity', 'third-party-risk'],
+  rbnz: ['credit-risk', 'liquidity-risk', 'regulatory-compliance'],
+  rbi: ['credit-risk', 'operational-risk', 'regulatory-compliance'],
+  'nydfs-500': ['cyber-it-risk', 'regulatory-compliance'],
+  // Financial crime
+  fatf: ['financial-crime'],
+  austrac: ['financial-crime', 'regulatory-compliance'],
+  bsa: ['financial-crime', 'regulatory-compliance'],
+  'eu-aml': ['financial-crime', 'regulatory-compliance'],
+  pmla: ['financial-crime', 'regulatory-compliance'],
+  ofac: ['financial-crime', 'regulatory-compliance'],
+  // Security & IT
+  'iso-27001': ['cyber-it-risk'],
+  'nist-csf': ['cyber-it-risk'],
+  'nist-800-53': ['cyber-it-risk'],
+  soc2: ['cyber-it-risk', 'third-party-risk'],
+  cis: ['cyber-it-risk'],
+  'essential-8': ['cyber-it-risk'],
+  cobit: ['cyber-it-risk', 'internal-controls'],
+  fedramp: ['cyber-it-risk', 'third-party-risk'],
+  nis2: ['cyber-it-risk', 'regulatory-compliance'],
+  dora: ['cyber-it-risk', 'operational-risk', 'business-continuity', 'third-party-risk'],
+  // Risk, controls & governance
+  coso: ['internal-controls', 'operational-risk', 'strategic-risk'],
+  'iso-31000': ['operational-risk', 'strategic-risk'],
+  'uk-cgc': ['strategic-risk', 'internal-controls', 'policy-management'],
+  'asx-cgc': ['strategic-risk', 'internal-controls', 'policy-management'],
+  'far-au': ['operational-risk', 'regulatory-compliance'],
+  smcr: ['regulatory-compliance', 'financial-crime', 'operational-risk'],
+  'king-iv': ['strategic-risk', 'internal-controls', 'esg-climate-risk'],
+  // AI
+  'eu-ai-act': ['cyber-it-risk', 'regulatory-compliance'],
+  'iso-42001': ['cyber-it-risk'],
+  'nist-ai-rmf': ['cyber-it-risk'],
+  // ESG
+  csrd: ['esg-climate-risk', 'regulatory-compliance'],
+  issb: ['esg-climate-risk'],
+  tcfd: ['esg-climate-risk'],
+  'au-climate': ['esg-climate-risk', 'regulatory-compliance'],
+  'apra-cpg229': ['esg-climate-risk', 'operational-risk'],
+};
+
+export function risksFor(item) {
+  return RISKS[item.id] || [trackSlugFor(item)];
+}
+
+// Risk-type slugs actually present in the catalog (for building the filter).
+export function riskTypesInCatalog() {
+  const set = new Set();
+  catalog.forEach((c) => risksFor(c).forEach((r) => set.add(r)));
+  return set;
+}
