@@ -1,10 +1,16 @@
 import { useMemo, useState } from 'react';
-import { certifications, disciplineOrder, disciplineIcon, levelOrder, uniqueValues } from '../data/certifications.js';
+import { certifications, disciplineOrder, disciplineIcon, levelOrder, uniqueValues, risksFor, riskTypesInCerts } from '../data/certifications.js';
 import { getThemes } from '../data/themes.js';
 
 const THEME_TITLE = Object.fromEntries(getThemes().map((t) => [t.slug, t.title]));
 const THEME_LIVE = Object.fromEntries(getThemes().map((t) => [t.slug, t.status === 'live']));
 const PROVIDERS = uniqueValues('provider').sort((a, b) => a.localeCompare(b));
+
+// Risk types = learning themes, in catalog order, that at least one cert covers.
+const RISK_OPTIONS = (() => {
+  const present = riskTypesInCerts();
+  return getThemes().filter((t) => present.has(t.slug)).map((t) => ({ slug: t.slug, title: t.title }));
+})();
 
 const LEVEL_STYLE = {
   Foundational: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300',
@@ -19,6 +25,7 @@ export default function Certifications() {
   const [discipline, setDiscipline] = useState('All');
   const [level, setLevel] = useState('All');
   const [provider, setProvider] = useState('All');
+  const [risk, setRisk] = useState('All');
   const [query, setQuery] = useState('');
 
   const filtered = useMemo(() => {
@@ -27,11 +34,12 @@ export default function Certifications() {
       if (discipline !== 'All' && c.discipline !== discipline) return false;
       if (level !== 'All' && c.level !== level) return false;
       if (provider !== 'All' && c.provider !== provider) return false;
+      if (risk !== 'All' && !risksFor(c).includes(risk)) return false;
       if (q && !(`${c.name} ${c.full} ${c.provider} ${c.discipline} ${c.summary}`.toLowerCase().includes(q)))
         return false;
       return true;
     });
-  }, [discipline, level, provider, query]);
+  }, [discipline, level, provider, risk, query]);
 
   const groups = disciplineOrder
     .map((d) => ({ discipline: d, items: filtered.filter((c) => c.discipline === d) }))
@@ -41,6 +49,7 @@ export default function Certifications() {
     setDiscipline('All');
     setLevel('All');
     setProvider('All');
+    setRisk('All');
     setQuery('');
   };
 
@@ -77,6 +86,12 @@ export default function Certifications() {
           <Chip active={level === 'All'} onClick={() => setLevel('All')}>All</Chip>
           {levelOrder.map((l) => (
             <Chip key={l} active={level === l} onClick={() => setLevel(l)}>{l}</Chip>
+          ))}
+        </FilterRow>
+        <FilterRow label="Risk type">
+          <Chip active={risk === 'All'} onClick={() => setRisk('All')}>All risk types</Chip>
+          {RISK_OPTIONS.map((r) => (
+            <Chip key={r.slug} active={risk === r.slug} onClick={() => setRisk(r.slug)}>{r.title}</Chip>
           ))}
         </FilterRow>
         <div className="flex flex-wrap items-center gap-3 pt-1">
@@ -170,6 +185,16 @@ function Card({ item }) {
         <Tag>{item.provider}</Tag>
       </div>
       <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{item.summary}</p>
+      <div className="mt-2">
+        <span className="text-[10px] font-semibold uppercase tracking-wide text-slate-400">Risk types covered</span>
+        <div className="mt-1 flex flex-wrap gap-1">
+          {risksFor(item).map((r) => (
+            <span key={r} className="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-medium text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">
+              {THEME_TITLE[r] || r}
+            </span>
+          ))}
+        </div>
+      </div>
       <div className="mt-auto pt-3">
         {live && (
           <a

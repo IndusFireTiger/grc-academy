@@ -104,3 +104,34 @@ export const levelOrder = ['Foundational', 'Intermediate', 'Advanced', 'Expert']
 export function uniqueValues(key) {
   return [...new Set(certifications.map((c) => c[key]))];
 }
+
+// Risk types (= learning-track slugs) each certification builds capability in.
+// Many span several; falls back to the single related track if untagged.
+const RISKS = {
+  frm: ['market-risk', 'credit-risk', 'operational-risk', 'liquidity-risk'],
+  prm: ['operational-risk', 'market-risk', 'credit-risk'],
+  crisc: ['operational-risk', 'cyber-it-risk'],
+  irm: ['strategic-risk', 'operational-risk'],
+  'iso31000-rm': ['strategic-risk', 'operational-risk'],
+  cia: ['audit-management', 'internal-controls'],
+  cisa: ['audit-management', 'cyber-it-risk'],
+  crma: ['audit-management', 'operational-risk'],
+  cgeit: ['internal-controls', 'cyber-it-risk'],
+  cobit: ['cyber-it-risk', 'internal-controls'],
+  grcp: ['internal-controls', 'regulatory-compliance', 'strategic-risk'],
+  grca: ['audit-management', 'internal-controls'],
+  'ica-grc': ['regulatory-compliance', 'internal-controls', 'strategic-risk'],
+  cgss: ['financial-crime', 'regulatory-compliance'],
+  arm: ['insurable-risk', 'operational-risk'],
+  cfa: ['market-risk', 'credit-risk'],
+};
+
+export function risksFor(cert) {
+  return RISKS[cert.id] || [cert.track];
+}
+
+export function riskTypesInCerts() {
+  const set = new Set();
+  certifications.forEach((c) => risksFor(c).forEach((r) => set.add(r)));
+  return set;
+}
