@@ -1,0 +1,79 @@
+{
+  "id": 2,
+  "slug": "the-wrong-direction",
+  "title": "The Wrong Direction",
+  "subtitle": "The main ways strategy goes wrong",
+  "icon": "🧨",
+  "hook": {
+    "metaphor": "There are only so many ways to steer a ship onto the rocks: misread the chart, ignore a faster vessel overtaking you, take on a leaky ship in a merger, or sail boldly into a port with no harbour. Strategic failures rhyme — and learning their shapes means you can spot one forming before it's fatal.",
+    "scenario": "A taxi giant dismissed a small ride-hailing app as a toy. A retailer bought a trendy brand for a fortune that turned out to be worthless. A bank charged into a foreign market it didn't understand and lost a fortune. Three different companies, three classic strategic mistakes. Can you name the patterns?"
+  },
+  "learn": [
+    "**Disruption / obsolescence:** a new technology or business model makes your offering irrelevant. The taxi giant dismissing the ride-hailing app is the textbook case — incumbents routinely under-rate disruptors precisely because they look small and crude at first (Kodak/digital, Blockbuster/streaming).",
+    "**Failed M&A (mergers & acquisitions):** buying another company that turns out overpriced, broken, or impossible to integrate. Our retailer's worthless trendy brand is a classic over-paid acquisition — a huge share of mergers destroy value rather than create it.",
+    "**Bad market entry:** charging into a new geography, segment, or product you don't truly understand — our bank's foreign misadventure. Confidence from success at home often blinds firms to how different the new market really is.",
+    "**Missing or misjudging competitors and customers:** failing to see a rival's move, or a shift in what customers want, until it's too late. Strategy is relative — you can do everything 'right' and still lose because someone else changed the game.",
+    "**Concentration / over-reliance:** betting too much on one customer, product, market, or assumption, so a single change is catastrophic (the concentration idea, at the strategic level). The common thread across all of these: strategic failures come from **misreading change** — and they're survivable mostly if spotted early."
+  ],
+  "bridge": "So at work, you can scan for the classic strategic traps instead of being blindsided by them: *Are we dismissing a 'toy' disruptor? Over-paying for an acquisition? Charging into a market we don't understand? Missing a competitor or customer shift? Over-reliant on one bet?* These patterns repeat across decades — recognising the shape early is what turns a fatal strategic error into a course correction.",
+  "interactions": [
+    {
+      "type": "match",
+      "title": "Name the strategic failure",
+      "prompt": "Match each scenario to the strategic-failure pattern it shows.",
+      "pairs": [
+        { "left": "Dismissing a small disruptive app", "right": "Disruption / obsolescence" },
+        { "left": "Overpaying for a brand that proves worthless", "right": "Failed M&A" },
+        { "left": "Charging into a market you don't understand", "right": "Bad market entry" },
+        { "left": "Not noticing customers' tastes shifting", "right": "Misjudging customers" },
+        { "left": "Betting the firm on a single big client", "right": "Over-concentration" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "'It's just a toy'",
+      "prompt": "Executives dismiss a small, clunky competitor as no threat. What's the wise stance?",
+      "options": [
+        { "label": "Agree — it's tiny and crude, so ignore it.", "verdict": "bad", "feedback": "This is exactly how incumbents get disrupted. Disruptors almost always start small and crude — that's the disguise. 'It's just a toy' is the famous last words of obsolete giants." },
+        { "label": "Take it seriously — disruptors usually start looking like toys.", "verdict": "good", "feedback": "Exactly. The pattern repeats across history: the threat looks negligible until it isn't. Watching small disruptors closely is how you avoid the obsolescence trap." },
+        { "label": "Panic and copy it instantly.", "verdict": "ok", "feedback": "Taking it seriously is right; blind panic-copying isn't. You study the threat and respond deliberately — neither dismiss it nor flail at it." }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Strategy goes wrong in repeating patterns — disruption you dismissed, acquisitions you overpaid for, markets you didn't understand, competitors you missed, and bets you over-concentrated — and they're survivable mainly if you spot the shape early.”",
+  "checkpoint": [
+    {
+      "q": "Why do incumbents so often get disrupted?",
+      "options": [
+        "Disruptors start huge and obvious",
+        "Disruptors start small and crude, so they're easy to dismiss as 'toys'",
+        "Disruption never really happens",
+        "Incumbents are always poorly run"
+      ],
+      "answer": 1,
+      "explain": "The threat looks negligible at first — that disguise is exactly why it gets under-rated until too late."
+    },
+    {
+      "q": "Failed M&A is a strategic risk because…",
+      "options": [
+        "Mergers always succeed",
+        "Many acquisitions destroy value — overpriced, broken, or un-integrable",
+        "It's an operational error only",
+        "It has nothing to do with strategy"
+      ],
+      "answer": 1,
+      "explain": "A large share of mergers destroy rather than create value — a classic big-bet strategic mistake."
+    },
+    {
+      "q": "The common thread across strategic failures is…",
+      "options": [
+        "Bad luck",
+        "Misreading change — and they're survivable mainly if spotted early",
+        "Poor accounting",
+        "Too few staff"
+      ],
+      "answer": 1,
+      "explain": "Disruption, bad entries, missed competitors — all are failures to read change in time."
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": 5,
+  "slug": "when-you-claim",
+  "title": "When You Claim",
+  "subtitle": "The moment of truth — and why claims fail",
+  "icon": "📑",
+  "hook": {
+    "metaphor": "Insurance is a promise you only test on the worst day of your life. And on that day, people discover the hard way that 'I have insurance' and 'I'm actually covered for *this*, for the *full amount*' are very different things. The claim is the moment the safety net is real or revealed to have a hole — and the holes were almost always cut, quietly, long before.",
+    "scenario": "After a fire, a business confidently files a claim — and is stunned when the insurer pays only a fraction. It turns out they were under-insured, hadn't disclosed a key change, and the cause fell under an exclusion. They 'had insurance'. So why are they still nearly ruined?"
+  },
+  "learn": [
+    "A **claim** is the process of asking the insurer to pay for a covered loss: notify them, document what happened, and substantiate the amount. It's the entire point of insurance — and the moment that exposes whether the cover was actually adequate.",
+    "Claims get **reduced or denied** for predictable reasons, all visible in our scenario: the loss fell under an **exclusion** (not covered — read the fine print, Level 2); the policyholder breached a **condition** or failed to **disclose** something material (insurers can reduce or void cover for non-disclosure); or the claim was poorly **documented/substantiated**.",
+    "The most common quiet killer is **underinsurance**: insuring an asset for less than its true rebuild/replacement value. Many policies then apply 'average', paying out *proportionally* less — insure for half the value and you may get roughly half of even a partial loss. People discover this only at claim time.",
+    "Two duties matter throughout: **disclosure** (telling the insurer the truth, and updating them on material changes — a new high-risk activity, a moved location) and **documentation** (keeping records, valuations, and evidence so you can prove both that you're covered and how much you lost). A claim is won or lost on evidence (the assurance thread, again).",
+    "The deep lesson: the time to ensure a claim will succeed is **when you buy and maintain the policy**, not when disaster strikes. Reading exclusions, insuring to full value, disclosing changes, and keeping records are all done *beforehand*. On the worst day, it's far too late to fix the cover."
+  ],
+  "bridge": "So at work, you can make insurance actually pay out by doing the work before the claim: *are we insured to full value (not under-insured)? have we disclosed everything material and kept it updated? do we understand the exclusions? and can we document a loss if it happens?* 'I have insurance' is only as good as those answers — the holes in the safety net are cut at purchase, and only discovered at the claim.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Insured, yet nearly ruined",
+      "prompt": "After a fire, the insurer pays only a fraction — the firm was under-insured, hadn't disclosed a change, and the cause was excluded. The core lesson?",
+      "options": [
+        { "label": "The insurer is just cheating them.", "verdict": "bad", "feedback": "It's not cheating — each reduction traces to a real gap: underinsurance, non-disclosure, and an exclusion. The holes were cut at purchase; the firm just discovered them at claim time." },
+        { "label": "Adequate cover is set before the loss — value, disclosure, and exclusions all matter up front.", "verdict": "good", "feedback": "Exactly. 'Having insurance' isn't 'being covered for this, in full'. Insure to full value, disclose material changes, and understand exclusions — beforehand, because the worst day is too late to fix it." },
+        { "label": "They should have just claimed more confidently.", "verdict": "bad", "feedback": "Confidence doesn't override exclusions, underinsurance, or non-disclosure. The payout is governed by the policy terms and your prior actions, not how firmly you ask." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Why claims get cut",
+      "prompt": "Sort each factor by whether it strengthens or undermines a claim.",
+      "buckets": [
+        { "id": "strong", "label": "Strengthens the claim" },
+        { "id": "weak", "label": "Undermines the claim" }
+      ],
+      "items": [
+        { "label": "Insuring the asset to its full replacement value", "bucket": "strong" },
+        { "label": "Being under-insured (so 'average' applies)", "bucket": "weak" },
+        { "label": "Disclosing all material facts and changes", "bucket": "strong" },
+        { "label": "The loss falling under an exclusion", "bucket": "weak" },
+        { "label": "Good documentation and evidence of the loss", "bucket": "strong" },
+        { "label": "Failing to disclose a key change", "bucket": "weak" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “A claim is the moment the safety net is tested — and it fails for predictable reasons (exclusions, non-disclosure, underinsurance, poor documentation) whose holes were cut at purchase, so you secure the payout when you buy and maintain the policy, not when disaster strikes.”",
+  "checkpoint": [
+    {
+      "q": "'Underinsurance' can hurt a claim because…",
+      "options": [
+        "It always pays out in full",
+        "Insuring below true value can mean a proportionally reduced payout ('average')",
+        "It lowers your risk",
+        "It has no effect on claims"
+      ],
+      "answer": 1,
+      "explain": "Insure for half the value and you may receive roughly half even of a partial loss — discovered at claim time."
+    },
+    {
+      "q": "A common, legitimate reason a claim is denied is…",
+      "options": [
+        "The insurer feels like it",
+        "The loss falls under an exclusion or a material fact wasn't disclosed",
+        "The claim was filed too confidently",
+        "Insurers never deny claims"
+      ],
+      "answer": 1,
+      "explain": "Exclusions, breached conditions, and non-disclosure are the predictable claim-killers in the fine print."
+    },
+    {
+      "q": "The best time to ensure a claim will succeed is…",
+      "options": [
+        "Right after the disaster",
+        "When you buy and maintain the policy — value, disclosure, exclusions, records",
+        "During the claim dispute",
+        "Never — it's out of your hands"
+      ],
+      "answer": 1,
+      "explain": "The holes in cover are cut at purchase; on the worst day it's far too late to fix them."
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": 6,
+  "slug": "governing-policy",
+  "title": "Governing Policy",
+  "subtitle": "Framework, ownership & one source of truth",
+  "icon": "🗂️",
+  "hook": {
+    "metaphor": "A few house rules you can keep in your head. But run a large household — many rooms, many people, rules on everything — and you need a system: a master list, someone responsible for each rule, and one trusted place everyone checks. Without that, you get chaos: duplicate rules, contradictions, and nobody sure which version is real. Governing policy is building that system so the house rules stay coherent at scale.",
+    "scenario": "Across a big company, three departments have each written their own slightly different data-privacy policy, none knows the others exist, and there's no master list or owner. An employee trying to 'follow policy' finds three contradictory answers. What's missing at the top?"
+  },
+  "learn": [
+    "At scale you need a **policy framework**: an organising structure defining what policies exist, how they relate (the policy/standard/procedure hierarchy from Level 1), who owns each, and how they're created, approved, and reviewed (the lifecycle from Level 3). It's the master system that keeps the rule-set coherent rather than a sprawling free-for-all (our three-contradictory-policies mess).",
+    "Central to it is a **single source of truth**: one authoritative, accessible place where the current, approved version of every policy lives. Our employee found three contradictory answers precisely because there was no canonical library — duplication and contradiction are the signature symptoms of missing this.",
+    "Every policy needs a clear **owner** accountable for its content, currency, and effectiveness (the recurring ownership principle). 'Everyone owns it' means no one does — which is how the three departments each wrote their own in isolation, with no one responsible for the whole.",
+    "It fits the familiar **governance pattern**: senior/board oversight of the policy framework, the business owning and following policies (1st line), a policy/compliance function setting standards and curating the library (2nd line), and audit checking it works (3rd line). Policy management isn't a documentation chore — it's part of the control environment.",
+    "And — the golden thread that closes this academy — it lives or dies on **culture and tone at the top.** Where leadership genuinely values clear rules that are followed (and updated when wrong), policy becomes real governance. Where it treats policies as cover-your-back paperwork, you get exactly our scenario: contradictory, unowned documents that look like control and deliver none. That, in the end, is the whole of GRC: not the documents, but whether people actually live by them."
+  ],
+  "bridge": "So at work, you can assess policy governance with a few sharp questions: *Is there a framework and a single source of truth, or a sprawl of duplicate documents? Does every policy have an owner? And does leadership treat rules as real or as cover-your-back paperwork?* Coherent, owned, trusted policies in one place are governance; a contradictory, unowned pile is theatre — the same line that separates real from performative across every GRC theme.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Three contradictory privacy policies",
+      "prompt": "Three departments each wrote their own privacy policy, unaware of the others, with no master list or owner. What's missing at the top?",
+      "options": [
+        { "label": "Nothing — more policies means more coverage.", "verdict": "bad", "feedback": "Contradictory duplicates aren't coverage — they're chaos. An employee gets three different 'right' answers. The missing piece is a framework, a single source of truth, and ownership." },
+        { "label": "A policy framework, single source of truth, and clear ownership.", "verdict": "good", "feedback": "Exactly. At scale you need a master system: one authoritative library, defined ownership, and a governed lifecycle — so policies stay coherent instead of three teams writing contradictory versions in the dark." },
+        { "label": "Let each department keep its own version.", "verdict": "bad", "feedback": "That's the cause of the problem. Without a single source of truth and an owner for the topic, contradiction and confusion are guaranteed." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Coherent governance or sprawl?",
+      "prompt": "Sort each practice by whether it builds coherent policy governance or feeds the sprawl.",
+      "buckets": [
+        { "id": "governed", "label": "Coherent governance" },
+        { "id": "sprawl", "label": "Sprawl / theatre" }
+      ],
+      "items": [
+        { "label": "One authoritative library (single source of truth)", "bucket": "governed" },
+        { "label": "Three departments' contradictory versions", "bucket": "sprawl" },
+        { "label": "A named owner accountable for each policy", "bucket": "governed" },
+        { "label": "Policies treated as cover-your-back paperwork", "bucket": "sprawl" },
+        { "label": "A framework defining hierarchy, lifecycle, and ownership", "bucket": "governed" },
+        { "label": "No master list of what policies even exist", "bucket": "sprawl" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Governing policy at scale needs a framework, a single source of truth, and a clear owner for every rule — and ultimately a culture that treats policies as real, because a contradictory unowned pile looks like control and delivers none.”",
+  "checkpoint": [
+    {
+      "q": "A 'single source of truth' for policies is…",
+      "options": [
+        "Many copies in many places",
+        "One authoritative, accessible place holding the current approved version of each policy",
+        "A secret archive no one can access",
+        "The CEO's memory"
+      ],
+      "answer": 1,
+      "explain": "It prevents the duplication and contradiction that arise when policies live in scattered, unmanaged places."
+    },
+    {
+      "q": "A policy framework defines…",
+      "options": [
+        "Only the company logo",
+        "What policies exist, how they relate, who owns them, and how they're lifecycle-managed",
+        "Employee salaries",
+        "The marketing strategy"
+      ],
+      "answer": 1,
+      "explain": "It's the organising system that keeps the whole rule-set coherent rather than a sprawling free-for-all."
+    },
+    {
+      "q": "The thread that ultimately determines whether policy (and all GRC) is real is…",
+      "options": [
+        "The number of documents",
+        "Culture and tone at the top — whether people actually live by the rules",
+        "The length of each policy",
+        "How many committees approve it"
+      ],
+      "answer": 1,
+      "explain": "Across every GRC theme, governance is real only when leadership and culture make people genuinely live by it."
+    }
+  ]
+}

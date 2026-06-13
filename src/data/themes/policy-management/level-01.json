@@ -1,0 +1,85 @@
+{
+  "id": 1,
+  "slug": "the-house-rules",
+  "title": "The House Rules",
+  "subtitle": "What policies are — and aren't",
+  "icon": "📜",
+  "hook": {
+    "metaphor": "Every household runs on rules — 'shoes off at the door', 'homework before screens'. Some are written, most are understood, and they only work if everyone actually knows and follows them. An organisation's policies are its house rules at scale: the written statements of how things must be done. And just like at home, a rule nobody knows or follows isn't really a rule at all.",
+    "scenario": "A company has a policy for everything — hundreds of documents — yet staff routinely do things their own way, unsure which rules even exist or where to find them. Technically, it's heavily 'policed'. In practice, are the policies doing anything at all?"
+  },
+  "learn": [
+    "A **policy is a formal statement of an organisation's rules, expectations, and position** on a topic — what must (or must not) be done, and why. Policies are how an organisation turns its values, risk appetite, and legal obligations into consistent expected behaviour for everyone.",
+    "It helps to distinguish the **hierarchy**: a **policy** says *what* and *why* (the high-level rule: 'we protect customer data'); a **standard** sets specific requirements ('passwords must be 12+ characters'); and a **procedure** says *how*, step by step ('to reset a password, do X, Y, Z'). Confusing these is a common source of bloated, unusable documents.",
+    "Policies exist for real reasons: **consistency** (everyone does it the same way), **compliance** (encoding legal/regulatory obligations — the 'law → obligation → control' bridge from Regulatory Compliance), **risk control** (the documented version of many controls), and **clarity** (people know what's expected).",
+    "But here's the catch this whole track turns on: **a policy only has value if it's known and followed.** Our company with hundreds of ignored, un-findable documents has policies that exist on paper but do nothing real — the 'documented vs implemented' gap (Internal Controls) in its purest form.",
+    "And more policies is not better policies. A sprawling, contradictory, unread library is often *worse* than a lean, clear set — it creates false comfort ('we have a policy for that') while actually guiding no one's behaviour."
+  ],
+  "bridge": "So at work, you can judge a policy not by its existence but by its effect: *do the people it applies to actually know it, find it, and follow it?* A rule that's unknown, unclear, or unfindable is decoration, not governance. And remember the hierarchy — policy (what/why), standard (specifics), procedure (how) — because cramming all three into one document is how policies become the unread bricks nobody uses.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Hundreds of ignored policies",
+      "prompt": "A firm has a policy for everything, yet staff do their own thing, unsure what exists. Are the policies working?",
+      "options": [
+        { "label": "Yes — having a policy for everything means it's well-governed.", "verdict": "bad", "feedback": "Quantity isn't governance. Policies that are unknown, unfindable, and ignored do nothing — they're documented but not implemented, creating false comfort while guiding no behaviour." },
+        { "label": "No — policies only have value if people know and follow them.", "verdict": "good", "feedback": "Exactly. A rule nobody knows or follows isn't a rule. A sprawling, ignored library can be worse than a lean clear set — it looks governed while changing nothing." },
+        { "label": "They just need to write even more policies.", "verdict": "bad", "feedback": "More documents into an unread, unfindable pile makes it worse, not better. The problem isn't too few policies — it's that the existing ones aren't known or followed." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Policy, standard, or procedure?",
+      "prompt": "Sort each statement by where it sits in the hierarchy.",
+      "buckets": [
+        { "id": "policy", "label": "Policy (what/why)" },
+        { "id": "standard", "label": "Standard (specifics)" },
+        { "id": "procedure", "label": "Procedure (how)" }
+      ],
+      "items": [
+        { "label": "'We protect customer personal data'", "bucket": "policy" },
+        { "label": "'Passwords must be at least 12 characters'", "bucket": "standard" },
+        { "label": "'To reset a password: click X, enter Y, confirm Z'", "bucket": "procedure" },
+        { "label": "'We treat all customers fairly'", "bucket": "policy" },
+        { "label": "'Encryption must use AES-256'", "bucket": "standard" },
+        { "label": "'Steps to onboard a new vendor: 1, 2, 3...'", "bucket": "procedure" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Policies are the organisation's house rules — what must be done and why — but a rule nobody knows, finds, or follows isn't really a rule, so policies are judged by whether they actually shape behaviour, not by how many exist.”",
+  "checkpoint": [
+    {
+      "q": "A policy is best described as…",
+      "options": [
+        "A step-by-step how-to guide",
+        "A formal statement of the organisation's rules and expectations (what and why)",
+        "An employee's personal preference",
+        "A marketing slogan"
+      ],
+      "answer": 1,
+      "explain": "Policies set the high-level rules and rationale; procedures give the step-by-step how."
+    },
+    {
+      "q": "In the hierarchy, a 'procedure' provides…",
+      "options": [
+        "The high-level rule and rationale",
+        "The specific step-by-step instructions for how to do something",
+        "The company's values",
+        "The legal obligation only"
+      ],
+      "answer": 1,
+      "explain": "Policy = what/why, standard = specifics, procedure = the how. Mixing them creates unusable documents."
+    },
+    {
+      "q": "A policy has real value only if it is…",
+      "options": [
+        "Long and detailed",
+        "Known, findable, and actually followed",
+        "Stored securely and never read",
+        "Approved by many committees"
+      ],
+      "answer": 1,
+      "explain": "An unknown, unfindable, or ignored policy is decoration — the documented-vs-implemented gap."
+    }
+  ]
+}

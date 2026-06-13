@@ -1,0 +1,83 @@
+{
+  "id": 5,
+  "slug": "when-the-strategy-fails",
+  "title": "When the Strategy Fails",
+  "subtitle": "Pivots, escalation & course correction",
+  "icon": "↪️",
+  "hook": {
+    "metaphor": "Every sailor eventually finds themselves on the wrong heading. The good ones notice early and turn; the doomed ones, certain they're right, sail harder in the wrong direction. The hardest part of strategy isn't choosing the course — it's admitting when it's wrong and changing it, against every instinct telling you to push on.",
+    "scenario": "A company's flagship strategy clearly isn't working — losses mount, the market keeps shrinking. But leadership has staked its reputation on it, so it doubles down again and again, pouring in more money to prove it right. Each step deeper makes turning back harder. What trap has it fallen into?"
+  },
+  "learn": [
+    "The deadliest pattern when strategy fails is **escalation of commitment** — doubling down on a losing course precisely *because* you've already invested so much (sunk cost, now driven by ego and reputation). Our company isn't betting to win anymore; it's betting to avoid admitting it was wrong. That's how a recoverable mistake becomes a catastrophe.",
+    "The antidote starts with **honest, early recognition of failure** — which requires *pre-agreed signals* ('if we haven't hit X by Y, we stop or change') set while you're still rational, not in the heat of denial. Without tripwires, hope and ego will always argue for one more push.",
+    "When the course is wrong, the response is a **pivot** — a deliberate change of strategy while keeping what you've learned. The most celebrated companies often succeeded *after* pivoting hard from a failing original plan. A pivot isn't failure; refusing to pivot is.",
+    "This demands separating **decision from identity**. When leaders fuse their ego to a strategy, changing course feels like personal failure, so they don't — and the organisation pays. Cultures that treat changing your mind as strength (not weakness) make better, faster corrections.",
+    "And it requires a culture where people can **safely say 'this isn't working'** (the speak-up / no-blame thread from across GRC). If bad news about the strategy gets the messenger punished, leadership stays blind until the wall — exactly how escalation of commitment runs unchecked to the end."
+  ],
+  "bridge": "So at work, you can guard against the most expensive strategic failure mode with two moves: set **pre-agreed tripwires** for when you'll stop or pivot (decided while calm), and build a culture where saying 'this strategy isn't working' is rewarded, not punished. Doubling down to avoid admitting you were wrong is how a turnable mistake becomes a shipwreck — the brave move is the turn.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Doubling down on a loser",
+      "prompt": "A clearly-failing strategy gets more money poured in each time to 'prove it right'. What trap is this?",
+      "options": [
+        { "label": "Healthy persistence — winners never quit.", "verdict": "bad", "feedback": "This isn't persistence; it's escalation of commitment. They're investing to avoid admitting error, not to win. 'Never quit' applied to a sinking strategy is how a mistake becomes a catastrophe." },
+        { "label": "Escalation of commitment — doubling down to avoid admitting it was wrong.", "verdict": "good", "feedback": "Exactly. Sunk cost plus ego drives throwing more at a losing course. The fix is pre-agreed tripwires and a willingness to pivot — separating the decision from leaders' identity." },
+        { "label": "Fine, as long as they believe in it strongly.", "verdict": "bad", "feedback": "Strong belief in a failing strategy is the problem, not the solution. Conviction without tripwires is exactly what fuels escalation of commitment to the bitter end." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Course-correct or escalate?",
+      "prompt": "Sort each response to a failing strategy.",
+      "buckets": [
+        { "id": "correct", "label": "Healthy correction" },
+        { "id": "escalate", "label": "Escalation of commitment" }
+      ],
+      "items": [
+        { "label": "Pivoting to a new approach using what you learned", "bucket": "correct" },
+        { "label": "Pouring in more money to prove you were right", "bucket": "escalate" },
+        { "label": "Pre-agreed tripwires that trigger a rethink", "bucket": "correct" },
+        { "label": "Punishing anyone who says it isn't working", "bucket": "escalate" },
+        { "label": "Treating changing your mind as a strength", "bucket": "correct" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “The deadliest strategic failure is doubling down on a losing course to avoid admitting you were wrong (escalation of commitment) — so set tripwires for when to pivot, separate decisions from ego, and reward people who say 'this isn't working'.”",
+  "checkpoint": [
+    {
+      "q": "'Escalation of commitment' is…",
+      "options": [
+        "Cutting losses early",
+        "Doubling down on a failing course because of what you've already invested",
+        "Pivoting to a new strategy",
+        "Setting tripwires"
+      ],
+      "answer": 1,
+      "explain": "Sunk cost plus ego drives more investment in a loser — turning a recoverable mistake into a catastrophe."
+    },
+    {
+      "q": "A 'pivot' is…",
+      "options": [
+        "Stubbornly continuing the same plan",
+        "A deliberate change of strategy that keeps what you've learned",
+        "An admission you should never have started",
+        "Always a sign of failure"
+      ],
+      "answer": 1,
+      "explain": "Pivoting isn't failure — refusing to pivot from a failing course is."
+    },
+    {
+      "q": "Pre-agreed tripwires help because they…",
+      "options": [
+        "Lock you into the strategy forever",
+        "Decide when to stop or change while you're still rational, before denial sets in",
+        "Replace strategy entirely",
+        "Punish the team"
+      ],
+      "answer": 1,
+      "explain": "Set in the calm, tripwires force a rethink before hope and ego argue for 'one more push'."
+    }
+  ]
+}

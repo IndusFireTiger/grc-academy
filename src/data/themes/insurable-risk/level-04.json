@@ -1,0 +1,84 @@
+{
+  "id": 4,
+  "slug": "retain-or-transfer",
+  "title": "Retain or Transfer?",
+  "subtitle": "Deductibles, self-insurance & captives",
+  "icon": "⚖️",
+  "hook": {
+    "metaphor": "You don't claim on your car insurance for a ₹500 scratch — the hassle and lost no-claims bonus aren't worth it, so you just pay it yourself. You insure the big crash, not the scratch. Every organisation makes this same call at scale: which risks to *keep* (retain) and which to *hand off* (transfer). Insure everything and you're overpaying; insure nothing and one big hit ruins you. The art is the line between.",
+    "scenario": "A large company insures every tiny risk — even ₹2,000 breakages — paying hefty premiums and admin for each. A consultant points out it's paying far more in premiums than it ever gets back on the small stuff. What should it do differently?"
+  },
+  "learn": [
+    "The fundamental choice is **retain vs transfer.** *Retain* = accept and budget for a risk yourself; *transfer* = pay an insurer to carry it. The guiding rule: **transfer what could be ruinous, retain what you can comfortably absorb.** Our company has it backwards — insuring trivial breakages it could easily self-fund, paying premium-plus-admin for the privilege.",
+    "Why retain small risks? Because insurance isn't free: every policy carries the insurer's costs and profit margin on top of the expected loss. For small, frequent, predictable losses, it's almost always cheaper to **pay them yourself** than to pay someone else to pay them (the consultant's point).",
+    "The everyday tool for blending the two is the **deductible/excess**: you retain the first slice of each loss and transfer the rest. A *higher* deductible means you retain more, so your premium drops — a deliberate dial between retaining and transferring.",
+    "At scale, organisations formalise retention with **self-insurance** (deliberately setting aside funds to cover expected losses) and even **captives** (a company's own in-house insurance subsidiary). These make sense when you're big enough to pool your *own* risks and want to cut out the external insurer's margin.",
+    "The decision ties back to **risk appetite** (the recurring anchor): how much loss can we comfortably absorb ourselves? Below that line, retain (cheaper); above it — the potentially ruinous — transfer (worth the premium). Insuring everything is as much a failure of judgement as insuring nothing."
+  ],
+  "bridge": "So at work, you can make the insurance decision deliberately instead of by default: *which risks could ruin us (transfer those) and which can we comfortably absorb (retain those, and stop paying premium-plus-margin to insure them)?* Use deductibles to tune the split, consider self-insurance for predictable small losses at scale, and anchor it all to how much you can afford to lose — your risk appetite.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Insuring the ₹2,000 breakages",
+      "prompt": "A company insures even tiny breakages, paying more in premiums than it recovers. What should it do?",
+      "options": [
+        { "label": "Keep insuring everything — more cover is always safer.", "verdict": "bad", "feedback": "Insuring trivial, affordable losses means paying premium-plus-margin to cover what you could easily self-fund. That's overpaying, not safety — insuring everything is a judgement failure too." },
+        { "label": "Retain the small, affordable risks (raise deductibles) and insure only the ruinous ones.", "verdict": "good", "feedback": "Exactly. Transfer what could ruin you; retain what you can comfortably absorb. Higher deductibles or self-insuring the small stuff cuts wasted premium while keeping protection where it matters." },
+        { "label": "Drop all insurance to save money.", "verdict": "bad", "feedback": "The opposite error — now one big fire or lawsuit could wipe it out. You retain the small and transfer the ruinous, not abandon cover entirely." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Retain or transfer?",
+      "prompt": "Sort each risk by the smarter default response.",
+      "buckets": [
+        { "id": "retain", "label": "Retain (self-fund)" },
+        { "id": "transfer", "label": "Transfer (insure)" }
+      ],
+      "items": [
+        { "label": "A ₹2,000 office breakage", "bucket": "retain" },
+        { "label": "A factory burning down", "bucket": "transfer" },
+        { "label": "Minor, frequent, predictable wear-and-tear", "bucket": "retain" },
+        { "label": "A multi-crore liability lawsuit", "bucket": "transfer" },
+        { "label": "Small everyday losses you can easily absorb", "bucket": "retain" },
+        { "label": "A catastrophic cyber breach", "bucket": "transfer" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Transfer what could ruin you, retain what you can comfortably absorb — you insure the big crash, not the ₹500 scratch — using deductibles and self-insurance to tune the split against your risk appetite.”",
+  "checkpoint": [
+    {
+      "q": "The guiding rule for retain vs transfer is…",
+      "options": [
+        "Insure absolutely everything",
+        "Transfer the potentially ruinous; retain what you can comfortably absorb",
+        "Never insure anything",
+        "Insure only the cheapest risks"
+      ],
+      "answer": 1,
+      "explain": "Insure the big crash, self-fund the small scratch — both insuring everything and nothing are mistakes."
+    },
+    {
+      "q": "Raising your deductible (excess) generally…",
+      "options": [
+        "Raises your premium",
+        "Lowers your premium, because you retain more of each loss",
+        "Has no effect",
+        "Cancels the policy"
+      ],
+      "answer": 1,
+      "explain": "A higher deductible means you keep more of the risk, so the insurer charges less to carry the rest."
+    },
+    {
+      "q": "Why is it often cheaper to self-fund small, frequent losses?",
+      "options": [
+        "Insurers pay you to do so",
+        "Insurance adds the insurer's costs and margin on top of the expected loss",
+        "Small losses never happen",
+        "Self-funding is illegal"
+      ],
+      "answer": 1,
+      "explain": "For predictable small losses, paying premium-plus-margin to an insurer costs more than just paying them yourself."
+    }
+  ]
+}

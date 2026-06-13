@@ -1,0 +1,79 @@
+{
+  "id": 4,
+  "slug": "making-them-stick",
+  "title": "Making Them Stick",
+  "subtitle": "Communication, training & attestation",
+  "icon": "📌",
+  "hook": {
+    "metaphor": "Writing a great house rule and taping it inside a cupboard nobody opens changes nothing. The rule only works once people have *heard* it, *understood* it, and *agreed* to it. Getting a policy from 'approved' to 'actually shaping behaviour' is a job in itself — and it's the step most organisations quietly skip, then wonder why nobody complies.",
+    "scenario": "A company approves an excellent new code of conduct and posts it on an internal page. A year later, half the staff have never heard of it, and a serious breach occurs because an employee genuinely didn't know the rule. The policy was perfect and 'published'. Why did it fail?"
+  },
+  "learn": [
+    "Approval is not adoption. The gap between a published policy and a *followed* one is bridged by deliberate **communication, training, and reinforcement** — the step our company skipped (posting on a page ≠ communicating).",
+    "**Communication** means actively reaching the people the policy governs, where they actually are — not a one-time email or an intranet page they'll never visit. Roll-out, reminders, and making the policy easy to find at the moment of need all matter.",
+    "**Training** turns 'I've seen it' into 'I understand and can apply it' — especially for complex or high-risk policies. People can't follow a rule they don't understand; for important policies, explanation and examples beat a wall of text.",
+    "**Attestation** is the powerful 'I have read and agree' step: asking people to formally acknowledge a policy. It both reinforces awareness and creates a record — useful evidence (the assurance thread) that people were genuinely informed. Our breaching employee 'didn't know' precisely because there was no communication or attestation.",
+    "And reinforcement is **ongoing**, not one-and-done: people forget, new staff join, and policies change. Onboarding for new joiners, periodic refreshers, and embedding rules into everyday tools and workflows are what keep a policy alive in people's behaviour rather than fading after launch day."
+  ],
+  "bridge": "So at work, you can close the gap that sinks most policies by treating 'approved' as the *start*, not the finish: *have we actively communicated this, trained people on it, asked them to attest, and built in refreshers for new joiners and changes?* A perfect policy taped inside a cupboard changes nothing — making rules stick is a deliberate, ongoing communication job.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Perfect policy, total failure",
+      "prompt": "An excellent code of conduct was posted on an intranet page; a year later half of staff never heard of it and a breach followed. Why?",
+      "options": [
+        { "label": "The policy was bad after all.", "verdict": "bad", "feedback": "The policy was fine — the *rollout* failed. Posting on a page isn't communicating, training, or attestation. Approval was treated as the finish line instead of the start." },
+        { "label": "It was 'published' but never actively communicated, trained, or attested.", "verdict": "good", "feedback": "Exactly. Approval ≠ adoption. Without active communication, training, and an 'I've read and agree' step, even a perfect policy never reaches behaviour — and people genuinely don't know the rule." },
+        { "label": "Staff are simply at fault for not browsing the intranet.", "verdict": "bad", "feedback": "Expecting people to discover rules by chance on an intranet is the failure. It's the organisation's job to actively communicate and reinforce — not staff's to go hunting." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Making policies stick",
+      "prompt": "Match each mechanism to what it achieves.",
+      "pairs": [
+        { "left": "Communication", "right": "Actively reaching people where they work" },
+        { "left": "Training", "right": "Turning 'I've seen it' into 'I understand and can apply it'" },
+        { "left": "Attestation", "right": "Formal 'I've read and agree' — awareness plus a record" },
+        { "left": "Onboarding", "right": "Teaching new joiners the rules from day one" },
+        { "left": "Refreshers", "right": "Periodic reminders so rules don't fade" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Approval isn't adoption — a policy only sticks if you actively communicate it, train people, get them to attest 'I've read and agree', and keep reinforcing it for new joiners and changes; a perfect rule in a cupboard changes nothing.”",
+  "checkpoint": [
+    {
+      "q": "Why isn't 'publishing' a policy enough?",
+      "options": [
+        "It's more than enough",
+        "Approval isn't adoption — people must hear, understand, and acknowledge it",
+        "Publishing is illegal",
+        "Policies don't need readers"
+      ],
+      "answer": 1,
+      "explain": "A posted-but-uncommunicated policy never reaches behaviour — communication, training, and attestation bridge the gap."
+    },
+    {
+      "q": "'Attestation' means…",
+      "options": [
+        "Translating the policy",
+        "People formally acknowledging they've read and agree to a policy",
+        "Deleting the policy",
+        "A type of audit software"
+      ],
+      "answer": 1,
+      "explain": "It reinforces awareness and creates a record that people were genuinely informed."
+    },
+    {
+      "q": "Keeping policies alive in behaviour requires…",
+      "options": [
+        "A single launch-day email",
+        "Ongoing reinforcement — onboarding, refreshers, and embedding in workflows",
+        "Never mentioning them again",
+        "Hiding them from new staff"
+      ],
+      "answer": 1,
+      "explain": "People forget and staff change, so reinforcement must be continuous, not one-and-done."
+    }
+  ]
+}

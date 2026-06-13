@@ -1,0 +1,79 @@
+{
+  "id": 3,
+  "slug": "pricing-the-risk",
+  "title": "Pricing the Risk",
+  "subtitle": "Premiums, underwriting & hidden traps",
+  "icon": "🧮",
+  "hook": {
+    "metaphor": "An insurer is really a professional bet-taker: it must charge each customer roughly in line with the risk they bring, or it goes broke. Charge the careful and the reckless the same price, and the careful leave while the reckless pile in — and the whole net collapses. Pricing risk fairly is what keeps the safety net standing.",
+    "scenario": "An insurer offers cheap, identical home cover to everyone — careful homeowners and people who leave candles burning unattended alike. Within a year it's losing money badly, the careful customers have left for cheaper rivals, and only the high-risk ones remain. What went wrong?"
+  },
+  "learn": [
+    "**Underwriting** is how insurers assess and price each risk: they estimate how likely you are to claim and how big the loss could be, then set a **premium** to match. Price too low for the risk and they lose money; price by risk and the system stays fair and solvent. Our flat-price insurer skipped real underwriting — and paid for it.",
+    "Two classic traps explain its collapse. **Adverse selection:** if you don't price by risk, low-risk customers (who are overpaying) leave for fairer prices, while high-risk ones (who are underpaying) flock in — so your pool gets worse and worse. That's exactly what happened.",
+    "**Moral hazard:** once insured, people may behave *more* recklessly because they no longer bear the full cost (why bother blowing out the candle if insurance pays?). Insurance can accidentally encourage the very risk it covers.",
+    "Insurers fight these with tools you'll recognise as risk-sharing: **deductibles/excess** (you pay the first slice of any claim, so you keep some skin in the game — curbing moral hazard), risk-based pricing (careful customers pay less — curbing adverse selection), and **exclusions and limits** (caps on what's covered).",
+    "The upshot for *you* as the insured: your premium is a price signal about your risk. Reducing your actual risk (better controls, fewer claims) lowers your cost — insurance and good risk management reward each other. And a suspiciously cheap policy may simply be one that excludes a lot, or comes from an insurer heading for trouble."
+  ],
+  "bridge": "So at work, you can read insurance pricing as information, not just a bill: a premium reflects the risk you bring, so *reducing real risk lowers your cost* — insurance rewards good risk management. And you can spot the traps: flat pricing invites adverse selection, full cover with no deductible invites moral hazard, and a price that looks too cheap usually means heavy exclusions or a shaky insurer. The fine print and the price both tell you something.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The flat-price collapse",
+      "prompt": "An insurer charged everyone the same regardless of risk, lost money, kept only high-risk customers, and the careful ones left. What happened?",
+      "options": [
+        { "label": "Bad luck — too many claims by chance.", "verdict": "bad", "feedback": "Not chance — it's structural. Flat pricing drove the careful (overcharged) away and drew the reckless (undercharged) in. That's adverse selection, a predictable death spiral, not luck." },
+        { "label": "Adverse selection — flat pricing drove out the low-risk and attracted the high-risk.", "verdict": "good", "feedback": "Exactly. Without risk-based underwriting, good customers leave for fairer prices and bad ones pile in, worsening the pool until it collapses. Pricing to risk is what keeps the net standing." },
+        { "label": "It just needed to charge everyone even less.", "verdict": "bad", "feedback": "Charging less worsens it — the pricing already didn't cover the risk. The fix is risk-based pricing (and deductibles), not a cheaper flat rate." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Pricing concepts",
+      "prompt": "Match each term to its meaning.",
+      "pairs": [
+        { "left": "Underwriting", "right": "Assessing and pricing a risk to set the premium" },
+        { "left": "Premium", "right": "The price paid for cover, ideally matched to risk" },
+        { "left": "Adverse selection", "right": "Flat pricing drives out good risks, attracts bad ones" },
+        { "left": "Moral hazard", "right": "Being insured tempts more reckless behaviour" },
+        { "left": "Deductible / excess", "right": "The first slice of a claim you pay yourself" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Insurers must price each risk fairly via underwriting — or adverse selection (good risks leave, bad ones pile in) and moral hazard (insured people get reckless) wreck the pool — and deductibles plus risk-based pricing keep skin in the game.”",
+  "checkpoint": [
+    {
+      "q": "'Adverse selection' is the problem that…",
+      "options": [
+        "Insurers pick the best customers",
+        "Without risk-based pricing, low-risk customers leave and high-risk ones pile in",
+        "Everyone pays a fair price",
+        "Claims never happen"
+      ],
+      "answer": 1,
+      "explain": "Flat pricing overcharges the careful (who leave) and undercharges the reckless (who flock in) — a death spiral."
+    },
+    {
+      "q": "'Moral hazard' means…",
+      "options": [
+        "Insurers acting unethically",
+        "Being insured can tempt people to behave more recklessly",
+        "A type of premium",
+        "Claims being denied"
+      ],
+      "answer": 1,
+      "explain": "If you no longer bear the full cost, you may take more risk — which deductibles help curb."
+    },
+    {
+      "q": "For the insured, a premium is also…",
+      "options": [
+        "A meaningless number",
+        "A price signal about your risk — reducing real risk lowers your cost",
+        "Always fixed forever",
+        "Unrelated to your behaviour"
+      ],
+      "answer": 1,
+      "explain": "Better controls and fewer claims lower premiums — insurance and good risk management reward each other."
+    }
+  ]
+}

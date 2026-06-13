@@ -1,0 +1,85 @@
+{
+  "id": 3,
+  "slug": "reading-the-horizon",
+  "title": "Reading the Horizon",
+  "subtitle": "Scanning, scenarios & weak signals",
+  "icon": "🔭",
+  "hook": {
+    "metaphor": "A captain who only watches the deck will hit what's beyond the bow. Avoiding strategic disaster means looking *up and out* — scanning the horizon for distant storms, faint lights of other ships, and shifts in the weather while there's still time to turn. The information that saves you is almost always at the edge of view, easy to miss, and ignored by everyone staring at today's numbers.",
+    "scenario": "Two firms in the same industry. One obsesses over this quarter's internal metrics. The other also tracks emerging technologies, regulatory rumblings, and odd shifts in customer behaviour. A major change arrives. One saw it coming and adapted; the other was blindsided. What was the second firm doing?"
+  },
+  "learn": [
+    "The core habit is **environmental scanning** — systematically watching the world *outside* the organisation for change. Inward-looking firms (our quarter-obsessed one) get blindsided; outward-looking ones see change coming. Strategic risk lives outside your walls, so that's where you must look.",
+    "A simple lens for scanning is **PESTLE**: Political, Economic, Social, Technological, Legal, and Environmental forces. Running through these prompts surfaces threats and opportunities you'd otherwise miss — a structured way to look up from the deck.",
+    "Because the future is unknowable, the key tool is **scenario planning** (the cousin of stress testing): imagining several plausible futures ('what if this technology wins? what if that regulation passes?') and asking 'would our strategy survive each?' You don't predict *the* future; you prepare for a *range* of them.",
+    "The hardest skill is catching **weak signals** — faint early hints of big change (a fringe technology, a small competitor, a shift among your most demanding customers). By the time a signal is strong and obvious, the cheap chances to respond are gone. Disruption is loud only in hindsight; in foresight it whispers.",
+    "And the enemy of horizon-scanning is **short-termism and confirmation bias** (the ESG short-term thread, and a human one): the pull to focus on this quarter and to dismiss signals that contradict the current strategy. Reading the horizon honestly means actively seeking the news you *don't* want to hear."
+  ],
+  "bridge": "So at work, you can build the habit that prevents most strategic disasters: regularly look *up and out*, not just down at this quarter. Run a PESTLE scan, ask 'would our strategy survive several different futures?' (scenario planning), and pay deliberate attention to weak signals — especially the uncomfortable ones that suggest your current direction might be wrong.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Who saw it coming?",
+      "prompt": "One firm watched only internal quarterly metrics; the other also scanned tech, regulation, and customer shifts. A big change hit. Why did the second adapt?",
+      "options": [
+        { "label": "Luck — it just happened to react faster.", "verdict": "bad", "feedback": "Not luck — it was looking. Environmental scanning meant it saw the change forming on the horizon while the inward-looking firm stared at the deck. Foresight beat hindsight." },
+        { "label": "It scanned the external environment, so it saw the change early.", "verdict": "good", "feedback": "Exactly. Strategic risk lives outside the walls. Watching tech, regulation, and customer shifts (e.g. via PESTLE) gave it time to turn — the inward-looking firm got blindsided." },
+        { "label": "Internal metrics are all that matter anyway.", "verdict": "bad", "feedback": "Internal metrics never warn of external change — that's the blind spot that sinks well-run firms. You must look up and out, not just down." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Sort the PESTLE forces",
+      "prompt": "Match each external change to its PESTLE category.",
+      "buckets": [
+        { "id": "tech", "label": "Technological" },
+        { "id": "legal", "label": "Political/Legal" },
+        { "id": "social", "label": "Social/Economic" }
+      ],
+      "items": [
+        { "label": "A new AI tool reshaping your industry", "bucket": "tech" },
+        { "label": "A looming change in regulation", "bucket": "legal" },
+        { "label": "A shift in what customers value", "bucket": "social" },
+        { "label": "Automation replacing a core process", "bucket": "tech" },
+        { "label": "A new government policy on your sector", "bucket": "legal" },
+        { "label": "A recession changing spending habits", "bucket": "social" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Avoiding strategic disaster means reading the horizon — scanning the outside world (PESTLE), planning for several plausible futures, and catching weak signals early — because disruption only looks obvious in hindsight; in foresight it whispers.”",
+  "checkpoint": [
+    {
+      "q": "'Environmental scanning' in strategy means…",
+      "options": [
+        "Checking the office temperature",
+        "Systematically watching the outside world for change",
+        "Auditing internal controls",
+        "Reviewing last quarter's profit"
+      ],
+      "answer": 1,
+      "explain": "Strategic risk lives outside the walls, so you must look up and out, not just at internal metrics."
+    },
+    {
+      "q": "Scenario planning helps with strategic risk by…",
+      "options": [
+        "Predicting the exact future",
+        "Preparing for a range of plausible futures, not betting on one",
+        "Ignoring uncertainty",
+        "Focusing only on this quarter"
+      ],
+      "answer": 1,
+      "explain": "You can't predict the future, so you ensure your strategy survives several possible ones."
+    },
+    {
+      "q": "'Weak signals' are important because…",
+      "options": [
+        "They're always false alarms",
+        "By the time a signal is strong and obvious, the cheap chances to respond are gone",
+        "They only matter to scientists",
+        "They're easy for everyone to see"
+      ],
+      "answer": 1,
+      "explain": "Disruption whispers before it shouts — catching faint early hints buys time the obvious signal won't."
+    }
+  ]
+}

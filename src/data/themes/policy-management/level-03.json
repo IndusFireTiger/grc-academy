@@ -1,0 +1,84 @@
+{
+  "id": 3,
+  "slug": "the-policy-lifecycle",
+  "title": "The Policy Lifecycle",
+  "subtitle": "From draft to retirement",
+  "icon": "🔄",
+  "hook": {
+    "metaphor": "A policy isn't a monument you carve once and leave forever — it's a living thing with a lifecycle: born (drafted), approved, published, periodically health-checked, and eventually retired when it no longer fits. Treat it as a one-time carving and you end up with a wall of fossils: rules referencing systems, laws, and people that vanished years ago.",
+    "scenario": "An auditor finds a company's policies still reference a regulation repealed five years ago, a system long decommissioned, and a 'contact the head of department' who left in 2019. Nobody owns reviewing them. The policies exist — but what's gone wrong?"
+  },
+  "learn": [
+    "Policies move through a **lifecycle**: **draft → review/approve → publish/communicate → maintain (periodic review) → retire.** Skip any stage and the policy decays. Our fossilised policies skipped 'periodic review' — so they slowly drifted from reality until they were actively misleading.",
+    "**Drafting and approval** must involve the right people: the subject-matter owner writes it, relevant stakeholders (legal, risk, affected teams) review it, and an appropriate authority formally **approves** it. An unapproved 'policy' carries no weight; a policy approved without stakeholder input often proves unworkable.",
+    "**Publishing and communicating** is its own stage (and its own level next) — a policy that's approved but not actually rolled out to the people it governs isn't really 'live'.",
+    "**Periodic review** is the most-skipped, most-important maintenance: every policy needs an owner and a review date (e.g. annually, or when the law/system changes). This is what stops the fossilisation in our scenario — outdated policies aren't just useless, they're *dangerous*, because people may follow rules that are now wrong.",
+    "And **retirement** matters too: when a policy is obsolete or superseded, formally withdraw it. Leaving dead policies in the library breeds confusion and contradiction (which is the live-policy you should follow?). A clean lifecycle keeps the rule-set trustworthy."
+  ],
+  "bridge": "So at work, you can tell a managed policy from a fossil by asking: *who owns it, when was it last reviewed, and when is it next due?* Every policy needs an owner and a review cycle — because the world changes (laws, systems, people) and a policy that isn't maintained doesn't just go stale, it starts pointing people in the wrong direction. And retire the dead ones, so the library stays trustworthy.",
+  "interactions": [
+    {
+      "type": "classify",
+      "title": "Order the lifecycle",
+      "prompt": "Sort each activity into its stage of the policy lifecycle.",
+      "buckets": [
+        { "id": "create", "label": "Draft & approve" },
+        { "id": "maintain", "label": "Publish & maintain" },
+        { "id": "retire", "label": "Retire" }
+      ],
+      "items": [
+        { "label": "The owner writes the policy and stakeholders review it", "bucket": "create" },
+        { "label": "An authority formally signs it off", "bucket": "create" },
+        { "label": "Rolling it out to the people it governs", "bucket": "maintain" },
+        { "label": "An annual review to keep it current", "bucket": "maintain" },
+        { "label": "Formally withdrawing an obsolete policy", "bucket": "retire" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "The fossilised policies",
+      "prompt": "Policies reference a repealed law, a dead system, and a person gone since 2019, with no review owner. What went wrong?",
+      "options": [
+        { "label": "Nothing — the policies still exist, so they're fine.", "verdict": "bad", "feedback": "Existing isn't the same as current. Out-of-date policies are worse than none — people may follow rules that are now wrong. The missing piece is ownership and periodic review." },
+        { "label": "No periodic review or owner — the policies decayed into being misleading.", "verdict": "good", "feedback": "Exactly. Every policy needs an owner and a review cycle. Skipping maintenance let them fossilise until they actively misdirect — and obsolete ones should have been retired." },
+        { "label": "They just need more policies added on top.", "verdict": "bad", "feedback": "Adding more onto a stale, contradictory base makes it worse. The fix is to maintain (review/update) and retire the dead ones — not to pile on." }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “A policy is a living thing — drafted, approved, published, periodically reviewed, and eventually retired — so every policy needs an owner and a review date, because an unmaintained policy doesn't just go stale, it starts misdirecting people.”",
+  "checkpoint": [
+    {
+      "q": "The policy lifecycle runs roughly…",
+      "options": [
+        "Retire → publish → draft",
+        "Draft → approve → publish → periodic review → retire",
+        "Write once and never touch again",
+        "There is no lifecycle"
+      ],
+      "answer": 1,
+      "explain": "Skipping any stage — especially periodic review — lets policies decay or mislead."
+    },
+    {
+      "q": "Why is periodic review the most-skipped, most-important stage?",
+      "options": [
+        "It isn't important",
+        "The world changes, and an unreviewed policy goes stale and starts misdirecting people",
+        "Reviews are illegal",
+        "Policies never need updating"
+      ],
+      "answer": 1,
+      "explain": "Laws, systems, and people change; without an owner and review cycle, policies fossilise and mislead."
+    },
+    {
+      "q": "Obsolete policies should be…",
+      "options": [
+        "Left in the library forever",
+        "Formally retired, to avoid confusion and contradiction",
+        "Secretly deleted with no record",
+        "Made even longer"
+      ],
+      "answer": 1,
+      "explain": "Dead policies breed confusion about which rule is live — formal retirement keeps the set trustworthy."
+    }
+  ]
+}

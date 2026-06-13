@@ -1,0 +1,79 @@
+{
+  "id": 1,
+  "slug": "the-safety-net",
+  "title": "The Safety Net",
+  "subtitle": "Risk transfer & pooling, explained",
+  "icon": "🪂",
+  "hook": {
+    "metaphor": "A trapeze artist still performs daring leaps — but over a net. The net doesn't stop them falling; it stops a fall from being fatal. Insurance is that safety net for organisations: it doesn't prevent bad things happening, it makes them survivable, by letting you swap an unpredictable catastrophe for a predictable, affordable cost.",
+    "scenario": "A small business could be wiped out by one big event — a fire, a lawsuit, a flood — that it can't predict or afford. For a modest annual premium, an insurer agrees to carry that cost if it happens. Has the business removed the risk, or done something else?"
+  },
+  "learn": [
+    "Insurance is a form of **risk transfer** (one of the four risk responses from Operational Risk: avoid, reduce, transfer, accept). You don't remove the risk — the fire can still happen — you shift its *financial consequence* to someone else (the insurer) in exchange for a premium. The net doesn't stop the fall; it catches it.",
+    "The magic behind it is **risk pooling**. An insurer collects small premiums from *many* parties, only a few of whom will suffer a loss in any year. The many fund the unlucky few. This converts each member's rare, unpredictable catastrophe into a small, predictable, budgetable cost — a genuinely powerful trade.",
+    "So the core trade is **certainty for a fee**: you accept a small, *certain* cost (the premium) to avoid a large, *uncertain* one (the loss). For risks that are rare but potentially ruinous, that's an excellent deal — which is exactly why insurance exists.",
+    "But — crucially for later levels — **transferring the financial cost doesn't transfer everything.** Insurance can pay to rebuild the factory, but it can't restore lost customers, reputation, or time. It's a financial backstop, not a substitute for actually managing the risk (preventing the fire still matters).",
+    "And it connects to every other GRC theme: cyber breaches, third-party failures, liability, property damage, business interruption — most major risks have an insurance angle. Insurance is the financial safety net under the whole risk landscape, used *alongside* prevention and controls, not instead of them."
+  ],
+  "bridge": "So at work, you can frame insurance correctly: it doesn't remove a risk, it **transfers the financial blow** — swapping a rare catastrophe for a predictable premium, funded by pooling across many. That makes it perfect for rare-but-ruinous risks. Just remember it's a net, not a shield: it catches the financial fall but doesn't prevent it, and it can't restore reputation or lost time — so it complements managing the risk, never replaces it.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Removed the risk, or transferred it?",
+      "prompt": "A business pays a premium so the insurer covers the cost of a possible fire. What has it actually done?",
+      "options": [
+        { "label": "Removed the risk — a fire can no longer hurt it.", "verdict": "bad", "feedback": "The fire can still happen and still disrupt the business. Insurance doesn't remove the risk — it transfers the *financial* consequence. The net catches the fall; it doesn't prevent it." },
+        { "label": "Transferred the financial consequence to the insurer for a predictable fee.", "verdict": "good", "feedback": "Exactly. It swapped a rare, ruinous, uncertain cost for a small, certain premium — risk transfer via pooling. The risk itself remains, so prevention still matters." },
+        { "label": "Made the business completely safe forever.", "verdict": "bad", "feedback": "Insurance pays to rebuild, but can't restore lost customers, reputation, or time. It's a financial backstop, not total safety — manage the risk too." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "What insurance can and can't do",
+      "prompt": "Sort each outcome by whether insurance can restore it.",
+      "buckets": [
+        { "id": "can", "label": "Insurance can cover" },
+        { "id": "cant", "label": "Insurance can't restore" }
+      ],
+      "items": [
+        { "label": "The cost to rebuild a burned-down factory", "bucket": "can" },
+        { "label": "Customers lost during the downtime", "bucket": "cant" },
+        { "label": "A legal payout from a lawsuit", "bucket": "can" },
+        { "label": "Damaged reputation and trust", "bucket": "cant" },
+        { "label": "Repair costs after a flood", "bucket": "can" },
+        { "label": "The time and momentum lost in the crisis", "bucket": "cant" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Insurance is a safety net, not a shield — it doesn't prevent the fall, it transfers the financial blow, swapping a rare catastrophe for a predictable premium funded by pooling many people's risk together.”",
+  "checkpoint": [
+    {
+      "q": "Insurance is a form of risk…",
+      "options": ["Avoidance", "Transfer", "Elimination", "Creation"],
+      "answer": 1,
+      "explain": "It transfers the financial consequence of a risk to the insurer for a premium — the risk itself remains."
+    },
+    {
+      "q": "'Risk pooling' works because…",
+      "options": [
+        "Everyone suffers a loss every year",
+        "Many pay small premiums, and the many fund the unlucky few who have losses",
+        "Insurers never pay out",
+        "Losses are perfectly predictable for individuals"
+      ],
+      "answer": 1,
+      "explain": "Pooling turns each member's rare, unpredictable catastrophe into a small, predictable, shared cost."
+    },
+    {
+      "q": "A key limit of insurance is that it…",
+      "options": [
+        "Prevents all disasters",
+        "Can cover financial loss but can't restore reputation, customers, or time",
+        "Removes the need for any risk management",
+        "Always pays out instantly in full"
+      ],
+      "answer": 1,
+      "explain": "It's a financial backstop, not a substitute for preventing and managing the risk."
+    }
+  ]
+}

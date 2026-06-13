@@ -13,6 +13,9 @@ import { marketRiskTrack } from './themes/market-risk/track.js';
 import { liquidityRiskTrack } from './themes/liquidity-risk/track.js';
 import { esgClimateRiskTrack } from './themes/esg-climate-risk/track.js';
 import { businessContinuityTrack } from './themes/business-continuity/track.js';
+import { strategicRiskTrack } from './themes/strategic-risk/track.js';
+import { policyManagementTrack } from './themes/policy-management/track.js';
+import { insurableRiskTrack } from './themes/insurable-risk/track.js';
 
 export const themes = [
   {
@@ -40,9 +43,9 @@ export const themes = [
   { slug: 'esg-climate-risk', title: 'ESG & Climate Risk', tagline: 'The Long-Game Forecast', blurb: 'Physical and transition risk over the long horizon.', icon: '🌱', accent: 'teal', status: 'live', track: esgClimateRiskTrack },
   { slug: 'business-continuity', title: 'Business Continuity & Resilience', tagline: 'The Fire Drill', blurb: 'Keep running when the lights go out.', icon: '🚨', accent: 'rose', status: 'live', track: businessContinuityTrack },
   // ---- Wave 4 ----
-  { slug: 'strategic-risk', title: 'Strategic Risk', tagline: 'Steering the Ship', blurb: 'The bets that make or break the mission.', icon: '🧭', accent: 'violet', status: 'soon', track: null },
-  { slug: 'policy-management', title: 'Policy Management', tagline: 'The House Rules', blurb: 'Written, agreed, and actually followed.', icon: '📜', accent: 'amber', status: 'soon', track: null },
-  { slug: 'insurable-risk', title: 'Insurable Risk & Claims', tagline: 'The Safety Net', blurb: 'What’s covered — and what happens when you fall.', icon: '🪂', accent: 'sky', status: 'soon', track: null },
+  { slug: 'strategic-risk', title: 'Strategic Risk', tagline: 'Steering the Ship', blurb: 'The bets that make or break the mission.', icon: '🧭', accent: 'violet', status: 'live', track: strategicRiskTrack },
+  { slug: 'policy-management', title: 'Policy Management', tagline: 'The House Rules', blurb: 'Written, agreed, and actually followed.', icon: '📜', accent: 'amber', status: 'live', track: policyManagementTrack },
+  { slug: 'insurable-risk', title: 'Insurable Risk & Claims', tagline: 'The Safety Net', blurb: 'What’s covered — and what happens when you fall.', icon: '🪂', accent: 'sky', status: 'live', track: insurableRiskTrack },
 ];
 
 export function getThemes() {

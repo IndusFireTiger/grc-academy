@@ -1,0 +1,84 @@
+{
+  "id": 1,
+  "slug": "steering-the-ship",
+  "title": "Steering the Ship",
+  "subtitle": "The risk of going the wrong way",
+  "icon": "🧭",
+  "hook": {
+    "metaphor": "You can run a ship flawlessly — engine humming, crew drilled, decks spotless — and still sail it confidently in the wrong direction, straight onto the rocks. Strategic risk is the risk of the *direction* being wrong, not the operations. It's the most dangerous risk of all because everything can look perfectly well-run right up to the moment the whole voyage proves pointless.",
+    "scenario": "A company is brilliantly run — efficient, compliant, low on operational incidents. But it makes a product the world is rapidly abandoning, and leadership keeps optimising it instead of changing course. Operationally flawless, strategically doomed. Which risk is about to sink it?"
+  },
+  "learn": [
+    "**Strategic risk is the risk that your big-picture choices — what business to be in, which markets, which bets — turn out wrong**, threatening your fundamental objectives and survival. It's about *direction*, not execution.",
+    "It's the odd one out among risks because it's about doing the *wrong thing well* rather than doing the right thing badly. Our company has near-zero operational, compliance, and even financial-control problems — and is still doomed, because the *strategy* is wrong. Polishing the brass on a sinking course doesn't help.",
+    "Strategic risk is uniquely dangerous for three reasons: it's **slow and quiet** (no alarm goes off when your market is dying), it's **existential** (it threatens the whole organisation, not one process), and it's often **invisible from inside** good operational metrics — you can be hitting every KPI on the way to irrelevance (Kodak, Blockbuster, Nokia).",
+    "It's also the risk most tied to **opportunity**: strategy is about taking bets to win, so strategic risk and strategic *reward* are two sides of one coin. The goal isn't to avoid strategic risk (that means never moving) but to take the *right* bets with eyes open.",
+    "And it sits at the top of the risk hierarchy: operational, credit, and market risks are about running the chosen course well; strategic risk asks whether the course itself is right. Which is why it's fundamentally the **board's** responsibility (a later level)."
+  ],
+  "bridge": "So at work, you can hold a question that day-to-day metrics never ask: *are we doing the right thing, or just doing the wrong thing efficiently?* A flawless operation pointed in a dying direction is the classic strategic-risk trap — no operational dashboard will warn you, because every gauge reads green right up until the market disappears beneath you.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Flawless but doomed",
+      "prompt": "A superbly-run company keeps optimising a product the world is abandoning. Which risk threatens it?",
+      "options": [
+        { "label": "Operational risk — something must be breaking.", "verdict": "bad", "feedback": "Nothing operational is breaking — that's the trap. The company executes brilliantly. The danger is the *direction*: a dying product. That's strategic risk, invisible to operational metrics." },
+        { "label": "Strategic risk — the direction is wrong, however well it's executed.", "verdict": "good", "feedback": "Exactly. It's doing the wrong thing well. Strategic risk threatens the whole voyage regardless of operational excellence — Kodak and Blockbuster ran fine right up to irrelevance." },
+        { "label": "No real risk — it's well-run, so it's safe.", "verdict": "bad", "feedback": "'Well-run' only covers execution. A perfectly-run company sailing toward a vanishing market is in the gravest danger of all — strategic, and unflagged by any operational gauge." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Strategic or operational?",
+      "prompt": "Sort each issue by whether it's about the direction (strategic) or running it well (operational).",
+      "buckets": [
+        { "id": "strategic", "label": "Strategic (direction)" },
+        { "id": "operational", "label": "Operational (execution)" }
+      ],
+      "items": [
+        { "label": "Betting the company on a declining product", "bucket": "strategic" },
+        { "label": "A payment system outage", "bucket": "operational" },
+        { "label": "Entering a market that doesn't want you", "bucket": "strategic" },
+        { "label": "A staff member making a data-entry error", "bucket": "operational" },
+        { "label": "Missing a disruptive new competitor", "bucket": "strategic" },
+        { "label": "A server running out of capacity", "bucket": "operational" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Strategic risk is sailing the wrong direction flawlessly — the risk that your big-picture bets are wrong — and it's the deadliest because every operational gauge reads green right up to the moment the market disappears.”",
+  "checkpoint": [
+    {
+      "q": "Strategic risk is fundamentally about…",
+      "options": [
+        "Doing the right thing badly (execution)",
+        "Doing the wrong thing well (direction)",
+        "A single system failing",
+        "A borrower defaulting"
+      ],
+      "answer": 1,
+      "explain": "It's about the big-picture choices being wrong, regardless of how well they're executed."
+    },
+    {
+      "q": "Why is strategic risk so dangerous?",
+      "options": [
+        "It's loud and obvious",
+        "It's slow, existential, and invisible to good operational metrics",
+        "It only affects small firms",
+        "It's easy to reverse"
+      ],
+      "answer": 1,
+      "explain": "You can hit every KPI on the road to irrelevance — no operational alarm warns of a dying direction."
+    },
+    {
+      "q": "The goal with strategic risk is to…",
+      "options": [
+        "Avoid all bets and never change",
+        "Take the right bets with eyes open — it's tied to opportunity",
+        "Ignore it as the board's hobby",
+        "Eliminate it entirely"
+      ],
+      "answer": 1,
+      "explain": "Strategy means taking bets to win; the aim is wise, eyes-open risk-taking, not paralysis."
+    }
+  ]
+}

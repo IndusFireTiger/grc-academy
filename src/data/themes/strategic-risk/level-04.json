@@ -1,0 +1,84 @@
+{
+  "id": 4,
+  "slug": "betting-wisely",
+  "title": "Betting Wisely",
+  "subtitle": "Decisions under deep uncertainty",
+  "icon": "🎲",
+  "hook": {
+    "metaphor": "Strategy is gambling with incomplete information — but a wise gambler and a reckless one play very differently. The wise one sizes bets so no single loss is fatal, keeps options open, walks away from bad hands, and judges decisions by whether they were *smart given what was known*, not just by whether they happened to win. Strategic risk-taking is that disciplined gambling.",
+    "scenario": "A company bets everything on one bold, all-or-nothing strategy. It happens to pay off spectacularly, and the CEO is hailed as a genius. A risk officer is uneasy anyway. Why might a winning bet still have been a bad decision?"
+  },
+  "learn": [
+    "First principle: **size bets so no single loss is fatal.** Strategy means taking risks, but a wise organisation doesn't bet the whole company on one throw (the concentration trap). Our all-or-nothing CEO got lucky — but a bet that could have destroyed the firm was reckless *even though it won*. Outcome and decision quality are not the same thing.",
+    "This is the crucial idea of **judging decisions by process, not just outcome** ('resulting' is the gambler's term for confusing the two). A good decision can have a bad outcome and vice versa. If you only reward winners, you reward recklessness that got lucky — and punish sound bets that didn't.",
+    "Second: **keep options open (optionality).** Where you can, prefer reversible, staged bets — small experiments that can scale if they work — over giant irreversible commitments. Pilots, phased rollouts, and exit ramps let you learn cheaply before betting big.",
+    "Third: weigh **risk against reward** honestly, and beware **sunk-cost thinking** — throwing good money after bad because you've already invested (a bias that fuels failed strategies for years). The money already spent is gone; the only question is whether the *next* rupee is worth spending.",
+    "And manage the **human biases** that wreck strategic decisions: overconfidence, groupthink (everyone agreeing because the boss likes it), and confirmation bias. Good strategic risk-taking deliberately invites challenge — a 'devil's advocate', a pre-mortem ('imagine this failed — why?') — to pressure-test the bet before it's made."
+  ],
+  "bridge": "So at work, you can tell wise strategic risk-taking from reckless gambling that got lucky: *was the bet sized so a loss wouldn't be fatal? Were options kept open? And was the decision sound given what was known — regardless of how it turned out?* Judge the process, not just the result — because rewarding lucky recklessness teaches everyone to gamble the company.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The winning bad bet",
+      "prompt": "An all-or-nothing bet paid off spectacularly. Why might the risk officer still call it a bad decision?",
+      "options": [
+        { "label": "She's wrong — it won, so it was clearly a great decision.", "verdict": "bad", "feedback": "That's 'resulting' — confusing a good outcome with a good decision. A bet that could have destroyed the company was reckless even though it happened to win. Don't reward lucky gambling." },
+        { "label": "It risked the whole firm on one throw — reckless, even though it won.", "verdict": "good", "feedback": "Exactly. Decision quality ≠ outcome. Sizing a bet so a loss would be fatal is reckless regardless of result; rewarding it teaches everyone to gamble the company." },
+        { "label": "Winning bets are always perfectly safe.", "verdict": "bad", "feedback": "Winning doesn't make a bet safe — it made *this* throw lucky. The same bet replayed could have sunk the firm. Judge the process, not the single result." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Wise or reckless?",
+      "prompt": "Sort each approach to strategic decision-making.",
+      "buckets": [
+        { "id": "wise", "label": "Wise" },
+        { "id": "reckless", "label": "Reckless" }
+      ],
+      "items": [
+        { "label": "Sizing bets so no single loss is fatal", "bucket": "wise" },
+        { "label": "Betting the whole company on one throw", "bucket": "reckless" },
+        { "label": "Piloting before a full rollout (keeping options open)", "bucket": "wise" },
+        { "label": "Throwing more money in because you've already spent so much", "bucket": "reckless" },
+        { "label": "Inviting a devil's advocate to challenge the plan", "bucket": "wise" },
+        { "label": "Judging the decision purely by whether it won", "bucket": "reckless" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Bet wisely — size bets so no loss is fatal, keep options open, ignore sunk costs, and judge decisions by whether they were smart given what was known, not just by whether they got lucky.”",
+  "checkpoint": [
+    {
+      "q": "'Resulting' is the mistake of…",
+      "options": [
+        "Judging a decision only by its outcome, not its quality",
+        "Always planning ahead",
+        "Keeping options open",
+        "Sizing bets carefully"
+      ],
+      "answer": 0,
+      "explain": "A good decision can have a bad outcome and vice versa — rewarding only winners rewards lucky recklessness."
+    },
+    {
+      "q": "'Sunk-cost' thinking leads firms to…",
+      "options": [
+        "Cut losses quickly",
+        "Throw good money after bad because of what's already been spent",
+        "Always make sound decisions",
+        "Keep options open"
+      ],
+      "answer": 1,
+      "explain": "Money already spent is gone; the only question is whether the next rupee is worth it — sunk cost ignores that."
+    },
+    {
+      "q": "'Optionality' in strategy means…",
+      "options": [
+        "Making giant irreversible bets",
+        "Preferring reversible, staged bets that let you learn cheaply",
+        "Never deciding anything",
+        "Copying competitors exactly"
+      ],
+      "answer": 1,
+      "explain": "Pilots, phased rollouts, and exit ramps let you test before committing big — keeping your options open."
+    }
+  ]
+}

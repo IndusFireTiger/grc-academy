@@ -1,0 +1,83 @@
+{
+  "id": 5,
+  "slug": "policy-vs-reality",
+  "title": "Policy vs Reality",
+  "subtitle": "The gap between written and done",
+  "icon": "🪞",
+  "hook": {
+    "metaphor": "There are two sets of rules in any organisation: the ones written down, and the ones people actually follow. When they match, the policy is real. When they drift apart — everyone quietly doing it 'the real way' that contradicts the manual — you have a dangerous gap that looks like compliance on paper and is anything but. Closing that gap is the heart of policy management.",
+    "scenario": "A company's policy says every refund needs manager approval. In reality, the team agreed long ago it was too slow, so they skip it — and everyone, including the manager, knows. The written rule and the real rule have quietly diverged. What should happen now?"
+  },
+  "learn": [
+    "The recurring GRC trap, here in its purest form: the gap between the **documented** rule and the **actual** behaviour (the 'documented vs implemented' theme from Internal Controls and Audit). Our refund policy is a textbook case — the written rule and the lived rule have silently split.",
+    "When policy and reality diverge, there are only two honest fixes, and one dishonest non-fix. **Fix the behaviour** (enforce the policy, if the rule is right and important) — or **fix the policy** (change it, if the rule is genuinely outdated or unworkable, like a too-slow refund process). The dishonest non-fix is to leave the gap open and pretend the paper rule is followed.",
+    "Leaving the gap is dangerous because it breeds **normalised deviance** — once people routinely ignore one rule with no consequence, they learn that *all* rules are optional, eroding the whole control environment. A widely-flouted policy doesn't just fail itself; it corrodes respect for every other policy.",
+    "Finding the gap requires **monitoring compliance** with policy — checking whether the rule is actually being followed (via spot-checks, audits, data, or simply asking). You can't close a gap you don't know exists, and people rarely volunteer that they've been quietly bypassing a rule for years.",
+    "And gaps are often legitimate signals: a routinely-ignored policy frequently means the *policy* is wrong (unworkable, outdated), not that people are bad. A formal **exceptions process** — a sanctioned way to deviate with approval and a reason — is healthier than driving deviations underground. The goal is alignment between paper and practice, reached honestly."
+  ],
+  "bridge": "So at work, whenever you spot a rule everyone quietly ignores, you can name it as a policy-vs-reality gap and force the honest choice: *enforce it, or change it — but don't leave it.* A widely-flouted policy is corroding respect for all your rules. And treat the gap as information: it often means the policy, not the people, needs fixing — so monitor compliance, and give people a real exceptions process instead of pushing deviation into the shadows.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The ignored refund rule",
+      "prompt": "Everyone (including the manager) skips the 'manager must approve refunds' rule because it's too slow. What should happen?",
+      "options": [
+        { "label": "Nothing — it works in practice, leave the gap.", "verdict": "bad", "feedback": "Leaving the gap is the dangerous non-fix. A rule everyone openly ignores teaches that all rules are optional (normalised deviance), corroding the whole control environment." },
+        { "label": "Honestly close the gap — enforce the rule if it's right, or change it if it's outdated.", "verdict": "good", "feedback": "Exactly. Two honest options: fix the behaviour or fix the policy. Here the routinely-ignored rule likely signals the policy is too slow — so update it (perhaps a faster threshold-based approval), don't pretend." },
+        { "label": "Punish the team while keeping the unworkable rule.", "verdict": "ok", "feedback": "Enforcing matters if the rule is right — but a rule everyone including the manager bypasses is likely the problem. Punishing people for an unworkable policy without fixing it just drives deviation underground." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Honest fix or dangerous non-fix?",
+      "prompt": "Sort each response to a policy-vs-reality gap.",
+      "buckets": [
+        { "id": "honest", "label": "Honest fix" },
+        { "id": "dishonest", "label": "Dangerous non-fix" }
+      ],
+      "items": [
+        { "label": "Enforcing the rule if it's genuinely important", "bucket": "honest" },
+        { "label": "Updating an outdated, unworkable policy", "bucket": "honest" },
+        { "label": "Pretending the paper rule is followed", "bucket": "dishonest" },
+        { "label": "A sanctioned exceptions process with approval", "bucket": "honest" },
+        { "label": "Letting everyone quietly ignore it forever", "bucket": "dishonest" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “When the written rule and the real behaviour drift apart, you must honestly close the gap — enforce the policy or change it — because leaving a widely-ignored rule teaches everyone that all rules are optional.”",
+  "checkpoint": [
+    {
+      "q": "When a policy and actual behaviour diverge, the dishonest non-fix is to…",
+      "options": [
+        "Enforce the rule",
+        "Change the rule",
+        "Leave the gap and pretend the paper rule is followed",
+        "Add an exceptions process"
+      ],
+      "answer": 2,
+      "explain": "Leaving the gap open breeds normalised deviance — the honest options are enforce it or change it."
+    },
+    {
+      "q": "'Normalised deviance' is the danger that…",
+      "options": [
+        "Policies become too strict",
+        "Routinely ignoring one rule teaches that all rules are optional",
+        "Everyone follows every rule perfectly",
+        "Policies are reviewed too often"
+      ],
+      "answer": 1,
+      "explain": "One flouted rule with no consequence erodes respect for the whole control environment."
+    },
+    {
+      "q": "A routinely-ignored policy often signals that…",
+      "options": [
+        "The people are simply bad",
+        "The policy itself may be unworkable or outdated and needs fixing",
+        "More punishment is the only answer",
+        "The gap should be hidden"
+      ],
+      "answer": 1,
+      "explain": "Gaps are information — often the policy, not the people, needs to change; an exceptions process beats underground deviation."
+    }
+  ]
+}

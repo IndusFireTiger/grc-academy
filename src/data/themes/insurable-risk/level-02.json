@@ -1,0 +1,79 @@
+{
+  "id": 2,
+  "slug": "what-can-you-insure",
+  "title": "What Can You Insure?",
+  "subtitle": "Insurable risks & types of cover",
+  "icon": "☂️",
+  "hook": {
+    "metaphor": "Not everything can sit under the umbrella. You can insure your house against fire, but you can't insure a lottery ticket against not winning, or your business against simply making a bad strategic bet. Some risks fit insurance; others don't. Knowing which is which tells you where the safety net can actually catch you — and where you're on your own.",
+    "scenario": "A company wants to insure three things: its warehouse against fire, itself against being sued by a customer, and its CEO's risky expansion strategy against 'not working out'. An insurer happily quotes the first two and laughs at the third. Why?"
+  },
+  "learn": [
+    "For a risk to be **insurable**, it generally must be: **accidental/fortuitous** (not deliberate or certain), **measurable** (you can estimate the likelihood and cost), **spread across many** (poolable), and **not catastrophic to the insurer** (not everyone losing at once). The CEO's strategy fails several tests — it's a *deliberate bet* whose outcome isn't a random accident. That's **strategic risk** (its own track), which you manage, not insure.",
+    "This is why some risks are **uninsurable**: deliberate acts, normal business/strategic risk, and sometimes systemic catastrophes (war, or, increasingly, some climate and pandemic risks where everyone is hit together). The safety net has edges.",
+    "Within the insurable world, cover comes in recognisable types. **Property** insurance: physical assets against fire, theft, flood (the warehouse). **Liability** insurance: claims that you harmed others — public liability, product liability, professional indemnity (the customer lawsuit).",
+    "More specialised covers map to modern risks (and to other tracks): **Cyber** insurance (breaches, ransomware — Cyber & IT Risk), **Directors & Officers (D&O)** (protecting leaders personally from claims), and **Business Interruption (BI)** — covering lost income while you're shut down after an insured event (the link to Business Continuity).",
+    "And a subtle but vital point: insurers **price and exclude** based on these criteria. Cover comes with **exclusions** (things explicitly not covered) and conditions — which is why 'I have insurance' is never the whole story (the claims-denial lesson is coming). What you're *actually* covered for is defined by the policy's fine print, not its title."
+  ],
+  "bridge": "So at work, you can quickly sort what the safety net can catch: *is this risk accidental, measurable, and poolable (insurable) — or a deliberate/strategic bet you must manage yourself (uninsurable)?* Then match real exposures to the right cover — property, liability, cyber, D&O, business interruption — and always check the *exclusions*, because the policy title promises far less than the policy fine print delivers.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Why won't they insure the strategy?",
+      "prompt": "An insurer covers the warehouse and the lawsuit risk but refuses to insure the CEO's expansion strategy 'not working out'. Why?",
+      "options": [
+        { "label": "Insurers are just being unhelpful.", "verdict": "bad", "feedback": "It's not unhelpfulness — a strategic bet isn't an insurable risk. It's a deliberate decision whose outcome isn't a random, measurable accident, and it can't be pooled. That's strategic risk to manage, not insure." },
+        { "label": "Strategic bets aren't accidental, measurable, or poolable — they're uninsurable.", "verdict": "good", "feedback": "Exactly. Insurable risks are accidental, measurable, and spread across many. A chosen strategy fails those tests — it's strategic risk you manage, not transfer to an insurer." },
+        { "label": "The CEO should just demand they cover it.", "verdict": "bad", "feedback": "No insurer will cover a deliberate business bet — it breaks the fundamentals of insurability. The strategy must be managed (Strategic Risk track), not insured away." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Match the cover to the risk",
+      "prompt": "Match each type of insurance to what it covers.",
+      "pairs": [
+        { "left": "Property insurance", "right": "Physical assets vs fire, theft, flood" },
+        { "left": "Liability insurance", "right": "Claims that you harmed others" },
+        { "left": "Cyber insurance", "right": "Breaches, ransomware, and data incidents" },
+        { "left": "Directors & Officers (D&O)", "right": "Protecting leaders personally from claims" },
+        { "left": "Business Interruption (BI)", "right": "Lost income while shut down after an insured event" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “You can insure risks that are accidental, measurable, and poolable — property, liability, cyber, D&O, business interruption — but not deliberate strategic bets; and what you're really covered for is defined by the exclusions, not the policy's title.”",
+  "checkpoint": [
+    {
+      "q": "For a risk to be insurable it generally must be…",
+      "options": [
+        "Deliberate and certain to happen",
+        "Accidental, measurable, poolable, and not catastrophic to the insurer",
+        "A strategic business bet",
+        "Impossible to estimate"
+      ],
+      "answer": 1,
+      "explain": "Those criteria are why a chosen strategy (deliberate, unique) is uninsurable while a fire is insurable."
+    },
+    {
+      "q": "Business Interruption (BI) insurance covers…",
+      "options": [
+        "Physical rebuilding only",
+        "Lost income while you're shut down after an insured event",
+        "Deliberate strategic mistakes",
+        "Employee salaries forever"
+      ],
+      "answer": 1,
+      "explain": "BI replaces income during downtime — the financial link to business continuity."
+    },
+    {
+      "q": "Why does 'I have insurance' never tell the whole story?",
+      "options": [
+        "Insurance is always total",
+        "Cover is defined by the policy's exclusions and conditions, not its title",
+        "Exclusions don't exist",
+        "Insurers cover everything by default"
+      ],
+      "answer": 1,
+      "explain": "The fine print — exclusions and conditions — determines what you're actually covered for."
+    }
+  ]
+}

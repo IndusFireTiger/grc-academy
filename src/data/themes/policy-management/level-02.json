@@ -1,0 +1,84 @@
+{
+  "id": 2,
+  "slug": "writing-rules-people-follow",
+  "title": "Writing Rules People Follow",
+  "subtitle": "Why bad policies get ignored",
+  "icon": "✍️",
+  "hook": {
+    "metaphor": "A road sign that's a paragraph of legalese in tiny font, half-hidden behind a tree, won't stop anyone speeding — not because drivers are bad, but because the sign failed. Most 'policy compliance' problems are really *policy writing* problems: rules so long, vague, or buried that following them is harder than ignoring them.",
+    "scenario": "A 30-page security policy, dense with legal jargon and contradictions, is emailed once and never mentioned again. Staff don't follow it. Management blames the staff for non-compliance. Who's actually at fault here?"
+  },
+  "learn": [
+    "The uncomfortable truth: **most non-compliance is a writing failure, not a people failure.** If a policy is unreadable, unclear, or impossible to find, people will default to whatever's easiest — and that's the policy's fault, not theirs (just like the buried road sign). Blaming staff (our management) misdiagnoses the problem.",
+    "Good policies are **clear and plain**: written for the actual reader, in plain language, short, and unambiguous. If the people who must follow a rule can't understand it in one read, it will be ignored — comprehension is a prerequisite for compliance.",
+    "They're **actionable**: they tell people what to actually *do* (or where to find the how), not just abstract principles. A policy that leaves the reader thinking 'okay… but what do I do?' has failed even if every word is technically correct.",
+    "They're **consistent and current**: free of contradictions with other policies, and kept up to date. Our 30-page contradictory document is unfollowable by design — when rules conflict, people stop trusting all of them.",
+    "And critically, they're **findable and digestible**: accessible where people work, searchable, and reasonable in length. A perfect policy nobody can locate or has time to read might as well not exist. The test of a policy isn't legal completeness — it's whether a busy human will actually read, understand, and act on it."
+  ],
+  "bridge": "So at work, when a policy isn't being followed, you can resist the reflex to blame the people and look at the rule itself: *is it clear, short, actionable, consistent, and easy to find?* A policy is a communication tool — if it's written like impenetrable legalese and buried in an inbox, the failure is the writing, not the reader. Fix the sign before blaming the driver.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Whose fault is non-compliance?",
+      "prompt": "A 30-page jargon-filled, contradictory security policy is ignored, and management blames the staff. Who's at fault?",
+      "options": [
+        { "label": "The staff — they should read and follow policies.", "verdict": "bad", "feedback": "Mostly the policy. Unreadable, contradictory, buried rules guarantee non-compliance regardless of staff intent. Blaming the reader misdiagnoses a writing failure." },
+        { "label": "The policy — unclear, too long, contradictory, and unfindable rules don't get followed.", "verdict": "good", "feedback": "Exactly. Most non-compliance is a writing/communication failure. Fix the sign (make it clear, short, actionable, findable) before blaming the driver." },
+        { "label": "Nobody — non-compliance is just inevitable.", "verdict": "bad", "feedback": "It's not inevitable — it's caused by a badly written, badly distributed policy. A clear, findable, actionable version would be followed far more." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Followable or ignored-by-design?",
+      "prompt": "Sort each policy trait by its effect on whether people actually comply.",
+      "buckets": [
+        { "id": "follow", "label": "Helps compliance" },
+        { "id": "ignore", "label": "Invites non-compliance" }
+      ],
+      "items": [
+        { "label": "Plain language a reader gets in one pass", "bucket": "follow" },
+        { "label": "30 pages of dense legal jargon", "bucket": "ignore" },
+        { "label": "Clear actions: 'do X, don't do Y'", "bucket": "follow" },
+        { "label": "Contradictions with other policies", "bucket": "ignore" },
+        { "label": "Easy to find where people actually work", "bucket": "follow" },
+        { "label": "Emailed once and never seen again", "bucket": "ignore" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Most non-compliance is a writing failure, not a people failure — if a rule is unclear, too long, contradictory, or buried, people default to what's easy, so good policies are plain, actionable, consistent, and findable.”",
+  "checkpoint": [
+    {
+      "q": "Most policy non-compliance is actually caused by…",
+      "options": [
+        "Lazy or dishonest staff",
+        "Policies that are unclear, too long, contradictory, or unfindable",
+        "Too few policies",
+        "Regulators"
+      ],
+      "answer": 1,
+      "explain": "Like a buried, jargon-filled road sign, a bad policy fails the reader — fix the writing before blaming people."
+    },
+    {
+      "q": "A good policy should be…",
+      "options": [
+        "As long and legalistic as possible",
+        "Clear, plain, actionable, consistent, and easy to find",
+        "Emailed once then forgotten",
+        "Full of contradictions"
+      ],
+      "answer": 1,
+      "explain": "Comprehension is a prerequisite for compliance — a policy is a communication tool, not a legal brick."
+    },
+    {
+      "q": "The real test of a policy is whether…",
+      "options": [
+        "It is legally exhaustive",
+        "A busy human will actually read, understand, and act on it",
+        "It is the longest in the company",
+        "It uses impressive jargon"
+      ],
+      "answer": 1,
+      "explain": "Legal completeness means nothing if no one reads or follows it — usability is what makes it work."
+    }
+  ]
+}

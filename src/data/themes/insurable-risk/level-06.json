@@ -1,0 +1,84 @@
+{
+  "id": 6,
+  "slug": "governing-the-safety-net",
+  "title": "Governing the Safety Net",
+  "subtitle": "Programs, gaps & not over-relying",
+  "icon": "🕸️",
+  "hook": {
+    "metaphor": "A safety net with a hole in the middle, or one the acrobats trust so much they stop training, is worse than useless — it gives false confidence right where you'll fall. Governing insurance means treating all your cover as one deliberate net: checking for holes (gaps), keeping it sized to the act (current), and never letting the existence of a net become an excuse to take wild, careless risks.",
+    "scenario": "A company has lots of insurance policies bought piecemeal over years by different people. Nobody has the full picture, two policies overlap wastefully, a major new risk (cyber) isn't covered at all, and the team has grown careless 'because we're insured'. What's missing — and what's the hidden danger?"
+  },
+  "learn": [
+    "At scale, insurance must be governed as a coherent **insurance program**, not a pile of policies bought ad hoc. Someone needs the **whole-of-organisation view**: what we're covered for, by whom, for how much, with what gaps and overlaps. Our company's piecemeal mess is the classic failure — nobody owns the net.",
+    "The two things that view reveals are **gaps** (a real, material risk with no cover — like the uninsured cyber exposure) and **overlaps/waste** (two policies covering the same thing). Gaps are dangerous; overlaps are wasteful — and you find both only by mapping all cover against your actual risk profile (the risk register meets the policy schedule).",
+    "Cover must be **reviewed regularly** against a changing business: new activities, new locations, new risks (cyber, climate), and changing asset values all shift what you need. An insurance program set once and forgotten drifts out of alignment exactly like an unreviewed policy or control (the recurring 'maintain it' theme).",
+    "The subtle, serious danger is **over-reliance** — the moral hazard of Level 3 at the organisational level. Our careless 'because we're insured' team is the warning: a safety net that makes people stop managing risk has made the organisation *more* dangerous, not less. Insurance complements prevention and controls; it must never replace them.",
+    "And it closes on the **golden thread** of this whole academy: insurance sits inside the broader risk framework, owned with board visibility, tied to **risk appetite** (what we retain vs transfer), and underpinned by a culture that treats the net as a backstop for risks it still works hard to prevent. Insurance is the last line of defence — not a reason to abandon the others."
+  ],
+  "bridge": "So at work, you can govern the safety net rather than just collect policies: *does someone hold the whole-of-organisation view of our cover? Have we mapped it against our real risks to find gaps and overlaps? Is it reviewed as the business changes? And — crucially — has having insurance quietly made us careless?* A coherent, current program with no false-confidence is real protection; a pile of piecemeal policies that excuses sloppy risk-taking is a hole in the middle of the net.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The piecemeal policies",
+      "prompt": "Policies bought ad hoc over years: no full picture, wasteful overlap, an uninsured cyber gap, and a team careless 'because we're insured'. What's missing and what's the danger?",
+      "options": [
+        { "label": "Nothing — having lots of policies means well-covered.", "verdict": "bad", "feedback": "A pile of policies isn't a program. There's a dangerous uninsured gap (cyber), wasteful overlap, no owner of the whole view — and worst, insurance has bred carelessness, making the firm more exposed, not less." },
+        { "label": "A governed program (whole view, gap/overlap analysis) — and the danger is over-reliance breeding carelessness.", "verdict": "good", "feedback": "Exactly. Govern insurance as one coherent program mapped to real risks (closing gaps, cutting overlap), reviewed as the business changes — and never let the net become an excuse to stop managing risk." },
+        { "label": "Just buy more policies to be safe.", "verdict": "bad", "feedback": "More piecemeal policies deepen the overlap and still miss the gap, while feeding the over-reliance. The fix is a governed program and a culture that still prevents risk, not more random cover." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Strong insurance governance or not?",
+      "prompt": "Sort each practice.",
+      "buckets": [
+        { "id": "strong", "label": "Good governance" },
+        { "id": "weak", "label": "Failure" }
+      ],
+      "items": [
+        { "label": "A whole-of-organisation view of all cover", "bucket": "strong" },
+        { "label": "Policies bought piecemeal with no owner", "bucket": "weak" },
+        { "label": "Mapping cover against real risks to find gaps", "bucket": "strong" },
+        { "label": "Growing careless 'because we're insured'", "bucket": "weak" },
+        { "label": "Reviewing cover as the business changes", "bucket": "strong" },
+        { "label": "Two policies wastefully covering the same thing", "bucket": "weak" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Govern insurance as one coherent program — a whole-of-organisation view mapped to real risks to find gaps and overlaps, reviewed as you change — and never let the safety net make you careless, because insurance is the last line of defence, not a replacement for managing risk.”",
+  "checkpoint": [
+    {
+      "q": "Governing insurance as a 'program' means…",
+      "options": [
+        "Buying policies piecemeal with no owner",
+        "Holding a whole-of-organisation view of cover, mapped to real risks",
+        "Insuring only the cheapest risks",
+        "Never reviewing cover"
+      ],
+      "answer": 1,
+      "explain": "A coherent program reveals gaps and overlaps that a pile of ad-hoc policies hides."
+    },
+    {
+      "q": "The hidden danger of 'we're insured' is…",
+      "options": [
+        "Lower premiums",
+        "Over-reliance — people stop managing risk, making the organisation more exposed",
+        "Too much prevention",
+        "Nothing at all"
+      ],
+      "answer": 1,
+      "explain": "Moral hazard at the organisational level: a net that breeds carelessness increases real danger."
+    },
+    {
+      "q": "Insurance should be treated as…",
+      "options": [
+        "A replacement for prevention and controls",
+        "The last line of defence, complementing — not replacing — managing risk",
+        "The only risk tool you need",
+        "Irrelevant to other GRC themes"
+      ],
+      "answer": 1,
+      "explain": "It's a financial backstop within the broader risk framework — you still prevent and control the risks."
+    }
+  ]
+}

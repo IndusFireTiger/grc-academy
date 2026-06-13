@@ -1,0 +1,84 @@
+{
+  "id": 6,
+  "slug": "governing-strategy",
+  "title": "Governing Strategy",
+  "subtitle": "The board, blind spots & risk appetite",
+  "icon": "🏛️",
+  "hook": {
+    "metaphor": "A ship's owners don't steer minute-to-minute, but they choose the captain, approve the destination, and make sure someone challenges the captain when he's sailing toward rocks he can't see. Governing strategic risk is that owner's role: not running the strategy, but ensuring the big bets are sound, challenged, and matched to how much risk the organisation can survive.",
+    "scenario": "A charismatic CEO presents a bold strategy. The board, dazzled and deferential, approves it with no hard questions, no dissent, and no check against how much risk the firm could survive. The strategy fails and nearly sinks the company. The CEO made the call — but what was the board's failure?"
+  },
+  "learn": [
+    "Strategic risk is fundamentally the **board's responsibility** — it's the one risk that's about the organisation's whole direction and survival. Management proposes strategy; the board's job is to *challenge and approve* it, and to ensure strategic risk is actively managed. A rubber-stamping board (ours) has abandoned its core duty.",
+    "The board's first tool is **constructive challenge**: asking the hard questions, demanding evidence, and welcoming dissent. The deadliest boardroom failure is **groupthink** around a charismatic leader — everyone deferring, no one challenging. Healthy governance deliberately invites the awkward question and protects the dissenter.",
+    "Strategy must be tied to **risk appetite** (the recurring boardroom anchor): how much risk can the organisation *survive* in pursuit of its goals? Our board never checked whether the bold bet exceeded what the firm could endure — so a losing bet became near-fatal. Appetite is the guardrail that keeps ambition from becoming recklessness.",
+    "The board must also guard against its own **blind spots** — overconfidence, lack of diverse perspectives, and being captured by management's framing. Diverse, independent directors and outside perspectives are how a board sees the rocks the captain doesn't.",
+    "And the golden thread, one final time across the whole academy: **culture and tone at the top.** A board and leadership that genuinely want challenge, honesty about failing bets, and eyes-open risk-taking create an organisation that steers wisely. One that prizes confidence over candour sails proudly toward the rocks — which is where strategic risk, and this entire GRC journey, began: doing the wrong thing well."
+  ],
+  "bridge": "So at work, you can judge whether strategy is truly governed — not just decided — by asking: *does the board genuinely challenge big bets (or rubber-stamp them)? Is strategy checked against how much risk we could survive (appetite)? And is dissent welcomed or punished?* The same principle closes every GRC theme: good governance and an honest culture are what turn risk-taking from gambling into stewardship.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The dazzled board",
+      "prompt": "A board approved a charismatic CEO's bold strategy with no challenge or appetite check, and it nearly sank the firm. The board's failure?",
+      "options": [
+        { "label": "None — it was the CEO's strategy, so the CEO's fault.", "verdict": "bad", "feedback": "Governing strategy is the board's core job. Rubber-stamping with no challenge and no appetite check IS the board's failure — abdicating exactly the duty it exists for." },
+        { "label": "It rubber-stamped via groupthink and never checked the bet against risk appetite.", "verdict": "good", "feedback": "Exactly. The board's role is constructive challenge and ensuring strategy fits what the firm can survive. Deference to a charismatic leader plus no appetite guardrail is the classic governance failure." },
+        { "label": "Boards shouldn't question a confident CEO.", "verdict": "bad", "feedback": "The opposite — challenging management's big bets is precisely why the board exists. Unquestioning deference to confidence is how boards let firms sail onto the rocks." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Good strategic governance or not?",
+      "prompt": "Sort each board behaviour.",
+      "buckets": [
+        { "id": "good", "label": "Good governance" },
+        { "id": "bad", "label": "Governance failure" }
+      ],
+      "items": [
+        { "label": "Challenging big bets with hard questions", "bucket": "good" },
+        { "label": "Rubber-stamping a charismatic CEO's plan", "bucket": "bad" },
+        { "label": "Checking strategy against risk appetite", "bucket": "good" },
+        { "label": "Suppressing dissent in the boardroom", "bucket": "bad" },
+        { "label": "Diverse, independent directors who see blind spots", "bucket": "good" },
+        { "label": "Deferring to confidence over evidence", "bucket": "bad" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Governing strategy is the board's job — to challenge the big bets, welcome dissent, and check the strategy against how much risk the firm can survive — because the same thing closes all of GRC: good governance and an honest culture turn gambling into stewardship.”",
+  "checkpoint": [
+    {
+      "q": "Strategic risk is primarily the responsibility of…",
+      "options": [
+        "The IT team",
+        "The board — challenging and approving the organisation's direction",
+        "Junior staff",
+        "Customers"
+      ],
+      "answer": 1,
+      "explain": "It's about the whole organisation's direction and survival — squarely the board's duty to govern."
+    },
+    {
+      "q": "The deadliest boardroom failure in governing strategy is…",
+      "options": [
+        "Asking too many questions",
+        "Groupthink — deferring to a charismatic leader with no challenge",
+        "Having diverse directors",
+        "Checking risk appetite"
+      ],
+      "answer": 1,
+      "explain": "Unchallenged deference lets bad big bets through; healthy boards invite the awkward question."
+    },
+    {
+      "q": "Tying strategy to risk appetite ensures that…",
+      "options": [
+        "The firm never takes any risk",
+        "Big bets stay within what the organisation can actually survive",
+        "Profits are guaranteed",
+        "The board need not meet"
+      ],
+      "answer": 1,
+      "explain": "Appetite is the guardrail that keeps ambition from tipping into firm-threatening recklessness."
+    }
+  ]
+}
