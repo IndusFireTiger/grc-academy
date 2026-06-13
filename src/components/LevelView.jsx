@@ -1,0 +1,105 @@
+import { useEffect, useState } from 'react';
+import DecisionScenario from './DecisionScenario.jsx';
+import ClassifySort from './ClassifySort.jsx';
+import MatchPairs from './MatchPairs.jsx';
+import ApprovalDial from './ApprovalDial.jsx';
+import Checkpoint from './Checkpoint.jsx';
+import { markComplete } from '../lib/progress.js';
+
+// Renders one level end-to-end: hook → learn → bridge → try it → teach-back → checkpoint.
+export default function LevelView({ theme, themeTitle, lesson, nextSlug }) {
+  const [passed, setPassed] = useState(false);
+
+  useEffect(() => {
+    if (passed) markComplete(theme, lesson.slug);
+  }, [passed, theme, lesson.slug]);
+
+  return (
+    <article className="mx-auto max-w-2xl space-y-10 px-5 py-10">
+      <header>
+        <a href={`/track/${theme}`} className="text-sm text-slate-500 hover:text-emerald-600 dark:text-slate-400">
+          ← {themeTitle}
+        </a>
+        <h1 className="mt-2 text-3xl font-bold text-slate-900 dark:text-slate-100">
+          <span className="mr-2">{lesson.icon}</span>Level {lesson.id}: {lesson.title}
+        </h1>
+        <p className="mt-1 text-slate-500 dark:text-slate-400">{lesson.subtitle}</p>
+      </header>
+
+      {/* Hook */}
+      <section className="space-y-3">
+        <p className="text-slate-700 dark:text-slate-300" dangerouslySetInnerHTML={{ __html: mdBold(lesson.hook.metaphor) }} />
+        <blockquote className="border-l-4 border-emerald-400 bg-emerald-50 px-4 py-3 text-slate-700 dark:bg-emerald-900/20 dark:text-slate-200">
+          {lesson.hook.scenario}
+        </blockquote>
+      </section>
+
+      {/* Learn */}
+      <section className="space-y-4">
+        <h2 className="text-lg font-semibold text-slate-800 dark:text-slate-200">Learn</h2>
+        {lesson.learn.map((p, i) => (
+          <p key={i} className="text-slate-700 dark:text-slate-300" dangerouslySetInnerHTML={{ __html: mdBold(p) }} />
+        ))}
+      </section>
+
+      {/* Real-world bridge */}
+      <section className="rounded-xl bg-slate-900 px-5 py-4 text-slate-100 dark:bg-slate-950 dark:ring-1 dark:ring-slate-700">
+        <span className="text-xs font-semibold uppercase tracking-wide text-emerald-400">So at work, you can…</span>
+        <p className="mt-1" dangerouslySetInnerHTML={{ __html: mdBold(lesson.bridge) }} />
+      </section>
+
+      {lesson.seeAlso && (
+        <a
+          href={lesson.seeAlso.href}
+          className="-mt-4 block rounded-xl border border-sky-200 bg-sky-50 px-5 py-3 text-sm font-medium text-sky-700 transition hover:border-sky-400 dark:border-sky-800/50 dark:bg-sky-900/20 dark:text-sky-300"
+        >
+          {lesson.seeAlso.label} →
+        </a>
+      )}
+
+      {/* Interactions */}
+      <section className="space-y-5">
+        <h2 className="text-lg font-semibold text-slate-800 dark:text-slate-200">Try it</h2>
+        {lesson.interactions.map((ix, i) => {
+          if (ix.type === 'decision') return <DecisionScenario key={i} {...ix} />;
+          if (ix.type === 'classify') return <ClassifySort key={i} {...ix} />;
+          if (ix.type === 'match') return <MatchPairs key={i} {...ix} />;
+          if (ix.type === 'approvalDial') return <ApprovalDial key={i} {...ix} />;
+          return null;
+        })}
+      </section>
+
+      {/* Teach-back */}
+      <section className="rounded-xl border border-emerald-200 bg-emerald-50 px-5 py-4 dark:border-emerald-800/50 dark:bg-emerald-900/20">
+        <span className="text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-400">Teach it back</span>
+        <p className="mt-1 text-slate-700 dark:text-slate-300">{lesson.teachBack}</p>
+      </section>
+
+      {/* Checkpoint */}
+      <section className="space-y-4">
+        <h2 className="text-lg font-semibold text-slate-800 dark:text-slate-200">Checkpoint</h2>
+        <Checkpoint questions={lesson.checkpoint} onPassed={() => setPassed(true)} />
+      </section>
+
+      {/* Next */}
+      <footer className="border-t border-slate-200 pt-6 dark:border-slate-700">
+        {passed && nextSlug ? (
+          <a href={`/track/${theme}/${nextSlug}`} className="inline-block rounded-lg bg-emerald-600 px-5 py-3 font-medium text-white hover:bg-emerald-700">
+            On to the next level →
+          </a>
+        ) : passed ? (
+          <a href={`/track/${theme}`} className="inline-block rounded-lg bg-emerald-600 px-5 py-3 font-medium text-white hover:bg-emerald-700">
+            ← Back to the track
+          </a>
+        ) : (
+          <p className="text-sm text-slate-400">Clear the checkpoint to unlock the next level.</p>
+        )}
+      </footer>
+    </article>
+  );
+}
+
+// Minimal **bold** → <strong> so content authors can emphasize in JSON.
+function mdBold(s) {
+  return s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+}

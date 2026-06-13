@@ -1,0 +1,24 @@
+{
+  "name": "grc-academy",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "GRC Academy — an interactive, multi-theme learning platform for Governance, Risk & Compliance. Pilot track: Credit Risk (The Lender's Journey). Internal enablement tool; examples span India + global with a focus on Australia & New Zealand.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.0",
+    "@astrojs/tailwind": "^6.0.0",
+    "astro": "^5.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
+  }
+}

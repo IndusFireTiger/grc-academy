@@ -1,0 +1,24 @@
+---
+import Base from '../../layouts/Base.astro';
+import TrackMap from '../../components/TrackMap.jsx';
+import { getLiveThemes, getTheme } from '../../data/themes.js';
+
+export function getStaticPaths() {
+  return getLiveThemes().map((t) => ({ params: { theme: t.slug } }));
+}
+
+const { theme } = Astro.params;
+const t = getTheme(theme);
+---
+
+<Base title={`${t.title} — GRC Academy`} description={t.blurb}>
+  <TrackMap
+    client:load
+    theme={t.slug}
+    title={t.title}
+    tagline={t.tagline}
+    blurb={t.blurb}
+    accent={t.accent}
+    levels={t.track.levels}
+  />
+</Base>

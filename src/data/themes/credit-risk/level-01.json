@@ -1,0 +1,98 @@
+{
+  "id": 1,
+  "slug": "the-500-question",
+  "title": "The ₹500 Question",
+  "subtitle": "Foundations: likelihood × consequence",
+  "icon": "🤝",
+  "hook": {
+    "metaphor": "You already understand credit risk. Every time a friend asks to borrow money, your brain runs a tiny risk model: *will I actually get this back?* That instinct — scaled up with data, software, and rules — is the entire field.",
+    "scenario": "Your cousin texts: “Can I borrow ₹50,000? I’ll pay you back next month — promise.” He’s missed paying you back twice before. Do you lend it?"
+  },
+  "learn": [
+    "**Credit risk is the chance that someone you lent money to doesn’t pay it back** — on time, or at all. When they fail to pay as agreed, that’s called a **default**. A bank lending ₹500 crore and you lending a cousin ₹500 are doing the same thing, just at different scale.",
+    "Every lending decision has two parts. **Likelihood** — how *likely* is it to go wrong? (Your cousin who ghosted you twice = high likelihood.) And **consequence** (or impact) — how *much* does it hurt if it does? (₹500 you’ll shrug off; ₹50,000 you won’t.) **Risk = likelihood × consequence.** A tiny chance of a catastrophe and a near-certain tiny loss can carry the *same* risk.",
+    "This is why lenders don’t just ask “will they pay?” — they ask “how likely, and how bad if not?” A reliable friend borrowing your house deposit can be *riskier* than a flaky friend borrowing lunch money, because the consequence is so much larger.",
+    "Credit risk is one branch of a bigger family of business risks. **Operational risk** is things going wrong inside the machine (a system fails, someone makes a mistake). **Market risk** is losses from prices moving (interest rates, exchange rates). **Fraud risk** is someone deceiving you on purpose. Knowing which box a problem falls into is the first job of anyone working in risk — because each is managed differently.",
+    "Worldwide, lenders are held to this discipline by regulators: India’s **RBI**, Australia’s **APRA**, and New Zealand’s **RBNZ** all require lenders to measure and hold money against the credit risk they take on. The vocabulary is global; only the rulebook changes by country."
+  ],
+  "bridge": "So at work, you can reframe almost any “will we get burned?” decision as **likelihood × consequence** — and push back when someone fixates on one and ignores the other. “It’s unlikely” isn’t reassuring if the consequence is ruinous; “it’s a small amount” isn’t safe if it happens constantly.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Would you lend?",
+      "prompt": "Your cousin has missed repaying you twice before, and ₹50,000 is real money to you. Using likelihood × consequence, what’s the soundest call?",
+      "options": [
+        {
+          "label": "Lend the full ₹50,000 — he promised.",
+          "verdict": "bad",
+          "feedback": "A promise doesn’t change the *likelihood*. His track record (missed twice) says high chance of default, and ₹50,000 is a high consequence for you. High × high = the riskiest possible call."
+        },
+        {
+          "label": "Lend a smaller amount you can afford to lose.",
+          "verdict": "good",
+          "feedback": "Exactly the lever a real lender pulls: you can’t easily change the likelihood, so you reduce the *consequence*. Smaller loan = smaller impact if it defaults. This is “risk appetite” in action."
+        },
+        {
+          "label": "Lend it, but ask for his bike as security.",
+          "verdict": "ok",
+          "feedback": "Not bad — collateral cuts your *consequence* (you recover something on default). Real lenders do exactly this. Just make sure the security is actually worth the loan and you can claim it."
+        },
+        {
+          "label": "Refuse — never lend to anyone, ever.",
+          "verdict": "bad",
+          "feedback": "Avoiding all risk also avoids all reward (and all friendships intact). Risk management isn’t “say no to everything” — it’s pricing and sizing the risk you take."
+        }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Which kind of risk is it?",
+      "prompt": "Drag each situation into the risk family it belongs to. (This sorting instinct is the daily job of a risk professional.)",
+      "buckets": [
+        { "id": "credit", "label": "Credit risk" },
+        { "id": "operational", "label": "Operational risk" },
+        { "id": "market", "label": "Market risk" },
+        { "id": "fraud", "label": "Fraud risk" }
+      ],
+      "items": [
+        { "label": "A borrower stops repaying their car loan.", "bucket": "credit" },
+        { "label": "A power outage takes the loan-approval system offline.", "bucket": "operational" },
+        { "label": "Interest rates jump and the loan book loses value.", "bucket": "market" },
+        { "label": "Someone applies using a stolen identity.", "bucket": "fraud" },
+        { "label": "A small business can’t make its repayments after a bad season.", "bucket": "credit" },
+        { "label": "A staff member fat-fingers an extra zero on a payout.", "bucket": "operational" }
+      ]
+    },
+    {
+      "type": "approvalDial",
+      "title": "The Approval Dial",
+      "prompt": "You’re the lender now. Drag the sliders and watch the risk score, the heat-map cell, and the verdict change. Notice how the same loan flips from Approve to Decline as likelihood (missed payments) and consequence (loan size) move."
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Credit risk is just ‘will I get my money back?’ — and how worried I should be is the chance it goes wrong times how much it would hurt.”",
+  "checkpoint": [
+    {
+      "q": "Risk is best thought of as…",
+      "options": [
+        "How likely something is to go wrong",
+        "How badly it would hurt if it did",
+        "Likelihood × consequence — both together",
+        "Whichever number is bigger"
+      ],
+      "answer": 2,
+      "explain": "Risk combines both: a likely-but-tiny loss and an unlikely-but-huge loss can carry the same risk."
+    },
+    {
+      "q": "A borrower failing to repay as agreed is called a…",
+      "options": ["A default", "A deduction", "A dividend", "A drawdown"],
+      "answer": 0,
+      "explain": "Default = failing to meet the agreed repayment obligation."
+    },
+    {
+      "q": "Someone applies for a loan using a stolen identity. That’s primarily…",
+      "options": ["Credit risk", "Market risk", "Fraud risk", "Liquidity risk"],
+      "answer": 2,
+      "explain": "Deception on purpose = fraud risk. It often rides alongside credit risk, but it’s managed differently."
+    }
+  ]
+}

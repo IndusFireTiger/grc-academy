@@ -1,0 +1,22 @@
+---
+import Base from '../../../layouts/Base.astro';
+import LevelView from '../../../components/LevelView.jsx';
+import { getAllLevelPaths, getTheme } from '../../../data/themes.js';
+
+export function getStaticPaths() {
+  return getAllLevelPaths().map((p) => ({ params: p }));
+}
+
+const { theme, slug } = Astro.params;
+const t = getTheme(theme);
+const lesson = t.track.getLevel(slug);
+
+// Next available level after this one (for the "on to the next level" button).
+const idx = t.track.levels.findIndex((l) => l.slug === slug);
+const next = t.track.levels.slice(idx + 1).find((l) => l.available);
+const nextSlug = next ? next.slug : null;
+---
+
+<Base title={`Level ${lesson.id}: ${lesson.title} — ${t.title}`}>
+  <LevelView client:load theme={t.slug} themeTitle={t.title} lesson={lesson} nextSlug={nextSlug} />
+</Base>

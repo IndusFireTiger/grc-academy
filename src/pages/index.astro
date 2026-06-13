@@ -1,0 +1,9 @@
+---
+import Base from '../layouts/Base.astro';
+import ThemeCatalog from '../components/ThemeCatalog.jsx';
+import { getThemes } from '../data/themes.js';
+---
+
+<Base title="GRC Academy — Learn Governance, Risk & Compliance">
+  <ThemeCatalog client:load themes={getThemes()} />
+</Base>
