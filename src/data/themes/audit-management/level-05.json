@@ -1,0 +1,83 @@
+{
+  "id": 5,
+  "slug": "closing-the-loop",
+  "title": "Closing the Loop",
+  "subtitle": "Remediation, follow-up & audit readiness",
+  "icon": "🔁",
+  "hook": {
+    "metaphor": "Getting a diagnosis is worthless if you never fill the prescription. A check-up that finds a problem you then ignore is arguably worse than no check-up — now you *knew* and did nothing. The real payoff of audit isn't the report; it's the loop being closed: the issue fixed, and someone confirming it actually got fixed.",
+    "scenario": "Last year's audit found the same three issues that *this* year's audit just found again. Management 'accepted' the findings both times but never actually fixed them. The audit function is working perfectly — so why is nothing getting better?"
+  },
+  "learn": [
+    "An audit finding's life isn't over when it's reported — it needs **remediation**: a concrete fix, with a named **owner** and a **deadline** (the same discipline as Internal Controls). 'Management accepted the finding' is not a fix; acceptance without action is exactly our repeat-finding trap.",
+    "Then comes **follow-up**: audit checks back to confirm the fix was actually implemented *and works* — not just that someone ticked 'done'. **Repeat findings** (the same issue, audit after audit) are a red flag that the loop isn't closing, and a sign of weak accountability or culture, not weak auditing.",
+    "Sometimes management makes a conscious choice to **accept the risk** rather than fix it — which is legitimate *if* it's a deliberate, documented decision by someone with the authority and risk appetite to own it. The danger is fake acceptance: 'accepting' a risk simply to avoid the work, with no real sign-off (our scenario).",
+    "From the auditee's side, this is where **audit readiness** pays off: keeping evidence organised year-round so audits are smooth, and — more importantly — running a tight ship so there's little to find. The best way to ace an audit is to not need heroics for it (the 'controls that last' lesson, again).",
+    "Underpinning it all is the **audit committee** of the board, which tracks open findings to closure and holds management accountable. Without that top-level pressure, findings quietly rot — and the loop our scenario needed was board-level follow-through, not better fieldwork."
+  ],
+  "bridge": "So at work, you can spot whether audit actually *works* by looking past the report to the loop: *are findings fixed with owners and deadlines, does someone verify the fix, and are repeat findings being chased down?* An organisation that keeps re-discovering the same issues doesn't have an audit problem — it has an accountability problem, and that's where to push.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The same three findings, again",
+      "prompt": "This year's audit re-found last year's three issues; management 'accepted' them both times but never fixed them. The real problem?",
+      "options": [
+        { "label": "The auditors aren't finding new things.", "verdict": "bad", "feedback": "The auditors did their job — they found the issues, twice. The breakdown is afterwards: no remediation, no follow-up, no accountability. That's not an audit problem." },
+        { "label": "The loop isn't closing — findings accepted but never remediated or followed up.", "verdict": "good", "feedback": "Exactly. Acceptance isn't a fix. Repeat findings signal weak accountability and culture; the missing piece is owned remediation, follow-up verification, and board pressure to close." },
+        { "label": "Stop auditing those areas to avoid repeat findings.", "verdict": "bad", "feedback": "That just hides the problem. The fix is to close the loop on the known issues, not to stop looking at them." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Closing the loop or not?",
+      "prompt": "Sort each action by whether it genuinely closes the audit loop.",
+      "buckets": [
+        { "id": "closes", "label": "Closes the loop" },
+        { "id": "fake", "label": "Doesn't close it" }
+      ],
+      "items": [
+        { "label": "Assigning a fix to an owner with a deadline", "bucket": "closes" },
+        { "label": "Audit re-testing to confirm the fix actually works", "bucket": "closes" },
+        { "label": "'Management accepted the finding' with no action", "bucket": "fake" },
+        { "label": "The audit committee tracking findings to closure", "bucket": "closes" },
+        { "label": "Marking a finding 'done' without verifying it", "bucket": "fake" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “An audit only pays off when the loop closes — findings get fixed with owners and deadlines, audit verifies the fix worked, and repeat findings get chased — otherwise you just keep re-diagnosing the same untreated illness.”",
+  "checkpoint": [
+    {
+      "q": "'Repeat findings' (the same issue audit after audit) usually signal…",
+      "options": [
+        "Excellent auditing",
+        "Weak accountability — the loop isn't closing on known issues",
+        "That the issue is fine",
+        "A reason to stop auditing"
+      ],
+      "answer": 1,
+      "explain": "Finding it twice means it was never remediated — an accountability/culture problem, not an audit one."
+    },
+    {
+      "q": "Audit 'follow-up' means…",
+      "options": [
+        "Sending a thank-you note",
+        "Verifying the agreed fix was actually implemented and works",
+        "Repeating the entire audit",
+        "Closing the company"
+      ],
+      "answer": 1,
+      "explain": "Confirming the remediation truly happened — not just that someone ticked 'done'."
+    },
+    {
+      "q": "Consciously 'accepting' an audit risk is legitimate only when it's…",
+      "options": [
+        "A way to dodge the work quietly",
+        "A deliberate, documented decision by someone with the authority and appetite to own it",
+        "Never written down",
+        "Decided by the auditors"
+      ],
+      "answer": 1,
+      "explain": "Genuine risk acceptance is owned and signed off; fake acceptance to avoid effort is the trap."
+    }
+  ]
+}

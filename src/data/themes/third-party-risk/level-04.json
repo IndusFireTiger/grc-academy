@@ -1,0 +1,79 @@
+{
+  "id": 4,
+  "slug": "concentration-and-the-supply-chain",
+  "title": "Concentration & the Supply Chain",
+  "subtitle": "When everyone leans on the same pillar",
+  "icon": "🏛️",
+  "hook": {
+    "metaphor": "Imagine an entire town where every house, shop, and hospital is wired to a single power pole. Each building looks independent — but pull down that one pole and the whole town goes dark at once. Modern business has built exactly this: thousands of 'independent' firms all quietly leaning on the same few digital pillars.",
+    "scenario": "A single cloud provider has a global outage for a few hours. Suddenly airlines can't check in passengers, banks' apps die, shops can't take payments, and hospitals lose systems — all at the same moment. None of them share a logo. How did one outage hit everyone?"
+  },
+  "learn": [
+    "**Concentration risk** is the danger of too many critical things depending on the *same* single point. At the level of one firm, it's relying on one vendor for something vital. At the level of the *whole system*, it's thousands of firms all depending on the same handful of giant providers — the town wired to one pole.",
+    "This is the dark side of efficiency. Everyone uses the same few cloud platforms, payment networks, and core software because they're excellent and cheap — but that very concentration means a single failure cascades across the entire economy at once (our simultaneous outage).",
+    "**Systemic risk** is the grown-up name for this: when one node is so widely depended-upon that its failure threatens the stability of the whole system. Regulators now worry about specific cloud and tech providers becoming 'too critical to fail' — which is why regimes like the EU's **DORA** create oversight of **critical third-party providers** directly.",
+    "The supply chain also runs *deep*: a **supply-chain attack** compromises one widely-used software vendor to reach all its customers at once (the cyber link again). One poisoned pillar, thousands of victims.",
+    "Defences are hard but real: **diversification** (don't put everything with one provider — though it costs more), **multi-region / multi-cloud** designs, mapping your critical dependencies so you actually *know* where the pillars are, and resilience planning for 'what if our biggest provider vanishes for a day?'"
+  ],
+  "bridge": "So at work, you can look past the comforting illusion of independence and ask: *what single pillar, if it fell, would take down many of our critical services at once — and does the rest of our industry lean on it too?* The cheapest, most efficient setup (everyone on one provider) is often the most concentrated — and concentration is invisible right up until the lights go out.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "One pole, whole town dark",
+      "prompt": "A single cloud outage simultaneously hit airlines, banks, and shops. The deeper lesson?",
+      "options": [
+        { "label": "Bad luck — unrelated companies all had a bad day.", "verdict": "bad", "feedback": "It wasn't unrelated or unlucky. They shared one hidden pillar — the same cloud provider. That's concentration/systemic risk, and it's structural, not random." },
+        { "label": "Concentration risk — many 'independent' firms leaned on the same provider.", "verdict": "good", "feedback": "Exactly. The efficiency of everyone using the same few giants creates a shared single point of failure that cascades system-wide when it breaks." },
+        { "label": "Proof that cloud computing should never be used.", "verdict": "bad", "feedback": "Too far — cloud brings huge benefits. The lesson isn't 'avoid cloud', it's 'understand and manage your concentration' via diversification, mapping, and resilience." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Supply-chain vocabulary",
+      "prompt": "Match each term to its meaning.",
+      "pairs": [
+        { "left": "Concentration risk", "right": "Too many critical things depending on one point" },
+        { "left": "Systemic risk", "right": "One node's failure threatening the whole system" },
+        { "left": "Critical third-party provider", "right": "A vendor so widely relied on regulators oversee it" },
+        { "left": "Supply-chain attack", "right": "Compromising one vendor to reach all its customers" },
+        { "left": "Diversification", "right": "Spreading reliance so no single failure is fatal" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Concentration risk is a whole town wired to one power pole — when everyone leans on the same few cloud and tech giants, a single failure goes system-wide, so you map your pillars and diversify the critical ones.”",
+  "checkpoint": [
+    {
+      "q": "Concentration risk is the danger that…",
+      "options": [
+        "You have too many different vendors",
+        "Too many critical things depend on the same single point of failure",
+        "Vendors are too cheap",
+        "You use no technology"
+      ],
+      "answer": 1,
+      "explain": "Whether one firm on one vendor, or a whole industry on one provider — shared single points of failure cascade."
+    },
+    {
+      "q": "Why do regulators (e.g. via DORA) now oversee 'critical third-party providers' directly?",
+      "options": [
+        "They're bored",
+        "Some providers are so widely depended-on that their failure is a systemic threat",
+        "To increase those providers' profits",
+        "Cloud is illegal"
+      ],
+      "answer": 1,
+      "explain": "When a single provider becomes 'too critical to fail', its risk affects the whole financial system."
+    },
+    {
+      "q": "A practical defence against concentration risk is…",
+      "options": [
+        "Putting everything with one provider for simplicity",
+        "Diversification and mapping your critical dependencies",
+        "Ignoring where your data lives",
+        "Using more of the same single pillar"
+      ],
+      "answer": 1,
+      "explain": "Spread critical reliance, know where your pillars are, and plan for a major provider vanishing."
+    }
+  ]
+}

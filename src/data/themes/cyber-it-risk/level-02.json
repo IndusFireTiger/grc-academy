@@ -1,0 +1,80 @@
+{
+  "id": 2,
+  "slug": "who-is-attacking-and-how",
+  "title": "Who’s Attacking, and How",
+  "subtitle": "The threat landscape, de-mystified",
+  "icon": "🦹",
+  "hook": {
+    "metaphor": "Besiegers don't always charge the gate. Some tunnel under it, some disguise themselves as a friendly merchant to be let in, some bribe a guard, and some just throw so many bodies at the wall that it buckles. Knowing the enemy's playbook is half the defence — and the cleverest attacks target the people, not the stone.",
+    "scenario": "An employee gets an urgent email from the 'CEO' asking her to buy gift cards and send the codes — now, quietly. No firewall was breached, no malware deployed. She was the way in. What kind of attack is this, and why is it so effective?"
+  },
+  "learn": [
+    "**Malware** is malicious software — viruses, spyware, and the headline-grabber **ransomware**, which encrypts your data and demands payment to unlock it. Ransomware has become the dominant cyber threat to organisations, often shutting operations down for weeks.",
+    "**Phishing and social engineering** are the tunnels under the wall: tricking *people* rather than breaking *technology*. Our gift-card email is **business email compromise (BEC)** — impersonating a trusted figure to manipulate someone into acting. It works because it targets human trust and urgency, which no firewall defends.",
+    "**Denial of Service (DDoS)** is the 'throw enough bodies at the wall' attack — flooding a system with traffic until it collapses (an availability attack). **Insider threats** are the bribed or careless guard — staff who leak, steal, or simply click the wrong link.",
+    "The unifying truth: **the human is the most-attacked part of the castle.** The vast majority of breaches involve a person being tricked, not a flaw in the code. That's why awareness and a 'verify before you act' culture are frontline defences, not soft extras.",
+    "And the threats keep evolving: **AI-generated phishing** and **deepfakes** now make impersonation eerily convincing (a 'CEO' can call in a cloned voice), and **supply-chain attacks** sneak in through trusted software vendors — looping back to third-party risk."
+  ],
+  "bridge": "So at work, you can be the hard target: treat urgency + secrecy + a request to move money or data as the classic attack signature, and **verify through a second channel** before acting (call the real CEO). Most attacks aim at people, so a calm, sceptical human who pauses to check is one of the strongest controls an organisation has.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The gift-card email",
+      "prompt": "The 'CEO' urgently asks an employee to buy gift cards quietly. Best response?",
+      "options": [
+        { "label": "Comply quickly — the CEO asked and it's urgent.", "verdict": "bad", "feedback": "Urgency + secrecy + 'move value now' is the exact fingerprint of business email compromise. Acting fast is what the attacker is counting on." },
+        { "label": "Verify via a second channel (call the CEO directly) before doing anything.", "verdict": "good", "feedback": "Exactly. A 30-second out-of-band check defeats the whole attack. The human who pauses to verify is the control no firewall can replace." },
+        { "label": "Reply to the email to confirm it's really them.", "verdict": "bad", "feedback": "Replying just talks to the attacker, who'll happily 'confirm'. Verification must use a *different*, trusted channel — not the suspicious message itself." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Name the attack",
+      "prompt": "Match each threat to its description.",
+      "pairs": [
+        { "left": "Ransomware", "right": "Encrypts your data and demands payment to unlock it" },
+        { "left": "Phishing", "right": "Tricking people into clicking, paying, or revealing secrets" },
+        { "left": "Business email compromise", "right": "Impersonating a trusted figure to manipulate an action" },
+        { "left": "DDoS", "right": "Flooding a system with traffic until it collapses" },
+        { "left": "Insider threat", "right": "A staff member who leaks, steals, or clicks carelessly" },
+        { "left": "Supply-chain attack", "right": "Sneaking in through a trusted software vendor" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Attackers use malware, phishing, DDoS, and insiders — but most breaches come from tricking a person, so the urgency-plus-secrecy email is the real fingerprint, and verifying before acting is the best defence.”",
+  "checkpoint": [
+    {
+      "q": "Ransomware works by…",
+      "options": [
+        "Flooding a website with traffic",
+        "Encrypting your data and demanding payment to restore access",
+        "Politely asking for data",
+        "Improving system performance"
+      ],
+      "answer": 1,
+      "explain": "It locks up your data/systems and extorts a ransom — a dominant threat that can halt operations for weeks."
+    },
+    {
+      "q": "Why is social engineering (like phishing) so effective?",
+      "options": [
+        "It breaks encryption easily",
+        "It targets human trust and urgency, which firewalls don't defend",
+        "It only works on computers, never people",
+        "It's actually rare"
+      ],
+      "answer": 1,
+      "explain": "Most breaches involve a tricked human — the people are the most-attacked part of the castle."
+    },
+    {
+      "q": "The safest response to an urgent, secret request to move money is to…",
+      "options": [
+        "Act immediately",
+        "Verify through a separate trusted channel before doing anything",
+        "Reply to the same email to confirm",
+        "Forward it to all staff"
+      ],
+      "answer": 1,
+      "explain": "Out-of-band verification (e.g. call the real person) defeats business email compromise."
+    }
+  ]
+}

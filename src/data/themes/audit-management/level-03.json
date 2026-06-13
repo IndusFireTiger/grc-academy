@@ -1,0 +1,83 @@
+{
+  "id": 3,
+  "slug": "gathering-the-evidence",
+  "title": "Gathering the Evidence",
+  "subtitle": "Fieldwork, testing & working papers",
+  "icon": "🧾",
+  "hook": {
+    "metaphor": "A detective doesn't convict on a hunch — they gather evidence: documents, witness statements, samples, things they saw with their own eyes. Audit fieldwork is detective work. The auditor's golden rule is simple and ruthless: *if it isn't evidenced, it didn't happen.* A confident 'yes, we always do that' counts for nothing without proof.",
+    "scenario": "An auditor asks whether large payments get a second approval. The manager says, 'Absolutely, every time.' The auditor pulls 25 random payments to check. Twenty have the second approval; five don't. Whose account was right — and what just happened?"
+  },
+  "learn": [
+    "**Fieldwork** is the evidence-gathering heart of an audit. Auditors get evidence several ways: **inspecting** documents, **observing** a process in action, **re-performing** a control themselves, and **inquiry** (asking people) — though inquiry alone is the *weakest* evidence, because people misremember and misstate (our 'every time' manager).",
+    "Because you can't check everything, auditors **sample** (Internal Controls Level 5): test a representative subset to conclude about the whole. Pulling 25 payments and finding 5 failures isn't a story about those 5 — it suggests a roughly 20% failure rate across all of them. That's the power of sampling.",
+    "Good evidence is **sufficient** (enough of it) and **appropriate** (relevant and reliable). A pile of weak evidence isn't sufficient; one strong document can outweigh many vague assurances. Auditors weigh quality, not just quantity.",
+    "Everything is recorded in **working papers** — the documented trail of what was tested, how, and what was found. They're the audit's evidence file: they let conclusions be reviewed, challenged, and stand up to scrutiny later. 'Trust me, I checked' is not an audit; the working papers are the proof that you did.",
+    "And the cardinal mindset is **professional scepticism**: not assuming people are lying, but not simply taking their word either. The auditor in our scenario didn't accuse the manager — they *verified*. That gap between 'I was told' and 'I tested' is the whole value of audit."
+  ],
+  "bridge": "So at work, you can adopt the auditor's reflex on any important claim: *what's the evidence, and is it strong enough?* Treat 'we always do that' as a hypothesis to test, not a fact — and value the document, the sample, the re-performance over the confident assertion. 'If it isn't evidenced, it didn't happen' is a quietly powerful habit far beyond audit.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "'Every time' vs the sample",
+      "prompt": "The manager swears second approvals always happen; a sample of 25 shows 5 missing. What's the takeaway?",
+      "options": [
+        { "label": "Trust the manager — 5 is a tiny number.", "verdict": "bad", "feedback": "5 of 25 is ~20% failing — a serious control gap, not a rounding error. And inquiry ('every time') is the weakest evidence; the test beats the assertion." },
+        { "label": "The evidence overrides the assertion — test results reveal a real control failure.", "verdict": "good", "feedback": "Exactly. Professional scepticism plus sampling exposed what confident words hid. ~20% of large payments lacked the required approval — that's the finding, evidenced." },
+        { "label": "Re-do the audit until the numbers look better.", "verdict": "bad", "feedback": "That's the opposite of audit — you don't massage evidence to a desired answer. The sample found a real issue; you report and fix it." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Strong or weak evidence?",
+      "prompt": "Rank each source of audit evidence.",
+      "buckets": [
+        { "id": "strong", "label": "Stronger evidence" },
+        { "id": "weak", "label": "Weaker evidence" }
+      ],
+      "items": [
+        { "label": "Re-performing the control yourself and seeing the result", "bucket": "strong" },
+        { "label": "Someone saying 'we always do that'", "bucket": "weak" },
+        { "label": "Inspecting signed approval records", "bucket": "strong" },
+        { "label": "A general verbal reassurance with no documents", "bucket": "weak" },
+        { "label": "Directly observing the process happen", "bucket": "strong" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Audit is evidence-gathering — inspect, observe, re-perform, and sample rather than just take people's word — recorded in working papers, because if it isn't evidenced, it didn't happen.”",
+  "checkpoint": [
+    {
+      "q": "The weakest form of audit evidence is usually…",
+      "options": [
+        "Re-performing the control",
+        "Inquiry — simply asking people",
+        "Inspecting documents",
+        "Direct observation"
+      ],
+      "answer": 1,
+      "explain": "People misremember and misstate; inquiry must be backed by stronger, verifiable evidence."
+    },
+    {
+      "q": "Finding 5 failures in a random sample of 25 payments suggests…",
+      "options": [
+        "Only those 5 are a problem",
+        "A roughly 20% failure rate across all such payments",
+        "The control is perfect",
+        "Nothing at all"
+      ],
+      "answer": 1,
+      "explain": "Sampling lets you infer the wider failure rate — that's a serious control gap, not 5 isolated cases."
+    },
+    {
+      "q": "Working papers exist to…",
+      "options": [
+        "Look impressive",
+        "Document what was tested, how, and what was found, so it can be reviewed",
+        "Replace the audit",
+        "Hide the evidence"
+      ],
+      "answer": 1,
+      "explain": "They're the evidence trail proving the work was done and letting conclusions stand up to scrutiny."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": 4,
+  "slug": "findings-that-land",
+  "title": "Findings That Land",
+  "subtitle": "Rating, reporting & making it useful",
+  "icon": "📝",
+  "hook": {
+    "metaphor": "A doctor who buries 'you have a serious heart condition' on page 40, between 'mild dry skin' and 'slightly low on vitamin D', has failed you — even if every word is technically correct. A great diagnosis is *prioritised and clear*. Audit findings are the same: the value isn't in finding problems, it's in communicating them so the right ones actually get fixed.",
+    "scenario": "An audit report lists 60 findings, all formatted identically, with the critical fraud-control gap given the same weight as a typo in a procedure document. The executives skim it, fix three easy ones, and miss the big one. Technically thorough — but did it work?"
+  },
+  "learn": [
+    "Not all findings are equal, so they must be **rated by severity** — typically high / medium / low (or critical/major/minor). Rating is how you tell the reader 'fix *this* first'. Our report failed precisely because it flattened a critical gap to look like a typo (the materiality lesson, ignored).",
+    "A useful finding has a standard anatomy, sometimes called the **'5 Cs'**: **Condition** (what we found), **Criteria** (the standard it breaches), **Cause** (why it happened), **Consequence** (the risk/impact), and **Corrective action** (the recommended fix). 'There's a problem' is useless; this structure makes a finding actionable.",
+    "Tone and framing matter. Findings should be **objective and evidence-based**, not personal attacks — and ideally **agreed with management** (who confirm the facts and own a fix with a deadline). An auditor's job is to drive improvement, not to win arguments; a finding nobody accepts rarely gets fixed.",
+    "The report should also surface **root cause**, not just symptoms. Ten findings that all stem from one broken process are really *one* problem — fixing the cause beats patching ten symptoms (echoing the people-vs-process lesson from Operational Risk).",
+    "And the audience shapes the message: executives and the board need the **critical few** clearly highlighted, not the exhaustive list. Burying the heart condition among the dry skin (our report) is a communication failure that defeats the entire audit."
+  ],
+  "bridge": "So at work, you can judge an audit report by whether it *lands*, not by its page count: *are findings rated so the critical ones stand out? Does each one say what, against what standard, why, the impact, and the fix? Is the root cause named?* A report where the big risk is visible in ten seconds is worth more than a flawless 60-item list nobody acts on.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The flattened report",
+      "prompt": "60 findings, all weighted equally; execs fix three easy ones and miss the critical fraud gap. The failure?",
+      "options": [
+        { "label": "None — every finding was accurate and included.", "verdict": "bad", "feedback": "Accurate but useless. By giving a critical gap the same weight as a typo, the report failed to communicate priority — and the big risk went unfixed. Thoroughness isn't the goal; impact is." },
+        { "label": "Findings weren't rated by severity, so the critical one didn't stand out.", "verdict": "good", "feedback": "Exactly. Rating and highlighting the critical few is how a report lands. A finding nobody acts on is a finding wasted, however correct." },
+        { "label": "They should have added even more findings.", "verdict": "bad", "feedback": "More items in an unprioritised list makes it worse, not better — the critical issue gets buried deeper. Prioritise, don't pile on." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Anatomy of a finding (the 5 Cs)",
+      "prompt": "Match each element of a good finding to its meaning.",
+      "pairs": [
+        { "left": "Condition", "right": "What we actually found" },
+        { "left": "Criteria", "right": "The standard or rule it breaches" },
+        { "left": "Cause", "right": "Why it happened (the root cause)" },
+        { "left": "Consequence", "right": "The risk or impact it creates" },
+        { "left": "Corrective action", "right": "The recommended fix, with an owner" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “The value of an audit isn't finding problems, it's communicating them — rate findings by severity, give each one the what/standard/why/impact/fix, name the root cause, and make the critical few impossible to miss.”",
+  "checkpoint": [
+    {
+      "q": "Why must audit findings be rated by severity?",
+      "options": [
+        "To make the report longer",
+        "So readers know what to fix first and the critical issues stand out",
+        "To confuse management",
+        "Severity doesn't matter"
+      ],
+      "answer": 1,
+      "explain": "Flattening a critical gap to look like a typo means the big risk gets buried and ignored."
+    },
+    {
+      "q": "A genuinely useful finding includes its…",
+      "options": [
+        "Author's mood",
+        "Condition, criteria, cause, consequence, and corrective action",
+        "Page count only",
+        "Just the word 'problem'"
+      ],
+      "answer": 1,
+      "explain": "The 5 Cs turn an observation into something actionable that someone can own and fix."
+    },
+    {
+      "q": "Identifying the root cause matters because…",
+      "options": [
+        "It makes more findings",
+        "Ten symptoms of one broken process are really one problem to fix",
+        "It's required for length",
+        "Causes are irrelevant"
+      ],
+      "answer": 1,
+      "explain": "Fixing the underlying cause beats patching many symptoms one by one."
+    }
+  ]
+}

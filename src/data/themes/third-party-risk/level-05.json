@@ -1,0 +1,84 @@
+{
+  "id": 5,
+  "slug": "the-exit-plan",
+  "title": "The Exit Plan",
+  "subtitle": "Lock-in, off-boarding & contingency",
+  "icon": "🚪",
+  "hook": {
+    "metaphor": "Before you move in with someone, the wise question isn't just 'how good is this?' but 'how hard would it be to leave?' A relationship you *can't* exit isn't a partnership — it's a trap. With vendors it's the same: if leaving a supplier would cripple you, they own you, and any failure of theirs becomes your hostage situation.",
+    "scenario": "A company built everything on one vendor's proprietary platform. The vendor triples its prices and lets service slide. The company does the maths on leaving — and discovers untangling would take two years and cost a fortune. They're trapped. When should they have thought about the exit?"
+  },
+  "learn": [
+    "**Vendor lock-in** is when leaving a supplier is so costly or difficult that you're effectively stuck — and a stuck customer has no leverage over price, quality, or risk. Our trapped company is paying the price of never planning an exit.",
+    "The fix is counter-intuitive: **plan the exit before you enter.** When you onboard a vendor, you ask how you'd off-board them — and you bake the answer into the contract: data must be returned in a usable format, reasonable notice periods, transition help, and no hostage-taking of *your* data.",
+    "For critical vendors you also need a **contingency / continuity plan**: if this supplier failed *tomorrow*, what would we do? Is there an alternative? A manual fallback? Knowing the answer turns a vendor collapse from an existential crisis into a manageable switch — the resilience mindset from Operational Risk, applied to suppliers.",
+    "Watch for things that deepen lock-in: **proprietary formats** (your data trapped in a shape only they can read), deep integration with no alternatives, and letting a vendor hold the only copy of critical data. The more unique and entangled the dependency, the harder the exit.",
+    "And remember off-boarding is also a **security** event: when a relationship ends, revoke the vendor's access promptly and confirm they've securely deleted or returned your data. A 'former' vendor who still has live access and your data is a breach waiting to happen."
+  ],
+  "bridge": "So at work, you can ask the question most teams skip during the excitement of signing: *if this vendor failed or turned hostile, how hard would it be to leave?* Negotiate data portability and exit terms up front, keep a contingency plan for critical suppliers, and treat off-boarding (revoke access, retrieve data) as carefully as onboarding. An exit you've planned is leverage; one you haven't is a trap.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Trapped on the platform",
+      "prompt": "A company is locked into a vendor that hiked prices and dropped service; leaving would take two years. When should the exit have been considered?",
+      "options": [
+        { "label": "Now — just start the painful two-year exit.", "verdict": "ok", "feedback": "They may have to — but the real lesson is timing. Had they planned portability and exit terms at the start, they'd have leverage now instead of a two-year ordeal." },
+        { "label": "At the beginning — exit terms and data portability belong in the original deal.", "verdict": "good", "feedback": "Exactly. You plan the exit before you enter. Contractual data portability, notice periods, and a contingency plan would have turned this trap into a manageable switch." },
+        { "label": "Never — loyalty to one vendor is always best.", "verdict": "bad", "feedback": "Blind loyalty with no exit is precisely lock-in. Loyalty is fine; having no way out is what hands the vendor total power over you." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Deepens or eases lock-in?",
+      "prompt": "Sort each factor by whether it makes leaving a vendor harder or easier.",
+      "buckets": [
+        { "id": "harder", "label": "Deepens lock-in" },
+        { "id": "easier", "label": "Eases exit" }
+      ],
+      "items": [
+        { "label": "Your data trapped in a proprietary format only they read", "bucket": "harder" },
+        { "label": "Contractual right to export data in a standard format", "bucket": "easier" },
+        { "label": "The vendor holds the only copy of critical data", "bucket": "harder" },
+        { "label": "A documented contingency plan with an alternative provider", "bucket": "easier" },
+        { "label": "Deep, custom integration with no alternatives", "bucket": "harder" },
+        { "label": "Agreed transition assistance and notice periods", "bucket": "easier" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Always plan the exit before you enter — negotiate data portability and exit terms up front and keep a contingency plan — because a vendor you can't leave owns you, and any failure of theirs becomes your trap.”",
+  "checkpoint": [
+    {
+      "q": "'Vendor lock-in' is dangerous because…",
+      "options": [
+        "It saves too much money",
+        "Being unable to leave removes your leverage over price, quality, and risk",
+        "It makes vendors too helpful",
+        "It only affects small firms"
+      ],
+      "answer": 1,
+      "explain": "A customer who can't leave is a hostage — the vendor controls the terms and any failure traps you."
+    },
+    {
+      "q": "The best time to plan a vendor exit is…",
+      "options": [
+        "Only after they fail",
+        "Before you enter — bake portability and exit terms into the contract",
+        "Never",
+        "Ten years in"
+      ],
+      "answer": 1,
+      "explain": "Exit terms, data portability, and a contingency plan negotiated up front give you leverage later."
+    },
+    {
+      "q": "Off-boarding a vendor is also a security task because you must…",
+      "options": [
+        "Throw a farewell party",
+        "Revoke their access and confirm your data is returned or securely deleted",
+        "Keep paying them forever",
+        "Leave their access on just in case"
+      ],
+      "answer": 1,
+      "explain": "A former vendor still holding live access and your data is a breach waiting to happen."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": 3,
+  "slug": "building-the-walls",
+  "title": "Building the Walls",
+  "subtitle": "Defence in depth",
+  "icon": "🧱",
+  "hook": {
+    "metaphor": "A castle never relied on one wall. It had a moat, then an outer wall, then an inner keep, then locked rooms inside that. If the enemy gets past one layer, the next one stops them. Cyber defence works the same way — it's called **defence in depth**, and the whole point is that no single failure lets the attacker win.",
+    "scenario": "A company protects everything with one strong password policy. An attacker phishes one employee's password and instantly has the keys to the entire kingdom — every system, all the data. One wall, one breach, total loss. What layers were missing?"
+  },
+  "learn": [
+    "The governing principle is **defence in depth**: multiple, overlapping layers so a single failure isn't fatal. Our single-password company had exactly one layer; once it fell, nothing else stood between the attacker and everything.",
+    "The frontline layer is **identity & access**: strong authentication, and crucially **multi-factor authentication (MFA)** — something you know (password) plus something you have (a phone/token). MFA alone would have stopped our phished-password attack cold. Add **least privilege** (people get only the access they need) so a compromised account can't reach everything.",
+    "Then **protect the data itself** with **encryption** — scrambling it so a stolen copy is useless without the key (at rest and in transit). And keep the walls in good repair with **patching**: applying security updates promptly, because most successful attacks exploit *known* holes that were never fixed.",
+    "Around it all: **network security** (firewalls, segmentation so a breach in one area can't roam freely) and the modern philosophy of **zero trust** — 'never trust, always verify', assume the attacker may already be inside, and check every request rather than trusting anything just because it's within the walls.",
+    "The lesson of layering: each control is imperfect, but stacked together they make success enormously harder. You're not building one unbreakable wall — you're making the attacker beat *all* of them."
+  ],
+  "bridge": "So at work, you can judge a security posture by its *layers*, not any single feature: *Is there MFA? Least privilege? Encryption? Prompt patching? Network segmentation?* If everything hinges on one control (like our single password), that's a single point of catastrophic failure. Defence in depth means one slip doesn't lose the kingdom.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "One wall, one breach",
+      "prompt": "A phished password gave an attacker the entire kingdom. The single most impactful missing layer?",
+      "options": [
+        { "label": "A longer, more complex password policy.", "verdict": "ok", "feedback": "Marginally harder to phish, but a complex password is still just one wall — and it can still be stolen or tricked out of someone. You need a second factor, not a longer first one." },
+        { "label": "Multi-factor authentication, plus least privilege to limit the blast radius.", "verdict": "good", "feedback": "Exactly. MFA stops a stolen password alone from working, and least privilege means even a compromised account can't reach everything. Layers, not a bigger single wall." },
+        { "label": "Tell employees to be more careful.", "verdict": "bad", "feedback": "Awareness helps but humans will be phished eventually. You design layers (MFA, segmentation) so that one human slip isn't catastrophic." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Defence layers",
+      "prompt": "Match each defensive control to what it does.",
+      "pairs": [
+        { "left": "Multi-factor authentication", "right": "Requires a second proof beyond the password" },
+        { "left": "Least privilege", "right": "Users get only the access their role needs" },
+        { "left": "Encryption", "right": "Scrambles data so a stolen copy is useless" },
+        { "left": "Patching", "right": "Promptly fixing known security holes" },
+        { "left": "Network segmentation", "right": "Walls inside the network so a breach can't roam" },
+        { "left": "Zero trust", "right": "Never trust, always verify — even inside the walls" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Good cyber defence is layered — MFA, least privilege, encryption, patching, segmentation — so that beating one wall doesn't win the castle; that's defence in depth.”",
+  "checkpoint": [
+    {
+      "q": "'Defence in depth' means…",
+      "options": [
+        "One extremely strong wall",
+        "Multiple overlapping layers so one failure isn't fatal",
+        "Hiding the data very deep",
+        "Only defending at night"
+      ],
+      "answer": 1,
+      "explain": "Stacked, overlapping controls force the attacker to beat all of them, not just one."
+    },
+    {
+      "q": "Multi-factor authentication (MFA) helps because…",
+      "options": [
+        "It makes passwords longer",
+        "A stolen password alone isn't enough — a second factor is also required",
+        "It removes the need for passwords entirely with no downside",
+        "It speeds up logins"
+      ],
+      "answer": 1,
+      "explain": "Even a phished password fails without the second factor — a hugely effective, simple layer."
+    },
+    {
+      "q": "Why is prompt patching so important?",
+      "options": [
+        "It improves the user interface",
+        "Most successful attacks exploit known holes that were never fixed",
+        "It's legally optional and rarely useful",
+        "It only matters for new systems"
+      ],
+      "answer": 1,
+      "explain": "Unpatched known vulnerabilities are among the most common ways attackers get in."
+    }
+  ]
+}

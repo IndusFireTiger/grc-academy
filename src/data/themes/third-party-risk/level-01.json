@@ -1,0 +1,84 @@
+{
+  "id": 1,
+  "slug": "your-weakest-supplier",
+  "title": "Your Weakest Supplier",
+  "subtitle": "Why other people's risk becomes yours",
+  "icon": "🔗",
+  "hook": {
+    "metaphor": "A chain is only as strong as its weakest link — and your organisation is a chain of suppliers. Your cloud host, your payroll provider, your delivery partner, the tiny startup that runs one critical feature. Each one you depend on can drag you down if *they* fail. Third-party risk is the simple, uncomfortable truth that you inherit the weaknesses of everyone you rely on.",
+    "scenario": "A bank with world-class security suffers a massive data breach. The hole wasn't in the bank — it was in a small contractor with access to the bank's systems and far weaker defences. The attackers walked in through the supplier. Whose breach is it, really?"
+  },
+  "learn": [
+    "**Third-party (or vendor) risk** is the risk that an external party you depend on — a supplier, partner, contractor, or service provider — causes you harm by failing, being breached, or behaving badly. Modern businesses outsource enormously, so this risk has exploded.",
+    "The hardest truth: **you can outsource the activity, but not the responsibility.** When the contractor's weak security let attackers into the bank (our scenario), it was the *bank's* breach in the eyes of customers and regulators. 'Our vendor did it' is never an acceptable answer.",
+    "Third-party risk is rarely just one risk — it's a carrier for all the others. A vendor can expose you to **cyber risk** (their breach becomes yours), **operational risk** (their outage stops you), **compliance risk** (they mishandle data you're responsible for), and **reputational risk** (their scandal taints you).",
+    "And it goes deeper than you can see: your suppliers have *their* suppliers (**fourth parties** and beyond). A failure four links down the chain can still reach you — the dependency you didn't even know you had is often the one that bites.",
+    "This is squarely on the regulators' radar: Australia's **APRA CPS 230** explicitly requires managing material service-provider risk, the EU's **DORA** governs ICT third parties, and guidance worldwide now demands firms understand and control their supply chains."
+  ],
+  "bridge": "So at work, you can stop thinking of suppliers as 'someone else's problem'. For anyone you depend on, ask: *what would happen to us if they were breached, went down, or behaved badly — and would we still be on the hook?* (You would be.) Your risk perimeter isn't your own walls; it's the walls of everyone you rely on.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Whose breach is it?",
+      "prompt": "Attackers entered a secure bank through a weak contractor with system access. How should the bank see it?",
+      "options": [
+        { "label": "The contractor's problem — not the bank's fault.", "verdict": "bad", "feedback": "Customers and regulators hold the bank responsible. You can outsource the work, never the accountability. 'Our vendor did it' won't save you." },
+        { "label": "The bank's breach — it owns the risk of everyone it gives access to.", "verdict": "good", "feedback": "Exactly. Your risk perimeter extends to every party you depend on or give access to. A weak supplier is your weak link, and the consequences land on you." },
+        { "label": "Nobody's fault — these things just happen.", "verdict": "bad", "feedback": "Giving a weakly-defended contractor access to critical systems is a known, manageable risk. This was a third-party risk failure, not bad luck." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "What does the vendor expose you to?",
+      "prompt": "Sort each supplier failure by the type of risk it creates for you.",
+      "buckets": [
+        { "id": "cyber", "label": "Cyber" },
+        { "id": "operational", "label": "Operational" },
+        { "id": "compliance", "label": "Compliance" }
+      ],
+      "items": [
+        { "label": "Your cloud vendor is hacked and your data leaks", "bucket": "cyber" },
+        { "label": "Your payments provider goes offline for a day", "bucket": "operational" },
+        { "label": "A vendor mishandles personal data you're responsible for", "bucket": "compliance" },
+        { "label": "A supplier's ransomware spreads into your systems", "bucket": "cyber" },
+        { "label": "A key logistics partner collapses mid-contract", "bucket": "operational" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Third-party risk is inheriting the weaknesses of everyone you depend on — and since you can outsource the work but never the responsibility, your weakest supplier is your weakest link.”",
+  "checkpoint": [
+    {
+      "q": "The core principle of third-party risk is…",
+      "options": [
+        "Vendors are always someone else's problem",
+        "You can outsource the activity but not the responsibility",
+        "Suppliers carry no risk",
+        "Only your own systems matter"
+      ],
+      "answer": 1,
+      "explain": "Accountability stays with you even when the work — and the failure — happens at a vendor."
+    },
+    {
+      "q": "A 'fourth party' is…",
+      "options": [
+        "Your direct supplier",
+        "Your supplier's supplier — a deeper dependency you may not see",
+        "A regulator",
+        "A type of contract"
+      ],
+      "answer": 1,
+      "explain": "Risk can reach you from suppliers of your suppliers — dependencies further down the chain."
+    },
+    {
+      "q": "Why has third-party risk grown so much?",
+      "options": [
+        "Companies outsource far more than they used to",
+        "Vendors became more honest",
+        "Regulators stopped caring",
+        "Technology made it irrelevant"
+      ],
+      "answer": 0,
+      "explain": "Heavy reliance on cloud, SaaS, and outsourced services means more of your risk lives outside your walls."
+    }
+  ]
+}

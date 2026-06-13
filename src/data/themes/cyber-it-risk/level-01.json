@@ -1,0 +1,80 @@
+{
+  "id": 1,
+  "slug": "the-castle-under-siege",
+  "title": "The Castle Under Siege",
+  "subtitle": "What cyber & IT risk really is",
+  "icon": "🏰",
+  "hook": {
+    "metaphor": "Think of your organisation's data and systems as a castle. Inside are treasures (customer data, money, secrets). Outside are attackers who want in, plus storms and structural cracks that can bring walls down on their own. Cyber & IT risk is everything that threatens the castle — whether a siege by enemies or a roof that simply collapses.",
+    "scenario": "A company spends a fortune on a firewall to keep hackers out — then loses everything when a hard drive fails and there's no backup. They guarded against the siege but not the structural crack. What were they actually protecting, and from what?"
+  },
+  "learn": [
+    "**Cyber & IT risk** is the risk of harm to your digital systems and data — from deliberate attacks (cyber) *and* from ordinary technology failures (IT). Our firewall-rich, backup-poor company learned the hard way that both halves matter.",
+    "What are you protecting? Security people use the **CIA triad**: **Confidentiality** (only the right people can see the data), **Integrity** (the data is accurate and unaltered), and **Availability** (the systems are up when needed). Every threat attacks one or more of these — a leak breaks confidentiality, tampering breaks integrity, an outage breaks availability.",
+    "Who's attacking? A range of **threat actors**: opportunistic **criminals** (after money), **insiders** (malicious or careless), **hacktivists** (making a point), and **nation-states** (espionage/sabotage). Their motives differ, but your defences are often the same.",
+    "The most important mindset shift: **cyber is a business risk, not just an IT problem.** A breach isn't a tech inconvenience — it's lost customer trust, regulatory fines (privacy laws again), operational shutdown, and sometimes existential damage. Which is why it belongs in the boardroom, owned by leaders, not buried in the server room.",
+    "And it links to everything you've learned: a cyber breach is an **operational risk** event, mishandled data is a **compliance** breach, and reliance on a hacked vendor is **third-party risk**. The castle shares walls with the rest of GRC."
+  ],
+  "bridge": "So at work, you can frame any digital threat by asking *which part of the CIA triad does this hit — confidentiality, integrity, or availability?* and *is this a deliberate attack or an ordinary failure?* Both questions matter, because (like our firewall company) defending only against hackers while ignoring backups and outages leaves the castle half-guarded.",
+  "interactions": [
+    {
+      "type": "classify",
+      "title": "Which part of CIA is hit?",
+      "prompt": "Sort each incident by the part of the CIA triad it primarily breaks.",
+      "buckets": [
+        { "id": "confidentiality", "label": "Confidentiality" },
+        { "id": "integrity", "label": "Integrity" },
+        { "id": "availability", "label": "Availability" }
+      ],
+      "items": [
+        { "label": "Customer records are leaked to the public", "bucket": "confidentiality" },
+        { "label": "Ransomware takes all systems offline", "bucket": "availability" },
+        { "label": "An attacker quietly alters account balances", "bucket": "integrity" },
+        { "label": "A server crash makes the app unreachable", "bucket": "availability" },
+        { "label": "Someone reads emails they shouldn't access", "bucket": "confidentiality" },
+        { "label": "A bug corrupts records so they're no longer accurate", "bucket": "integrity" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "Guarded against the wrong thing",
+      "prompt": "The firewall-rich company lost everything to a failed drive with no backup. The lesson?",
+      "options": [
+        { "label": "Buy an even bigger firewall.", "verdict": "bad", "feedback": "More wall against sieges does nothing about a collapsing roof. They over-invested in one threat (attackers) and ignored another (IT failure / availability)." },
+        { "label": "Protect all of the CIA triad — including availability via backups and resilience.", "verdict": "good", "feedback": "Exactly. Confidentiality (the firewall) is only one third. Availability needs backups, redundancy, and recovery. Cyber & IT risk covers attacks AND ordinary failures." },
+        { "label": "Accept that data loss just happens.", "verdict": "bad", "feedback": "A missing backup is a known, basic, preventable gap. This wasn't fate — it was an unguarded part of the castle." }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Cyber & IT risk is protecting the castle of your data and systems — its confidentiality, integrity, and availability — from both deliberate attackers and ordinary failures, and it's a business risk, not just IT's problem.”",
+  "checkpoint": [
+    {
+      "q": "The 'CIA triad' in security stands for…",
+      "options": [
+        "Cash, Interest, Assets",
+        "Confidentiality, Integrity, Availability",
+        "Control, Internal, Audit",
+        "Cyber, Incident, Alert"
+      ],
+      "answer": 1,
+      "explain": "The three things security protects: who can see data, whether it's accurate, and whether it's available."
+    },
+    {
+      "q": "Ransomware that takes systems offline primarily attacks…",
+      "options": ["Confidentiality", "Integrity", "Availability", "Profitability"],
+      "answer": 2,
+      "explain": "Locking you out of your own systems is an availability attack (it may hit confidentiality too if data is stolen)."
+    },
+    {
+      "q": "Treating cyber as 'just an IT problem' is dangerous because…",
+      "options": [
+        "IT teams are unskilled",
+        "A breach causes lost trust, fines, and operational harm — it's a business risk",
+        "Cyber risk doesn't really exist",
+        "Only hackers matter"
+      ],
+      "answer": 1,
+      "explain": "Cyber consequences are business-wide, so it must be owned in the boardroom, not buried in the server room."
+    }
+  ]
+}

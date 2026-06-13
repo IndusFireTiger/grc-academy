@@ -1,0 +1,79 @@
+{
+  "id": 2,
+  "slug": "planning-the-audit",
+  "title": "Planning the Audit",
+  "subtitle": "Risk-based planning & scope",
+  "icon": "🗺️",
+  "hook": {
+    "metaphor": "A good doctor with limited time doesn't run every test on every patient — they focus on where the risk is: the smoker's lungs, the family history, the worrying symptom. Audit works the same way. You can never check *everything*, so the art is choosing *what* to examine — pointing your limited attention where things are most likely to be wrong and most damaging if they are.",
+    "scenario": "An audit team has time to deeply review only 5 of the company's 50 processes this year. One manager lobbies hard for his low-risk, already-tidy area to be audited (it'll look great). Where should the team actually point its limited attention?"
+  },
+  "learn": [
+    "The foundation is the **risk-based audit plan**: you can't audit everything, so you prioritise by risk — likelihood × impact, the idea running through this whole academy. The riskiest, most material areas get the deepest attention; the tidy low-risk ones can wait (so no, not the lobbying manager's pet area).",
+    "Each audit then needs a clear **scope** — what's in and what's out — and **objectives** (what question are we answering?). A fuzzy scope produces a fuzzy, useless audit. 'Audit everything about payments' is not a scope; 'test whether large-payment approvals operated correctly last quarter' is.",
+    "Auditors judge against **criteria** — a standard to compare reality to: a policy, a regulation, a framework, a contract. Without a yardstick, a 'finding' is just an opinion. The criteria turn 'I don't like this' into 'this doesn't meet the documented standard'.",
+    "Good planning also weighs **materiality** — focusing on what's big enough to matter. An auditor won't burn the engagement chasing a ₹500 discrepancy while a ₹5-crore exposure sits unexamined. Proportion is part of the skill.",
+    "And the plan should stay **independent of pressure**: audit decides where to look based on risk, not on which manager lobbies hardest or which area will flatter the results. The moment audit lets the audited choose what gets audited, its independence — and its value — evaporates."
+  ],
+  "bridge": "So at work, you can sense a well-run audit from a theatrical one by where it points: *is attention going to the genuinely risky, material areas — chosen independently — with a clear scope and a real yardstick to judge against?* An audit aimed at the tidy, low-risk corner that someone wanted to show off is effort spent proving what you already knew.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Where to point the audit",
+      "prompt": "With time to deeply audit only 5 of 50 processes, where should attention go?",
+      "options": [
+        { "label": "The manager's low-risk, already-tidy area he's lobbying for.", "verdict": "bad", "feedback": "Auditing the tidy, low-risk corner someone wants shown off proves nothing useful — and letting the audited choose the scope kills independence." },
+        { "label": "The highest-risk, most material areas, chosen independently by risk.", "verdict": "good", "feedback": "Exactly. Risk-based planning points limited attention where problems are most likely and most damaging — not where it'll flatter someone or where lobbying is loudest." },
+        { "label": "Five processes picked at random for fairness.", "verdict": "bad", "feedback": "Random isn't fair, it's wasteful — it ignores risk. You deliberately target the material, high-risk areas, not a lottery." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Audit planning terms",
+      "prompt": "Match each planning concept to its meaning.",
+      "pairs": [
+        { "left": "Risk-based plan", "right": "Prioritising audits by likelihood × impact" },
+        { "left": "Scope", "right": "What's in and out of a given audit" },
+        { "left": "Objective", "right": "The question the audit is trying to answer" },
+        { "left": "Criteria", "right": "The standard reality is compared against" },
+        { "left": "Materiality", "right": "Focusing on what's big enough to matter" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “You can't audit everything, so a risk-based plan points limited attention at the most material, high-risk areas — chosen independently — with a clear scope and a real standard to judge against.”",
+  "checkpoint": [
+    {
+      "q": "A 'risk-based' audit plan means…",
+      "options": [
+        "Auditing everything equally",
+        "Prioritising the riskiest, most material areas with limited resources",
+        "Auditing whatever a manager requests",
+        "Choosing areas at random"
+      ],
+      "answer": 1,
+      "explain": "Point scarce audit attention where problems are most likely and most damaging."
+    },
+    {
+      "q": "Why must an audit have clear 'criteria'?",
+      "options": [
+        "To make it longer",
+        "So findings are measured against a real standard, not just opinion",
+        "To flatter management",
+        "Criteria aren't needed"
+      ],
+      "answer": 1,
+      "explain": "A yardstick (policy, law, framework) turns 'I don't like this' into 'this fails the documented standard'."
+    },
+    {
+      "q": "Letting the audited area choose what gets audited is dangerous because it…",
+      "options": [
+        "Saves time",
+        "Destroys independence — people steer audit away from real problems",
+        "Improves accuracy",
+        "Is legally required"
+      ],
+      "answer": 1,
+      "explain": "Independence requires audit to decide scope by risk, not by who lobbies hardest."
+    }
+  ]
+}

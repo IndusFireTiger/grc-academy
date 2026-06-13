@@ -1,0 +1,83 @@
+{
+  "id": 2,
+  "slug": "vetting-at-the-gate",
+  "title": "Vetting at the Gate",
+  "subtitle": "Due diligence before you sign",
+  "icon": "🔎",
+  "hook": {
+    "metaphor": "You wouldn't hand a stranger the keys to your house without checking who they are, what they'll do inside, and whether they've burgled anyone before. Yet organisations routinely give vendors deep access with barely a glance. **Due diligence** is checking the stranger at the gate *before* you let them in — because afterwards is far too late.",
+    "scenario": "A team urgently needs a new analytics tool and signs up the cheapest option in an afternoon — handing it live customer data. Nobody checked its security, its data practices, or where the data would be stored. It felt fast and efficient. What did that speed actually buy?"
+  },
+  "learn": [
+    "**Due diligence** is assessing a vendor's risk *before* you commit. The cardinal rule: the time to discover a supplier is weak is *before* you depend on them, not after they've leaked your data. Speed bought by skipping the check (our analytics tool) is a loan against a future disaster.",
+    "Smart due diligence is **risk-based** — proportionate to how much the vendor could hurt you. A supplier touching sensitive customer data with deep system access (high risk) deserves deep scrutiny; the office stationery supplier doesn't. Tier your vendors so effort goes where the danger is.",
+    "What you check depends on the risk, but typically: their **security** posture (certifications like ISO 27001, SOC 2 reports), **financial health** (will they still exist next year?), **data practices** (what will they collect, where will it live, who can see it?), **compliance** record, and any history of breaches or misconduct.",
+    "It then gets locked into the **contract** — the gate's legal lock. Good contracts spell out security requirements, data-handling rules, the **right to audit**, breach-notification duties, service levels (SLAs), and exit terms. A handshake and an invoice is not a control.",
+    "The principle of **least privilege** (from cyber) applies here too: give each vendor only the access and data they genuinely need — never the master keys when they only need to water the plants."
+  ],
+  "bridge": "So at work, you can insist on a simple discipline before any vendor goes live: *how much could they hurt us (tier the risk), have we actually checked them in proportion, and is it written into the contract with audit rights and least-privilege access?* The afternoon you 'save' skipping due diligence is borrowed from the week you'll lose cleaning up.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The afternoon sign-up",
+      "prompt": "A team signs the cheapest analytics tool in an afternoon and hands it live customer data, unchecked. The problem?",
+      "options": [
+        { "label": "Nothing — fast and cheap is good business.", "verdict": "bad", "feedback": "Fast and cheap, paid for with unchecked exposure of customer data, is a disaster on credit. The speed is real; so is the borrowed risk." },
+        { "label": "No risk-based due diligence before handing over sensitive data.", "verdict": "good", "feedback": "Exactly. A vendor touching live customer data is high-risk and needs proportionate vetting (security, data practices, location) and contractual safeguards before it goes live." },
+        { "label": "Fine as long as the tool has a nice interface.", "verdict": "bad", "feedback": "A polished UI tells you nothing about their security or data handling. Looks aren't due diligence." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "How much scrutiny?",
+      "prompt": "Risk-based due diligence: sort each vendor by the scrutiny it warrants.",
+      "buckets": [
+        { "id": "high", "label": "High scrutiny" },
+        { "id": "low", "label": "Light scrutiny" }
+      ],
+      "items": [
+        { "label": "A cloud provider hosting all your customer data", "bucket": "high" },
+        { "label": "The company that supplies your office coffee", "bucket": "low" },
+        { "label": "A payroll processor handling staff bank details", "bucket": "high" },
+        { "label": "A firm with deep admin access to core systems", "bucket": "high" },
+        { "label": "A vendor printing your branded notebooks", "bucket": "low" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Vet vendors at the gate — risk-based due diligence on their security, finances, and data practices, locked into a contract with audit rights and least-privilege access — because checking after you depend on them is too late.”",
+  "checkpoint": [
+    {
+      "q": "Due diligence on a vendor should be done…",
+      "options": [
+        "After they cause a problem",
+        "Before you commit and depend on them",
+        "Only every ten years",
+        "Never, to save time"
+      ],
+      "answer": 1,
+      "explain": "The point is to discover weakness before you rely on them — afterwards is far too late."
+    },
+    {
+      "q": "'Risk-based' due diligence means…",
+      "options": [
+        "Checking every vendor identically",
+        "Scrutinising vendors in proportion to how much they could harm you",
+        "Only checking cheap vendors",
+        "Skipping checks for big vendors"
+      ],
+      "answer": 1,
+      "explain": "Tier vendors by potential impact and spend your effort where the danger is greatest."
+    },
+    {
+      "q": "A strong vendor contract should include…",
+      "options": [
+        "Just a price and a logo",
+        "Security requirements, data rules, audit rights, breach notification, and exit terms",
+        "Only the start date",
+        "A promise to be nice"
+      ],
+      "answer": 1,
+      "explain": "The contract is the legal lock on the gate — it must spell out the safeguards and your rights."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": 1,
+  "slug": "the-health-checkup",
+  "title": "The Health Check-up",
+  "subtitle": "What audit is — and why it's independent",
+  "icon": "🩺",
+  "hook": {
+    "metaphor": "You feel fine, but you still get a check-up. Why? Because a doctor looks for the problems you can't feel yet, and tells you the truth even when you'd rather not hear it. That's exactly what an audit is for an organisation: an independent, expert examination that finds the issues management can't see (or won't admit) — *before* they become a crisis.",
+    "scenario": "A CEO insists 'everything is under control here' and wants to skip this year's audit to save money and hassle. A board member pushes back: 'That's precisely when we most need one.' Who's right — and what is an audit actually for?"
+  },
+  "learn": [
+    "An **audit is an independent, objective examination** of whether something is really working as claimed — the finances, a process, the controls, compliance. Its superpower is **independence**: like a doctor, an auditor has no stake in telling you you're fine, so their verdict can be trusted.",
+    "There are two big families. **Internal audit** is an in-house team that reports to the board (specifically the **audit committee**), checking the organisation's own risks and controls all year — the third line of defence you met earlier. **External audit** is an outside firm giving an independent opinion to the *outside world* (e.g. that the financial statements are true and fair).",
+    "Auditors don't just hunt for fraud (a common myth). They provide **assurance**: evidence-based confidence that controls work, numbers are accurate, and rules are followed — or a clear, documented account of where they don't.",
+    "Crucially, audit is about **'how do you know?'**, not opinion. An auditor doesn't accept 'we're confident'; they ask for *evidence* and test it (the assurance discipline from Internal Controls). 'Everything's fine' without evidence is exactly the claim an audit exists to verify — which is why our CEO's confidence is a reason *for* an audit, not against one.",
+    "And independence has degrees: internal audit must be free to report uncomfortable truths to the board without management silencing them; external auditors must avoid conflicts (you can't credibly audit your own work or a close friend's)."
+  ],
+  "bridge": "So at work, you can treat audit as a health check, not an attack: its job is to surface problems early, with evidence, by someone independent enough to be honest. When someone says 'we don't need an audit, everything's fine', recognise that unverified confidence is the very thing audit exists to test — and that the loudest 'we're fine' often hides the most.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Skip the check-up?",
+      "prompt": "The CEO wants to skip the audit because 'everything's under control'. The soundest view?",
+      "options": [
+        { "label": "Agreed — if things are fine, an audit is wasted money.", "verdict": "bad", "feedback": "'We feel fine' is exactly when a check-up matters — it catches what you can't feel. Unverified confidence is the claim audit exists to test, not a reason to skip it." },
+        { "label": "An audit independently verifies that claim with evidence — that's its whole point.", "verdict": "good", "feedback": "Exactly. Audit replaces 'trust us, we're fine' with evidence-based assurance from someone independent. Confidence without verification is a risk, not a reassurance." },
+        { "label": "Only do it if fraud is suspected.", "verdict": "bad", "feedback": "Audit isn't just fraud-hunting — it's assurance that controls, numbers, and compliance actually work. Waiting for suspicion means finding problems only after they've grown." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Internal or external audit?",
+      "prompt": "Sort each description by which kind of audit it fits.",
+      "buckets": [
+        { "id": "internal", "label": "Internal audit" },
+        { "id": "external", "label": "External audit" }
+      ],
+      "items": [
+        { "label": "An in-house team reporting to the audit committee", "bucket": "internal" },
+        { "label": "An outside firm opining on the financial statements", "bucket": "external" },
+        { "label": "Checks the organisation's risks and controls all year", "bucket": "internal" },
+        { "label": "Gives independent assurance to outside investors", "bucket": "external" },
+        { "label": "The third line of defence", "bucket": "internal" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “An audit is a health check — an independent, evidence-based examination that finds problems early and verifies 'we're fine' — with internal audit checking from inside and external audit assuring the outside world.”",
+  "checkpoint": [
+    {
+      "q": "The single most important quality of an auditor is…",
+      "options": ["Speed", "Independence", "Friendliness", "Low cost"],
+      "answer": 1,
+      "explain": "Independence lets the verdict be trusted — like a doctor with no stake in saying you're healthy."
+    },
+    {
+      "q": "Internal audit typically reports to…",
+      "options": [
+        "The marketing team",
+        "The board / audit committee",
+        "Whichever manager it's checking",
+        "External customers"
+      ],
+      "answer": 1,
+      "explain": "Reporting to the audit committee keeps it independent of the management it examines (the third line)."
+    },
+    {
+      "q": "Beyond hunting fraud, audit mainly provides…",
+      "options": [
+        "Marketing copy",
+        "Evidence-based assurance that controls, numbers, and compliance work",
+        "Guaranteed profits",
+        "Legal immunity"
+      ],
+      "answer": 1,
+      "explain": "Its core product is assurance — verified confidence, or a clear account of where things fall short."
+    }
+  ]
+}

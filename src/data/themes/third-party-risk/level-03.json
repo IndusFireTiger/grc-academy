@@ -1,0 +1,84 @@
+{
+  "id": 3,
+  "slug": "watching-the-relationship",
+  "title": "Watching the Relationship",
+  "subtitle": "Ongoing monitoring, not 'sign and forget'",
+  "icon": "📡",
+  "hook": {
+    "metaphor": "Vetting someone at the gate once doesn't mean they're trustworthy forever — people and companies change. A vendor who was rock-solid at signing can quietly decline: cutting corners, getting acquired, losing key staff, drifting into financial trouble. Third-party risk isn't a one-time check at the door; it's keeping an eye on the relationship the whole time they're inside.",
+    "scenario": "A vendor passed a rigorous review three years ago and has been trusted ever since. Unknown to the company, the vendor has since been quietly bought, gutted its security team, and started subcontracting the work overseas. Nobody re-checked. What failed?"
+  },
+  "learn": [
+    "The trap is **'sign and forget'** — doing thorough due diligence once, then never looking again. Risk is dynamic: our vendor's quiet decline went unnoticed for three years because nobody was watching. A point-in-time check expires.",
+    "**Ongoing monitoring** keeps the relationship under review proportionate to its risk: periodic re-assessments, reviewing their security attestations (e.g. annual SOC 2 reports), tracking their financial health, watching the news for breaches or scandals, and checking they're meeting agreed **service levels (SLAs)**.",
+    "Watch for **change events** that should trigger a fresh look: the vendor being acquired, moving data to a new country, subcontracting to a fourth party, a breach, or a big drop in service. Each can quietly change your risk overnight.",
+    "Use **Key Risk Indicators** here too (Operational Risk Level 4): rising support tickets, missed SLAs, slow responses, key staff leaving — early-warning signs that a vendor is sliding before it fails outright.",
+    "And monitor **concentration** across the whole portfolio: if dozens of your critical services secretly rely on the *same* underlying cloud provider, that's a single point of failure hiding in plain sight (the concentration risk from Operational Risk Level 3)."
+  ],
+  "bridge": "So at work, you can challenge any 'we vetted them ages ago' reassurance with: *when did we last re-check, and what would tell us if they'd gone downhill?* Build in periodic reviews, watch for change events (acquisitions, new locations, subcontracting), track simple KRIs, and keep an eye on concentration. A vendor relationship is a living thing, not a filed contract.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Three years untouched",
+      "prompt": "A once-vetted vendor quietly declined for three years with no re-check. The core failure?",
+      "options": [
+        { "label": "The original due diligence was wrong.", "verdict": "bad", "feedback": "The original check may have been fine — for back then. The failure is that risk changed and nobody was monitoring. A clean check three years ago says nothing about today." },
+        { "label": "'Sign and forget' — no ongoing monitoring of a changing vendor.", "verdict": "good", "feedback": "Exactly. Risk is dynamic; an acquisition, gutted security team, and offshore subcontracting all changed the picture. Ongoing monitoring and change-event triggers would have caught it." },
+        { "label": "Nothing — once vetted, always safe.", "verdict": "bad", "feedback": "This is the very assumption that caused the problem. Vendors change; trust must be maintained, not assumed forever." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Re-check trigger or routine?",
+      "prompt": "Which of these should trigger a fresh vendor risk review?",
+      "buckets": [
+        { "id": "trigger", "label": "Trigger a re-review" },
+        { "id": "routine", "label": "Business as usual" }
+      ],
+      "items": [
+        { "label": "The vendor is acquired by another company", "bucket": "trigger" },
+        { "label": "The vendor starts storing your data in a new country", "bucket": "trigger" },
+        { "label": "A normal monthly invoice arrives on time", "bucket": "routine" },
+        { "label": "The vendor suffers a data breach", "bucket": "trigger" },
+        { "label": "The vendor quietly subcontracts the work overseas", "bucket": "trigger" },
+        { "label": "A scheduled support call happens as planned", "bucket": "routine" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Third-party risk isn't 'sign and forget' — vendors change, so you keep monitoring them, watch for change events like acquisitions and offshoring, and track early-warning signs the whole time they're inside.”",
+  "checkpoint": [
+    {
+      "q": "The 'sign and forget' problem is that…",
+      "options": [
+        "Contracts are too short",
+        "A one-time check expires as the vendor and risk change over time",
+        "Monitoring is illegal",
+        "Vendors never change"
+      ],
+      "answer": 1,
+      "explain": "Risk is dynamic; without ongoing monitoring, a vendor's decline goes unnoticed until it's too late."
+    },
+    {
+      "q": "Which is a classic 'change event' warranting a fresh review?",
+      "options": [
+        "An on-time invoice",
+        "The vendor being acquired or moving data offshore",
+        "A routine support call",
+        "A normal Tuesday"
+      ],
+      "answer": 1,
+      "explain": "Acquisitions, new data locations, subcontracting, and breaches can change your risk overnight."
+    },
+    {
+      "q": "Monitoring vendor 'concentration' guards against…",
+      "options": [
+        "Spending too little",
+        "Too many critical services secretly depending on the same provider",
+        "Vendors being too honest",
+        "Having any vendors at all"
+      ],
+      "answer": 1,
+      "explain": "If many services rely on one underlying provider, its failure becomes a single point of failure for you."
+    }
+  ]
+}

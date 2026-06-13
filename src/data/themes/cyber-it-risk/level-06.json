@@ -1,0 +1,79 @@
+{
+  "id": 6,
+  "slug": "governing-cyber",
+  "title": "Governing Cyber",
+  "subtitle": "Frameworks, the board & the human firewall",
+  "icon": "🛡️",
+  "hook": {
+    "metaphor": "A castle's defence isn't really about any single wall — it's about the lord who decides defence matters, the master plan everyone follows, and a garrison trained so well that every guard is a sentry. Cyber maturity is the same: it's a governed program, led from the top, following a recognised playbook, with every employee as part of the wall.",
+    "scenario": "After a breach, a board asks the CISO: 'Are we secure now?' The honest answer isn't 'yes' — security is never finished. The mature answer reframes the whole question. What should the CISO say instead?"
+  },
+  "learn": [
+    "Cyber can't be improvised, so organisations adopt recognised **frameworks** as their playbook: the **NIST Cybersecurity Framework** (Identify, Protect, Detect, Respond, Recover — a clean way to organise everything in this track), **ISO 27001** (a certifiable information-security management system), and Australia's practical **Essential Eight** baseline. Frameworks turn 'are we secure?' into 'how mature are we against a known standard?'",
+    "Because perfect security is impossible, mature firms practise **cyber risk management**, not absolutism: identify the crown-jewel assets, assess the risks, and invest proportionately — accepting, reducing, or transferring risk (including **cyber insurance**) within a defined **risk appetite** (Operational Risk Level 6, again).",
+    "It must be **governed from the top**: board oversight, a clear owner (often a **CISO**), regular reporting in business terms (not jargon), and cyber treated as an enterprise risk on the same table as credit and operational risk. Regulators increasingly *expect* board-level cyber accountability.",
+    "And the most cost-effective control of all: the **human firewall**. Since most attacks target people, ongoing awareness training, phishing simulations, and a 'pause and verify' culture turn the workforce from the weakest link into a distributed sensor network. Culture — tone at the top — is the golden thread here too.",
+    "The mature answer to 'are we secure?' is therefore: *'Security is never done. Here's our maturity against the framework, our biggest residual risks, and what we're investing to reduce them.'* That's governance talking, not false comfort."
+  ],
+  "bridge": "So at work, you can lift cyber from a tech checklist to governance: anchor it to a recognised **framework**, treat it as **enterprise risk** within an appetite, demand **board-level ownership and plain-language reporting**, and invest in the **human firewall**. And you can replace the dangerous question 'are we secure?' with the honest one: 'how mature are we, and what are our biggest residual risks?'",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "'Are we secure now?'",
+      "prompt": "Post-breach, the board asks the CISO if they're secure now. The mature answer?",
+      "options": [
+        { "label": "'Yes — we've fixed it, we're secure.'", "verdict": "bad", "feedback": "Declaring 'secure' is false comfort that sets up the next nasty surprise. Security is never finished; absolute safety isn't a thing in cyber." },
+        { "label": "'Security is never done — here's our maturity vs the framework and our top residual risks.'", "verdict": "good", "feedback": "Exactly. That reframes the question into governance: a standard to measure against, honest residual risks, and a plan. Mature, defensible, and true." },
+        { "label": "'That's an IT question, not for the board.'", "verdict": "bad", "feedback": "The opposite of mature. Cyber is an enterprise risk the board must own and oversee — pushing it back to IT is exactly the failure regulators target." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Governance toolkit",
+      "prompt": "Match each concept to its role in governing cyber.",
+      "pairs": [
+        { "left": "NIST CSF", "right": "A framework: Identify, Protect, Detect, Respond, Recover" },
+        { "left": "ISO 27001", "right": "A certifiable information-security management system" },
+        { "left": "CISO", "right": "The senior person accountable for cyber" },
+        { "left": "Cyber insurance", "right": "Transferring some financial risk of an incident" },
+        { "left": "Human firewall", "right": "A trained, alert workforce as a frontline defence" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Mature cyber is governed — a recognised framework, board ownership, risk-based investment within appetite, and a trained 'human firewall' — and the honest question is never 'are we secure?' but 'how mature are we, and what are our biggest residual risks?'”",
+  "checkpoint": [
+    {
+      "q": "Adopting a framework like the NIST CSF or ISO 27001 helps because it…",
+      "options": [
+        "Guarantees you can never be hacked",
+        "Turns 'are we secure?' into 'how mature are we against a known standard?'",
+        "Replaces the need for any controls",
+        "Is only for governments"
+      ],
+      "answer": 1,
+      "explain": "Frameworks give a structured, measurable way to organise and benchmark cyber defence."
+    },
+    {
+      "q": "Treating the workforce as a 'human firewall' means…",
+      "options": [
+        "Replacing all technology with people",
+        "Training and a verify-first culture so staff become a frontline defence",
+        "Blaming employees for breaches",
+        "Removing technical controls"
+      ],
+      "answer": 1,
+      "explain": "Since attacks target people, an aware, sceptical workforce is one of the most cost-effective controls."
+    },
+    {
+      "q": "The mature view of cyber security is that it is…",
+      "options": [
+        "A finished state you reach and keep",
+        "Never 'done' — managed continuously against residual risk and a standard",
+        "Only the IT team's concern",
+        "Impossible, so not worth trying"
+      ],
+      "answer": 1,
+      "explain": "Perfect security doesn't exist; you govern it continuously, measuring maturity and managing residual risk."
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": 5,
+  "slug": "privacy-and-ai-governance",
+  "title": "Privacy & AI Governance",
+  "subtitle": "Protecting people, not just systems",
+  "icon": "🧠",
+  "hook": {
+    "metaphor": "Guarding the castle isn't only about keeping invaders out — it's also about how *you* treat the treasures inside. The villagers handed you their valuables (their personal data) on trust. Privacy is the duty to handle that trust well. And now there's a powerful new machine in the castle — AI — that can do wonders with those valuables, or quietly misuse them. Both need governing.",
+    "scenario": "A company keeps every scrap of customer data forever 'just in case', and feeds it all into a new AI tool that makes decisions no one can explain. Nothing's been hacked — yet it's a privacy and governance disaster waiting to happen. Why?"
+  },
+  "learn": [
+    "**Privacy** is distinct from security: security is keeping data *safe*; privacy is using it *appropriately and lawfully*. You can hold data perfectly securely and still violate privacy by collecting too much, keeping it too long, or using it in ways people never agreed to (our hoard-everything company).",
+    "Core privacy principles (from GDPR, DPDP, the Privacy Acts): **data minimisation** (collect only what you need), **purpose limitation** (use it only for what you said), **retention limits** (don't keep it forever), and honouring **individual rights** (access, correction, deletion). 'Just in case' is the enemy of all four.",
+    "**AI governance** is the fast-emerging frontier — increasingly grouped with cyber/IT risk. AI systems trained on personal data raise the bias, black-box, and explainability problems you met in Credit Risk — now across every domain. Governing AI means asking: *what data trained it? can we explain its decisions? is it fair? who's accountable when it's wrong?*",
+    "Regulation is arriving fast: the **EU AI Act** classifies AI by risk and bans the worst uses; privacy regulators worldwide are scrutinising automated decisions; Australia and others are issuing AI-governance guidance. 'The AI decided' is becoming as weak a defence as 'the system failed'.",
+    "The link back to security: privacy and AI both massively raise the *stakes* of a breach. A leak of rich personal data, or a compromised AI making critical decisions, is far more damaging than losing some harmless files — so strong security is the foundation privacy and AI governance are built on."
+  ],
+  "bridge": "So at work, you can apply two extra lenses beyond 'is it secure?': for privacy — *do we actually need this data, for a stated purpose, kept no longer than necessary?* and for AI — *can we explain and stand behind what this system decides?* Hoarding data 'just in case' and deploying unexplainable AI are modern landmines, even when nothing's been hacked.",
+  "interactions": [
+    {
+      "type": "classify",
+      "title": "Privacy principle in play",
+      "prompt": "Sort each good practice by the privacy principle it reflects.",
+      "buckets": [
+        { "id": "minimisation", "label": "Data minimisation" },
+        { "id": "retention", "label": "Retention limits" },
+        { "id": "rights", "label": "Individual rights" }
+      ],
+      "items": [
+        { "label": "Only asking for the fields you actually need", "bucket": "minimisation" },
+        { "label": "Deleting records after they're no longer needed", "bucket": "retention" },
+        { "label": "Letting a customer download or delete their data", "bucket": "rights" },
+        { "label": "Not collecting date of birth if it's irrelevant", "bucket": "minimisation" },
+        { "label": "Auto-purging logs after the legal retention period", "bucket": "retention" },
+        { "label": "Correcting data when a customer says it's wrong", "bucket": "rights" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "Hoard-everything + black-box AI",
+      "prompt": "A firm keeps all data forever and feeds it to an unexplainable AI. Nothing's been hacked. The verdict?",
+      "options": [
+        { "label": "Fine — no breach has occurred.", "verdict": "bad", "feedback": "No breach yet, but it's violating privacy principles (minimisation, retention) and deploying ungovernable AI. The harm is baked in; a breach would just make it catastrophic." },
+        { "label": "A privacy + AI-governance failure: minimise data, set retention, and demand explainable AI.", "verdict": "good", "feedback": "Exactly. Security isn't the only test. Collect less, keep it for less time, and ensure the AI's decisions can be explained and owned. 'Just in case' and 'the AI decided' are both landmines." },
+        { "label": "Solve it by just adding more encryption.", "verdict": "bad", "feedback": "Encryption is security, not privacy or AI governance. Perfectly encrypted data you shouldn't hold, fed to AI you can't explain, is still a disaster." }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Security keeps data safe; privacy means using it appropriately — collect less, keep it less long, honour people's rights — and AI governance adds: can we explain and stand behind what the machine decides?”",
+  "checkpoint": [
+    {
+      "q": "The difference between security and privacy is…",
+      "options": [
+        "They're identical",
+        "Security keeps data safe; privacy is using it appropriately and lawfully",
+        "Privacy is only about encryption",
+        "Security doesn't matter"
+      ],
+      "answer": 1,
+      "explain": "You can hold data securely yet still breach privacy by over-collecting, over-keeping, or misusing it."
+    },
+    {
+      "q": "'Data minimisation' means…",
+      "options": [
+        "Keeping all data forever",
+        "Collecting only the data you actually need",
+        "Making data files smaller",
+        "Deleting backups"
+      ],
+      "answer": 1,
+      "explain": "Collect only what's necessary for a stated purpose — 'just in case' hoarding is the opposite."
+    },
+    {
+      "q": "A core question of AI governance is…",
+      "options": [
+        "How fast the AI runs",
+        "Can we explain and stand behind the AI's decisions, and is it fair?",
+        "What colour the interface is",
+        "Whether AI is popular"
+      ],
+      "answer": 1,
+      "explain": "Explainability, fairness, and accountability — the same issues as the Credit Risk model, now everywhere."
+    }
+  ]
+}

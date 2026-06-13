@@ -1,0 +1,81 @@
+{
+  "id": 4,
+  "slug": "when-the-walls-are-breached",
+  "title": "When the Walls Are Breached",
+  "subtitle": "Detection & incident response",
+  "icon": "🚨",
+  "hook": {
+    "metaphor": "Even the best-defended castle plans for the day the walls are breached — where the alarm bells hang, where everyone runs, who leads the counter-attack, how you put out the fires and rebuild. In cyber, *assuming you'll eventually be breached* isn't pessimism; it's professionalism. The question isn't only 'will they get in?' but 'how fast will we notice and respond?'",
+    "scenario": "Attackers were inside a company's network for 200 days before anyone noticed — quietly stealing data the whole time. When they were finally spotted, there was no plan, so the response was chaos. Two failures here, not one. What were they?"
+  },
+  "learn": [
+    "First failure: **detection**. The scariest breaches are the ones you don't see — our attackers had 200 days (the industry calls this 'dwell time'). Good detection means **monitoring and logging**, often via a **SOC (Security Operations Centre)** watching for anomalies, so you spot intruders in hours, not months.",
+    "Second failure: **no incident response plan**. A standard playbook has clear phases — **detect, contain, eradicate, recover, and learn**. *Contain* (stop the bleeding — isolate affected systems), *eradicate* (remove the attacker), *recover* (restore from clean backups), and *learn* (a blameless post-mortem so it doesn't recur). Deciding all this *during* a crisis guarantees chaos.",
+    "A breach also triggers **legal clocks**. Privacy laws require notifying regulators (and often affected people) fast — Australia's **Notifiable Data Breaches** scheme, the EU's **72-hour** GDPR rule, India's DPDP breach duties. Knowing the clock is part of the plan, not an afterthought.",
+    "Underrated truth: **backups are your ultimate insurance**, especially against ransomware. Clean, tested, offline backups mean you can recover without paying. A backup you've never tested restoring is just a hope — practise the recovery before you need it.",
+    "And rehearse: tabletop **exercises** (a simulated breach drill) turn a panicked scramble into a calm, practised routine — exactly the resilience mindset from Operational Risk's fire-drill."
+  ],
+  "bridge": "So at work, you can assess breach-readiness with two questions beyond 'are we secure?': *How fast would we even notice?* (detection/monitoring) and *Do we have a tested plan and clean backups for when it happens?* (response/recovery). Assume breach, shrink dwell time, and rehearse the response — because the difference between an incident and a catastrophe is usually how fast and how calmly you react.",
+  "interactions": [
+    {
+      "type": "classify",
+      "title": "Order the response",
+      "prompt": "Sort each action into the incident-response phase it belongs to.",
+      "buckets": [
+        { "id": "contain", "label": "Contain" },
+        { "id": "eradicate", "label": "Eradicate" },
+        { "id": "recover", "label": "Recover" },
+        { "id": "learn", "label": "Learn" }
+      ],
+      "items": [
+        { "label": "Isolate the infected machines from the network", "bucket": "contain" },
+        { "label": "Remove the attacker's access and malware", "bucket": "eradicate" },
+        { "label": "Restore systems from clean backups", "bucket": "recover" },
+        { "label": "Run a blameless post-mortem to prevent recurrence", "bucket": "learn" },
+        { "label": "Cut off the compromised account immediately", "bucket": "contain" },
+        { "label": "Bring services back online and verify integrity", "bucket": "recover" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "200 days unseen",
+      "prompt": "Attackers lurked for 200 days, then the response was chaos. The two core fixes?",
+      "options": [
+        { "label": "Just buy a bigger firewall to keep them out.", "verdict": "bad", "feedback": "Prevention alone failed — and will sometimes fail for everyone. The gaps here were *detection* (200 days unseen) and *response* (no plan), neither of which a firewall fixes." },
+        { "label": "Add monitoring/detection to shrink dwell time, and build a tested response plan.", "verdict": "good", "feedback": "Exactly. You assume breach: detect fast (monitoring/SOC) and respond calmly (a rehearsed detect-contain-eradicate-recover-learn plan with clean backups)." },
+        { "label": "Pay the attackers to go away.", "verdict": "bad", "feedback": "Paying funds crime, doesn't guarantee recovery, and ignores the real gaps. With tested backups and a plan, you recover on your own terms." }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Assume you'll be breached — so invest in detecting it fast and in a rehearsed plan (contain, eradicate, recover, learn) with clean tested backups, because how fast and calmly you respond decides whether it's an incident or a catastrophe.”",
+  "checkpoint": [
+    {
+      "q": "Why does long attacker 'dwell time' (e.g. 200 days unseen) matter so much?",
+      "options": [
+        "It doesn't",
+        "The longer they're undetected, the more damage and data theft occurs",
+        "It makes the attack legal",
+        "It speeds up recovery"
+      ],
+      "answer": 1,
+      "explain": "Undetected attackers keep stealing and spreading — fast detection (monitoring/SOC) shrinks the harm."
+    },
+    {
+      "q": "The phase that immediately stops the bleeding by isolating affected systems is…",
+      "options": ["Recover", "Contain", "Learn", "Ignore"],
+      "answer": 1,
+      "explain": "Containment isolates the problem first; eradication and recovery come after."
+    },
+    {
+      "q": "Clean, tested, offline backups are especially powerful against…",
+      "options": [
+        "Slow internet",
+        "Ransomware — you can recover without paying",
+        "Marketing problems",
+        "Nothing in particular"
+      ],
+      "answer": 1,
+      "explain": "If you can restore from clean backups, ransomware loses its leverage — but only if you've tested the restore."
+    }
+  ]
+}

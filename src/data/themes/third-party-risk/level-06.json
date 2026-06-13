@@ -1,0 +1,85 @@
+{
+  "id": 6,
+  "slug": "governing-the-ecosystem",
+  "title": "Governing the Ecosystem",
+  "subtitle": "The whole vendor lifecycle, owned",
+  "icon": "🕸️",
+  "hook": {
+    "metaphor": "A handful of well-vetted suppliers you can track in your head; a sprawling web of hundreds you cannot. At scale, third-party risk stops being a series of one-off checks and becomes an *ecosystem* to govern — with a register of who you depend on, a lifecycle every vendor moves through, and someone accountable for the whole web. Otherwise the risky vendor is simply the one nobody remembered to look at.",
+    "scenario": "After an incident, a company tries to list every third party with access to its data. It can't. Different teams signed up vendors independently, there's no central register, and nobody owns the overall picture. The breach came through a vendor no one at the top knew existed. What was missing?"
+  },
+  "learn": [
+    "At scale you need a **third-party register / inventory**: a single source of truth listing every vendor, what they do, what data and access they have, their risk tier, and who owns the relationship. You cannot manage a web you can't even see (our company couldn't list its own vendors).",
+    "Everything you've learned slots into a **vendor lifecycle**: **identify & tier** → **due diligence** (Level 2) → **contract** → **monitor** (Level 3) → **off-board** (Level 5). Governing third-party risk means running every vendor through this lifecycle consistently, not ad hoc per team.",
+    "Beware **shadow vendors / shadow IT**: tools and suppliers individual teams sign up on a credit card without telling anyone. They bypass all due diligence and never reach the register — which is exactly how the unknown vendor in our scenario became the breach. A central, easy intake process is the antidote.",
+    "It needs an **accountable owner** and **three-lines** governance (the recurring pattern): the business owns its vendor relationships (1st line), a risk/procurement function sets standards and challenges (2nd line), and audit checks the whole program works (3rd line) — with board visibility of the most critical dependencies.",
+    "And the **golden thread** again: this only works inside a culture that treats vendor risk as everyone's job, not a procurement formality to dodge. When teams *want* to route vendors through the process (because it's easy and clearly matters), the ecosystem stays mapped. When they see it as red tape, shadow vendors multiply."
+  ],
+  "bridge": "So at work, you can judge whether third-party risk is truly governed by one brutal test: *could we list every vendor with access to our critical data and systems right now — and does each one have an owner and a place in the lifecycle?* If the honest answer is 'no', the dangerous vendor isn't the weak one you assessed; it's the one nobody knew to assess.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The vendor nobody knew",
+      "prompt": "A breach came through a vendor no one centrally knew about, because there was no register and no owner. The core gap?",
+      "options": [
+        { "label": "The vendor was just unusually sneaky.", "verdict": "bad", "feedback": "The vendor's strength isn't the point — the company couldn't even see it. With no register and fragmented sign-ups, the risk was invisible, not unbeatable." },
+        { "label": "No governed program: no central register, lifecycle, or accountable owner.", "verdict": "good", "feedback": "Exactly. At scale you need a single inventory, a consistent lifecycle, control over shadow vendors, and clear ownership. You can't manage what you can't see." },
+        { "label": "They should simply stop using any vendors.", "verdict": "bad", "feedback": "Not realistic — modern business runs on vendors. The answer is to *govern* the ecosystem, not abolish it." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Order the vendor lifecycle",
+      "prompt": "Sort each activity into its stage of the third-party lifecycle.",
+      "buckets": [
+        { "id": "onboard", "label": "Identify & onboard" },
+        { "id": "manage", "label": "Manage & monitor" },
+        { "id": "offboard", "label": "Off-board" }
+      ],
+      "items": [
+        { "label": "Tiering a new vendor and running due diligence", "bucket": "onboard" },
+        { "label": "Periodic re-assessment and SLA tracking", "bucket": "manage" },
+        { "label": "Revoking access and retrieving data at contract end", "bucket": "offboard" },
+        { "label": "Signing the contract with security and audit terms", "bucket": "onboard" },
+        { "label": "Reviewing the vendor after an acquisition", "bucket": "manage" },
+        { "label": "Confirming secure data deletion when leaving", "bucket": "offboard" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “At scale, third-party risk is an ecosystem to govern — a central register of every vendor, a consistent lifecycle, control of shadow vendors, and clear ownership — because the dangerous vendor is the one nobody knew to assess.”",
+  "checkpoint": [
+    {
+      "q": "A third-party register/inventory exists to…",
+      "options": [
+        "List employees",
+        "Be the single source of truth for every vendor, their access, risk tier, and owner",
+        "Track only the cheapest vendors",
+        "Replace contracts"
+      ],
+      "answer": 1,
+      "explain": "You can't manage a web of vendors you can't see — the register makes the ecosystem visible."
+    },
+    {
+      "q": "'Shadow vendors' (shadow IT) are dangerous because they…",
+      "options": [
+        "Are always cheaper",
+        "Bypass due diligence and never reach the register, creating invisible risk",
+        "Are required by regulators",
+        "Improve governance"
+      ],
+      "answer": 1,
+      "explain": "Tools signed up off the books skip every control — exactly how unknown vendors become breaches."
+    },
+    {
+      "q": "The vendor lifecycle runs roughly…",
+      "options": [
+        "Off-board → monitor → onboard",
+        "Identify/tier → due diligence → contract → monitor → off-board",
+        "Pay → forget → repeat",
+        "There is no lifecycle"
+      ],
+      "answer": 1,
+      "explain": "Governing third-party risk means running every vendor consistently through that full lifecycle."
+    }
+  ]
+}
