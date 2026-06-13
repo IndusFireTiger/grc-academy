@@ -1,0 +1,79 @@
+{
+  "id": 3,
+  "slug": "the-bank-run",
+  "title": "The Bank Run",
+  "subtitle": "Maturity mismatch & the speed of fear",
+  "icon": "🏃",
+  "hook": {
+    "metaphor": "A bank takes your deposit (which you can withdraw any time) and lends it out for years (a 30-year mortgage). That's its whole business model — and its fatal flaw. If everyone asks for their money back at once, the cash simply isn't there: it's locked in long-term loans. The bank isn't a vault full of your cash; it's a clever, fragile timing trick. A bank run is that trick failing.",
+    "scenario": "A perfectly solvent bank's customers hear a rumour it's in trouble. Frightened, they all rush to withdraw at once. The bank can't return everyone's money simultaneously — because it's lent out — so it collapses, *making the rumour come true*. How did a healthy bank die of a rumour?"
+  },
+  "learn": [
+    "The engine of bank fragility is **maturity mismatch** (or 'maturity transformation'): banks fund *long-term* assets (loans, mortgages) with *short-term* liabilities (deposits withdrawable on demand). This is genuinely useful — it's how savings become mortgages — but it means a bank can *never* repay all depositors at once.",
+    "Normally that's fine, because only a few withdraw at any time. A **bank run** happens when **confidence breaks** and everyone demands their cash together. The bank, unable to instantly recall its long-term loans, runs out of cash and fails — even if it was perfectly solvent.",
+    "The cruellest twist is the **self-fulfilling prophecy**: the *fear* of failure causes the failure. A solvent bank dies because people *believed* it might. This makes liquidity uniquely psychological — confidence isn't a nice-to-have, it's the foundation the whole thing stands on.",
+    "Modern runs are **faster than ever**. Social media spreads panic in minutes and mobile banking lets billions be withdrawn in hours — as the 2023 collapse of Silicon Valley Bank showed: a digital run that emptied the bank at a speed no traditional run ever matched.",
+    "Two big defences exist: **deposit insurance** (governments guaranteeing deposits up to a limit — like Australia's Financial Claims Scheme — so people *don't* panic), and the **central bank as lender of last resort**, which can lend emergency cash to a solvent-but-illiquid bank to break the panic. Both exist to protect *confidence*, because confidence is the real asset."
+  ],
+  "bridge": "So at work, you can understand why liquidity is treated almost as sacred in finance: the bank business model is built on a timing trick that *depends on confidence*, and confidence can evaporate in hours — faster now than ever. It's why regulators obsess over liquidity buffers and deposit insurance: they're really defending the one thing that can't be allowed to break — trust.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Death by rumour",
+      "prompt": "A solvent bank collapsed because customers feared it would, and all withdrew at once. How is that possible?",
+      "options": [
+        { "label": "It must have secretly been insolvent all along.", "verdict": "bad", "feedback": "Not necessarily — a perfectly solvent bank can fail a run. Its money is lent out long-term; it simply can't return all deposits at once. The fear, not insolvency, was fatal." },
+        { "label": "Maturity mismatch + lost confidence — the fear became self-fulfilling.", "verdict": "good", "feedback": "Exactly. Banks fund long-term loans with on-demand deposits, so a simultaneous withdrawal breaks them regardless of solvency. The rumour caused the very collapse it predicted." },
+        { "label": "It was a cyber attack.", "verdict": "bad", "feedback": "No systems were hacked. This is a classic liquidity/confidence failure driven by maturity mismatch, not a cyber event." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Bank-run vocabulary",
+      "prompt": "Match each term to its meaning.",
+      "pairs": [
+        { "left": "Maturity mismatch", "right": "Funding long-term assets with short-term, on-demand money" },
+        { "left": "Bank run", "right": "Everyone demanding their deposits at once" },
+        { "left": "Self-fulfilling prophecy", "right": "Fear of failure causing the failure" },
+        { "left": "Deposit insurance", "right": "A guarantee on deposits so people don't panic" },
+        { "left": "Lender of last resort", "right": "A central bank lending emergency cash to break a panic" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “A bank runs on a timing trick — long-term loans funded by on-demand deposits — so if confidence breaks and everyone withdraws at once, even a solvent bank collapses, and modern digital runs make that happen in hours.”",
+  "checkpoint": [
+    {
+      "q": "'Maturity mismatch' in banking means…",
+      "options": [
+        "Staff are the wrong age",
+        "Funding long-term assets (loans) with short-term, on-demand deposits",
+        "Loans and deposits have the same term",
+        "Holding only cash"
+      ],
+      "answer": 1,
+      "explain": "It's the core of banking — and the reason a bank can never repay all depositors simultaneously."
+    },
+    {
+      "q": "A bank run can destroy a bank that is…",
+      "options": [
+        "Only an insolvent one",
+        "Even a perfectly solvent one, because confidence and timing fail",
+        "Never a real bank",
+        "Only a very small one"
+      ],
+      "answer": 1,
+      "explain": "The fear becomes self-fulfilling: a solvent bank can't return all deposits at once and collapses."
+    },
+    {
+      "q": "Deposit insurance and a lender of last resort both exist mainly to…",
+      "options": [
+        "Increase bank profits",
+        "Protect confidence so panics don't start or spread",
+        "Replace the need for capital",
+        "Slow down withdrawals by law"
+      ],
+      "answer": 1,
+      "explain": "Both defend trust — the real foundation liquidity depends on."
+    }
+  ]
+}

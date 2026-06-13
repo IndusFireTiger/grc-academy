@@ -1,0 +1,83 @@
+{
+  "id": 6,
+  "slug": "governing-liquidity",
+  "title": "Governing Liquidity",
+  "subtitle": "Appetite, monitoring & the board's job",
+  "icon": "🏛️",
+  "hook": {
+    "metaphor": "A ship's captain doesn't personally check the water tanks every hour — but she sets the rule for how low they may ever get, makes sure someone watches the gauge, and never lets a profitable detour drain the reserves below the line. Governing liquidity is that captaincy: turning 'keep enough cash' from a vague hope into a watched, enforced, owned discipline.",
+    "scenario": "A bank's treasury team quietly let liquidity drift lower and lower to boost returns, and nobody at board level was watching the gauge. Then a shock hit and the cushion wasn't there. Profits had looked great — right up to the near-collapse. What governance was missing?"
+  },
+  "learn": [
+    "It starts, as always, with **risk appetite**: the board sets explicit limits on how much liquidity risk is acceptable — minimum buffer levels, funding concentration limits, survival horizons. Without a stated line, liquidity quietly drifts down in the chase for returns (exactly our treasury team), because cash 'wastefully' sitting idle is always tempting to deploy.",
+    "Appetite is made real by **monitoring**: tracking liquidity metrics (the LCR/NSFR, buffer levels) and **early-warning indicators** — the liquidity KRIs from Operational Risk: rising funding costs, deposit outflows, shortening funding maturities. These flash amber *before* the gauge hits empty.",
+    "It must be **independently overseen and reported to the board**, not left solely to the treasury desk that benefits from running it lean (the segregation principle again). Someone independent watches the gauge, and the board sees the truth — our scenario failed precisely here.",
+    "**Liquidity stress testing** (Level 5) is a board-level discipline: regularly proving the firm could survive severe scenarios, and adjusting buffers and plans when it couldn't. Stress results should reach the top, not die in a spreadsheet.",
+    "And the golden thread one last time — **culture**. Liquidity is unglamorous and 'expensive' in calm times, so a short-term, profit-worshipping culture is tempted to run it dangerously thin. The firms that survive treat their liquidity buffer as sacred *precisely* when it looks like an unnecessary cost — because, as every liquidity crisis proves, it kills quickly and without warning."
+  ],
+  "bridge": "So at work, you can judge liquidity governance with one question: *is there a board-set appetite, independently watched, that nobody is allowed to erode for short-term returns — even when the buffer looks like wasted money?* Liquidity is the risk that drifts quietly downward in good times and kills suddenly in bad ones, so the captain's real job is refusing to drain the reserves when the sailing is smooth.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The drained reserves",
+      "prompt": "Treasury quietly ran liquidity ever lower for returns, unwatched by the board, until a shock found the cushion gone. The governance gap?",
+      "options": [
+        { "label": "Nothing — the profits were good until the shock.", "verdict": "bad", "feedback": "Good profits earned by secretly draining the safety reserve is the definition of poor liquidity governance. The shock just revealed a risk that was being run all along, unwatched." },
+        { "label": "No board-set appetite and no independent oversight of liquidity being eroded.", "verdict": "good", "feedback": "Exactly. Liquidity drifts down in the chase for returns unless the board sets a hard floor, someone independent watches the gauge, and reporting reaches the top. All three were missing." },
+        { "label": "Treasury should have chased even higher returns.", "verdict": "bad", "feedback": "The opposite. Higher returns came precisely from running liquidity dangerously thin. Governance exists to stop that trade-off being made in the dark." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Strengthens or weakens liquidity governance?",
+      "prompt": "Sort each practice.",
+      "buckets": [
+        { "id": "strong", "label": "Strengthens" },
+        { "id": "weak", "label": "Weakens" }
+      ],
+      "items": [
+        { "label": "A board-set minimum buffer that can't be breached for profit", "bucket": "strong" },
+        { "label": "Treasury quietly running liquidity lower, unwatched", "bucket": "weak" },
+        { "label": "Independent monitoring of liquidity early-warning indicators", "bucket": "strong" },
+        { "label": "Regular liquidity stress tests reported to the board", "bucket": "strong" },
+        { "label": "Treating the buffer as wasted money to be deployed", "bucket": "weak" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Governing liquidity means the board sets a hard floor nobody may erode for returns, someone independent watches the gauge and early-warning signs, and stress tests reach the top — because liquidity quietly drains in good times and kills suddenly in bad ones.”",
+  "checkpoint": [
+    {
+      "q": "Without a board-set liquidity appetite, liquidity tends to…",
+      "options": [
+        "Stay perfectly safe on its own",
+        "Drift lower over time as firms chase returns with idle cash",
+        "Automatically increase",
+        "Become irrelevant"
+      ],
+      "answer": 1,
+      "explain": "Idle buffers look 'wasteful', so without a hard floor liquidity quietly erodes in good times."
+    },
+    {
+      "q": "Liquidity monitoring should be…",
+      "options": [
+        "Left entirely to the desk that benefits from running it lean",
+        "Independently overseen with results reported to the board",
+        "Done once a decade",
+        "Kept secret from leadership"
+      ],
+      "answer": 1,
+      "explain": "Independent oversight and board reporting stop the conflicted party from quietly eroding the buffer."
+    },
+    {
+      "q": "Why is a strong culture especially important for liquidity?",
+      "options": [
+        "Liquidity is glamorous and exciting",
+        "Buffers look like wasted cost in calm times, tempting firms to run them dangerously thin",
+        "Culture has no effect on liquidity",
+        "Liquidity never causes failures"
+      ],
+      "answer": 1,
+      "explain": "A profit-worshipping culture drains the unglamorous buffer — exactly the reserve that prevents sudden collapse."
+    }
+  ]
+}

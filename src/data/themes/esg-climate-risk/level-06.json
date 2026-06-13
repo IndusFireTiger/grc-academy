@@ -1,0 +1,84 @@
+{
+  "id": 6,
+  "slug": "governing-the-long-game",
+  "title": "Governing the Long Game",
+  "subtitle": "Short-termism vs the long horizon",
+  "icon": "🌍",
+  "hook": {
+    "metaphor": "The hardest thing about a long-range threat is that the people in charge are usually rewarded for the short term. A CEO judged on this year's profit has every incentive to leave the slow storm for their successor. Governing ESG and climate risk is really about beating that short-termism — building a structure that makes the organisation act on a threat whose worst effects land after today's leaders have moved on.",
+    "scenario": "A board agrees climate is a serious long-term risk — then approves a strategy and bonus plan based purely on the next two years' profit, with no one accountable for the long-horizon risks. They 'believe in' ESG. Why will nothing actually change?"
+  },
+  "learn": [
+    "The core tension is **short-termism vs the long horizon.** ESG risks land over decades, but strategy, reporting, and especially **incentives** usually run on quarters and years. If nobody is rewarded for managing the long game (our board's 2-year bonus plan), belief in ESG stays a slogan while behaviour chases the next quarter.",
+    "So governance must **embed ESG into strategy and incentives**, not bolt it on. That means board-level oversight of climate/ESG risk, integrating it into the **risk appetite** and **enterprise risk** view (the recurring boardroom ideas), and tying some executive reward to long-term sustainability goals — so the long horizon has a champion with skin in the game.",
+    "Clear **accountability** is essential: a named owner (often at board or executive level) for ESG/climate risk, with it on the agenda regularly — not delegated to a sidelined sustainability team with no power (the same independence/authority lesson from every governance level).",
+    "It increasingly has regulatory teeth: mandatory climate disclosure, **APRA CPG 229** expectations, central-bank climate stress tests, and director-duty guidance that climate risk is a *financial* risk boards must consider. 'We didn't think it was our job' is no longer a defence for directors.",
+    "And the golden thread, one final time: **culture and tone at the top** decide whether ESG is genuine or theatre. A board that truly treats the long game as real — funding it, measuring it, rewarding it, and being honest about trade-offs — turns ESG from a glossy report into actual resilience. One that just 'believes in it' while paying for short-term profit changes nothing at all."
+  ],
+  "bridge": "So at work, you can tell genuine ESG governance from greenwashed good intentions with one test: *does the organisation put structure and money behind the long game — board ownership, ESG in the risk appetite, and incentives that reward long-term outcomes — or does it 'believe in' ESG while paying purely for short-term profit?* The slow storm is only ever managed by beating short-termism, and that's a governance and culture choice.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Belief without change",
+      "prompt": "The board 'believes in' climate risk but bases strategy and bonuses purely on 2-year profit, with no long-horizon owner. Why won't anything change?",
+      "options": [
+        { "label": "It will change — believing in ESG is enough.", "verdict": "bad", "feedback": "Belief without structure changes nothing. If incentives reward only short-term profit and no one owns the long-horizon risk, behaviour keeps chasing the next quarter regardless of stated belief." },
+        { "label": "Incentives and accountability still reward short-termism — ESG isn't embedded.", "verdict": "good", "feedback": "Exactly. Until ESG is in the strategy, the risk appetite, the incentives, and someone's accountability, it stays a slogan. You manage the long game by beating short-termism structurally." },
+        { "label": "Just publish a glossier sustainability report.", "verdict": "bad", "feedback": "A nicer report without changed incentives is greenwashing-adjacent theatre. Behaviour follows reward and accountability, not brochures." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Genuine governance or theatre?",
+      "prompt": "Sort each practice by whether it embeds ESG or just performs it.",
+      "buckets": [
+        { "id": "genuine", "label": "Genuine governance" },
+        { "id": "theatre", "label": "Theatre" }
+      ],
+      "items": [
+        { "label": "Tying executive pay partly to long-term sustainability goals", "bucket": "genuine" },
+        { "label": "'Believing in' ESG while rewarding only short-term profit", "bucket": "theatre" },
+        { "label": "Board-level owner accountable for climate risk", "bucket": "genuine" },
+        { "label": "A glossy report with no change to incentives", "bucket": "theatre" },
+        { "label": "ESG built into the risk appetite and strategy", "bucket": "genuine" },
+        { "label": "A powerless sustainability team kept on the sidelines", "bucket": "theatre" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Governing ESG means beating short-termism — embedding the long game in strategy, the risk appetite, accountability, and incentives — because a board that only 'believes in' ESG while paying for short-term profit changes nothing at all.”",
+  "checkpoint": [
+    {
+      "q": "The central challenge in governing ESG/climate risk is…",
+      "options": [
+        "It's too cheap to bother with",
+        "Short-termism — leaders are rewarded for the near term while risks land long-term",
+        "It's always immediate",
+        "Nobody believes it's real"
+      ],
+      "answer": 1,
+      "explain": "Long-horizon risks get neglected when strategy and incentives run on quarters and years."
+    },
+    {
+      "q": "For ESG governance to actually change behaviour, it must be…",
+      "options": [
+        "Mentioned in a report",
+        "Embedded in strategy, risk appetite, accountability, and incentives",
+        "Delegated to a powerless side team",
+        "Believed in but not funded"
+      ],
+      "answer": 1,
+      "explain": "Behaviour follows reward and ownership — ESG has to be built in, not bolted on."
+    },
+    {
+      "q": "Directors increasingly cannot say 'climate isn't our job' because…",
+      "options": [
+        "It's a popular slogan",
+        "Regulators and duty guidance treat climate as a financial risk boards must consider",
+        "It's purely charity",
+        "It only affects scientists"
+      ],
+      "answer": 1,
+      "explain": "Mandatory disclosure, CPG 229, and director-duty guidance make climate a board-level financial responsibility."
+    }
+  ]
+}

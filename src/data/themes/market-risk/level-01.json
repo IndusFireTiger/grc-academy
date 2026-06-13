@@ -1,0 +1,80 @@
+{
+  "id": 1,
+  "slug": "sailing-in-changing-weather",
+  "title": "Sailing in Changing Weather",
+  "subtitle": "What market risk is — prices that move",
+  "icon": "⛵",
+  "hook": {
+    "metaphor": "A sailor can't stop the wind, the tides, or the weather — but a good one reads them, prepares for them, and trims the sails to survive a sudden squall. Market risk is the weather of finance: the prices of things you hold (rates, currencies, shares, commodities) constantly move, and you can't control them. You can only see them coming and rig your boat to take the blow.",
+    "scenario": "A company borrowed at a 'floating' interest rate when rates were low. Rates then climbed sharply, and its repayments ballooned — no customer defaulted, no system failed, no fraud occurred. It simply got caught in changing weather. What kind of risk hit it?"
+  },
+  "learn": [
+    "**Market risk is the risk of losses from changes in market prices** — interest rates, exchange rates, share prices, commodity prices. The defining feature: it comes from the *market moving*, not from a borrower failing (credit risk) or the plumbing breaking (operational risk). Our floating-rate borrower lost money purely because the price of money (the interest rate) rose.",
+    "It hits anyone exposed to prices, not just traders. An importer is exposed to **currency** moves; a borrower to **interest rates**; an airline to **fuel** prices; a pension fund to **share** prices. If a number you don't control affects what you owe or own, you carry market risk.",
+    "A crucial idea: market risk is **two-sided**. The weather can also blow in your favour — rates could have fallen and helped our borrower. Risk here means *uncertainty* in both directions, which is why the goal is usually to manage volatility, not to eliminate all exposure (you'd give up the upside too).",
+    "Market risk loves company — it's **correlated and fast**. In a crisis, many prices crash together and within hours, unlike a slow trickle of loan defaults. That speed and contagion is what makes it dangerous (and what links it to liquidity risk, a neighbouring track).",
+    "Regulators treat it as a core risk: banks must measure and hold capital against market risk under **Basel** rules, and **APRA**, **RBNZ**, and **RBI** all set expectations for managing it. You're allowed to sail in rough water — but you must know your exposure and carry a buffer."
+  ],
+  "bridge": "So at work, you can spot market risk by asking: *what prices do we not control that affect what we owe or own — rates, currencies, commodities, shares?* If a swing in any of those would hurt, that's market-risk exposure. And remember it's two-sided weather: the aim is to manage the volatility you can't avoid, not to pretend you can stop the wind.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Name the risk",
+      "prompt": "A firm's repayments ballooned when floating interest rates rose — no default, no failure, no fraud. The cleanest classification?",
+      "options": [
+        { "label": "Credit risk — they're struggling to repay.", "verdict": "bad", "feedback": "Nobody defaulted *to* them; their own cost rose because a market price (the interest rate) moved. Difficulty pating due to a rate move is market risk, not credit risk." },
+        { "label": "Market risk — a price they don't control (the interest rate) moved against them.", "verdict": "good", "feedback": "Exactly. Market risk is loss from market prices moving. The floating rate rose, and their exposure to it did the damage — pure market risk." },
+        { "label": "Operational risk — something broke.", "verdict": "bad", "feedback": "Nothing in the plumbing failed. The loss came entirely from a market price moving — that's market risk, not an operational failure." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Which price is the exposure?",
+      "prompt": "Sort each situation by the market price driving the risk.",
+      "buckets": [
+        { "id": "rates", "label": "Interest rates" },
+        { "id": "fx", "label": "Exchange rates (FX)" },
+        { "id": "commodity", "label": "Commodity prices" }
+      ],
+      "items": [
+        { "label": "An importer paying suppliers in US dollars", "bucket": "fx" },
+        { "label": "A borrower on a floating-rate loan", "bucket": "rates" },
+        { "label": "An airline exposed to jet-fuel prices", "bucket": "commodity" },
+        { "label": "A bank holding lots of long-term bonds", "bucket": "rates" },
+        { "label": "An exporter paid in a foreign currency", "bucket": "fx" },
+        { "label": "A baker exposed to the price of wheat", "bucket": "commodity" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Market risk is the weather of finance — the prices of rates, currencies, shares, and commodities move and you can't control them, so you read the weather and rig your boat rather than pretend you can stop the wind.”",
+  "checkpoint": [
+    {
+      "q": "Market risk is the risk of loss from…",
+      "options": [
+        "A borrower defaulting",
+        "Changes in market prices like rates, FX, shares, and commodities",
+        "A system outage",
+        "An employee mistake"
+      ],
+      "answer": 1,
+      "explain": "It comes from the market moving — not from credit, operational, or fraud failures."
+    },
+    {
+      "q": "A key feature of market risk is that it is…",
+      "options": [
+        "Always one-directional loss",
+        "Two-sided — prices can move for or against you",
+        "Impossible to measure",
+        "Only relevant to banks"
+      ],
+      "answer": 1,
+      "explain": "It's uncertainty in both directions; managing volatility usually beats killing all exposure (which kills the upside too)."
+    },
+    {
+      "q": "An importer who pays overseas suppliers in foreign currency carries which market risk?",
+      "options": ["Interest-rate risk", "Foreign-exchange (FX) risk", "Equity risk", "No market risk"],
+      "answer": 1,
+      "explain": "Currency moves change what they owe in their home currency — FX risk."
+    }
+  ]
+}

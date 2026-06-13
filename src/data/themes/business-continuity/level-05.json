@@ -1,0 +1,79 @@
+{
+  "id": 5,
+  "slug": "bouncing-back",
+  "title": "Bouncing Back",
+  "subtitle": "Recovery, DR & learning the lesson",
+  "icon": "🔧",
+  "hook": {
+    "metaphor": "Surviving the fire is only half the story — then you have to rebuild, move back in, and crucially, figure out *why* it started so it doesn't happen again. Many organisations exhale the moment the immediate crisis passes and skip the rebuild and the lesson — which is exactly why they keep having the same fire. Bouncing back well is what turns a disaster into something you emerge from stronger.",
+    "scenario": "After a damaging outage, a company restores its systems, everyone celebrates, and they move straight back to business as usual. No review, no root-cause analysis. Six months later, the identical outage happens again. They 'recovered' both times — so why did they learn nothing?"
+  },
+  "learn": [
+    "Continuity has a tail end people love to skip: **recovery** — the structured return from 'limping along on Plan B' to normal operations. It's not automatic; restoring systems, reconciling what happened during the disruption, and verifying everything works correctly all take deliberate effort.",
+    "On the technical side sits **Disaster Recovery (DR)** — specifically restoring IT systems and data (from the backups and failover you set up earlier). DR is a *subset* of business continuity: BCM keeps the whole business running; DR is the IT-recovery piece within it. Don't confuse the part for the whole.",
+    "Recovery should be **prioritised by the BIA**: bring the most critical processes back first (within their RTOs), not whatever's easiest. And it must be **verified** — 'the system is back' isn't the same as 'the system is back *and working correctly*', especially after data loss or a messy failover.",
+    "The most-skipped, highest-value step is the **post-incident review / lessons learned** — a blameless analysis of what happened, what worked, what didn't, and what to change. Our company's repeat outage is the signature symptom of skipping this: you can 'recover' endlessly and still never improve (the no-blame, learning-culture thread from Operational Risk).",
+    "Done well, recovery closes the loop: the lessons feed back into better plans, fixed root causes, and updated continuity strategies — so each crisis leaves you *more* resilient, not just back where you started waiting for the next identical one."
+  ],
+  "bridge": "So at work, you can make sure a crisis actually makes you stronger by insisting on the two skipped steps: *did we recover the critical things first and verify they truly work — and did we run a blameless review to fix the root cause?* An organisation that keeps suffering the same incident hasn't got a recovery problem; it's got a *learning* problem — it exhaled before it learned.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Recovered twice, learned nothing",
+      "prompt": "A company restored systems after an outage, skipped any review, and hit the identical outage six months later. Why?",
+      "options": [
+        { "label": "Bad luck — lightning struck twice.", "verdict": "bad", "feedback": "It wasn't luck — it was the same root cause, never found or fixed. Skipping the post-incident review guarantees the same fire keeps reigniting." },
+        { "label": "They skipped the lessons-learned review, so the root cause was never fixed.", "verdict": "good", "feedback": "Exactly. Recovery without a blameless post-incident review means you return to normal with the same flaw intact. You can 'recover' forever and never improve." },
+        { "label": "They recovered fine both times, so there's no real problem.", "verdict": "bad", "feedback": "Recovering repeatedly from a preventable, recurring incident IS the problem. Without learning, you're just paying for the same disaster again and again." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Recovery vocabulary",
+      "prompt": "Match each term to its meaning.",
+      "pairs": [
+        { "left": "Recovery", "right": "Structured return from Plan B to normal operations" },
+        { "left": "Disaster Recovery (DR)", "right": "The IT-systems/data recovery piece within BCM" },
+        { "left": "Verification", "right": "Confirming systems are back AND working correctly" },
+        { "left": "Post-incident review", "right": "A blameless analysis of what happened and what to fix" },
+        { "left": "Lessons learned", "right": "Feeding improvements back into plans and root-cause fixes" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Bouncing back means recovering the critical things first and verifying they truly work — and then running a blameless review to fix the root cause — because a company that recovers but never learns just keeps having the same fire.”",
+  "checkpoint": [
+    {
+      "q": "Disaster Recovery (DR) relates to Business Continuity (BCM) as…",
+      "options": [
+        "They're identical",
+        "DR (IT/data recovery) is a subset of the broader BCM",
+        "BCM is part of DR",
+        "They're unrelated"
+      ],
+      "answer": 1,
+      "explain": "BCM keeps the whole business running; DR is specifically the IT-recovery piece within it."
+    },
+    {
+      "q": "Repeatedly suffering the same incident usually means the organisation has…",
+      "options": [
+        "A recovery problem",
+        "A learning problem — it skips the post-incident review and root-cause fix",
+        "Too many backups",
+        "Excellent continuity"
+      ],
+      "answer": 1,
+      "explain": "Recovering without learning leaves the root cause intact, so the same fire keeps reigniting."
+    },
+    {
+      "q": "'Verification' during recovery means…",
+      "options": [
+        "Assuming the system is fine once it powers on",
+        "Confirming systems are back AND actually working correctly",
+        "Telling customers it's fixed without checking",
+        "Skipping testing to save time"
+      ],
+      "answer": 1,
+      "explain": "'Back' isn't the same as 'back and correct' — especially after data loss or a messy failover."
+    }
+  ]
+}

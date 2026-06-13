@@ -1,0 +1,84 @@
+{
+  "id": 2,
+  "slug": "two-kinds-of-dry",
+  "title": "Two Kinds of Dry",
+  "subtitle": "Funding vs market liquidity",
+  "icon": "🏜️",
+  "hook": {
+    "metaphor": "There are two ways to be stuck without cash. One: nobody will lend you any (the tap is off). Two: you own something valuable but can't sell it quickly without slashing the price to nothing (the asset won't convert). They feel similar in the moment — broke — but they're different droughts with different cures, and in a crisis they cruelly combine.",
+    "scenario": "A firm needs cash fast. Its bank suddenly won't extend more credit, AND when it tries to sell its bond holdings, buyers will only pay fire-sale prices. Two different liquidity problems are hitting at once. Can you name them?"
+  },
+  "learn": [
+    "**Funding liquidity risk** is the risk you can't *raise* cash when you need it — lenders won't lend, deposits flee, credit lines get pulled. The tap you relied on turns off. Our firm's bank refusing more credit is funding-liquidity stress.",
+    "**Market liquidity risk** is the risk you can't *sell* an asset quickly without crashing its price. The asset is valuable in theory, but if you must sell *now* and few will buy, you take a brutal discount — a **fire sale**. Our firm's bonds fetching only fire-sale prices is market-liquidity stress.",
+    "The cruelty is that they **feed each other**. If funding dries up, you're forced to sell assets — which pushes their prices down (market illiquidity), which makes you look weaker, which scares off funders even more. A doom loop, exactly our firm's bind.",
+    "Market liquidity also varies hugely by *asset*: cash and government bonds stay liquid even in stress; niche, complex, or thinly-traded assets can become almost impossible to sell at any sensible price when everyone heads for the exit at once.",
+    "The practical upshot: when you assess how 'liquid' you are, you must check *both* taps — can we still borrow, AND could we actually sell our assets for something close to their value if we had to? Counting illiquid assets as if they were cash is how firms fool themselves right up to the crisis."
+  ],
+  "bridge": "So at work, you can diagnose any cash squeeze by asking which drought it is: *can't we borrow (funding), or can't we sell without a fire sale (market)?* — knowing that in a real crisis both hit together in a doom loop. And you can avoid self-deception by never treating hard-to-sell assets as if they were ready cash.",
+  "interactions": [
+    {
+      "type": "classify",
+      "title": "Which drought is it?",
+      "prompt": "Sort each problem into funding or market liquidity risk.",
+      "buckets": [
+        { "id": "funding", "label": "Funding liquidity" },
+        { "id": "market", "label": "Market liquidity" }
+      ],
+      "items": [
+        { "label": "The bank pulls your credit line", "bucket": "funding" },
+        { "label": "Your bonds only sell at fire-sale prices", "bucket": "market" },
+        { "label": "Depositors withdraw their money en masse", "bucket": "funding" },
+        { "label": "A niche asset has no buyers at any fair price", "bucket": "market" },
+        { "label": "Investors refuse to roll over your short-term debt", "bucket": "funding" },
+        { "label": "Selling fast would crash the price of what you hold", "bucket": "market" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "The doom loop",
+      "prompt": "Funding dried up, so the firm sold assets, which pushed prices down, which scared funders further. What's happening?",
+      "options": [
+        { "label": "Two unrelated problems by coincidence.", "verdict": "bad", "feedback": "They're not unrelated — they're feeding each other. Funding stress forced selling, which worsened market liquidity, which deepened funding stress. That's the doom loop." },
+        { "label": "Funding and market liquidity risk reinforcing each other in a spiral.", "verdict": "good", "feedback": "Exactly. Forced selling into a weak market and fleeing funders amplify one another — the classic liquidity death spiral that turns a squeeze into a collapse." },
+        { "label": "Pure credit risk.", "verdict": "bad", "feedback": "No borrower defaulted to them. This is two liquidity problems — funding and market — combining, not a credit event." }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “There are two droughts — funding (nobody will lend) and market (can't sell without a fire sale) — and in a crisis they feed each other in a doom loop, so you must check both taps and never count illiquid assets as cash.”",
+  "checkpoint": [
+    {
+      "q": "Funding liquidity risk is the risk that you can't…",
+      "options": [
+        "Sell an asset quickly",
+        "Raise cash because lenders/depositors won't provide it",
+        "Make a profit",
+        "Hire staff"
+      ],
+      "answer": 1,
+      "explain": "It's the 'tap turns off' risk — credit pulled, deposits flee, debt won't roll over."
+    },
+    {
+      "q": "Market liquidity risk is the risk that you can't…",
+      "options": [
+        "Borrow money",
+        "Sell an asset quickly without crashing its price",
+        "Pay your staff",
+        "Find customers"
+      ],
+      "answer": 1,
+      "explain": "The asset is valuable in theory, but forced quick sale means a fire-sale discount."
+    },
+    {
+      "q": "The two types of liquidity risk are dangerous together because they…",
+      "options": [
+        "Cancel each other out",
+        "Feed each other in a doom loop (forced selling worsens funding, and vice versa)",
+        "Never occur at the same time",
+        "Only affect profits"
+      ],
+      "answer": 1,
+      "explain": "Funding stress forces asset sales that crash prices, scaring funders further — a reinforcing spiral."
+    }
+  ]
+}

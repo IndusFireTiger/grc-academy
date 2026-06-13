@@ -1,0 +1,85 @@
+{
+  "id": 5,
+  "slug": "pricing-the-slow-storm",
+  "title": "Pricing the Slow Storm",
+  "subtitle": "How climate feeds every other risk",
+  "icon": "📉",
+  "hook": {
+    "metaphor": "Climate risk rarely arrives wearing a label that says 'climate risk'. It shows up disguised — as a loan that defaults, a property that's repriced, a factory that floods, an insurance claim that spikes. It's a slow storm that seeps into all the *other* risks you've already learned. The skill is recognising its fingerprints where they hide.",
+    "scenario": "A bank's loan book looks fine on traditional credit measures. But many borrowers are farmers in a drought-prone region and businesses on a flood plain. Today's numbers don't show it — but climate risk is quietly building inside what looks like ordinary credit risk. How would the bank ever see it coming?"
+  },
+  "learn": [
+    "Climate risk is a **risk multiplier**, not a standalone silo. It seeps into: **credit risk** (borrowers hit by drought or floods default — our farmers), **market risk** (carbon-heavy assets get repriced as the transition bites), **operational risk** (your own sites flood or burn), and **insurance/underwriting risk** (claims rise, some risks become uninsurable).",
+    "The challenge is that **traditional, backward-looking measures miss it.** A credit model trained on the past won't see a flood plain's future risk; today's numbers look fine right up until the slow storm lands. You can't manage climate risk with a rear-view mirror.",
+    "The main tool is **climate scenario analysis**: modelling how the business fares under different futures — e.g. an orderly transition, a disorderly one, or a 'hot house' world of high physical risk. It's forward-looking by design, asking 'how would our loan book / assets / operations hold up under each path?' (the stress-testing mindset from Market and Liquidity risk, stretched over decades).",
+    "Regulators now expect this: Australia's **APRA CPG 229** guides banks and insurers on climate scenario analysis, and central banks worldwide run climate stress tests. The message: prove you've looked *forward* at climate, not just backward at history.",
+    "And the data is genuinely hard — long horizons, deep uncertainty, sparse history. So the goal isn't false precision but **direction and preparedness**: knowing where your concentrations of climate-exposed risk sit (drought-region farmers, flood-plain businesses, carbon-heavy holdings) and acting before the rear-view mirror finally shows the crash."
+  ],
+  "bridge": "So at work, you can hunt for climate risk where it actually hides — inside credit, market, operational, and insurance exposures — rather than waiting for a neat 'climate' label. Ask: *where are our concentrations of climate-exposed risk, and have we looked forward (scenario analysis) rather than just back?* The slow storm is invisible in today's numbers precisely until it isn't.",
+  "interactions": [
+    {
+      "type": "classify",
+      "title": "Climate hiding inside which risk?",
+      "prompt": "Sort each climate-driven loss by the 'other' risk it shows up as.",
+      "buckets": [
+        { "id": "credit", "label": "Credit risk" },
+        { "id": "market", "label": "Market risk" },
+        { "id": "operational", "label": "Operational risk" }
+      ],
+      "items": [
+        { "label": "Drought-hit farmers default on their loans", "bucket": "credit" },
+        { "label": "Carbon-heavy assets are repriced downward", "bucket": "market" },
+        { "label": "A bushfire shuts your own factory", "bucket": "operational" },
+        { "label": "Flood-plain businesses can't repay debt", "bucket": "credit" },
+        { "label": "A 'stranded' coal holding loses market value", "bucket": "market" },
+        { "label": "A cyclone destroys your warehouse", "bucket": "operational" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "The fine-looking loan book",
+      "prompt": "Traditional credit measures look healthy, but borrowers cluster in drought and flood zones. How does the bank get ahead of it?",
+      "options": [
+        { "label": "Trust the current numbers — they look fine.", "verdict": "bad", "feedback": "Backward-looking measures are exactly what miss climate risk. Today's healthy numbers won't show the drought/flood concentration until the slow storm lands and it's too late." },
+        { "label": "Run forward-looking climate scenario analysis on the book.", "verdict": "good", "feedback": "Exactly. Scenario analysis asks how the loan book holds up under different climate futures — surfacing the drought/flood concentration that historical metrics hide. Look forward, not just back." },
+        { "label": "Wait until defaults actually rise, then react.", "verdict": "bad", "feedback": "Reacting after the storm forfeits all the cheap options to adjust. The whole point is to see the building risk early, via forward-looking analysis." }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Climate risk hides inside the other risks — defaulting farmers (credit), repriced carbon assets (market), flooded factories (operational) — and since backward-looking numbers miss it, you use forward-looking scenario analysis to see the slow storm coming.”",
+  "checkpoint": [
+    {
+      "q": "Climate risk is best understood as…",
+      "options": [
+        "A standalone risk unrelated to others",
+        "A multiplier that seeps into credit, market, operational, and insurance risk",
+        "Only an environmental charity issue",
+        "Always immediate, never slow"
+      ],
+      "answer": 1,
+      "explain": "It shows up disguised as defaults, repricings, floods, and claims — inside the other risks."
+    },
+    {
+      "q": "Why do traditional risk measures struggle with climate risk?",
+      "options": [
+        "They're too expensive",
+        "They're backward-looking and miss building future exposures",
+        "Climate risk isn't real",
+        "They're banned"
+      ],
+      "answer": 1,
+      "explain": "A rear-view mirror won't show a flood plain's future risk — you need forward-looking analysis."
+    },
+    {
+      "q": "Climate scenario analysis is valuable because it…",
+      "options": [
+        "Predicts the exact future precisely",
+        "Models how the business fares under different climate futures, forward-looking",
+        "Replaces all other risk tools",
+        "Only looks at past data"
+      ],
+      "answer": 1,
+      "explain": "It tests resilience across paths (orderly/disorderly transition, hot-house world) rather than trusting history."
+    }
+  ]
+}

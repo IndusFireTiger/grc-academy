@@ -1,0 +1,84 @@
+{
+  "id": 3,
+  "slug": "plan-b-and-c",
+  "title": "Plan B (and C)",
+  "subtitle": "Continuity strategies & redundancy",
+  "icon": "🔀",
+  "hook": {
+    "metaphor": "A good expedition never relies on a single rope. There's a backup rope, a backup route, and a way to keep going if a member drops out. Continuity strategy is about building those backups *into* how you operate — so when Plan A fails, Plan B kicks in smoothly, and there's even a Plan C. The single point of failure is the enemy; redundancy is the answer.",
+    "scenario": "A company's entire operation runs from one office, on one server, with one key engineer who alone knows how the system works. Everything is efficient — and everything is a single point of failure. If any one of the three is lost, the whole company stops. What strategy is missing?"
+  },
+  "learn": [
+    "The core idea is **redundancy** — having backups so no single failure stops you. Our company has *three* single points of failure (one office, one server, one irreplaceable person). Each is a snapped rope away from total collapse. Redundancy means a spare for each critical thing.",
+    "Common continuity strategies map to what could fail: **alternate sites** (work-from-home or a backup office if the building is lost), **system redundancy and backups** (failover servers, restorable data — the cyber lesson), **cross-training** (more than one person can do each critical job — no 'key person risk'), and **alternative suppliers** (don't depend on a single vendor — the third-party lesson).",
+    "A vital and often-forgotten strategy is the **manual workaround**: a low-tech way to keep the critical process limping along when the system is down (taking orders on paper, say). It won't be pretty, but 'slow and manual' beats 'completely stopped' for the things that truly matter.",
+    "Strategies cost money, so they're chosen against the **RTO/RPO** from the BIA: a process needing 5-minute recovery justifies expensive hot standby; one that can wait a week needs only a cheap plan. You buy resilience in proportion to impact — not gold-plate everything.",
+    "And resilience is strongest when **built in, not bolted on**: designing operations so backups already exist (multiple sites, cross-trained teams, replicated data) beats scrambling to invent them mid-crisis. The most resilient organisations made redundancy a design choice long before they needed it."
+  ],
+  "bridge": "So at work, you can hunt single points of failure with one question per critical thing: *if we lost this one office / system / person / supplier, what's our Plan B?* If the honest answer is 'we'd stop', that's a snapped-rope risk. Build in redundancy and a manual workaround proportionate to how fast you'd need to recover — before, not during, the crisis.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Three single points of failure",
+      "prompt": "One office, one server, one irreplaceable engineer. Efficient — but what's the missing strategy?",
+      "options": [
+        { "label": "Nothing — it's lean and efficient as it is.", "verdict": "bad", "feedback": "Lean here means fragile. Three single points of failure each guarantee total collapse if lost. Efficiency without redundancy is a disaster on a timer." },
+        { "label": "Redundancy — backups for the site, the system, and the key person.", "verdict": "good", "feedback": "Exactly. Alternate site / remote work, system failover and backups, and cross-training so no one person is irreplaceable. Spare ropes for every critical thing." },
+        { "label": "Just tell the engineer never to quit or get sick.", "verdict": "bad", "feedback": "Hope isn't a strategy. People leave, get sick, or are unavailable in a crisis. Cross-training removes the key-person single point of failure." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Match the backup to the failure",
+      "prompt": "Sort each continuity strategy by the kind of failure it addresses.",
+      "buckets": [
+        { "id": "site", "label": "Losing the site" },
+        { "id": "system", "label": "Losing the system" },
+        { "id": "people", "label": "Losing key people" }
+      ],
+      "items": [
+        { "label": "Remote work / a backup office", "bucket": "site" },
+        { "label": "Failover servers and restorable backups", "bucket": "system" },
+        { "label": "Cross-training so others can do the job", "bucket": "people" },
+        { "label": "A second location ready to operate from", "bucket": "site" },
+        { "label": "Documented procedures so it's not all in one head", "bucket": "people" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Continuity strategy is never relying on a single rope — build in redundancy (alternate sites, system failover, cross-trained people, backup suppliers) plus manual workarounds, sized to how fast each process must recover.”",
+  "checkpoint": [
+    {
+      "q": "'Redundancy' in continuity planning means…",
+      "options": [
+        "Making staff redundant",
+        "Having backups so no single failure stops you",
+        "Doing work twice for no reason",
+        "Removing all spare capacity"
+      ],
+      "answer": 1,
+      "explain": "A spare for each critical thing — site, system, person, supplier — so one snapped rope isn't fatal."
+    },
+    {
+      "q": "A 'manual workaround' is valuable because…",
+      "options": [
+        "It's the fastest option ever",
+        "'Slow and manual' beats 'completely stopped' for critical processes",
+        "It replaces all technology permanently",
+        "It's free and effortless"
+      ],
+      "answer": 1,
+      "explain": "A low-tech fallback keeps the essential process limping along when the system is down."
+    },
+    {
+      "q": "How do you decide how much continuity strategy to buy?",
+      "options": [
+        "Gold-plate everything equally",
+        "In proportion to each process's RTO/RPO (impact and urgency)",
+        "Spend nothing",
+        "Whatever the newest vendor sells"
+      ],
+      "answer": 1,
+      "explain": "Match the cost of resilience to the impact — fast-recovery processes justify more; slow ones need less."
+    }
+  ]
+}

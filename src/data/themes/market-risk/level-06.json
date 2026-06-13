@@ -1,0 +1,83 @@
+{
+  "id": 6,
+  "slug": "governing-the-voyage",
+  "title": "Governing the Voyage",
+  "subtitle": "Appetite, limits & the rogue trader",
+  "icon": "🧭",
+  "hook": {
+    "metaphor": "A ship needs more than a skilled sailor — it needs a captain who sets the course and the rules, who decides how much weather the ship will brave, and who makes sure no single crew member can steer everyone onto the rocks. Governing market risk is that captaincy: turning individual cleverness into a system that can't be sunk by one person or one bad bet.",
+    "scenario": "A star trader makes the bank huge profits by taking ever-bigger risks, quietly breaching his limits. Managers look the other way — he's a money-maker. Then one bet goes wrong and the losses are catastrophic, dwarfing years of his profits. What failed long before the bad trade?"
+  },
+  "learn": [
+    "It starts with **risk appetite** (the recurring boardroom idea): a deliberate statement of how much market risk the firm is willing to take. Without it, exposure creeps upward bet by bet until a single move can be fatal — exactly our star trader's slow escalation.",
+    "Appetite is enforced through a **limits framework**: hard caps per desk, per trader, per exposure, monitored independently. The catastrophe wasn't really the bad trade — it was that **limit breaches were tolerated** because he was profitable. Limits you don't enforce aren't limits; they're suggestions.",
+    "This is the classic **rogue-trader** failure (Barings, Société Générale, and others): not evil genius, but weak governance — a profitable person allowed to break the rules, with risk oversight too cowed or conflicted to stop him. The lesson: **independent risk control must be able to halt a money-maker.** If P&L can override risk, you have no risk function.",
+    "Independence again means **segregation** (Internal Controls): the people taking the risk (front office) must be separate from those measuring and checking it (risk/back office). When the trader controls — or charms — his own oversight, the brakes are disconnected.",
+    "And the **golden thread**: culture and tone at the top. A culture that worships short-term profit over disciplined risk-taking *invites* the rogue trader. The firms that endure treat risk limits as sacred even when — especially when — someone's making money breaking them."
+  ],
+  "bridge": "So at work, you can judge whether market risk is truly governed by one test: *would our risk function be allowed to stop a star performer who's breaching limits but making money?* If the honest answer is 'no', you don't have risk management — you have a rogue trader waiting to happen. Real governance means appetite set at the top, hard independent limits, and a culture where the rules bind the profitable most of all.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The tolerated breaches",
+      "prompt": "A profitable trader repeatedly breached limits and managers looked away — until a catastrophic loss. What failed first?",
+      "options": [
+        { "label": "Nothing — it was just one unlucky trade.", "verdict": "bad", "feedback": "The bad trade was the symptom. The real failure was years of tolerated limit breaches because he made money. Governance broke long before the loss landed." },
+        { "label": "Governance — limit breaches were tolerated because he was profitable.", "verdict": "good", "feedback": "Exactly. Limits that bend for a money-maker aren't limits. The rogue-trader pattern is weak governance: profit allowed to override independent risk control. The loss was inevitable." },
+        { "label": "The risk team should have made more profit too.", "verdict": "bad", "feedback": "Risk control's job isn't to chase profit — it's to enforce limits independently. The failure was that it couldn't (or wasn't allowed to) stop a profitable rule-breaker." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Strengthens or weakens governance?",
+      "prompt": "Sort each practice by its effect on market-risk governance.",
+      "buckets": [
+        { "id": "strong", "label": "Strengthens" },
+        { "id": "weak", "label": "Weakens" }
+      ],
+      "items": [
+        { "label": "A board-set risk appetite with enforced limits", "bucket": "strong" },
+        { "label": "Ignoring limit breaches by profitable traders", "bucket": "weak" },
+        { "label": "Independent risk control separate from the front office", "bucket": "strong" },
+        { "label": "Letting a star trader oversee his own risk", "bucket": "weak" },
+        { "label": "Risk allowed to halt any desk that breaches limits", "bucket": "strong" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Governing market risk means the captain sets the appetite and hard limits, an independent risk function can stop even a star money-maker who breaks them, and the culture treats limits as sacred — because the rogue trader is a governance failure, not bad luck.”",
+  "checkpoint": [
+    {
+      "q": "The root cause of most 'rogue trader' disasters is…",
+      "options": [
+        "One uniquely evil genius",
+        "Weak governance — a profitable person allowed to breach limits unchecked",
+        "Bad luck on a single trade",
+        "Too many risk limits"
+      ],
+      "answer": 1,
+      "explain": "Tolerated breaches and cowed oversight let exposure escalate until one bet became catastrophic."
+    },
+    {
+      "q": "For risk control to be real, it must be able to…",
+      "options": [
+        "Make the most profit",
+        "Halt even a profitable trader who breaches limits",
+        "Report to that trader",
+        "Approve every trade for speed"
+      ],
+      "answer": 1,
+      "explain": "If P&L can override risk, there is no risk function — independence and authority are essential."
+    },
+    {
+      "q": "Why must the front office be segregated from risk control?",
+      "options": [
+        "For office space reasons",
+        "So those taking risk don't also measure and check it (no marking your own homework)",
+        "It isn't necessary",
+        "To slow down trading"
+      ],
+      "answer": 1,
+      "explain": "Separation keeps oversight independent — when traders control their own checks, the brakes are disconnected."
+    }
+  ]
+}

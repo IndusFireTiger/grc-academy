@@ -1,0 +1,80 @@
+{
+  "id": 4,
+  "slug": "trimming-the-sails",
+  "title": "Trimming the Sails",
+  "subtitle": "Hedging, diversification & derivatives",
+  "icon": "⛵",
+  "hook": {
+    "metaphor": "You can't stop the wind, but you can trim the sails, spread the load, and rig safety lines so a gust doesn't capsize you. Managing market risk is the same craft: you reduce your exposure to moves you don't want, while keeping the boat moving. The tools sound exotic — 'derivatives', 'hedging' — but the idea is just sensible seamanship.",
+    "scenario": "An exporter will be paid US$1 million in three months and is terrified the dollar will fall before then. A bank offers to lock in today's exchange rate for that future payment. Is taking that deal 'risky financial engineering' — or exactly the opposite?"
+  },
+  "learn": [
+    "**Hedging** is taking an offsetting position so that if your exposure moves against you, the hedge moves *for* you, cancelling out the swing. Our exporter locking in today's exchange rate is a textbook hedge: whatever the dollar does, they now know exactly what they'll receive. Far from risky, it *removes* risk.",
+    "The main hedging tools are **derivatives** — contracts whose value derives from an underlying price. A **forward/future** locks in a price for a future date; an **option** is the right (not obligation) to trade at a set price; a **swap** exchanges one kind of payment for another (e.g. floating-rate for fixed). Used to hedge, they're seatbelts. Used to gamble, they're how people blow up — same tool, opposite intent.",
+    "**Diversification** is the other great lever: don't put all your exposure in one place, because uncorrelated risks partly cancel out ('don't put all your eggs in one basket'). A portfolio spread across many assets is steadier than one bet.",
+    "And the humble but vital tool: **risk limits** — hard caps on how much exposure a desk or trader may take. Limits ensure no single position can sink the firm, no matter how confident someone is (the rogue-trader lesson waits in Level 6).",
+    "The key judgement: hedging isn't free (it has a cost, and it also caps your *upside*). So firms decide how much risk to keep versus hedge based on their **risk appetite** — sometimes you accept some weather rather than pay to flatten every wave."
+  ],
+  "bridge": "So at work, you can tell prudent risk management from reckless speculation by *intent*: the same derivative that hedges a real exposure (our exporter) can also be a naked gamble. Ask: *is this offsetting a risk we actually have, or creating a new bet?* And remember hedging costs something and caps upside — so how much to hedge is a deliberate choice against your risk appetite, not an automatic 'hedge everything'.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Lock in the rate?",
+      "prompt": "The exporter locks in today's exchange rate for a future US$1m payment. Risky engineering, or sound management?",
+      "options": [
+        { "label": "Reckless — derivatives are dangerous gambling.", "verdict": "bad", "feedback": "Here the derivative *removes* risk rather than adding it. Locking a rate against a real, known future receipt is a classic hedge — the opposite of a gamble." },
+        { "label": "Sound hedging — it removes the uncertainty on a real exposure.", "verdict": "good", "feedback": "Exactly. They have a genuine FX exposure (US$1m due) and offset it. Whatever the dollar does, they know what they'll get. That's prudent seamanship." },
+        { "label": "Pointless — they should just hope the rate is fine.", "verdict": "bad", "feedback": "Hoping is leaving the risk on. The whole point is to convert an uncertain future receipt into a known one — that certainty has real value to a business." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "The toolkit",
+      "prompt": "Match each risk-management tool to what it does.",
+      "pairs": [
+        { "left": "Hedging", "right": "An offsetting position that cancels a swing" },
+        { "left": "Forward / future", "right": "Locks in a price for a future date" },
+        { "left": "Option", "right": "The right, not obligation, to trade at a set price" },
+        { "left": "Swap", "right": "Exchanging one payment type for another (e.g. floating→fixed)" },
+        { "left": "Diversification", "right": "Spreading exposure so risks partly cancel out" },
+        { "left": "Risk limit", "right": "A hard cap on how much exposure is allowed" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “You can't stop the wind but you can trim the sails — hedge real exposures with derivatives, diversify so risks cancel, and set hard limits — and the line between prudence and gambling is whether you're offsetting a risk or creating a new bet.”",
+  "checkpoint": [
+    {
+      "q": "Hedging means…",
+      "options": [
+        "Doubling down on a bet",
+        "Taking an offsetting position so an adverse move is cancelled out",
+        "Ignoring the risk",
+        "Borrowing more money"
+      ],
+      "answer": 1,
+      "explain": "A hedge moves in your favour exactly when your exposure moves against you, neutralising the swing."
+    },
+    {
+      "q": "The same derivative can be prudent or reckless depending on…",
+      "options": [
+        "Its colour",
+        "Whether it offsets a real exposure or creates a new speculative bet",
+        "The day of the week",
+        "Its price only"
+      ],
+      "answer": 1,
+      "explain": "Intent is everything: hedging a genuine exposure reduces risk; a naked position adds it."
+    },
+    {
+      "q": "Risk limits exist to ensure that…",
+      "options": [
+        "Traders can never make money",
+        "No single position can grow large enough to sink the firm",
+        "Hedging is banned",
+        "Everyone takes maximum risk"
+      ],
+      "answer": 1,
+      "explain": "Hard caps contain exposure regardless of any individual's confidence — a key safeguard against blow-ups."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": 5,
+  "slug": "when-the-storm-hits",
+  "title": "When the Storm Hits",
+  "subtitle": "Tail risk, black swans & contagion",
+  "icon": "🌊",
+  "hook": {
+    "metaphor": "Most days the sea is manageable. But every so often comes the freak wave — bigger than the forecast said was possible, arriving when several bad things line up at once. Ships that only prepared for *average* weather sink in these. Market risk's deadliest moments aren't the daily chop; they're the rare, violent storms that the normal models swore couldn't happen.",
+    "scenario": "In 2008, assets that 'never' fell together all crashed at once; in early 2020, markets dropped faster than almost any model predicted. Firms that relied on 'normal' assumptions were stunned. What do these events reveal about the limits of everyday risk measures?"
+  },
+  "learn": [
+    "**Tail risk** is the danger living in the extreme 'tail' of outcomes — the rare, severe losses beyond what normal measures like VaR describe (the 1% we flagged in Level 3). These events are *unlikely* but *devastating* — and they're where firms actually die.",
+    "A **'black swan'** is an event so rare and unexpected it wasn't in anyone's model — yet obvious in hindsight. The lesson isn't to predict them (you can't) but to stay resilient enough to survive them: don't bet the whole firm on 'this has never happened'.",
+    "Crises bring **correlation breakdown**: in calm times, diversification works because assets move independently; in a panic, *everything crashes together* ('all correlations go to 1'). The diversification that protected you on Tuesday can vanish exactly when you need it most (2008's lesson).",
+    "Storms also expose the deadly link to **liquidity risk** (its own track): when you're forced to sell into a falling market and there are no buyers, paper losses become real, fire-sale losses. Market and liquidity risk feed each other in a downward spiral.",
+    "Which is why **stress testing and scenario analysis** matter more than any single number: deliberately imagining the freak wave ('what if our worst historical crisis repeats, only worse?') and making sure you'd survive it. You prepare for the storm in the calm — because in the storm it's too late to start."
+  ],
+  "bridge": "So at work, you can puncture dangerous over-confidence with one question: *what happens to us in the freak storm, not the average day?* Treat 'it's never happened' as a warning, not a comfort; remember diversification can fail in a panic; and value the stress test that imagines the unthinkable. Surviving the rare gale, not optimising for calm seas, is what keeps the firm afloat.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "'It's never happened before'",
+      "prompt": "A team dismisses a scenario because 'markets have never moved that far'. How should you respond?",
+      "options": [
+        { "label": "Agree — if it's never happened, it won't.", "verdict": "bad", "feedback": "This is the exact reasoning that sinks firms in black-swan events. 'Never happened' is not 'cannot happen' — 2008 and 2020 both broke prior records. Past calm guarantees nothing." },
+        { "label": "Treat 'never happened' as a reason to stress-test it, not dismiss it.", "verdict": "good", "feedback": "Exactly. The dangerous losses live in the tail beyond past experience. You deliberately model the freak wave and ensure you'd survive it — resilience over prediction." },
+        { "label": "Panic and sell everything immediately.", "verdict": "bad", "feedback": "Over-reaction isn't the answer either. You don't liquidate in fear; you prepare — stress test, set limits, keep buffers — so a storm is survivable, not fatal." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Storm vocabulary",
+      "prompt": "Match each concept to its meaning.",
+      "pairs": [
+        { "left": "Tail risk", "right": "Rare, severe losses beyond normal measures" },
+        { "left": "Black swan", "right": "An extreme event no model foresaw" },
+        { "left": "Correlation breakdown", "right": "In a panic, assets crash together (diversification fails)" },
+        { "left": "Fire sale", "right": "Forced selling into a falling market with no buyers" },
+        { "left": "Stress test", "right": "Deliberately modelling a severe scenario to test survival" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “The deadliest market risk isn't the daily chop but the rare freak wave — tail events where everything crashes together and 'it's never happened' stops being comfort — so you stress-test the unthinkable and keep buffers to survive it.”",
+  "checkpoint": [
+    {
+      "q": "'Tail risk' refers to…",
+      "options": [
+        "Small everyday losses",
+        "Rare but severe losses beyond what normal measures capture",
+        "Profit on good days",
+        "The cost of hedging"
+      ],
+      "answer": 1,
+      "explain": "It's the extreme end of outcomes — unlikely but devastating, and where firms actually fail."
+    },
+    {
+      "q": "In a severe crisis, diversification can fail because…",
+      "options": [
+        "It always works perfectly",
+        "Assets that normally move independently can all crash together",
+        "There are too few assets",
+        "Diversification is illegal"
+      ],
+      "answer": 1,
+      "explain": "Correlations 'go to 1' in a panic — the protection vanishes exactly when you need it most."
+    },
+    {
+      "q": "The right way to handle 'it's never happened before' is to…",
+      "options": [
+        "Treat it as proof it can't happen",
+        "Stress-test the scenario and ensure you'd survive it",
+        "Sell everything in a panic",
+        "Ignore all rare events"
+      ],
+      "answer": 1,
+      "explain": "Past records get broken; resilience to the freak wave beats false comfort from history."
+    }
+  ]
+}

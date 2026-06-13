@@ -1,0 +1,84 @@
+{
+  "id": 4,
+  "slug": "when-the-alarm-sounds",
+  "title": "When the Alarm Sounds",
+  "subtitle": "Crisis management & communication",
+  "icon": "📣",
+  "hook": {
+    "metaphor": "When the fire alarm actually goes off, the plan only works if someone takes charge, everyone knows their role, and clear instructions cut through the panic. The worst outcomes come not from the fire itself but from confusion: nobody in command, mixed messages, people frozen or running the wrong way. Crisis management is the human side of continuity — leading people calmly through the smoke.",
+    "scenario": "During a major outage, three managers each give different instructions, nobody's sure who's in charge, customers get no word for hours, and staff improvise in conflicting directions. The technical recovery is actually going fine — but the response is a disaster anyway. What broke?"
+  },
+  "learn": [
+    "Continuity has two halves: the **plans** (Levels 2–3) and the **response** — how humans actually run the crisis. Our outage shows you can have a sound technical recovery and *still* fail through chaotic response. Leadership and communication are not soft extras; they're the difference between order and panic.",
+    "First essential: a clear **command structure**. Someone is the designated **incident leader**, with defined roles around them (who handles technical recovery, who handles customers, who handles staff). The deadliest gap in our scenario was that *nobody knew who was in charge* — so three managers pulled in three directions.",
+    "Second: **communication**, internal and external. Staff need to know what's happening and what to do; customers, regulators, and partners need timely, honest updates. **Silence breeds panic and rumour** (the bank-run lesson). 'We have an issue and here's what we're doing' beats hours of ominous quiet every time.",
+    "A practical tool is the pre-written **crisis communication plan / holding statements**: drafting *in the calm* who says what, to whom, through which channel — so you're not composing your first customer message while everything's on fire.",
+    "Third: keep people **calm and coordinated** — which only happens if roles and the plan were rehearsed beforehand (next level). In a real crisis people fall back on what they've practised; if they've never practised, they fall back on panic. Good response looks improvised but is actually well-drilled."
+  ],
+  "bridge": "So at work, you can spot a crisis-response gap before the crisis: *if something major hit right now, would everyone know who's in charge, what their role is, and how we'd communicate to staff and customers?* A brilliant technical fix delivered amid leaderless chaos and radio silence still fails — clear command and honest, fast communication are what carry people through the smoke.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Recovery fine, response a disaster",
+      "prompt": "Three managers gave conflicting orders, no one was in charge, and customers heard nothing for hours — though the tech fix went fine. What broke?",
+      "options": [
+        { "label": "Nothing — the technical recovery worked, so it was a success.", "verdict": "bad", "feedback": "A sound fix delivered through leaderless chaos and silence is still a failed response — confused staff and abandoned customers do lasting damage regardless of the tech." },
+        { "label": "No clear command structure and no communication — the human side collapsed.", "verdict": "good", "feedback": "Exactly. Continuity has a people half: a designated incident leader, defined roles, and timely honest communication. All three were missing, so the response failed despite the fix." },
+        { "label": "They should have just recovered the systems faster.", "verdict": "bad", "feedback": "Speed of the fix wasn't the problem — leadership and communication were. Faster tech wouldn't have stopped the conflicting orders and customer silence." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Good crisis response or not?",
+      "prompt": "Sort each behaviour during a crisis.",
+      "buckets": [
+        { "id": "good", "label": "Good response" },
+        { "id": "bad", "label": "Poor response" }
+      ],
+      "items": [
+        { "label": "A single designated incident leader takes charge", "bucket": "good" },
+        { "label": "Three managers give conflicting instructions", "bucket": "bad" },
+        { "label": "Timely, honest updates to staff and customers", "bucket": "good" },
+        { "label": "Hours of silence while everyone guesses", "bucket": "bad" },
+        { "label": "Pre-drafted holding statements ready to send", "bucket": "good" },
+        { "label": "Everyone improvising in different directions", "bucket": "bad" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “When the alarm sounds, the plan only works with clear command (one leader, defined roles) and fast honest communication — because a perfect technical fix delivered amid leaderless chaos and silence still fails.”",
+  "checkpoint": [
+    {
+      "q": "A clear command structure in a crisis means…",
+      "options": [
+        "Everyone decides for themselves",
+        "A designated incident leader with defined roles around them",
+        "The most senior person hides",
+        "No one is responsible"
+      ],
+      "answer": 1,
+      "explain": "Someone is clearly in charge with defined roles — preventing the conflicting-orders chaos."
+    },
+    {
+      "q": "Why is communication so critical during a crisis?",
+      "options": [
+        "It isn't — just fix the systems",
+        "Silence breeds panic and rumour; timely honest updates keep people coordinated",
+        "Customers prefer to be ignored",
+        "It slows recovery"
+      ],
+      "answer": 1,
+      "explain": "Staff and customers need to know what's happening — silence is filled with fear and speculation."
+    },
+    {
+      "q": "Pre-written holding statements help because…",
+      "options": [
+        "They look professional only",
+        "You're not composing your first crisis message while everything's on fire",
+        "They replace the recovery",
+        "They're legally required to be vague"
+      ],
+      "answer": 1,
+      "explain": "Drafting who-says-what in the calm means fast, clear communication when the crisis actually hits."
+    }
+  ]
+}

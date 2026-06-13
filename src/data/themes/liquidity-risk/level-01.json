@@ -1,0 +1,84 @@
+{
+  "id": 1,
+  "slug": "cash-vs-wealth-on-paper",
+  "title": "Cash vs Wealth on Paper",
+  "subtitle": "Can you actually pay your bills today?",
+  "icon": "💰",
+  "hook": {
+    "metaphor": "Imagine you own a ₹5-crore house but have ₹200 in your wallet, and rent is due tomorrow. You're *rich* — and you're about to miss a payment. That gap between being wealthy and being able to *pay right now* is the whole of liquidity risk. Plenty of healthy-looking businesses have died not because they ran out of value, but because they ran out of cash at the wrong moment.",
+    "scenario": "A profitable company has a full order book and valuable assets, but its customers pay slowly and a big tax bill lands on Friday. It can't find the cash in time and defaults — despite being, on paper, perfectly healthy. What killed it?"
+  },
+  "learn": [
+    "**Liquidity risk is the risk of not being able to meet your obligations as they fall due** — even when you're fundamentally solvent. It's a *timing and cash* problem, not a *value* problem. Our company wasn't broke; it was illiquid at the worst moment.",
+    "The crucial distinction is **solvency vs liquidity.** *Solvent* means your assets exceed your debts (you're worth something). *Liquid* means you have cash available *now* to pay what's due. You can be solvent but illiquid — rich on paper, unable to pay the rent — and that alone can sink you.",
+    "Why does it happen to healthy firms? Because **assets and obligations don't line up in time.** Money is tied up in things you can't instantly turn to cash (inventory, slow-paying invoices, buildings), while bills arrive on their own schedule. A mismatch in *timing* is enough.",
+    "Liquidity has a brutal personality: **it kills quickly.** Credit losses bleed slowly over months; a liquidity crisis can be fatal in *days* or even hours once confidence goes. This speed is what makes it uniquely dangerous (and why bank runs are so feared — a later level).",
+    "It's a top concern for regulators precisely because of that speed: banks must hold liquidity buffers under **Basel** rules (the LCR and NSFR you'll meet later), and **APRA**, **RBNZ**, and **RBI** all watch liquidity closely. Being valuable isn't enough — you must be *able to pay*."
+  ],
+  "bridge": "So at work, you can separate two questions people often blur: *are we worth something?* (solvency) and *can we actually pay what's due, on time?* (liquidity). A business can ace the first and still die on the second. Watch the timing of cash in versus cash out — because, as many profitable firms have learned, you can be rich on paper and still go under for want of cash this Friday.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "What killed the profitable firm?",
+      "prompt": "A profitable company with valuable assets defaulted because it couldn't find cash for a sudden bill. The cause?",
+      "options": [
+        { "label": "It was insolvent — it must have been worthless.", "verdict": "bad", "feedback": "No — it was solvent and profitable, worth more than it owed. It died of a *cash timing* problem, not a value problem. That's liquidity, not solvency." },
+        { "label": "Liquidity risk — solvent on paper, but no cash available when needed.", "verdict": "good", "feedback": "Exactly. Value tied up in slow-paying invoices and assets couldn't become cash in time. Being rich on paper didn't pay Friday's bill — classic liquidity failure." },
+        { "label": "Market risk — prices moved against it.", "verdict": "bad", "feedback": "No market price moved here. The problem was purely that cash wasn't available when an obligation fell due — liquidity risk." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Liquid or just valuable?",
+      "prompt": "Sort each asset by how quickly it can become cash.",
+      "buckets": [
+        { "id": "liquid", "label": "Highly liquid (cash-like)" },
+        { "id": "illiquid", "label": "Illiquid (slow to sell)" }
+      ],
+      "items": [
+        { "label": "Money in a current account", "bucket": "liquid" },
+        { "label": "A commercial building", "bucket": "illiquid" },
+        { "label": "Government bonds you can sell instantly", "bucket": "liquid" },
+        { "label": "Unsold inventory in a warehouse", "bucket": "illiquid" },
+        { "label": "Invoices customers will pay in 90 days", "bucket": "illiquid" },
+        { "label": "Cash in the till", "bucket": "liquid" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Liquidity risk is owning a ₹5-crore house with ₹200 in your wallet when rent is due — you can be solvent and valuable yet still fail simply because you can't turn it into cash in time.”",
+  "checkpoint": [
+    {
+      "q": "Liquidity risk is the risk of…",
+      "options": [
+        "Your assets being worth less than your debts",
+        "Not being able to meet obligations as they fall due, even if solvent",
+        "A market price moving",
+        "A cyber attack"
+      ],
+      "answer": 1,
+      "explain": "It's a cash-and-timing problem — you can be solvent yet unable to pay right now."
+    },
+    {
+      "q": "The difference between solvency and liquidity is…",
+      "options": [
+        "They're the same",
+        "Solvency = assets exceed debts; liquidity = cash available to pay now",
+        "Liquidity is about profit only",
+        "Solvency is about cyber risk"
+      ],
+      "answer": 1,
+      "explain": "You can be solvent (worth something) yet illiquid (no cash now) — and the second can still kill you."
+    },
+    {
+      "q": "Compared with credit losses, a liquidity crisis tends to…",
+      "options": [
+        "Develop very slowly over years",
+        "Strike very fast — in days or even hours once confidence goes",
+        "Never actually happen",
+        "Only affect profits, not survival"
+      ],
+      "answer": 1,
+      "explain": "Liquidity kills quickly — its speed is exactly what makes it so dangerous."
+    }
+  ]
+}

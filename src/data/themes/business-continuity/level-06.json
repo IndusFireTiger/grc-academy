@@ -1,0 +1,84 @@
+{
+  "id": 6,
+  "slug": "a-resilient-organisation",
+  "title": "A Resilient Organisation",
+  "subtitle": "Testing, embedding & true resilience",
+  "icon": "💪",
+  "hook": {
+    "metaphor": "A fire-escape plan taped to a wall that no one has ever walked through is not safety — it's paperwork. The fire drill *is* the point: you only know the plan works when you've actually run it, found what fails, and fixed it. A truly resilient organisation isn't one with the thickest continuity binder; it's one that rehearses, learns, and treats resilience as a living habit.",
+    "scenario": "A company proudly shows auditors a beautiful 200-page business continuity plan. The auditor asks one question: 'When did you last test it?' The room goes quiet — they never have. How much is that plan actually worth?"
+  },
+  "learn": [
+    "The decisive truth: **an untested plan is an assumption, not a capability.** Our 200-page binder that's never been tested is worth almost nothing — like a fire escape no one has walked. Plans look fine on paper and fail in ways you only discover by *running* them.",
+    "So resilient organisations **exercise** their plans regularly. **Tabletop exercises** talk through a scenario ('the data centre is down — what now?'); **simulations** and **full drills** actually execute parts of the plan. Each test surfaces gaps — the missing phone number, the backup that doesn't restore, the role nobody owns — *before* a real crisis does.",
+    "It must be **governed and owned**: board/senior accountability, a named owner, plans kept up to date (a plan listing a vendor you dropped two years ago is dangerous), and continuity built into how the business actually runs — the three-lines and tone-at-the-top pattern from every track.",
+    "This is the **operational resilience** endgame regulators now demand (Operational Risk Level 6 — and it's why this whole track exists): Australia's **APRA CPS 230** requires identified critical operations, set **impact tolerances**, and *tested* continuity plans; the EU's **DORA** is similar. The bar has moved from 'do you have a plan?' to 'have you *proven* you can keep critical services running through severe disruption?'",
+    "And the golden thread once more: resilience is ultimately a **culture**. When leadership funds the drills, takes the lessons seriously, and treats 'what if this breaks?' as a normal question, the organisation genuinely bends-not-breaks. When continuity is a binder produced for the auditor and never tested, it shatters at the first real shock."
+  ],
+  "bridge": "So at work, you can cut through any continuity reassurance with the auditor's question: *when did we last actually test this, and what did we fix afterwards?* A plan never rehearsed is a hope, not a capability. True resilience is built by exercising plans, learning from the gaps, keeping them current, and a culture that treats 'what if?' as routine — not by the page count of an untested binder.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "'When did you last test it?'",
+      "prompt": "A firm has a beautiful 200-page continuity plan it has never tested. How much is it worth?",
+      "options": [
+        { "label": "A lot — it's thorough and professionally written.", "verdict": "bad", "feedback": "Length and polish aren't capability. An untested plan is an assumption — it'll fail in ways you can only find by running it. The page count is false comfort." },
+        { "label": "Little — an untested plan is a hope, not a proven capability.", "verdict": "good", "feedback": "Exactly. Like a fire escape no one has walked, it looks fine until the real emergency exposes the gaps. Testing is what turns a binder into actual resilience." },
+        { "label": "It's fine as long as it's never needed.", "verdict": "bad", "feedback": "You can't choose when it's needed — that's the whole point of continuity. And the first time you 'use' an untested plan is the worst possible time to discover its flaws." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Real resilience or paperwork?",
+      "prompt": "Sort each practice by whether it builds genuine resilience or just produces paperwork.",
+      "buckets": [
+        { "id": "real", "label": "Builds resilience" },
+        { "id": "paper", "label": "Just paperwork" }
+      ],
+      "items": [
+        { "label": "Regular tabletop exercises and drills", "bucket": "real" },
+        { "label": "A thick plan that's never been tested", "bucket": "paper" },
+        { "label": "Fixing gaps found during exercises", "bucket": "real" },
+        { "label": "A plan listing suppliers you dropped years ago", "bucket": "paper" },
+        { "label": "Board oversight and a named plan owner", "bucket": "real" },
+        { "label": "Writing the plan once and filing it forever", "bucket": "paper" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “A resilient organisation isn't the one with the thickest continuity binder — it's the one that actually rehearses its plans, fixes the gaps, keeps them current, and treats 'what if this breaks?' as a normal question, because an untested plan is just a hope.”",
+  "checkpoint": [
+    {
+      "q": "An untested business continuity plan is best described as…",
+      "options": [
+        "A proven capability",
+        "An assumption/hope that may fail in ways you haven't discovered",
+        "Better than a tested one",
+        "All you ever need"
+      ],
+      "answer": 1,
+      "explain": "You only know a plan works by running it — like a fire escape no one has ever walked."
+    },
+    {
+      "q": "A 'tabletop exercise' is…",
+      "options": [
+        "A furniture inspection",
+        "Talking through a crisis scenario to find gaps before a real event",
+        "The actual disaster",
+        "A financial audit"
+      ],
+      "answer": 1,
+      "explain": "It rehearses 'what would we do if…?' surfacing missing steps, contacts, and owners in advance."
+    },
+    {
+      "q": "Operational resilience regimes (e.g. APRA CPS 230) require firms to…",
+      "options": [
+        "Simply own a continuity plan",
+        "Prove they can keep critical services running through severe disruption, with tested plans",
+        "Avoid all disruptions forever",
+        "Stop reporting incidents"
+      ],
+      "answer": 1,
+      "explain": "The bar moved from 'have a plan' to 'demonstrate tested resilience within set impact tolerances'."
+    }
+  ]
+}

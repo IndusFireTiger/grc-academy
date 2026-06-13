@@ -1,0 +1,80 @@
+{
+  "id": 3,
+  "slug": "the-three-letters",
+  "title": "The Three Letters",
+  "subtitle": "E, S and G — and why each is a risk",
+  "icon": "🔤",
+  "hook": {
+    "metaphor": "ESG gets lumped into one buzzword, but it's really three different conversations wearing one badge. Environmental is about the planet, Social is about people, Governance is about how the company is run. A firm can be a climate champion (great E) while exploiting workers (terrible S) under a corrupt board (failing G). To manage ESG risk, you have to un-blend the three letters.",
+    "scenario": "An investor is told a company 'has a great ESG score'. Digging in, she finds it's genuinely green — but it underpays workers, has had safety scandals, and its CEO also chairs the board with no checks. Is its ESG risk really low?"
+  },
+  "learn": [
+    "**E — Environmental:** the company's impact on and exposure to the natural world — carbon emissions, pollution, water and resource use, biodiversity, and climate risk (Levels 1–2). Risks: regulatory penalties, clean-up costs, stranded assets, physical damage.",
+    "**S — Social:** how the company treats *people* — employees (safety, fair pay, diversity), customers (fairness, privacy, product safety), and communities and supply-chain workers (no forced or child labour). Risks: strikes, scandals, boycotts, lawsuits, and lost talent and trust. Our company's worker exploitation is a glaring S failure.",
+    "**G — Governance:** how the company is *run* — board independence and competence, executive pay, shareholder rights, transparency, and anti-corruption. It's the foundation: weak governance (our CEO who also chairs the unchecked board) tends to undermine E and S too. This is the same 'tone at the top' thread from every other track.",
+    "The key insight our investor uncovers: a single blended **'ESG score' can hide as much as it reveals.** Strength in one letter can mask serious risk in another. A real assessment looks at each letter separately — the green-but-exploitative-and-badly-governed firm is *not* low-risk.",
+    "And the letters interact: strong **G** usually makes genuine **E** and **S** more credible (a well-run board actually delivers on its promises), while weak G makes E and S claims suspect (and more likely to be greenwashing — next level)."
+  ],
+  "bridge": "So at work, you can interrogate any 'good ESG' claim by un-blending it: *how does this organisation actually score on Environmental, on Social, and on Governance — separately?* A strong headline score can hide a serious weakness in one letter, and weak governance in particular should make you doubt the other two. Three letters, three distinct questions.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The 'great ESG score'",
+      "prompt": "The company is genuinely green but underpays workers, has safety scandals, and an unchecked CEO-chair. Low ESG risk?",
+      "options": [
+        { "label": "Yes — it's green, so its ESG is good.", "verdict": "bad", "feedback": "Green is only the 'E'. Worker exploitation (S) and an unchecked CEO-chair (G) are serious risks a blended score can mask. Strong E doesn't offset failing S and G." },
+        { "label": "No — strong E can't offset failing S (worker harm) and G (no board checks).", "verdict": "good", "feedback": "Exactly. Un-blend the letters: this firm is high-risk on Social and Governance despite its Environmental strength. A single score hid two real dangers." },
+        { "label": "ESG scores are perfect, so trust the number.", "verdict": "bad", "feedback": "A blended number is exactly what hid the problem. Real assessment looks at each letter separately — the score gave false comfort." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Sort the issues",
+      "prompt": "Match each concern to the ESG letter it belongs to.",
+      "pairs": [
+        { "left": "Carbon emissions", "right": "Environmental" },
+        { "left": "Worker safety & fair pay", "right": "Social" },
+        { "left": "Board independence", "right": "Governance" },
+        { "left": "Pollution & water use", "right": "Environmental" },
+        { "left": "Forced labour in the supply chain", "right": "Social" },
+        { "left": "Anti-corruption & transparency", "right": "Governance" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “ESG is really three conversations — Environment (the planet), Social (people), Governance (how it's run) — and a single blended score can hide a serious failure in one letter, so you assess each separately.”",
+  "checkpoint": [
+    {
+      "q": "The 'S' in ESG is mainly about…",
+      "options": [
+        "Stock prices",
+        "How the company treats people — workers, customers, communities",
+        "Carbon emissions",
+        "Board structure"
+      ],
+      "answer": 1,
+      "explain": "Social covers safety, fair pay, diversity, customer fairness, and supply-chain labour."
+    },
+    {
+      "q": "Why is a single blended 'ESG score' potentially misleading?",
+      "options": [
+        "Scores are always wrong",
+        "Strength in one letter can mask serious risk in another",
+        "ESG can't be measured at all",
+        "It only measures profit"
+      ],
+      "answer": 1,
+      "explain": "A green-but-exploitative-and-badly-governed firm can still score well overall — you must un-blend the letters."
+    },
+    {
+      "q": "Strong Governance (G) tends to…",
+      "options": [
+        "Make E and S claims more credible and deliverable",
+        "Have no effect on E and S",
+        "Guarantee low profits",
+        "Replace the need for E and S"
+      ],
+      "answer": 0,
+      "explain": "A well-run board actually delivers on environmental and social commitments; weak G makes them suspect."
+    }
+  ]
+}

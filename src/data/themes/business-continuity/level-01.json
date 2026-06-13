@@ -1,0 +1,84 @@
+{
+  "id": 1,
+  "slug": "the-fire-drill",
+  "title": "The Fire Drill",
+  "subtitle": "Keep running when things go wrong",
+  "icon": "🚨",
+  "hook": {
+    "metaphor": "Nobody schedules a fire. So sensible buildings hold fire drills — they decide *in advance* where the exits are, who checks the rooms, and where everyone gathers, so that when smoke fills the corridor people act on instinct instead of panic. Business continuity is the organisational fire drill: planning, before disaster strikes, how to keep the essential things running and get everyone out safely.",
+    "scenario": "A flood knocks out a company's head office overnight. One competitor had a plan — staff worked remotely by 9am, customers barely noticed. Another had only good intentions — days of chaos, lost customers, lasting damage. Same flood, opposite outcomes. What separated them?"
+  },
+  "learn": [
+    "**Business Continuity Management (BCM)** is the discipline of preparing to keep your critical operations running — or restore them fast — through a serious disruption. It accepts a hard truth: disasters *will* happen (floods, outages, pandemics, cyber-attacks), so the question isn't 'if' but 'are we ready?'",
+    "The defining principle is **prepare in the calm, not the crisis.** Like a fire drill, the value is created entirely *before* the emergency. The prepared competitor didn't get lucky — they'd decided in advance how to operate without the office. You cannot write the plan while the building floods.",
+    "BCM focuses ruthlessly on **what's critical.** You can't protect everything equally, so you identify the handful of processes the organisation cannot live without (taking payments, serving customers, paying staff) and concentrate on keeping *those* alive. The nice-to-haves can wait.",
+    "It's the close cousin of **resilience** (the recurring theme from Operational Risk and Cyber): not the fantasy that nothing will ever break, but the ability to absorb a shock and keep functioning. Resilient organisations bend; brittle ones shatter.",
+    "And it's increasingly a regulatory expectation, not just good sense — Australia's **APRA CPS 230** mandates business continuity and tested plans, the EU's **DORA** demands operational resilience, and regulators worldwide now ask firms to *prove* they can keep critical services running through disruption."
+  ],
+  "bridge": "So at work, you can judge readiness by asking the fire-drill question *before* anything goes wrong: *if we lost our office / systems / key supplier tomorrow, do we already know how we'd keep the critical things running?* Good intentions evaporate in a crisis; a rehearsed plan is what lets one firm be back online by 9am while another descends into chaos.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Same flood, opposite outcomes",
+      "prompt": "One firm kept running through the flood; the other collapsed into chaos. What made the difference?",
+      "options": [
+        { "label": "Luck — the first firm just coped better on the day.", "verdict": "bad", "feedback": "It wasn't luck or improvisation on the day. The first firm had decided in advance how to operate without the office. Coping well in a crisis is the product of preparing before it." },
+        { "label": "A tested continuity plan prepared in advance vs only good intentions.", "verdict": "good", "feedback": "Exactly. Business continuity creates its value before the disaster — the fire drill done in the calm. One had a plan and rehearsed it; the other had hope." },
+        { "label": "The second firm should have prevented the flood.", "verdict": "bad", "feedback": "You can't prevent every flood, outage, or pandemic. Continuity isn't about preventing disasters — it's about being ready to keep running when they inevitably strike." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Critical or can-wait?",
+      "prompt": "In a crisis you protect the critical first. Sort each function.",
+      "buckets": [
+        { "id": "critical", "label": "Keep alive first" },
+        { "id": "later", "label": "Can wait" }
+      ],
+      "items": [
+        { "label": "Taking customer payments", "bucket": "critical" },
+        { "label": "Updating the office wall art", "bucket": "later" },
+        { "label": "Paying staff their wages", "bucket": "critical" },
+        { "label": "The annual team offsite planning", "bucket": "later" },
+        { "label": "Keeping core services available to customers", "bucket": "critical" },
+        { "label": "A routine brand-refresh project", "bucket": "later" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Business continuity is the organisational fire drill — deciding before a disaster how to keep the critical things running — because you can't write the plan while the building floods, and prepared firms bounce while unprepared ones break.”",
+  "checkpoint": [
+    {
+      "q": "Business Continuity Management is about…",
+      "options": [
+        "Preventing all disasters from ever happening",
+        "Preparing to keep critical operations running through a disruption",
+        "Increasing quarterly profit",
+        "Marketing the company"
+      ],
+      "answer": 1,
+      "explain": "It assumes disruptions will happen and prepares to keep the essentials running or restore them fast."
+    },
+    {
+      "q": "The core principle of business continuity is to…",
+      "options": [
+        "Improvise brilliantly during the crisis",
+        "Prepare in the calm, before the crisis strikes",
+        "Wait and see what happens",
+        "Protect everything equally"
+      ],
+      "answer": 1,
+      "explain": "Like a fire drill, the value is created entirely in advance — you can't plan while it's burning."
+    },
+    {
+      "q": "BCM focuses on critical processes because…",
+      "options": [
+        "Everything is equally important",
+        "You can't protect everything, so you keep the essential things alive first",
+        "Only profit matters",
+        "Critical processes are the cheapest"
+      ],
+      "answer": 1,
+      "explain": "Concentrate scarce crisis effort on what the organisation cannot function without."
+    }
+  ]
+}

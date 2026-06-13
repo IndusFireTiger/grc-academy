@@ -1,0 +1,85 @@
+{
+  "id": 1,
+  "slug": "the-long-game-forecast",
+  "title": "The Long-Game Forecast",
+  "subtitle": "What ESG & climate risk is",
+  "icon": "🌱",
+  "hook": {
+    "metaphor": "Most risks are about this quarter or this year. ESG and climate risk are about the long-range forecast — the slow-moving changes in the environment, society, and how companies are governed that will reshape business over years and decades. Ignoring them feels safe today, the way ignoring a distant weather front feels safe — right up until it arrives, by which time it's too late to prepare.",
+    "scenario": "A coastal factory is highly profitable and well-run today. But sea levels are rising, a carbon tax is coming, and customers increasingly boycott high-polluters. None of this hurts this quarter's numbers. Should the board care now — or is this 'someone else's problem for later'?"
+  },
+  "learn": [
+    "**ESG** stands for **Environmental, Social, and Governance** — three lenses on the non-financial factors that increasingly affect a company's long-term value and risk. **Climate risk** is the biggest piece of the 'E', and often discussed in its own right.",
+    "The defining feature is the **time horizon**: ESG and climate risks build slowly and land later — but they're often huge and partly irreversible when they do. This makes them uniquely easy to under-prioritise (our profitable factory) and uniquely dangerous to ignore, because by the time they hit your quarterly numbers, your options have narrowed.",
+    "Climate risk splits into two flavours you'll meet next level: **physical risk** (the direct damage of a changing climate — floods, fires, rising seas) and **transition risk** (the upheaval of *moving* to a low-carbon economy — carbon taxes, new rules, shifting demand). Our factory faces both.",
+    "ESG isn't charity or PR — it's increasingly **material financial risk**. A flooded factory, a stranded asset, a consumer boycott, or a governance scandal hits the balance sheet as hard as any credit or market loss. That's why risk professionals, investors, and regulators now treat it as core risk, not a feel-good extra.",
+    "And it connects to everything you've learned: climate change drives **operational** losses (damaged sites), **credit** losses (borrowers hit by climate), and **market** losses (repriced assets). ESG is less a separate silo than a long-horizon lens over all the other risks — which is exactly why regulators like Australia's **APRA** (via CPG 229) and global bodies now expect it to be managed."
+  ],
+  "bridge": "So at work, you can resist the 'that's a problem for later' reflex by asking: *what slow-moving environmental, social, or governance shifts will reshape our business — and what do they cost us if we wait until they're obvious?* ESG and climate risk reward those who read the long-range forecast early, because by the time the storm front is overhead, the cheap options to prepare have already passed.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Care now, or later?",
+      "prompt": "The profitable coastal factory faces rising seas, a coming carbon tax, and shifting consumer sentiment — none hurting this quarter. Should the board act now?",
+      "options": [
+        { "label": "No — it doesn't affect current profits, so ignore it.", "verdict": "bad", "feedback": "This is the classic ESG trap: slow-moving risks feel ignorable until they're suddenly upon you. By the time sea rise and carbon tax hit the numbers, the cheap options to adapt are gone." },
+        { "label": "Yes — these are material long-horizon risks; acting early is cheaper than reacting late.", "verdict": "good", "feedback": "Exactly. Physical (sea rise) and transition (carbon tax, boycotts) risks are real and partly irreversible. Reading the forecast early gives options that vanish once the storm arrives." },
+        { "label": "It's purely a PR/charity matter, not real risk.", "verdict": "bad", "feedback": "A flooded factory, a carbon tax, and lost customers are financial losses, not PR. ESG here is material risk, not corporate goodwill." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Which letter of ESG?",
+      "prompt": "Sort each issue by whether it's mainly Environmental, Social, or Governance.",
+      "buckets": [
+        { "id": "e", "label": "Environmental" },
+        { "id": "s", "label": "Social" },
+        { "id": "g", "label": "Governance" }
+      ],
+      "items": [
+        { "label": "Carbon emissions and climate impact", "bucket": "e" },
+        { "label": "How workers and communities are treated", "bucket": "s" },
+        { "label": "Board independence and executive pay", "bucket": "g" },
+        { "label": "Water use and pollution", "bucket": "e" },
+        { "label": "Data privacy and customer fairness", "bucket": "s" },
+        { "label": "Anti-corruption and transparency", "bucket": "g" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “ESG and climate risk are the long-range forecast — slow-moving environmental, social, and governance shifts that don't hit this quarter but land hard later — so they're material financial risk best prepared for early.”",
+  "checkpoint": [
+    {
+      "q": "ESG stands for…",
+      "options": [
+        "Earnings, Sales, Growth",
+        "Environmental, Social, and Governance",
+        "Equity, Stocks, Gold",
+        "Energy, Safety, Geography"
+      ],
+      "answer": 1,
+      "explain": "Three lenses on non-financial factors affecting long-term value and risk."
+    },
+    {
+      "q": "What makes ESG/climate risk uniquely easy to under-prioritise?",
+      "options": [
+        "It's not real",
+        "Its long time horizon — it builds slowly and lands later",
+        "It only affects charities",
+        "It's always tiny"
+      ],
+      "answer": 1,
+      "explain": "Slow-building risks feel ignorable until they arrive — by which point options have narrowed."
+    },
+    {
+      "q": "ESG is best treated as…",
+      "options": [
+        "Charity and PR only",
+        "Material financial risk that connects to credit, market, and operational risk",
+        "Irrelevant to business",
+        "A short-term fad"
+      ],
+      "answer": 1,
+      "explain": "Floods, stranded assets, boycotts, and scandals hit the balance sheet like any other loss."
+    }
+  ]
+}

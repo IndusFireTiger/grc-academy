@@ -1,0 +1,84 @@
+{
+  "id": 4,
+  "slug": "greenwashing-and-disclosure",
+  "title": "Greenwashing & Disclosure",
+  "subtitle": "Saying it vs proving it",
+  "icon": "🪧",
+  "hook": {
+    "metaphor": "It's easy to paint a brick wall green and call it a garden. **Greenwashing** is exactly that — making something look environmentally or socially good without the substance behind it. And just as audit answers 'how do you know?' for controls, ESG disclosure is meant to answer 'prove it' for sustainability claims. The gap between the marketing brochure and the audited reality is where the risk — and the regulators — now live.",
+    "scenario": "A fund markets itself as 'sustainable' and 'net zero', attracting eco-conscious investors. A journalist discovers it still holds major fossil-fuel companies and the 'net zero' claim rests on vague future promises. The fund didn't lie outright — but is it in trouble?"
+  },
+  "learn": [
+    "**Greenwashing** is making misleading claims about environmental (or social) credentials — overstating, cherry-picking, or relying on vague future pledges. It ranges from outright lies to technically-true-but-misleading spin (our 'net zero by vague promises' fund). It's increasingly treated as a form of consumer deception — a *conduct* failure (Regulatory Compliance Level 5).",
+    "The antidote is credible **disclosure**: reporting ESG performance with real, comparable, verifiable data — not a glossy brochure. The global direction is toward standardised, mandatory climate and sustainability reporting, so claims can be compared and checked.",
+    "Key frameworks are converging: the **TCFD** (Task Force on Climate-related Financial Disclosures) and now the **ISSB** standards (IFRS S1/S2) set what companies should disclose about climate risk; Australia has introduced **mandatory climate reporting**, with the EU (CSRD) and others doing the same. The era of voluntary, cherry-picked ESG claims is ending.",
+    "A core data challenge: ESG metrics are **hard to measure and compare** — especially **Scope 3 emissions** (those across your whole supply chain and product use), which are huge but notoriously difficult to pin down. Honest disclosure means being clear about what you *don't* yet know, not papering over gaps.",
+    "Regulators are now actively **enforcing** against greenwashing — Australia's **ASIC** and others have taken action and levied fines against misleading sustainability claims. So greenwashing isn't just an ethics issue; it's a live legal, financial, and reputational risk."
+  ],
+  "bridge": "So at work, you can apply the auditor's 'prove it' reflex to any sustainability claim: *is this backed by real, comparable, verifiable data and recognised disclosure — or is it a green-painted brick wall?* Vague pledges, cherry-picked metrics, and 'net zero' resting on distant promises are greenwashing red flags — and increasingly, regulators are fining exactly that.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The 'sustainable' fund",
+      "prompt": "A fund marketed as 'sustainable/net zero' still holds fossil fuels, with 'net zero' resting on vague future promises. Trouble?",
+      "options": [
+        { "label": "No — it didn't tell an outright lie.", "verdict": "bad", "feedback": "Technically-true-but-misleading is still greenwashing — and regulators like ASIC now fine exactly this. Marketing 'sustainable' while holding fossil fuels on vague promises misleads investors." },
+        { "label": "Yes — misleading sustainability claims are greenwashing, a real conduct and legal risk.", "verdict": "good", "feedback": "Exactly. Overstated or vaguely-supported ESG claims deceive consumers — a conduct failure regulators are actively enforcing against. The gap between brochure and reality is the risk." },
+        { "label": "Fine, because ESG claims can't be checked anyway.", "verdict": "bad", "feedback": "They increasingly can — mandatory disclosure standards (TCFD/ISSB) exist precisely so claims are comparable and verifiable. 'Can't be checked' is no longer true or a defence." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Greenwashing or credible?",
+      "prompt": "Sort each claim by whether it's a red flag or a sign of credible disclosure.",
+      "buckets": [
+        { "id": "greenwash", "label": "Greenwashing red flag" },
+        { "id": "credible", "label": "Credible disclosure" }
+      ],
+      "items": [
+        { "label": "'Net zero' based only on vague distant promises", "bucket": "greenwash" },
+        { "label": "Reporting verified emissions data against a standard", "bucket": "credible" },
+        { "label": "Cherry-picking one good metric, hiding the rest", "bucket": "greenwash" },
+        { "label": "Disclosing what you don't yet reliably know", "bucket": "credible" },
+        { "label": "Vague 'eco-friendly' labels with no evidence", "bucket": "greenwash" },
+        { "label": "Following TCFD/ISSB disclosure standards", "bucket": "credible" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Greenwashing is painting a brick wall green — misleading ESG claims with no substance — and the antidote is credible, standardised disclosure (TCFD/ISSB) that lets you 'prove it', which regulators now mandate and enforce.”",
+  "checkpoint": [
+    {
+      "q": "Greenwashing is…",
+      "options": [
+        "Genuine environmental improvement",
+        "Making misleading claims about ESG credentials without the substance",
+        "A type of audit",
+        "A government subsidy"
+      ],
+      "answer": 1,
+      "explain": "Overstated, cherry-picked, or vaguely-supported sustainability claims — increasingly treated as consumer deception."
+    },
+    {
+      "q": "TCFD and ISSB standards exist to…",
+      "options": [
+        "Ban all ESG reporting",
+        "Standardise climate/sustainability disclosure so claims are comparable and verifiable",
+        "Increase greenwashing",
+        "Replace financial accounts"
+      ],
+      "answer": 1,
+      "explain": "They set what to disclose about climate risk, moving the world toward mandatory, comparable reporting."
+    },
+    {
+      "q": "Why are 'Scope 3 emissions' a particular challenge?",
+      "options": [
+        "They don't exist",
+        "They span the whole supply chain and product use — huge but hard to measure",
+        "They're trivially small",
+        "They're illegal to report"
+      ],
+      "answer": 1,
+      "explain": "Honest disclosure means being clear about hard-to-measure areas like Scope 3, not papering over them."
+    }
+  ]
+}

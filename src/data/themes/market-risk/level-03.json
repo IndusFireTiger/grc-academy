@@ -1,0 +1,79 @@
+{
+  "id": 3,
+  "slug": "measuring-the-storm",
+  "title": "Measuring the Storm",
+  "subtitle": "Volatility, VaR & stress tests — plainly",
+  "icon": "🌡️",
+  "hook": {
+    "metaphor": "Before sailing, you check the forecast: how rough is it likely to get, and how bad could a freak storm be? Measuring market risk is exactly that forecasting — putting rough numbers on 'how much might we lose on a normal bad day' and 'how much could we lose in a once-in-a-decade gale'. You don't need the maths; you need to read the forecast and know its limits.",
+    "scenario": "A risk report proudly states: 'Our 1-day Value at Risk is ₹2 crore.' An executive relaxes — '₹2 crore is our worst case, then.' A risk officer winces. Why is the executive misreading the forecast?"
+  },
+  "learn": [
+    "The basic gauge is **volatility** — how much a price bounces around. High volatility = a rougher sea = more risk. It's the raw measure of 'how choppy is this exposure?'",
+    "The headline number is **Value at Risk (VaR)**: an estimate of how much you might lose, with a given confidence, over a given period — e.g. '1-day VaR of ₹2 crore at 99%' means 'on 99% of normal days we shouldn't lose more than ₹2 crore.' Useful as a common yardstick — but widely *misread*.",
+    "Here's the trap our executive fell into: VaR is **not the worst case**. That 99% figure says nothing about the other 1% of days — and on those days the loss can be *far* bigger. VaR tells you the edge of the normal, not the size of the catastrophe beyond it. Treating VaR as 'the worst that can happen' is exactly how firms get blindsided.",
+    "Which is why VaR must be paired with **stress testing** and **scenario analysis**: deliberately asking 'what if rates spike 3%? what if this currency crashes 20%? what if 2008 happens again?' Stress tests probe the dangerous tail that VaR ignores.",
+    "And every measure rests on assumptions and history — so it carries **model risk** (Operational Risk again). Markets can do things they've never done before, breaking the model. The mature user treats these numbers as a useful, humble forecast, not a precise guarantee."
+  ],
+  "bridge": "So at work, you can read a risk forecast without being fooled by it: *volatility* tells you how choppy, *VaR* tells you a normal-bad-day loss (NOT the worst case), and *stress tests* probe the rare catastrophe VaR ignores. When someone calls VaR 'the worst case', gently correct them — that misreading is how the 1% days sink boats.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Is VaR the worst case?",
+      "prompt": "The exec hears '1-day VaR is ₹2 crore' and treats it as the worst possible loss. Why is that wrong?",
+      "options": [
+        { "label": "It's right — VaR is the maximum you can lose.", "verdict": "bad", "feedback": "This is the classic, dangerous misreading. VaR is a threshold for *normal* days; it deliberately says nothing about the worst 1%, where losses can be far larger." },
+        { "label": "VaR is a normal-day estimate; the rare tail beyond it can be far worse.", "verdict": "good", "feedback": "Exactly. '₹2cr at 99%' means most days stay under ₹2cr — but the other 1% of days are uncapped. You need stress tests to probe that tail." },
+        { "label": "VaR is meaningless, so ignore it.", "verdict": "bad", "feedback": "Too far — VaR is a useful common yardstick for normal conditions. The fix isn't to discard it, but to understand its limit and pair it with stress testing." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Risk-measurement toolkit",
+      "prompt": "Match each tool to what it tells you.",
+      "pairs": [
+        { "left": "Volatility", "right": "How much a price bounces around" },
+        { "left": "Value at Risk (VaR)", "right": "A likely loss on a normal bad day (not the worst case)" },
+        { "left": "Stress test", "right": "Loss under a specific severe scenario" },
+        { "left": "Scenario analysis", "right": "Exploring 'what if X extreme thing happens?'" },
+        { "left": "Model risk", "right": "The chance your measure itself is wrong" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “You forecast market risk with volatility (how choppy), VaR (a normal-bad-day loss — not the worst case), and stress tests (the rare gale VaR ignores) — and you stay humble because the model can always be wrong.”",
+  "checkpoint": [
+    {
+      "q": "A '1-day VaR of ₹2 crore at 99%' means…",
+      "options": [
+        "You can never lose more than ₹2 crore",
+        "On ~99% of normal days, losses shouldn't exceed ₹2 crore",
+        "You will lose ₹2 crore tomorrow",
+        "Your profit is ₹2 crore"
+      ],
+      "answer": 1,
+      "explain": "It's a normal-day threshold; the worst 1% of days can be far worse — VaR isn't the worst case."
+    },
+    {
+      "q": "Why pair VaR with stress testing?",
+      "options": [
+        "To make reports longer",
+        "Because stress tests probe the severe tail that VaR ignores",
+        "Stress tests replace VaR entirely",
+        "Regulators dislike VaR"
+      ],
+      "answer": 1,
+      "explain": "Stress tests ask 'what if something extreme happens?' — exactly the catastrophe VaR is silent on."
+    },
+    {
+      "q": "'Volatility' measures…",
+      "options": [
+        "How much profit you make",
+        "How much a price bounces around (its choppiness)",
+        "The number of trades",
+        "The interest rate only"
+      ],
+      "answer": 1,
+      "explain": "Higher volatility means a rougher sea and more market risk."
+    }
+  ]
+}

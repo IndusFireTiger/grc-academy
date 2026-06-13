@@ -1,0 +1,81 @@
+{
+  "id": 2,
+  "slug": "the-four-winds",
+  "title": "The Four Winds",
+  "subtitle": "The main types of market risk",
+  "icon": "🧭",
+  "hook": {
+    "metaphor": "A sailor learns to name the winds, because each behaves differently and demands a different response. Market risk has its own prevailing winds — four main ones — and knowing which is blowing tells you what to watch and how to brace. Confuse them and you trim the wrong sail at the wrong moment.",
+    "scenario": "A globally-active company worries about 'market risk' in general — but its real exposures are very specific: it borrows at floating rates, sells abroad in three currencies, holds a share portfolio, and depends on copper. 'Market risk' is too vague to act on. How should it break the problem down?"
+  },
+  "learn": [
+    "**Interest-rate risk** — the wind from the price of money. When rates move, borrowing costs and the value of bonds and loans shift. It hits borrowers, lenders, and anyone holding fixed-income assets (rising rates push existing bond prices *down*).",
+    "**Currency / FX risk** — the wind from exchange rates. Anyone earning, paying, or holding value in a foreign currency is exposed: a favourable export contract can be wiped out by an adverse currency move before you're even paid.",
+    "**Equity risk** — the wind from share prices. Holding shares (directly, or via a pension or investment fund) means your value rises and falls with the stock market's mood.",
+    "**Commodity risk** — the wind from raw-material prices: oil, gas, metals, wheat. Airlines, manufacturers, farmers, and food companies live and die by these. Our copper-dependent company is squarely exposed here.",
+    "The practical point: 'market risk' is too vague to manage — you must **decompose** it into specific exposures (this currency, that rate, this commodity) before you can measure or hedge anything. Our globally-active firm doesn't have 'market risk'; it has floating-rate risk *plus* three FX exposures *plus* equity *plus* copper. Naming each wind is the first step to handling it."
+  ],
+  "bridge": "So at work, you can turn a vague worry about 'the markets' into something actionable by naming the winds: *which specific exposures do we have — interest rate, FX, equity, commodity — and how big is each?* You can't hedge or measure 'market risk' in the abstract; you manage named, sized exposures one wind at a time.",
+  "interactions": [
+    {
+      "type": "classify",
+      "title": "Which wind is blowing?",
+      "prompt": "Sort each exposure into the type of market risk it represents.",
+      "buckets": [
+        { "id": "rate", "label": "Interest-rate risk" },
+        { "id": "fx", "label": "FX risk" },
+        { "id": "equity", "label": "Equity risk" },
+        { "id": "commodity", "label": "Commodity risk" }
+      ],
+      "items": [
+        { "label": "A pension fund holding lots of shares", "bucket": "equity" },
+        { "label": "A bond portfolio that loses value as rates rise", "bucket": "rate" },
+        { "label": "An exporter paid in foreign currency", "bucket": "fx" },
+        { "label": "A bakery exposed to wheat prices", "bucket": "commodity" },
+        { "label": "A company on a floating-rate loan", "bucket": "rate" },
+        { "label": "A refiner exposed to the price of crude oil", "bucket": "commodity" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "Too vague to act",
+      "prompt": "The firm worries about 'market risk' generally. What's the right first move?",
+      "options": [
+        { "label": "Buy one product to cover 'market risk' overall.", "verdict": "bad", "feedback": "There's no single instrument for 'market risk' in the abstract — its exposures are distinct (rates, three currencies, equities, copper). You can't hedge a vague worry." },
+        { "label": "Decompose it into specific, sized exposures, then tackle each.", "verdict": "good", "feedback": "Exactly. Name the winds: floating-rate risk, each FX exposure, equity, copper. Only once each is identified and measured can you decide what to manage and how." },
+        { "label": "Ignore it — it's too complicated to break down.", "verdict": "bad", "feedback": "Decomposing is precisely what makes it manageable. 'Too complicated' usually means 'not yet broken into named exposures'." }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Market risk blows as four main winds — interest rate, FX, equity, and commodity — and since you can't manage 'the markets' in the abstract, you name and size each specific exposure first.”",
+  "checkpoint": [
+    {
+      "q": "The four main types of market risk are…",
+      "options": [
+        "Credit, fraud, cyber, model",
+        "Interest-rate, FX, equity, and commodity",
+        "People, process, systems, external",
+        "High, medium, low, none"
+      ],
+      "answer": 1,
+      "explain": "Each is a distinct 'wind' from a different kind of price."
+    },
+    {
+      "q": "When interest rates rise, the price of existing fixed-rate bonds generally…",
+      "options": ["Rises", "Falls", "Stays exactly the same", "Disappears"],
+      "answer": 1,
+      "explain": "Older bonds paying lower fixed rates become less attractive, so their market price falls — interest-rate risk."
+    },
+    {
+      "q": "Why decompose 'market risk' into specific exposures?",
+      "options": [
+        "To make it sound complicated",
+        "Because you can only measure and hedge named, sized exposures, not a vague whole",
+        "Regulators require exactly four",
+        "There's no reason to"
+      ],
+      "answer": 1,
+      "explain": "Naming each wind (this rate, that currency, this commodity) is the first step to managing it."
+    }
+  ]
+}

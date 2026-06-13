@@ -1,0 +1,79 @@
+{
+  "id": 4,
+  "slug": "keeping-cash-on-hand",
+  "title": "Keeping Cash on Hand",
+  "subtitle": "Buffers, forecasting & the liquidity rules",
+  "icon": "🪣",
+  "hook": {
+    "metaphor": "Sensible households keep an emergency fund — a few months' expenses in easy-to-reach savings — so a surprise bill or lost income doesn't sink them. Organisations do the same with **liquidity buffers**: a stash of genuinely cash-like assets, held precisely so they can survive a sudden squeeze without a fire sale. Boring, slightly costly, and the difference between a scare and a collapse.",
+    "scenario": "Two firms face the same sudden cash shock. One kept a buffer of cash and government bonds it could use instantly. The other had 'plenty of assets' — all tied up in property and slow invoices. Same shock, opposite outcomes. What did the first one understand?"
+  },
+  "learn": [
+    "The first defence is a **liquidity buffer**: a reserve of high-quality, genuinely liquid assets — cash and things that stay sellable even in stress (regulators call these **HQLA**, High-Quality Liquid Assets, chiefly cash and government bonds). The point is assets that convert to cash *fast and reliably*, especially when everything else is frozen.",
+    "Buffers cost something — safe liquid assets earn little — so there's a real tension: hold too little and you're fragile, hold too much and you drag returns. Setting the right buffer is a deliberate trade-off, not an afterthought.",
+    "The second defence is **cash-flow forecasting**: projecting money in versus money out over coming days, weeks, and months to spot a squeeze *before* it arrives. Our doomed Level-1 company died partly for lack of this — the tax bill shouldn't have been a surprise.",
+    "After 2008, regulators turned buffers into hard rules. The **Basel** framework introduced the **Liquidity Coverage Ratio (LCR)** — hold enough HQLA to survive a 30-day stress — and the **Net Stable Funding Ratio (NSFR)** — fund long-term assets with stable, longer-term money (directly attacking the maturity-mismatch fragility from Level 3). APRA, RBNZ and RBI apply these. You don't need the formulas; you need the idea: *prove you can survive a defined squeeze.*",
+    "Underpinning all of it: never count illiquid assets as part of your buffer. A 'buffer' of property and unpaid invoices is not a buffer — it's exactly the trap the second firm fell into."
+  ],
+  "bridge": "So at work, you can gauge real liquidity strength with three checks: *Is there a genuine buffer of cash-like (HQLA) assets — not property dressed up as cash? Do we forecast cash in vs out to see squeezes coming? And could we survive a defined period of stress (the LCR idea)?* An emergency fund you can actually reach is what turns a cash shock from fatal to merely uncomfortable.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Same shock, opposite outcomes",
+      "prompt": "One firm survived a cash shock with a buffer of cash and government bonds; the other had only property and slow invoices. The lesson?",
+      "options": [
+        { "label": "Both had assets, so both should have been fine.", "verdict": "bad", "feedback": "'Having assets' isn't the same as having *liquid* assets. Property and unpaid invoices can't pay a bill on Friday. Only genuinely cash-like buffers help in a squeeze." },
+        { "label": "A buffer must be genuinely liquid (HQLA) — not illiquid assets dressed up as cash.", "verdict": "good", "feedback": "Exactly. The survivor held cash and government bonds that convert instantly even in stress. The other counted illiquid assets as a buffer — the classic, fatal self-deception." },
+        { "label": "The second firm just had bad luck.", "verdict": "bad", "feedback": "Not luck — a foreseeable failure to hold a real liquidity buffer. The shock was survivable with proper preparation." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Liquidity defences",
+      "prompt": "Match each tool to what it does.",
+      "pairs": [
+        { "left": "Liquidity buffer", "right": "A reserve of cash-like assets for a squeeze" },
+        { "left": "HQLA", "right": "High-quality liquid assets (cash, government bonds)" },
+        { "left": "Cash-flow forecast", "right": "Projecting money in vs out to spot squeezes early" },
+        { "left": "Liquidity Coverage Ratio (LCR)", "right": "Hold enough HQLA to survive ~30 days of stress" },
+        { "left": "Net Stable Funding Ratio (NSFR)", "right": "Fund long-term assets with stable longer-term money" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Keep an emergency fund of genuinely cash-like assets (HQLA), forecast cash in versus out, and make sure you could survive a defined stress period — and never kid yourself that property or unpaid invoices count as a buffer.”",
+  "checkpoint": [
+    {
+      "q": "A liquidity buffer should consist of…",
+      "options": [
+        "Property and long-term investments",
+        "High-quality liquid assets like cash and government bonds",
+        "Unpaid customer invoices",
+        "Inventory"
+      ],
+      "answer": 1,
+      "explain": "HQLA convert to cash fast and reliably even in stress — that's what a real buffer needs."
+    },
+    {
+      "q": "The Basel Liquidity Coverage Ratio (LCR) essentially requires you to…",
+      "options": [
+        "Make a 30% profit",
+        "Hold enough liquid assets to survive about a 30-day stress",
+        "Never hold any cash",
+        "Lend out all deposits"
+      ],
+      "answer": 1,
+      "explain": "It's a hard rule that you can survive a defined short, severe liquidity squeeze."
+    },
+    {
+      "q": "Holding a large liquidity buffer involves a trade-off because…",
+      "options": [
+        "It's illegal",
+        "Safe liquid assets earn little, so too big a buffer drags returns",
+        "Buffers always lose all their value",
+        "There is no trade-off"
+      ],
+      "answer": 1,
+      "explain": "Too little buffer is fragile; too much hurts returns — sizing it is a deliberate decision."
+    }
+  ]
+}

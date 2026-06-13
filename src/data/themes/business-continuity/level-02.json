@@ -1,0 +1,79 @@
+{
+  "id": 2,
+  "slug": "what-could-stop-us",
+  "title": "What Could Stop Us?",
+  "subtitle": "Business impact analysis & RTO/RPO",
+  "icon": "⏱️",
+  "hook": {
+    "metaphor": "Before a fire drill makes sense, you have to know which rooms matter most and how long people can survive in them. Continuity planning starts the same way: working out *what* would hurt if it stopped, *how badly*, and *how fast*. Get this wrong and you'll pour resources into protecting the stationery cupboard while the thing that actually keeps you alive has no backup at all.",
+    "scenario": "A company spends heavily making its internal newsletter system bulletproof — while its payment system, which brings in all the revenue, can be down for days with no plan. Both are 'IT systems'. How should it have decided where to focus?"
+  },
+  "learn": [
+    "The foundation is the **Business Impact Analysis (BIA)**: a systematic look at each business process asking 'if this stopped, how much would it hurt, and how quickly?' The BIA is what reveals that the payment system matters enormously and the newsletter barely at all — turning gut feel into priorities.",
+    "The BIA produces two crucial numbers per critical process. **RTO — Recovery Time Objective:** how *fast* must this be back up? (Payments: minutes. Newsletter: who cares.) **RPO — Recovery Point Objective:** how much *data* can we afford to lose? (e.g. 'no more than 5 minutes of transactions'). Together they tell you how much protection each process actually needs.",
+    "The BIA also maps **dependencies**: the critical process relies on systems, people, suppliers, and data. A payment system 'recovered' is useless if the network it needs, or the key person who runs it, or the vendor it calls, is still down. You're only as recovered as your weakest dependency (the third-party lesson, again).",
+    "This is fundamentally about **prioritisation under scarcity**: you can't give everything a 5-minute RTO — that's ruinously expensive. The BIA lets you spend protection money where the impact justifies it, exactly the discipline our misguided newsletter-protecting company lacked.",
+    "And impact isn't only money: it includes **customer harm, legal/regulatory breach, reputation, and safety**. A process might earn little but be critical because its failure breaches the law or endangers people. The BIA weighs all of these, not just revenue."
+  ],
+  "bridge": "So at work, you can stop continuity effort from going to the loudest or easiest thing and point it where it matters: *for each process, how badly and how fast does its failure hurt (the BIA), and what does it depend on?* The numbers — RTO (how fast back) and RPO (how much data lost) — turn 'protect everything' into a focused, affordable plan that guards what actually keeps you alive.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Newsletter vs payments",
+      "prompt": "A firm hardened its newsletter system but left payments (all its revenue) with no recovery plan. The fix?",
+      "options": [
+        { "label": "Fine — both are IT systems, so it's balanced.", "verdict": "bad", "feedback": "'Both are IT' ignores impact. The newsletter stopping costs almost nothing; payments stopping costs everything. Treating them equally is exactly the mistake a BIA prevents." },
+        { "label": "Run a Business Impact Analysis to prioritise by how badly/fast each failure hurts.", "verdict": "good", "feedback": "Exactly. The BIA would show payments need a tiny RTO and strong protection, while the newsletter can wait. Focus protection where the impact justifies it." },
+        { "label": "Give every system the same gold-plated protection.", "verdict": "bad", "feedback": "Protecting everything to the max is ruinously expensive and unnecessary. The point is to match protection to impact — not to over-protect the trivial." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Continuity-planning terms",
+      "prompt": "Match each term to its meaning.",
+      "pairs": [
+        { "left": "Business Impact Analysis", "right": "Working out how badly/fast each process's failure hurts" },
+        { "left": "RTO (Recovery Time Objective)", "right": "How fast a process must be restored" },
+        { "left": "RPO (Recovery Point Objective)", "right": "How much data you can afford to lose" },
+        { "left": "Dependency", "right": "A system, person, or supplier a process relies on" },
+        { "left": "Critical process", "right": "Something the organisation can't function without" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “A Business Impact Analysis works out what hurts if it stops, how badly, and how fast — giving each critical process an RTO (how fast back) and RPO (how much data lost) — so you protect what keeps you alive, not the stationery cupboard.”",
+  "checkpoint": [
+    {
+      "q": "A Business Impact Analysis (BIA) determines…",
+      "options": [
+        "The marketing budget",
+        "How badly and how quickly each process's failure would hurt",
+        "Employee salaries",
+        "The share price"
+      ],
+      "answer": 1,
+      "explain": "It turns gut feel into priorities — revealing which processes are truly critical and how fast they're needed."
+    },
+    {
+      "q": "RTO (Recovery Time Objective) measures…",
+      "options": [
+        "How much data you can lose",
+        "How fast a process must be back up and running",
+        "The annual profit",
+        "The number of staff"
+      ],
+      "answer": 1,
+      "explain": "RTO = the speed of recovery required; RPO = the amount of data loss tolerable."
+    },
+    {
+      "q": "Why map a critical process's dependencies?",
+      "options": [
+        "For decoration",
+        "Because you're only as recovered as your weakest dependency (system, person, supplier)",
+        "Dependencies don't matter",
+        "To increase costs"
+      ],
+      "answer": 1,
+      "explain": "A 'recovered' process is useless if a system, key person, or vendor it relies on is still down."
+    }
+  ]
+}

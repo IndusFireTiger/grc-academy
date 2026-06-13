@@ -1,0 +1,84 @@
+{
+  "id": 2,
+  "slug": "physical-vs-transition",
+  "title": "Physical vs Transition",
+  "subtitle": "Two ways climate hits the books",
+  "icon": "🌊",
+  "hook": {
+    "metaphor": "Climate change threatens a business two completely different ways. One is the obvious one: the flood actually drowns your warehouse (physical). The other is sneakier: the *world's response* to climate change — carbon taxes, bans, changing tastes — makes your perfectly intact business suddenly unviable (transition). A coal company's mine isn't washed away; it's legislated and out-competed into worthlessness. Same threat, opposite mechanisms.",
+    "scenario": "Two firms worry about climate. One owns beachfront hotels threatened by storms and erosion. The other owns a fleet of petrol cars about to be out-competed by EVs and hit by emissions rules. Neither faces the *same* risk — what are the two different dangers?"
+  },
+  "learn": [
+    "**Physical risk** is the direct damage from a changing climate. It comes as **acute** events (sudden disasters: floods, bushfires, cyclones — our beachfront hotels) and **chronic** shifts (slow changes: rising seas, higher average temperatures, drought). It damages assets, disrupts operations, and raises insurance costs.",
+    "**Transition risk** is the risk from the *move* to a low-carbon economy — not the climate itself, but society's response. It comes through **policy** (carbon taxes, bans), **technology** (cleaner alternatives out-competing you — EVs vs petrol cars), **market** shifts (customers and investors fleeing high-carbon), and **reputation**. Our petrol-car fleet faces pure transition risk.",
+    "Crucially, the two can **trade off**: a fast, aggressive transition reduces long-term physical risk (less warming) but raises near-term transition risk (rapid disruption). A slow transition does the opposite. There's no zero-risk path — only different mixes.",
+    "A key transition concept is **stranded assets**: things that were valuable but become worthless or unviable due to the transition — coal reserves that can't be burned, petrol stations with no customers. Whole categories of asset can lose their value not from damage, but from changed rules and demand.",
+    "Both kinds ripple into the other risks: physical risk drives **operational** and **credit** losses (Operational Risk, Credit Risk); transition risk drives **market** repricing of carbon-heavy assets (Market Risk). Naming which type you face tells you what to watch and how to respond."
+  ],
+  "bridge": "So at work, you can split any climate worry into its two mechanisms: *physical* — will a changing climate physically damage or disrupt us? — and *transition* — will the world's shift away from carbon make us obsolete, taxed, or shunned? They demand different responses (adapt and protect vs pivot and decarbonise), and most organisations face some of both.",
+  "interactions": [
+    {
+      "type": "classify",
+      "title": "Physical or transition risk?",
+      "prompt": "Sort each climate danger by its type.",
+      "buckets": [
+        { "id": "physical", "label": "Physical risk" },
+        { "id": "transition", "label": "Transition risk" }
+      ],
+      "items": [
+        { "label": "A flood destroys a coastal warehouse", "bucket": "physical" },
+        { "label": "A carbon tax makes a product unprofitable", "bucket": "transition" },
+        { "label": "EVs out-compete a petrol-car business", "bucket": "transition" },
+        { "label": "Bushfires disrupt operations for weeks", "bucket": "physical" },
+        { "label": "Investors flee a high-carbon company", "bucket": "transition" },
+        { "label": "Rising seas slowly erode beachfront property", "bucket": "physical" }
+      ]
+    },
+    {
+      "type": "decision",
+      "title": "The two worried firms",
+      "prompt": "Beachfront hotels vs a petrol-car fleet — both worried about climate. How should each frame its risk?",
+      "options": [
+        { "label": "Both face the identical 'climate risk'.", "verdict": "bad", "feedback": "They don't. The hotels face physical risk (storms, erosion); the car fleet faces transition risk (EVs, emissions rules). Same theme, opposite mechanisms — and opposite responses." },
+        { "label": "Hotels = physical risk; car fleet = transition risk — different dangers, different fixes.", "verdict": "good", "feedback": "Exactly. The hotels must adapt/protect physical assets; the fleet must pivot and decarbonise before it's stranded. Naming the type tells each what to do." },
+        { "label": "Neither faces real risk since the climate is uncertain.", "verdict": "bad", "feedback": "Uncertainty about exact timing doesn't remove the risk — storms and EV disruption are already materialising. Both dangers are real and material." }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Climate hits two ways — physical risk (the flood drowns your warehouse) and transition risk (the world's shift away from carbon makes you taxed, out-competed, or stranded) — and they need opposite responses.”",
+  "checkpoint": [
+    {
+      "q": "Physical climate risk includes…",
+      "options": [
+        "Carbon taxes",
+        "Acute events like floods and chronic shifts like rising seas",
+        "Investors selling shares",
+        "New technology"
+      ],
+      "answer": 1,
+      "explain": "It's the direct damage of a changing climate — acute disasters and chronic shifts."
+    },
+    {
+      "q": "Transition risk comes from…",
+      "options": [
+        "The climate itself only",
+        "Society's move to low-carbon — policy, technology, market, and reputation shifts",
+        "Cyber attacks",
+        "Interest rates"
+      ],
+      "answer": 1,
+      "explain": "It's the disruption of moving away from carbon, not the physical climate damage."
+    },
+    {
+      "q": "A 'stranded asset' is one that…",
+      "options": [
+        "Is physically lost at sea",
+        "Becomes worthless or unviable due to the low-carbon transition",
+        "Is always very liquid",
+        "Has no climate exposure"
+      ],
+      "answer": 1,
+      "explain": "E.g. coal reserves that can't be burned — value lost to changed rules and demand, not damage."
+    }
+  ]
+}

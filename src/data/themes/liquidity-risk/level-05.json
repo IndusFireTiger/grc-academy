@@ -1,0 +1,83 @@
+{
+  "id": 5,
+  "slug": "when-it-dries-up",
+  "title": "When It Dries Up",
+  "subtitle": "Crisis dynamics & the contingency plan",
+  "icon": "🚱",
+  "hook": {
+    "metaphor": "When a real drought hits, the time to dig a well is *not* during the drought — it's before. Liquidity crises are the same: they arrive fast and turn slow assets into worthless ones at exactly the moment you need them most. The firms that survive are the ones that planned for the dry spell while the water was still flowing.",
+    "scenario": "A crisis hits. A firm scrambles to raise cash by dumping assets — but everyone else is dumping the same assets at the same time, so prices collapse and it gets pennies on the rupee. Its scramble actually made things worse. What should it have had ready?"
+  },
+  "learn": [
+    "In a crisis, liquidity vanishes precisely when you need it. The link to **market risk** turns vicious: forced selling triggers **fire sales** (Market Risk Level 5), crashing prices, which deepens losses and panic — the doom loop from Level 2, now system-wide.",
+    "Worse, liquidity crises are **contagious**: one firm's fire sale lowers the marked value of *everyone else's* identical assets, spreading distress across the system. This is the **systemic** side of liquidity (the concentration idea from Third-Party risk) — why a single failure can threaten the whole financial system.",
+    "Because scrambling mid-crisis backfires, mature firms prepare a **Contingency Funding Plan (CFP)**: a pre-agreed playbook for a liquidity emergency — where extra cash can be raised, which assets to sell in what order, who decides, and which committed credit lines to draw. Decided calmly in advance, executed fast on the day.",
+    "The ultimate backstop for banks is the **central bank as lender of last resort** (Level 3): it can lend emergency cash against good collateral to a solvent-but-illiquid firm, breaking the panic. But you can't *rely* on a rescue — it's a backstop, not a plan.",
+    "And the only honest way to know your plan works is **liquidity stress testing**: deliberately modelling severe scenarios ('a deposit run plus frozen markets plus a pulled credit line, all at once') and checking you'd survive. Like market risk, you prepare for the storm in the calm — because in the crisis it's far too late."
+  ],
+  "bridge": "So at work, you can tell a liquidity-resilient firm from a complacent one by whether it has dug the well *before* the drought: *Is there a contingency funding plan — known sources of cash, an order for selling, committed lines? Have we stress-tested a severe combined squeeze?* A firm improvising its cash-raising mid-crisis, into a market where everyone's selling the same thing, is a firm already in the doom loop.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Scrambling made it worse",
+      "prompt": "Mid-crisis, the firm dumped assets for pennies because everyone was selling the same things. What was missing?",
+      "options": [
+        { "label": "Nothing — selling in a crisis is just unavoidable.", "verdict": "bad", "feedback": "Panic-dumping into a falling market is exactly what a plan prevents. With a contingency funding plan and buffer, it could have raised cash in a calmer order instead of a fire sale." },
+        { "label": "A pre-agreed contingency funding plan (and a buffer) prepared in advance.", "verdict": "good", "feedback": "Exactly. You dig the well before the drought: known cash sources, a sensible selling order, committed credit lines, decided calmly beforehand. Improvising mid-crisis feeds the doom loop." },
+        { "label": "It should have simply waited for a government bailout.", "verdict": "bad", "feedback": "A lender-of-last-resort rescue is a backstop, not a plan — and may not come. Relying on rescue instead of preparing is how firms gamble their survival." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Prepared or panicking?",
+      "prompt": "Sort each action by whether it's sound preparation or a crisis scramble.",
+      "buckets": [
+        { "id": "prepared", "label": "Sound preparation" },
+        { "id": "panic", "label": "Crisis scramble" }
+      ],
+      "items": [
+        { "label": "A contingency funding plan agreed in advance", "bucket": "prepared" },
+        { "label": "Dumping assets into a falling market for pennies", "bucket": "panic" },
+        { "label": "Stress-testing a severe combined liquidity squeeze", "bucket": "prepared" },
+        { "label": "Frantically calling banks for cash on the day", "bucket": "panic" },
+        { "label": "Pre-arranged committed credit lines to draw on", "bucket": "prepared" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Dig the well before the drought — a contingency funding plan and stress tests prepared in the calm — because in a liquidity crisis everyone's fire-selling the same assets at once, and scrambling for cash mid-panic just feeds the doom loop.”",
+  "checkpoint": [
+    {
+      "q": "A Contingency Funding Plan (CFP) is…",
+      "options": [
+        "A marketing plan",
+        "A pre-agreed playbook for raising cash in a liquidity emergency",
+        "A way to avoid ever holding cash",
+        "A type of loan to customers"
+      ],
+      "answer": 1,
+      "explain": "It decides — calmly, in advance — where emergency cash comes from and in what order to act."
+    },
+    {
+      "q": "Why are liquidity crises contagious?",
+      "options": [
+        "They're not",
+        "One firm's fire sale lowers the value of everyone else's identical assets",
+        "Because of cyber attacks",
+        "They only affect one firm ever"
+      ],
+      "answer": 1,
+      "explain": "Forced selling drives down marked values system-wide, spreading distress — the systemic dimension."
+    },
+    {
+      "q": "Relying on a central-bank rescue as your liquidity strategy is unwise because…",
+      "options": [
+        "Rescues are illegal",
+        "It's a backstop, not a plan — it may not come, and only for the solvent",
+        "Central banks never lend",
+        "It's always guaranteed"
+      ],
+      "answer": 1,
+      "explain": "Lender of last resort breaks panics for solvent-but-illiquid firms, but you must prepare your own plan."
+    }
+  ]
+}

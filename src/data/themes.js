@@ -9,6 +9,10 @@ import { internalControlsTrack } from './themes/internal-controls/track.js';
 import { cyberItRiskTrack } from './themes/cyber-it-risk/track.js';
 import { thirdPartyRiskTrack } from './themes/third-party-risk/track.js';
 import { auditManagementTrack } from './themes/audit-management/track.js';
+import { marketRiskTrack } from './themes/market-risk/track.js';
+import { liquidityRiskTrack } from './themes/liquidity-risk/track.js';
+import { esgClimateRiskTrack } from './themes/esg-climate-risk/track.js';
+import { businessContinuityTrack } from './themes/business-continuity/track.js';
 
 export const themes = [
   {
@@ -31,10 +35,10 @@ export const themes = [
   { slug: 'third-party-risk', title: 'Third-Party / Vendor Risk', tagline: 'Your Weakest Supplier', blurb: 'You’re only as strong as the partners you depend on.', icon: '🔗', accent: 'amber', status: 'live', track: thirdPartyRiskTrack },
   { slug: 'audit-management', title: 'Audit Management', tagline: 'The Health Check-up', blurb: 'The annual exam — and the paper trail that proves it.', icon: '📋', accent: 'teal', status: 'live', track: auditManagementTrack },
   // ---- Wave 3 ----
-  { slug: 'market-risk', title: 'Market Risk', tagline: 'Sailing in Changing Weather', blurb: 'Prices, rates, and FX move under your feet.', icon: '⛵', accent: 'sky', status: 'soon', track: null },
-  { slug: 'liquidity-risk', title: 'Liquidity Risk', tagline: 'Cash vs. Wealth on Paper', blurb: 'Can you actually pay your bills today?', icon: '💰', accent: 'emerald', status: 'soon', track: null },
-  { slug: 'esg-climate-risk', title: 'ESG & Climate Risk', tagline: 'The Long-Game Forecast', blurb: 'Physical and transition risk over the long horizon.', icon: '🌱', accent: 'teal', status: 'soon', track: null },
-  { slug: 'business-continuity', title: 'Business Continuity & Resilience', tagline: 'The Fire Drill', blurb: 'Keep running when the lights go out.', icon: '🚨', accent: 'rose', status: 'soon', track: null },
+  { slug: 'market-risk', title: 'Market Risk', tagline: 'Sailing in Changing Weather', blurb: 'Prices, rates, and FX move under your feet.', icon: '⛵', accent: 'sky', status: 'live', track: marketRiskTrack },
+  { slug: 'liquidity-risk', title: 'Liquidity Risk', tagline: 'Cash vs. Wealth on Paper', blurb: 'Can you actually pay your bills today?', icon: '💰', accent: 'emerald', status: 'live', track: liquidityRiskTrack },
+  { slug: 'esg-climate-risk', title: 'ESG & Climate Risk', tagline: 'The Long-Game Forecast', blurb: 'Physical and transition risk over the long horizon.', icon: '🌱', accent: 'teal', status: 'live', track: esgClimateRiskTrack },
+  { slug: 'business-continuity', title: 'Business Continuity & Resilience', tagline: 'The Fire Drill', blurb: 'Keep running when the lights go out.', icon: '🚨', accent: 'rose', status: 'live', track: businessContinuityTrack },
   // ---- Wave 4 ----
   { slug: 'strategic-risk', title: 'Strategic Risk', tagline: 'Steering the Ship', blurb: 'The bets that make or break the mission.', icon: '🧭', accent: 'violet', status: 'soon', track: null },
   { slug: 'policy-management', title: 'Policy Management', tagline: 'The House Rules', blurb: 'Written, agreed, and actually followed.', icon: '📜', accent: 'amber', status: 'soon', track: null },
