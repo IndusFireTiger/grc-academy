@@ -1,0 +1,95 @@
+{
+  "id": 6,
+  "slug": "the-boardroom-view",
+  "title": "The Boardroom View",
+  "subtitle": "Risk appetite, resilience & reporting up",
+  "icon": "🏛️",
+  "hook": {
+    "metaphor": "The restaurant owner never touches a pan — but she decides how busy the kitchen is allowed to get, how much she'll spend on backup equipment, and what 'too risky' means for her name on the door. That's the boardroom view of operational risk: not running the controls, but setting how much risk the whole operation may take, and making sure someone can prove it's under control.",
+    "scenario": "At a board meeting, the CEO wants to cut the operations budget by 30% to boost profit. The risk officer warns it will push system outages past the level customers (and the regulator) will tolerate. Who's right — and how should a board even decide?"
+  },
+  "learn": [
+    "The anchor concept is **risk appetite**: a deliberate statement of how much operational risk the organisation is *willing* to accept in pursuit of its goals. Without it, every decision is ad-hoc. With it, the budget-cut argument becomes answerable: does a 30% cut breach the appetite the board already agreed to? Appetite turns gut feel into a line everyone can point at.",
+    "Operational risk doesn't live alone. **Enterprise Risk Management (ERM)** is the boardroom habit of seeing *all* the risks together — credit, market, operational, financial-crime — so they can be compared, prioritised, and traded off on one page rather than fought over in silos.",
+    "The board can't watch everything, so it relies on **reporting up**: concise dashboards, the **risk heat map** (likelihood × impact again), KRIs trending over time, and the biggest losses and near-misses. Good reporting tells the truth fast; bad reporting buries the one red cell under a hundred green ones.",
+    "The regulatory endgame now has a name: **operational resilience.** Rules like Australia's **APRA CPS 230** (and the EU's DORA, the UK's resilience regime) push firms past 'do you have controls?' to 'can your *critical services* keep running within a defined **impact tolerance** when something fails?' You identify your important business services, set how much disruption is survivable, and prove you can stay inside it.",
+    "And underneath it all, the same truth as every governance level: **tone at the top decides whether this is real or theatre.** A board that rewards cutting corners gets a fragile operation no matter how thick the policy binder. Resilience is a leadership choice before it's a control."
+  ],
+  "bridge": "So at work, you can lift any operational-risk debate from opinion to governance with three moves: anchor it to the agreed **risk appetite**, put it in the **enterprise** picture (how does this trade off against other risks?), and frame it as **resilience** (can our critical services survive this within tolerance?). That's how a boardroom decides, instead of just arguing.",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "The budget-cut showdown",
+      "prompt": "The CEO wants a 30% ops cut; the risk officer says it breaches tolerable outage levels. How should the board decide?",
+      "options": [
+        { "label": "Profit wins — cut it; outages are just an IT problem.", "verdict": "bad", "feedback": "Treating resilience as 'just IT' is exactly the boardroom failure regulators target. If the cut breaches agreed appetite and impact tolerances, profit doesn't override it — that's what appetite is *for*." },
+        { "label": "Test it against the agreed risk appetite and impact tolerances, then decide consciously.", "verdict": "good", "feedback": "Exactly the boardroom view. The question isn't 'profit vs safety' in the abstract — it's 'does this breach the line we already agreed?' If yes, you change the plan or consciously, formally re-set appetite." },
+        { "label": "Never cut anything — all spending must stay forever.", "verdict": "bad", "feedback": "Too rigid. Risk management isn't 'spend infinitely on safety'; it's spending to stay within appetite. The board *can* accept more risk — but deliberately, with eyes open, not by accident." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Within appetite or a breach?",
+      "prompt": "The board's appetite says: 'critical payments must not be down more than 2 hours/month.' Sort each situation.",
+      "buckets": [
+        { "id": "within", "label": "Within appetite" },
+        { "id": "breach", "label": "Breaches appetite" }
+      ],
+      "items": [
+        { "label": "Payments were down 25 minutes this month", "bucket": "within" },
+        { "label": "Payments were down 6 hours after an outage", "bucket": "breach" },
+        { "label": "A non-critical internal report was late", "bucket": "within" },
+        { "label": "Two separate 90-minute payment outages in one month", "bucket": "breach" },
+        { "label": "A near-miss caught before any downtime", "bucket": "within" }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Boardroom vocabulary",
+      "prompt": "Match each governance concept to its meaning.",
+      "pairs": [
+        { "left": "Risk appetite", "right": "How much risk the organisation chooses to accept" },
+        { "left": "Enterprise Risk Management", "right": "Seeing all risk types together to compare and prioritise" },
+        { "left": "Operational resilience", "right": "Keeping critical services running through disruption" },
+        { "left": "Impact tolerance", "right": "The maximum disruption a critical service can survive" },
+        { "left": "Reporting up", "right": "Concise dashboards that tell the board the truth fast" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “The boardroom doesn't run the controls — it sets how much operational risk is allowed (appetite), sees it next to every other risk (ERM), and demands that critical services stay running through trouble (resilience).”",
+  "checkpoint": [
+    {
+      "q": "'Risk appetite' is best described as…",
+      "options": [
+        "The amount of risk an organisation deliberately chooses to accept",
+        "A list of all possible risks",
+        "The profit target",
+        "A type of insurance"
+      ],
+      "answer": 0,
+      "explain": "Appetite is the agreed line — how much risk you'll take for your goals — turning ad-hoc calls into governed ones."
+    },
+    {
+      "q": "Operational resilience (e.g. under APRA CPS 230) shifts the question from…",
+      "options": [
+        "'Is it profitable?' to 'Is it cheap?'",
+        "'Do you have controls?' to 'Can critical services survive disruption within tolerance?'",
+        "'Who do we blame?' to 'Who do we fire?'",
+        "'Is it documented?' to 'Is it long?'"
+      ],
+      "answer": 1,
+      "explain": "Resilience is about critical services staying within a defined impact tolerance when things fail — not just having controls listed."
+    },
+    {
+      "q": "Why does the board look at Enterprise Risk Management rather than operational risk alone?",
+      "options": [
+        "To ignore operational risk",
+        "To see and trade off all risk types together on one page",
+        "Because operational risk doesn't matter",
+        "To make reports longer"
+      ],
+      "answer": 1,
+      "explain": "ERM lets the board compare and prioritise credit, market, operational and other risks together instead of in silos."
+    }
+  ]
+}

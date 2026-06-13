@@ -5,9 +5,10 @@ import level02 from './level-02.json';
 import level03 from './level-03.json';
 import level04 from './level-04.json';
 import level05 from './level-05.json';
+import level06 from './level-06.json';
 
 const authored = Object.fromEntries(
-  [level01, level02, level03, level04, level05].map((l) => [l.slug, l])
+  [level01, level02, level03, level04, level05, level06].map((l) => [l.slug, l])
 );
 
 export const operationalRiskTrack = {
@@ -17,6 +18,7 @@ export const operationalRiskTrack = {
     { id: 3, slug: 'systems-and-the-outside-world', title: 'Systems & the Outside World', subtitle: 'When tech fails and the world intrudes', icon: '🔌', available: true },
     { id: 4, slug: 'measuring-the-mess', title: 'Measuring the Mess', subtitle: 'Registers, RCSA, KRIs & loss data', icon: '📊', available: true },
     { id: 5, slug: 'taming-it', title: 'Taming It', subtitle: 'Controls, three lines of defence & culture', icon: '🛡️', available: true },
+    { id: 6, slug: 'the-boardroom-view', title: 'The Boardroom View', subtitle: 'Risk appetite, resilience & reporting up', icon: '🏛️', available: true },
   ],
   getLevel(slug) {
     return authored[slug] ?? null;

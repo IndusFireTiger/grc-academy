@@ -1,0 +1,96 @@
+{
+  "id": 6,
+  "slug": "the-war-room",
+  "title": "The War Room",
+  "subtitle": "Governance, regulation & the next threats",
+  "icon": "🛰️",
+  "hook": {
+    "metaphor": "One bouncer at one door can't win a war against organised crime. The real fight is run from a war room: someone clearly in charge, intelligence shared between rivals and the authorities, and a constant eye on the enemy's next move. Financial crime is an arms race — and the firms that lose are the ones still fighting last year's threat with a tick-box mindset.",
+    "scenario": "A regulator fines a bank hundreds of millions — not because money laundering definitely occurred, but because the bank couldn't prove its controls actually worked, and no senior person was clearly accountable. Meanwhile, criminals are already moving funds through crypto and deepfake-enabled scams the bank never modelled. What does 'winning' even look like here?"
+  },
+  "learn": [
+    "First, **accountability**. Modern regimes insist a *named senior person* owns financial-crime defence — typically the **MLRO (Money Laundering Reporting Officer)** — backed by board oversight. Accountability regimes like Australia's **FAR** (Financial Accountability Regime, successor to BEAR) and the UK's SMCR make it personal: 'the system failed' is no longer a defence when no human was responsible.",
+    "Second, the **enforcement reality**. Regulators (**AUSTRAC**, FinCEN, the FCA, **FIU-IND**) hand out eye-watering fines — and crucially, they punish firms whose controls existed *on paper* but couldn't be shown to *work*. The lesson from every mega-fine: **effectiveness over box-ticking.** A binder of policies is worthless without evidence they bite.",
+    "Third, the game is **collaborative**, not solo. Criminals move between institutions, so defence increasingly means **public-private intelligence sharing** — partnerships like AUSTRAC's **Fintel Alliance** — where banks and authorities pool signals. And global consistency comes from **FATF**, whose mutual evaluations grade whole countries (a poor grade can cut a nation off from the financial system).",
+    "Fourth, the **threats keep mutating**. Today's war room watches: **virtual assets / crypto** (and FATF's **'travel rule'** requiring identity to follow transfers), **AI-enabled fraud** — deepfake voices and synthetic identities that defeat old ID checks, **money-mule networks** recruited online, and **real-time payments** that shrink the reaction window from days to seconds. Yesterday's controls quietly expire.",
+    "Tie it together: financial crime is the **arms race** under all of GRC. The same governance spine you met in Credit Risk Level 6 and Operational Risk Level 6 — clear ownership, tone at the top, evidence over theatre — is exactly what separates a war room from a checkbox."
+  ],
+  "bridge": "So at work, you can judge whether a financial-crime programme is actually *winning* rather than merely *existing*. Ask: *Is someone senior personally accountable? Can we evidence our controls work, not just that they exist? Are we sharing intelligence? And are we tracking the next threat — crypto, deepfakes, mules, real-time rails — or still defending last year's?*",
+  "interactions": [
+    {
+      "type": "decision",
+      "title": "Why the giant fine?",
+      "prompt": "The bank was fined heavily despite no proven laundering. What's the real takeaway?",
+      "options": [
+        { "label": "Unfair — no crime was proven, so the fine is wrong.", "verdict": "bad", "feedback": "Regulators don't only punish realised crime; they punish *failure to have effective, accountable controls*. The exposure itself — unproven controls, no clear owner — is the violation." },
+        { "label": "Controls must be provably effective and personally owned — not just documented.", "verdict": "good", "feedback": "Exactly. The modern standard is effectiveness + accountability. 'We had a policy' fails if you can't show it worked and name who owned it. Evidence over theatre." },
+        { "label": "Just write more detailed policies next time.", "verdict": "bad", "feedback": "More paper is the trap. The fine wasn't for thin documents — it was for controls that couldn't be shown to *work* and a missing accountable owner. Volume isn't effectiveness." }
+      ]
+    },
+    {
+      "type": "classify",
+      "title": "Yesterday's threat or tomorrow's?",
+      "prompt": "Sort each by whether it's an established/classic concern or an emerging one the war room now tracks.",
+      "buckets": [
+        { "id": "classic", "label": "Established / classic" },
+        { "id": "emerging", "label": "Emerging threat" }
+      ],
+      "items": [
+        { "label": "Cash structured into sub-threshold deposits", "bucket": "classic" },
+        { "label": "Deepfake voice used to authorise a transfer", "bucket": "emerging" },
+        { "label": "Laundering through crypto / virtual assets", "bucket": "emerging" },
+        { "label": "Shell companies hiding beneficial ownership", "bucket": "classic" },
+        { "label": "Money mules recruited via social media", "bucket": "emerging" },
+        { "label": "A forged paper identity document", "bucket": "classic" }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "War-room vocabulary",
+      "prompt": "Match each term to its meaning.",
+      "pairs": [
+        { "left": "MLRO", "right": "The senior person accountable for AML defence" },
+        { "left": "FAR / SMCR", "right": "Regimes making senior managers personally accountable" },
+        { "left": "FATF travel rule", "right": "Identity info must follow crypto/virtual-asset transfers" },
+        { "left": "Fintel Alliance", "right": "Public-private intelligence-sharing partnership" },
+        { "left": "Money mule", "right": "A person used to move criminal funds through their account" }
+      ]
+    }
+  ],
+  "teachBack": "Explain it to a friend in one line: “Fighting financial crime for real means a named accountable owner, controls you can *prove* work, sharing intelligence, and constantly tracking new threats like crypto and deepfakes — not just a thicker policy binder.”",
+  "checkpoint": [
+    {
+      "q": "The recurring lesson from major AML enforcement fines is…",
+      "options": [
+        "Write longer policies",
+        "Controls must be provably effective and personally accountable, not just documented",
+        "Crime must always be proven first",
+        "Fines are random"
+      ],
+      "answer": 1,
+      "explain": "Regulators punish ineffective, unowned controls — 'effectiveness over box-ticking', with a named accountable senior person."
+    },
+    {
+      "q": "The FATF 'travel rule' requires that…",
+      "options": [
+        "Customers travel to a branch",
+        "Identity information follows crypto/virtual-asset transfers",
+        "All payments stop at borders",
+        "Banks share profits"
+      ],
+      "answer": 1,
+      "explain": "It extends 'know who's sending and receiving' to virtual-asset transfers, closing a crypto blind spot."
+    },
+    {
+      "q": "A 'money mule' is…",
+      "options": [
+        "A type of cryptocurrency",
+        "A person whose account is used to move criminal funds",
+        "A sanctions list",
+        "A fraud-detection model"
+      ],
+      "answer": 1,
+      "explain": "Mules — often recruited online — let their accounts move dirty money, a key node in modern laundering networks."
+    }
+  ]
+}
