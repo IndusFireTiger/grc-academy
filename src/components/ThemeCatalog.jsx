@@ -24,30 +24,37 @@ export default function ThemeCatalog({ themes }) {
         </p>
       </section>
 
-      {/* Reference modules: the GRC Atlas + Certifications */}
-      <div className="mb-8 grid gap-4 sm:grid-cols-2">
-        <a
-          href="/atlas"
-          className="flex flex-col rounded-2xl border border-emerald-200 bg-gradient-to-br from-emerald-50 to-sky-50 p-5 transition hover:border-emerald-400 hover:shadow-md dark:border-emerald-800/50 dark:from-emerald-900/20 dark:to-sky-900/20"
-        >
-          <span className="text-3xl">🗺️</span>
-          <h2 className="mt-2 font-semibold text-slate-900 dark:text-slate-100">The GRC Atlas</h2>
-          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-            The laws, regulations, frameworks &amp; standards organisations must abide by — filter by region, type, scope &amp; risk.
-          </p>
-          <span className="mt-3 text-sm font-medium text-emerald-600 dark:text-emerald-400">Open the atlas →</span>
-        </a>
-        <a
-          href="/certifications"
-          className="flex flex-col rounded-2xl border border-sky-200 bg-gradient-to-br from-sky-50 to-emerald-50 p-5 transition hover:border-sky-400 hover:shadow-md dark:border-sky-800/50 dark:from-sky-900/20 dark:to-emerald-900/20"
-        >
-          <span className="text-3xl">🏅</span>
-          <h2 className="mt-2 font-semibold text-slate-900 dark:text-slate-100">Certifications &amp; Programs</h2>
-          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-            The professional credentials of GRC, categorised by discipline — from foundational to expert.
-          </p>
-          <span className="mt-3 text-sm font-medium text-sky-600 dark:text-sky-400">Explore the credentials →</span>
-        </a>
+      {/* Reference library — look-ups, not study modules. Deliberately styled
+          distinct from the track cards: compact, horizontal, muted, dashed. */}
+      <div className="mb-10">
+        <div className="mb-2 flex items-center gap-2">
+          <span className="text-xs font-semibold uppercase tracking-widest text-slate-400">Reference library</span>
+          <span className="text-xs text-slate-400 dark:text-slate-500">— look it up, not a lesson</span>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <a
+            href="/atlas"
+            className="group flex items-center gap-3 rounded-xl border border-dashed border-slate-300 bg-slate-50/70 px-4 py-3 transition hover:border-emerald-400 hover:bg-white dark:border-slate-600 dark:bg-slate-900/40 dark:hover:bg-slate-900"
+          >
+            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-white text-xl shadow-sm dark:bg-slate-800">🗺️</span>
+            <span className="min-w-0">
+              <span className="block text-sm font-semibold text-slate-800 dark:text-slate-100">GRC Atlas</span>
+              <span className="block truncate text-xs text-slate-500 dark:text-slate-400">Laws, regulations, frameworks &amp; standards</span>
+            </span>
+            <span className="ml-auto shrink-0 text-slate-400 transition group-hover:translate-x-0.5 group-hover:text-emerald-500">→</span>
+          </a>
+          <a
+            href="/certifications"
+            className="group flex items-center gap-3 rounded-xl border border-dashed border-slate-300 bg-slate-50/70 px-4 py-3 transition hover:border-emerald-400 hover:bg-white dark:border-slate-600 dark:bg-slate-900/40 dark:hover:bg-slate-900"
+          >
+            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-white text-xl shadow-sm dark:bg-slate-800">🏅</span>
+            <span className="min-w-0">
+              <span className="block text-sm font-semibold text-slate-800 dark:text-slate-100">Certifications &amp; Programs</span>
+              <span className="block truncate text-xs text-slate-500 dark:text-slate-400">Credentials by discipline</span>
+            </span>
+            <span className="ml-auto shrink-0 text-slate-400 transition group-hover:translate-x-0.5 group-hover:text-emerald-500">→</span>
+          </a>
+        </div>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
