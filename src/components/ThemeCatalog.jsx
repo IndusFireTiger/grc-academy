@@ -1,6 +1,3 @@
-import { useEffect, useState } from 'react';
-import { completedCount } from '../lib/progress.js';
-
 // Two groups of study tracks: the risk *types* themselves, vs the disciplines for
 // *managing & governing* risk (audit, controls, policy, compliance, etc.).
 const RISK_TYPE_SLUGS = [
@@ -25,13 +22,6 @@ const MANAGE_SLUGS = [
 
 // The academy home: study tracks in two groups, plus the reference library.
 export default function ThemeCatalog({ themes }) {
-  const [, setTick] = useState(0);
-  useEffect(() => {
-    const refresh = () => setTick((t) => t + 1);
-    window.addEventListener('grc-progress', refresh);
-    return () => window.removeEventListener('grc-progress', refresh);
-  }, []);
-
   const bySlug = Object.fromEntries(themes.map((t) => [t.slug, t]));
   const pick = (slugs) => slugs.map((s) => bySlug[s]).filter(Boolean);
   const riskThemes = pick(RISK_TYPE_SLUGS);
@@ -129,7 +119,6 @@ function RefLink({ href, icon, title, desc }) {
 
 function ThemeCard({ t }) {
   const total = t.track ? t.track.levels.length : 0;
-  const done = t.status === 'live' ? completedCount(t.slug) : 0;
   const Card = t.status === 'live' ? 'a' : 'div';
   return (
     <Card
@@ -143,8 +132,8 @@ function ThemeCard({ t }) {
       <div className="flex items-start justify-between">
         <span className="text-3xl">{t.icon}</span>
         {t.status === 'live' ? (
-          <span className={`rounded-full bg-${t.accent}-100 px-2 py-0.5 text-xs font-medium text-${t.accent}-700 dark:bg-${t.accent}-900/30 dark:text-${t.accent}-300`}>
-            {done}/{total} done
+          <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+            {total} modules
           </span>
         ) : (
           <span className="rounded-full bg-slate-200 px-2 py-0.5 text-xs font-medium text-slate-500 dark:bg-slate-800 dark:text-slate-400">
